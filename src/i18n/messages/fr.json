@@ -1,0 +1,23 @@
+{
+  "date-published": "Date de publication",
+  "author": "Auteur",
+  "page-not-found": "Cette page n'a pas pu être trouvée.",
+  "go-home": "Aller à la page d'accueil",
+  "loading": "Chargement, veuillez patienter...",
+  "posts": "Articles",
+  "post": "Article",
+  "showing": "Affichage",
+  "of": "de",
+  "search": "Recherche",
+  "dashboard": "Tableau de bord",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "more-pages": "Plus de pages",
+  "contact": "Contact",
+
+  "cookie-message": "Nous utilisons des cookies essentiels nécessaires au fonctionnement du site, et avec votre consentement, des cookies supplémentaires pour l’analyse et la performance. En savoir plus dans la : ",
+  "accept": "Accepter",
+  "decline": "Refuser",
+  "privacy-policy": "Politique de confidentialité",
+  "tips": "Conseils"
+}
