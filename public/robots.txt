@@ -1,0 +1,19 @@
+# Allow Googlebot
+User-agent: Googlebot
+Disallow:
+
+# Allow Bingbot
+User-agent: Bingbot
+Disallow:
+
+# Block all other bots
+User-agent: *
+Disallow: /
+
+Crawl-delay: 10
+Disallow: /search
+Disallow: /admin
+Disallow: /_next/
+Disallow: /api/
+
+Sitemap: https://visitauschwitz.info/sitemap.xml
