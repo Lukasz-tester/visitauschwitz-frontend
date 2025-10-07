@@ -1,7 +1,7 @@
 'use client'
 import { cn } from '@/utilities/cn'
 import useClickableCard from '@/utilities/useClickableCard'
-// import Link from 'next/link'
+import Link from 'next/link'
 import React, { Fragment } from 'react'
 
 import type { Post } from '@/payload-types'
@@ -44,10 +44,10 @@ export const Card: React.FC<{
         {titleToUse && (
           <div className="prose">
             <div>
-              {/* TODO add inside CMSLink ref={link.ref} for clickable card area */}
-              <CMSLink className="not-prose text-2xl" url={href}>
+              {/* TODO add inside Link ref={link.ref} for clickable card area */}
+              <Link className="not-prose text-2xl" href={href} ref={link.ref}>
                 {titleToUse}
-              </CMSLink>
+              </Link>
             </div>
           </div>
         )}

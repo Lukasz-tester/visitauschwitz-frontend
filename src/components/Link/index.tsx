@@ -5,8 +5,11 @@ import { cn } from 'src/utilities/cn'
 import { useLocale } from 'next-intl'
 import React from 'react'
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import type { Page, Post } from '@/payload-types'
+// import { Link } from '@/i18n/routing'
 
 type CMSLinkType = {
   appearance?: 'inline' | ButtonProps['variant']
@@ -49,45 +52,50 @@ export const CMSLink: React.FC<CMSLinkType> = ({
 
   if (!href) return null
 
-  if (!href.startsWith(`/${locale}`)) {
-    href = `/${locale}${href.startsWith('/') ? href : `/${href}`}`
+  // EXTERNAL LINKING
+  if (href.startsWith('http')) {
+    return (
+      <Link href={href} target="_blank" rel="noopener noreferrer" replace>
+        {label}
+        {children}
+      </Link>
+    )
   }
 
-  // Normalize to ensure it always starts with "/"
+  // inside your CMSLink component
+  const pathname = usePathname()
+
+  // INTERNAL LINKING - THE SAME PAGE
+  if (href.startsWith('#')) {
+    const fullHref = `${pathname}${href}` // combine current path with hash
+    return (
+      <Link href={fullHref} className={cn(className)}>
+        {label}
+        {children}
+      </Link>
+    )
+  }
+
+  // 2️⃣ Normalize href to always start with "/"
   if (!href.startsWith('/')) {
     href = `/${href}`
   }
 
-  // Add locale prefix if missing and it's an internal link
+  // 3️⃣ Detect internal links (should be prefixed)
   const isInternal =
     href.startsWith('/') &&
-    !href.startsWith('http') &&
-    !href.startsWith('#') &&
     !href.startsWith('/_next') &&
     !href.startsWith('/admin') &&
+    !href.startsWith(`/${locale}`) &&
     !href.includes('://')
+  // !href.startsWith('#')
 
-  if (isInternal && !href.startsWith(`/${locale}/`) && href !== `/${locale}`) {
+  // 4️⃣ Prefix locale only for internal links
+  if (isInternal) {
     href = `/${locale}${href}`
   }
 
   console.log(`[CMSLink] locale=${locale}, href=${href}`)
-
-  // // 🧠 Auto-prefix locale if missing
-  // if (
-  //   href.startsWith('/') &&
-  //   !href.startsWith(`/${locale}`) &&
-  //   !href.startsWith('/admin') &&
-  //   !href.startsWith('/_next') &&
-  //   !href.includes('://')
-  // ) {
-  //   href = `/${locale}${href}`
-  // }
-
-  // // ⚡ Append `.html` if doing a static export
-  // if (process.env.NEXT_EXPORT && !href.endsWith('.html') && !href.includes('#')) {
-  //   href += '.html'
-  // }
 
   const linkProps: LinkProps = {
     href,
@@ -116,80 +124,3 @@ export const CMSLink: React.FC<CMSLinkType> = ({
     </Button>
   )
 }
-
-// import { Button, type ButtonProps } from '@/components/ui/button'
-// import { cn } from 'src/utilities/cn'
-// import { useLocale } from 'next-intl'
-// import React from 'react'
-// import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
-
-// import type { Page, Post } from '@/payload-types'
-
-// type CMSLinkType = {
-//   appearance?: 'inline' | ButtonProps['variant']
-//   children?: React.ReactNode
-//   className?: string
-//   label?: string | null
-//   newTab?: boolean | null
-//   reference?: {
-//     relationTo: 'pages' | 'posts'
-//     value: Page | Post | string | number
-//   } | null
-//   size?: ButtonProps['size'] | null
-//   type?: 'custom' | 'reference' | null
-//   url?: string | null
-//   onClick?(): void
-// }
-
-// // Use Next.js' LinkProps directly
-// type LinkProps = Omit<NextLinkProps, 'href'> & { href: string }
-
-// export const CMSLink: React.FC<CMSLinkType> = ({
-//   type,
-//   appearance = 'inline',
-//   children,
-//   className,
-//   label,
-//   newTab,
-//   reference,
-//   size: sizeFromProps,
-//   url,
-//   onClick,
-// }) => {
-//   const locale = useLocale()
-
-//   // Resolve href from reference or custom URL
-//   let href =
-//     type === 'reference' && typeof reference?.value === 'object' && reference.value.slug
-//       ? `${reference?.relationTo !== 'pages' ? `/${reference?.relationTo}` : ''}/${reference.value.slug}`
-//       : url || ''
-
-//   if (!href) return null
-
-//   const linkProps: LinkProps = {
-//     href,
-//     locale, // <-- let Next.js handle locale automatically
-//     ...((newTab && { target: '_blank', rel: 'noopener noreferrer' }) || {}),
-//     onClick,
-//   }
-
-//   const size = appearance === 'link' ? 'clear' : sizeFromProps
-
-//   if (appearance === 'inline') {
-//     return (
-//       <NextLink className={cn(className)} {...linkProps}>
-//         {label}
-//         {children}
-//       </NextLink>
-//     )
-//   }
-
-//   return (
-//     <Button asChild className={className} size={size} variant={appearance}>
-//       <NextLink className={cn(className)} {...linkProps}>
-//         {label}
-//         {children}
-//       </NextLink>
-//     </Button>
-//   )
-// }

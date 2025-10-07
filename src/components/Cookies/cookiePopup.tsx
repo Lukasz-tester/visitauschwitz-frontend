@@ -30,7 +30,6 @@ export const CookiePopup = () => {
     setCookie('cookie-popup-hide', 'true')
     setCookie('cookie-consent', 'true')
     setShow(false)
-    location.reload() // ważne, jeśli chcesz np. od razu załadować analytics
   }
 
   const declineCookies = () => {

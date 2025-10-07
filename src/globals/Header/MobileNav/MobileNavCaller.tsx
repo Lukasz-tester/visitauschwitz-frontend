@@ -9,8 +9,6 @@ import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { useTranslations } from 'next-intl'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
-// import Link from 'next/link'
-// import { Link } from '@/i18n/routing'
 import { CMSLink } from '@/components/Link'
 
 export const MobileNavCaller: React.FC<{
@@ -24,7 +22,7 @@ export const MobileNavCaller: React.FC<{
   const links = {
     supplement: 'tips',
     // '/posts': 'posts',
-    '#about-me': 'about',
+    '/#about-me': 'about',
     // '/contact': 'contact',
     // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
     // '/': 'books',

@@ -23,7 +23,6 @@ import { NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { CookiePopup } from '@/components/Cookies/cookiePopup'
-import { ConditionalCookies } from '@/components/Cookies/conditionalCookies'
 
 type Args = {
   children: React.ReactNode
@@ -62,7 +61,6 @@ export default async function RootLayout({ children, params }: Args) {
             {children}
             <Footer locale={locale} />
             <CookiePopup />
-            <ConditionalCookies />
           </NextIntlClientProvider>
         </Providers>
       </body>
