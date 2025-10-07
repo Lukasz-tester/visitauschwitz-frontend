@@ -5,7 +5,8 @@ import type { Page } from '@/payload-types'
 import type { StaticImageData } from 'next/image'
 import { ImageMedia } from '@/components/Media/ImageMedia'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { CMSLink } from '@/components/Link'
+// import Link from 'next/link'
 
 type Props = Extract<Page['layout'][0], { blockType: 'mediaBlock' }> & {
   breakout?: boolean
@@ -75,9 +76,9 @@ export const MediaBlock: React.FC<Props> = (props) => {
         {images.map((image, i) => {
           const { id, title, link, media } = image
           return (
-            <Link
+            <CMSLink
               key={id}
-              href={link!}
+              url={link!}
               className={`absolute ease-in-out transition-opacity duration-1000 ${
                 currentSlide !== i ? 'opacity-0' : 'opacity-100 z-10'
               }`}
@@ -92,7 +93,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
                   )}
                 </div>
               </div>
-            </Link>
+            </CMSLink>
           )
         })}
       </div>

@@ -61,7 +61,6 @@ export const MobileNavCaller: React.FC<{
               url="search"
               onClick={() => setModalOpen(!modalOpen)}
             >
-              <div>FDASFDAS</div>
               <SearchIcon size={26} className="opacity-85" />
             </CMSLink>
             {/* TODO: jak ponizej daje opacity-85 to powyzej lupka przestaje byc linkiem...? */}

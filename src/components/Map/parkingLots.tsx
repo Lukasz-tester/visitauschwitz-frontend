@@ -1,5 +1,5 @@
 import { LatLngExpression } from 'leaflet'
-import Link from 'next/link'
+// import Link from 'next/link'
 import MapLink from './MapLink'
 
 export const carparkMuzeum: LatLngExpression = [50.02997, 19.20587]

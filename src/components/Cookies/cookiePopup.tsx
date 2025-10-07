@@ -3,8 +3,9 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { getCookie } from '@/utilities/helpersSsr'
+import { CMSLink } from '../Link'
 
 function setCookie(name, value, days = 365) {
   let expires = ''
@@ -45,9 +46,9 @@ export const CookiePopup = () => {
       <div className="flex flex-col sm:flex-row w-fit h-fit p-6 pb-8 gap-5 items-start sm:items-center justify-between">
         <span>
           {t('cookie-message')}
-          <Link href="/privacy-policy" className="underline">
+          <CMSLink url="/privacy-policy" className="underline">
             {t('privacy-policy')}
-          </Link>
+          </CMSLink>
         </span>
 
         <div className="flex gap-6">

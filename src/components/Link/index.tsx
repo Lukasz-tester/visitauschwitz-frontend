@@ -61,6 +61,8 @@ export const CMSLink: React.FC<CMSLinkType> = ({
   // Add locale prefix if missing and it's an internal link
   const isInternal =
     href.startsWith('/') &&
+    !href.startsWith('http') &&
+    !href.startsWith('#') &&
     !href.startsWith('/_next') &&
     !href.startsWith('/admin') &&
     !href.includes('://')

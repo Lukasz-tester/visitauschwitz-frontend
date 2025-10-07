@@ -36,7 +36,8 @@ import {
   Umbrella,
   UmbrellaDrops,
 } from '@/components/ui/Icons'
-import Link from 'next/link'
+import { CMSLink } from '@/components/Link'
+// import Link from 'next/link'
 
 const icons = {
   food: <Food />,
@@ -169,15 +170,15 @@ export const CallToActionBlock: React.FC<Props & { id?: string }> = ({
                 )}
               >
                 {linkTo ? (
-                  <Link
+                  <CMSLink
                     className="place-self-center"
-                    href={linkTo}
+                    url={linkTo}
                     aria-label={`Call to action: ${title}`}
-                    target={linkTo.startsWith('http') ? '_blank' : undefined}
-                    rel={linkTo.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    // target={linkTo.startsWith('http') ? '_blank' : undefined}
+                    // rel={linkTo.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
                     {content}
-                  </Link>
+                  </CMSLink>
                 ) : (
                   <div className="place-self-center">{content}</div>
                 )}

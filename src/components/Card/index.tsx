@@ -44,7 +44,8 @@ export const Card: React.FC<{
         {titleToUse && (
           <div className="prose">
             <div>
-              <CMSLink className="not-prose text-2xl" href={href} ref={link.ref}>
+              {/* TODO add inside CMSLink ref={link.ref} for clickable card area */}
+              <CMSLink className="not-prose text-2xl" url={href}>
                 {titleToUse}
               </CMSLink>
             </div>
