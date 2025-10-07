@@ -45,4 +45,11 @@ const localization = {
   ],
 }
 
+// Extract type-safe array of locale codes
+//   const locales = ['en', 'pl', 'de', 'fr', 'es', 'it', 'nl', 'ru', 'uk'] as const
+
+export const locales = ['en', 'pl'] as const
+
+export type Locale = (typeof locales)[number] // 'en' | 'pl'
+
 export default localization

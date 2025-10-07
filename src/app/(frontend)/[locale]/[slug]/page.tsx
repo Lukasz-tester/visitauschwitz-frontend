@@ -12,6 +12,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from 'payload'
+import { locales } from '@/i18n/localization'
 
 // Generate static params for export
 export async function generateStaticParams() {
@@ -21,7 +22,6 @@ export async function generateStaticParams() {
     )
     const data = await res.json()
 
-    const locales = ['en', 'pl'] // extend with your other locales if needed
     const params = locales.flatMap((locale) =>
       (data?.docs || [])
         .filter((doc: PageType) => doc.slug !== 'home')

@@ -1,12 +1,13 @@
 'use client'
 import { cn } from '@/utilities/cn'
 import useClickableCard from '@/utilities/useClickableCard'
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { Fragment } from 'react'
 
 import type { Post } from '@/payload-types'
 
 import { Media } from '@/components/Media'
+import { CMSLink } from '../Link'
 
 export const Card: React.FC<{
   alignItems?: 'center'
@@ -43,9 +44,9 @@ export const Card: React.FC<{
         {titleToUse && (
           <div className="prose">
             <div>
-              <Link className="not-prose text-2xl" href={href} ref={link.ref}>
+              <CMSLink className="not-prose text-2xl" href={href} ref={link.ref}>
                 {titleToUse}
-              </Link>
+              </CMSLink>
             </div>
           </div>
         )}

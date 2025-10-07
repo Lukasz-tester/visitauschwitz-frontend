@@ -1,11 +1,9 @@
 import { Metadata } from 'next'
 import { mergeOpenGraph } from './mergeOpenGraph'
 import type { Page, Post } from '../payload-types'
+import { locales } from '@/i18n/localization'
 
 const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
-const locales = ['en', 'pl'] as const
-// TODO - add locales when translated!
-// const locales = ['en', 'pl', 'de', 'fr', 'es', 'it', 'nl', 'ru', 'uk']
 
 // Helper to match sitemap-style slug formatting
 const getSafeSlug = (doc: Page | Post): string => {
@@ -86,8 +84,6 @@ export const generateMeta = async ({
 //   const slug = rawSlug === 'home' ? '' : rawSlug
 
 //   const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://visitauschwitz.info'
-
-//   const locales = ['en', 'pl', 'de', 'fr', 'es', 'it', 'nl', 'ru', 'uk'] as const
 
 //   // Canonical URL should match current locale (self-canonical)
 //   const canonicalUrl = `${baseUrl}/${locale}/${slug}`

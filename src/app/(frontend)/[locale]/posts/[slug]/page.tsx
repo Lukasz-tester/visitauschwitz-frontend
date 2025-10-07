@@ -15,6 +15,7 @@ import type { Post } from '@/payload-types'
 import type { TypedLocale } from 'payload'
 import PageClient from '../../[slug]/page.client'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
+import { locales } from '@/i18n/localization'
 
 type Args = {
   params: Promise<{
@@ -64,8 +65,6 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const locales = ['en', 'pl']
-
   const res = await fetch(
     `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=1000`,
   )

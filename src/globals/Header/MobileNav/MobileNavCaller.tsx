@@ -1,5 +1,4 @@
 import LocaleSwitcher from '../LocaleSwitcher'
-import Link from 'next/link'
 
 import { SearchIcon } from 'lucide-react'
 
@@ -10,6 +9,9 @@ import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { useTranslations } from 'next-intl'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
+// import Link from 'next/link'
+// import { Link } from '@/i18n/routing'
+import { CMSLink } from '@/components/Link'
 
 export const MobileNavCaller: React.FC<{
   header: HeaderType
@@ -20,9 +22,9 @@ export const MobileNavCaller: React.FC<{
   useLockBodyScroll(modalOpen)
 
   const links = {
-    '/supplement': 'tips',
+    supplement: 'tips',
     // '/posts': 'posts',
-    '/#about-me': 'about',
+    '#about-me': 'about',
     // '/contact': 'contact',
     // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
     // '/': 'books',
@@ -53,14 +55,15 @@ export const MobileNavCaller: React.FC<{
             className="pt-2 bg-card h-screen gap-6 md:w-fit md:absolute md:right-0 md:bg-card/95"
             onClick={(e) => e.stopPropagation()}
           >
-            <Link
+            <CMSLink
               aria-label="Search"
               className="w-12 h-16 flex items-center justify-center fixed top-0 right-16 "
-              href="/search"
+              url="search"
               onClick={() => setModalOpen(!modalOpen)}
             >
+              <div>FDASFDAS</div>
               <SearchIcon size={26} className="opacity-85" />
-            </Link>
+            </CMSLink>
             {/* TODO: jak ponizej daje opacity-85 to powyzej lupka przestaje byc linkiem...? */}
             <div className="flex place-items-center text-xl top-0">
               <div
@@ -81,16 +84,16 @@ export const MobileNavCaller: React.FC<{
               />
               <div className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold ">
                 {Object.entries(links).map(([href, label]) => (
-                  <Link
+                  <CMSLink
                     aria-label="Secondary Navigation"
                     key={href}
                     className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
                     onClick={() => setModalOpen(false)}
-                    href={href}
+                    url={href}
                   >
                     {t(label)}
                     {label === 'tips' && ' FAQ'}
-                  </Link>
+                  </CMSLink>
                 ))}
               </div>
             </div>
