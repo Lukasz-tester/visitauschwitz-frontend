@@ -23,7 +23,7 @@ export const MobileNavCaller: React.FC<{
     supplement: 'tips',
     // '/posts': 'posts',
     '/#about-me': 'about',
-    // '/contact': 'contact',
+    '/contact': 'contact',
     // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
     // '/': 'books',
   }
@@ -53,6 +53,7 @@ export const MobileNavCaller: React.FC<{
             className="pt-2 bg-card h-screen gap-6 md:w-fit md:absolute md:right-0 md:bg-card/95"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* TODO: Add search functionality
             <CMSLink
               aria-label="Search"
               className="w-12 h-16 flex items-center justify-center fixed top-0 right-16 "
@@ -60,7 +61,7 @@ export const MobileNavCaller: React.FC<{
               onClick={() => setModalOpen(!modalOpen)}
             >
               <SearchIcon size={26} className="opacity-85" />
-            </CMSLink>
+            </CMSLink> */}
             {/* TODO: jak ponizej daje opacity-85 to powyzej lupka przestaje byc linkiem...? */}
             <div className="flex place-items-center text-xl top-0">
               <div

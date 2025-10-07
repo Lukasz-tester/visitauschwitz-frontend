@@ -1,7 +1,6 @@
 import { LatLngExpression } from 'leaflet'
 import { ReactNode } from 'react'
 import MapLink from './MapLink' // Adjust the import path as needed
-import { CMSLink } from '../Link'
 
 export const buildings: {
   [slug: string]: {
@@ -45,9 +44,6 @@ export const buildings: {
         <br /> <br />
         <strong>
           <MapLink url="tour#block-5">See block 5 →</MapLink>
-          <MapLink url="https://www.google.com/">google maplink →</MapLink>
-          <CMSLink url="tour#block-5">See block 5 cms →</CMSLink>
-          <CMSLink url="https://www.google.com/">google cms →</CMSLink>
         </strong>
       </>
     ),

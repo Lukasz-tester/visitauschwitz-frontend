@@ -1,4 +1,4 @@
-'use client' //just for logging
+// 'use client' //just for logging
 
 import { Button, type ButtonProps } from '@/components/ui/button'
 import { cn } from 'src/utilities/cn'
@@ -6,7 +6,7 @@ import { useLocale } from 'next-intl'
 import React from 'react'
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 
 import type { Page, Post } from '@/payload-types'
 // import { Link } from '@/i18n/routing'
@@ -63,13 +63,14 @@ export const CMSLink: React.FC<CMSLinkType> = ({
   }
 
   // inside your CMSLink component
-  const pathname = usePathname()
+  // const pathname = usePathname()
 
   // INTERNAL LINKING - THE SAME PAGE
   if (href.startsWith('#')) {
-    const fullHref = `${pathname}${href}` // combine current path with hash
+    // const fullHref = `${pathname}${href}` // combine current path with hash
     return (
-      <Link href={fullHref} className={cn(className)}>
+      //fullHref below instead of href
+      <Link href={href} className={cn(className)}>
         {label}
         {children}
       </Link>
