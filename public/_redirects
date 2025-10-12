@@ -1,0 +1,5 @@
+/en        /en/index.html  200
+/pl        /pl/index.html  200
+/en/*      /en/:splat/index.html  200
+/pl/*      /pl/:splat/index.html  200
+/*         /index.html  200

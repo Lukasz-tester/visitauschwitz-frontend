@@ -1,42 +1,39 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 import createNextIntlPlugin from 'next-intl/plugin'
+// import redirects from './redirects.js'
 
 const withNextIntl = createNextIntlPlugin()
 
-import redirects from './redirects.js'
+const NEXT_PUBLIC_SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || '/'
 
-const NEXT_PUBLIC_SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+// Build remotePatterns safely
+const imageSources = [
+  NEXT_PUBLIC_SERVER_URL,
+  'https://**.vercel-storage.com',
+  'https://raw.githubusercontent.com',
+  'https://images.visitauschwitz.info', // CF R2
+]
+
+const remotePatterns = imageSources
+  .filter((item) => item.startsWith('http'))
+  .map((item) => {
+    const url = new URL(item)
+    return {
+      protocol: url.protocol.replace(':', ''),
+      hostname: url.hostname,
+    }
+  })
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      ...[
-        NEXT_PUBLIC_SERVER_URL,
-        'https://**.vercel-storage.com',
-        'https://raw.githubusercontent.com',
-      ].map((item) => {
-        const url = new URL(item)
-
-        return {
-          hostname: url.hostname,
-          protocol: url.protocol.replace(':', ''),
-        }
-      }),
-    ],
-  },
-  output: 'export', // 👈 generates static HTML during build
-  images: {
-    unoptimized: true, // since Cloudflare Images handles optimization
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.visitauschwitz.info', // your CF R2 domain
-      },
-    ],
-  },
+  output: 'export', // static HTML export
+  trailingSlash: true, // generate /index.html in folders
   reactStrictMode: true,
-  redirects,
+  images: {
+    unoptimized: true, // CF Images handles optimization
+    remotePatterns,
+  },
+  // redirects,
 }
 
 export default withNextIntl(withPayload(nextConfig))

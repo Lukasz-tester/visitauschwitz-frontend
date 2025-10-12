@@ -4,10 +4,8 @@ export const dynamic = 'force-static'
 
 import type { Metadata } from 'next'
 import React from 'react'
-// import { notFound } from "next/navigation";
 import { RelatedPosts } from '@/blocks/RelatedPosts/Component'
 import { PayloadRedirects } from '@/components/PayloadRedirects'
-import RichText from '@/components/RichText'
 import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
