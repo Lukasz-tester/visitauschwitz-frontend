@@ -96,7 +96,7 @@ export const CMSLink: React.FC<CMSLinkType> = ({
     href = `/${locale}${href}`
   }
 
-  console.log(`[CMSLink] locale=${locale}, href=${href}`)
+  // console.log(`[CMSLink] locale=${locale}, href=${href}`)
 
   const linkProps: LinkProps = {
     href,
