@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useMapModal } from '@/providers/MapModalContext'
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
 
 interface MapLinkProps {
   url: string
@@ -14,6 +15,8 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
   const [isMounted, setIsMounted] = useState(false)
   const router = useRouter()
   const { setCurrentUrl } = useMapModal() // Get the setCurrentUrl from context
+
+  const locale = useLocale()
 
   // Ensure useRouter is only used once the component is mounted
   useEffect(() => {
@@ -54,11 +57,11 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
       </Link>
     )
   }
-
   // If the link is internal, handle it using Next.js router
+  const localizedUrl = `/${locale}${url}`
   return (
-    //TODO improve the lonk looks!
-    <Link href={url} onClick={handleClick} className="font-bold text-lg">
+    //TODO improve the link looks!
+    <Link href={localizedUrl} onClick={handleClick} className="font-bold text-lg">
       {children}
     </Link>
   )
