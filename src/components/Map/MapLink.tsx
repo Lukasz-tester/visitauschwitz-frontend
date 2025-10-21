@@ -17,6 +17,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
   const { setCurrentUrl } = useMapModal() // Get the setCurrentUrl from context
 
   const locale = useLocale()
+  const localizedUrl = `/${locale}${url}`
 
   // Ensure useRouter is only used once the component is mounted
   useEffect(() => {
@@ -39,7 +40,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
       window.open(url, '_blank')
     } else {
       // For internal links, use Next.js router and close the map modal
-      router.push(url)
+      router.push(localizedUrl)
       setCurrentUrl(null) // Close the map modal by setting the current URL to null
     }
   }
@@ -58,7 +59,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
     )
   }
   // If the link is internal, handle it using Next.js router
-  const localizedUrl = `/${locale}${url}`
+
   return (
     //TODO improve the link looks!
     <Link href={localizedUrl} onClick={handleClick} className="font-bold text-lg">
