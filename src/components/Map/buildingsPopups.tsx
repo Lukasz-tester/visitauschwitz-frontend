@@ -23,7 +23,7 @@ export const buildings: {
         Details about the mass murder of Jews at Auschwitz.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#block-4">See block 4 →</MapLink>
+          <MapLink url="tour#block-4">See block 4 →</MapLink>
         </strong>
       </>
     ),
@@ -43,7 +43,7 @@ export const buildings: {
         Personal belongings of victims.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#block-5">See block 5 →</MapLink>
+          <MapLink url="tour#block-5">See block 5 →</MapLink>
         </strong>
       </>
     ),
@@ -63,7 +63,7 @@ export const buildings: {
         How prisoners lived inside the camp.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#block-6">See block 6 →</MapLink>
+          <MapLink url="tour#block-6">See block 6 →</MapLink>
         </strong>
       </>
     ),
@@ -83,7 +83,7 @@ export const buildings: {
         Example of typical prisoner accommodation.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#block-7">See block 7 →</MapLink>
+          <MapLink url="tour#block-7">See block 7 →</MapLink>
         </strong>
       </>
     ),
@@ -107,7 +107,7 @@ export const buildings: {
         Internal prison, torture, and executions.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#block-11">See block 11 →</MapLink>
+          <MapLink url="tour#block-11">See block 11 →</MapLink>
         </strong>
       </>
     ),
@@ -128,7 +128,7 @@ export const buildings: {
         Place of mass extermination and body burning.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#gas-chamber">See the place →</MapLink>
+          <MapLink url="tour#gas-chamber">See the place →</MapLink>
         </strong>
       </>
     ),
@@ -143,7 +143,7 @@ export const buildings: {
         The infamous entrance to Auschwitz I.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#auschwitz-gate">See the gate →</MapLink>
+          <MapLink url="tour#auschwitz-gate">See the gate →</MapLink>
         </strong>
       </>
     ),
@@ -158,7 +158,7 @@ export const buildings: {
         Daily roll calls under brutal conditions.
         <br /> <br />
         <strong>
-          <MapLink url="/tour#roll-call">See the square →</MapLink>
+          <MapLink url="tour#roll-call">See the square →</MapLink>
         </strong>
       </>
     ),

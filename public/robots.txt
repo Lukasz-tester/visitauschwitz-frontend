@@ -1,19 +1,33 @@
-# Allow Googlebot
+# Major search engines
 User-agent: Googlebot
 Disallow:
-
-# Allow Bingbot
 User-agent: Bingbot
 Disallow:
+User-agent: DuckDuckBot
+Disallow:
+User-agent: Yandex
+Disallow:
 
-# Block all other bots
+# Social media and chat previews
+User-agent: facebookexternalhit
+Disallow:
+User-agent: WhatsApp
+Disallow:
+User-agent: Twitterbot
+Disallow:
+User-agent: LinkedInBot
+Disallow:
+User-agent: Discordbot
+Disallow:
+User-agent: Slackbot
+Disallow:
+
+# Block everyone else
 User-agent: *
 Disallow: /
-
-Crawl-delay: 10
 Disallow: /search
 Disallow: /admin
 Disallow: /_next/
 Disallow: /api/
 
-Sitemap: https://visitauschwitz.info/sitemap.xml
+Sitemap: https://www.visitauschwitz.info/sitemap.xml

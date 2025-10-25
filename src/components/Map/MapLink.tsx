@@ -17,7 +17,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
   const { setCurrentUrl } = useMapModal() // Get the setCurrentUrl from context
 
   const locale = useLocale()
-  const localizedUrl = `/${locale}${url}`
+  const localizedUrl = `/${locale}/${url}`
 
   // Ensure useRouter is only used once the component is mounted
   useEffect(() => {
