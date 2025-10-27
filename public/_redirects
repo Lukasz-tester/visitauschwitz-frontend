@@ -1,9 +1,8 @@
-/                /en/                301!
-/sitemap.xml     /sitemap.xml        200
+/sitemap.xml   /sitemap.xml   200
+/              /en/           301!
 
-/en              /en/index.html      200
-/pl              /pl/index.html      200
-/en/*            /en/:splat/index.html 200
-/pl/*            /pl/:splat/index.html 200
-
-/*               https://www.visitauschwitz.info/:splat 301!
+/en            /en/index.html 200
+/pl            /pl/index.html 200
+/en/*          /en/:splat/index.html 200
+/pl/*          /pl/:splat/index.html 200
+/*             /index.html    200
