@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import { scrolledFromTop, useLockBodyScroll } from '@/utilities/helpers'
+import { useScrolledFromTop, useLockBodyScroll } from '@/utilities/helpers'
 import { MapPlaceholder } from '../ui/Icons'
 import { X } from 'lucide-react'
 import { useMapModal } from '@/providers/MapModalContext'
@@ -43,7 +43,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   }
 
   return (
-    <div className={`z-50 fixed ${scrolledFromTop() ? '' : 'hidden'}`}>
+    <div className={`z-50 fixed ${useScrolledFromTop() ? '' : 'hidden'}`}>
       <button
         className={`z-50 ease-in-out duration-1000 ${
           modalOpen

@@ -138,7 +138,7 @@ export const buildings: {
     positions: [[50.027448, 19.203385]], // Coordinates for the "Arbeit Macht Frei" gate
     popup: (
       <>
-        <strong>Main Gate: "Arbeit Macht Frei"</strong>
+        <strong>Main Gate: &quot;Arbeit Macht Frei&quot;</strong>
         <br />
         The infamous entrance to Auschwitz I.
         <br /> <br />

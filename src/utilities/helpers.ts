@@ -18,11 +18,11 @@ export const useMediaQuery = (query) => {
     mediaMatch.addEventListener('change', handler)
 
     return () => mediaMatch.removeEventListener('change', handler)
-  })
+  }, [query])
   return matches
 }
 
-export const scrolledFromTop = () => {
+export const useScrolledFromTop = () => {
   const [visible, setVisible] = useState(false)
 
   const scrolledDown = () => {

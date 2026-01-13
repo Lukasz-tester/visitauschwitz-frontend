@@ -1,0 +1,21 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  },
+  "ignorePatterns": [
+    ".tmp",
+    "**/.git",
+    "**/.hg",
+    "**/.pnp.*",
+    "**/.svn",
+    "**/.yarn/**",
+    "**/build",
+    "**/dist/**",
+    "**/node_modules",
+    "**/temp",
+    "**/out",
+    "playwright.config.ts",
+    "jest.config.js"
+  ]
+}

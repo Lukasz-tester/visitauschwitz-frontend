@@ -130,3 +130,5 @@ export const ContentBlock: React.FC<{ id?: string } & Props> = React.memo(
     )
   },
 )
+
+ContentBlock.displayName = 'ContentBlock'

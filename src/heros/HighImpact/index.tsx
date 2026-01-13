@@ -28,8 +28,8 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
               {links.map(({ link }, i) => {
                 return (
                   <li key={i}>
-                    <Button variant={link.appearance}>
-                      {link.url && <Link href={link.url}>{link.label}</Link>}
+                    <Button asChild variant={link.appearance}>
+                      <Link href={link.url || '#'}>{link.label}</Link>
                     </Button>
                   </li>
                 )
@@ -56,3 +56,5 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
     </div>
   )
 })
+
+HighImpactHero.displayName = 'HighImpactHero'
