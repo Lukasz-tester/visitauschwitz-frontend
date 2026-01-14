@@ -21,6 +21,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { CookiePopup } from '@/components/Cookies/cookiePopup'
+import Script from 'next/script' //'next/dist/client/script'
 
 type Args = {
   children: React.ReactNode
@@ -43,8 +44,15 @@ export default async function RootLayout({ children, params }: Args) {
     <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Google Analytics tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XR28GR07KB"></script>
-        <script
+        <Script
+          id="google-gtag"
+          strategy="beforeInteractive"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XR28GR07KB"
+        ></Script>
+        <Script
+          id="google-tag-analytics"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -54,18 +62,20 @@ export default async function RootLayout({ children, params }: Args) {
           `,
           }}
         />
-        {/* <!-- End Analytics Tag --> */}
-        {/* <!-- Google Tag Manager --> */}
-        <script
+        {/* End Analytics Tag */}
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-MQ9VGDQB');`,
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MQ9VGDQB');`,
           }}
         />
-        {/* <!-- End Google Tag Manager --> */}
+        {/* End Tag Manager */}
         <InitTheme />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
       </head>
