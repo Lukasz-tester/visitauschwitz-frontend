@@ -8,14 +8,12 @@ export const dynamic = 'force-static'
 // import { cn } from 'src/utilities/cn'
 import React from 'react'
 
-import { AdminBar } from '@/components/AdminBar'
 import { Footer } from '@/globals/Footer/Component'
 import { Header } from '@/globals/Header/Component'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { draftMode } from 'next/headers'
 import { TypedLocale } from 'payload'
 
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -39,7 +37,6 @@ export default async function RootLayout({ children, params }: Args) {
   }
   setRequestLocale(locale)
 
-  const { isEnabled } = await draftMode()
   const messages = await getMessages()
 
   return (
@@ -51,11 +48,6 @@ export default async function RootLayout({ children, params }: Args) {
       <body>
         <Providers>
           <NextIntlClientProvider messages={messages}>
-            <AdminBar
-              adminBarProps={{
-                preview: isEnabled,
-              }}
-            />
             <LivePreviewListener />
             <Header locale={locale} />
             {children}
