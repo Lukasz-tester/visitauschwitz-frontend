@@ -1,5 +1,5 @@
 import { LatLngExpression } from 'leaflet'
-// import Link from 'next/link'
+import { ReactNode } from 'react'
 import MapLink from './MapLink'
 
 export const carparkMuzeum: LatLngExpression = [50.02997, 19.20587]
@@ -13,60 +13,62 @@ export const carparkJaracza: LatLngExpression = [50.03236, 19.19818]
 export const carparkRadius = 25
 export const carparkColor = 'blue'
 
-export const parkingLots = [
+export const getParkingLots = (
+  t: (key: string) => string,
+): { center: LatLngExpression; popupContent: ReactNode }[] => [
   {
     center: carparkMuzeum,
     popupContent: (
       <>
-        Car: 20 PLN
+        {t('map-parking-museum-car')}
         <br />
-        Minibus: 30 PLN
+        {t('map-parking-museum-minibus')}
         <br />
-        Bus: 40 PLN
+        {t('map-parking-museum-bus')}
         <br />
-        Camper: 90 PLN
+        {t('map-parking-museum-camper')}
         <br />
-        Motorcycle: 15 PLN
+        {t('map-parking-museum-motorcycle')}
         <br />
         <br />
         <strong>
-          <MapLink url="museum#main-entry">See the location →</MapLink>
+          <MapLink url="museum#main-entry">{t('map-parking-museum-link')}</MapLink>
         </strong>
       </>
     ),
   },
   {
     center: carparkSzajny,
-    popupContent: <p>Józefa Szajny Street parking lot.</p>,
+    popupContent: <p>{t('map-parking-szajny')}</p>,
   },
   {
     center: carparkImperiale,
-    popupContent: <p>Hotel Imperiale parking lot.</p>,
+    popupContent: <p>{t('map-parking-imperiale')}</p>,
   },
   {
     center: carparkBirkenau1,
-    popupContent: <p>40 PLN for vehicles not higher than 240 cm and 80 PLN for others.</p>,
+    popupContent: <p>{t('map-parking-birkenau1')}</p>,
   },
   {
     center: carparkBirkenau2,
     popupContent: (
       <>
-        Car (up to 20 people): 20 PLN
+        {t('map-parking-birkenau2-car')}
         <br />
-        Camper: 30 PLN
+        {t('map-parking-birkenau2-camper')}
         <br />
-        Bus: 40 PLN
+        {t('map-parking-birkenau2-bus')}
         <br />
-        Motorcycle: 10 PLN
+        {t('map-parking-birkenau2-motorcycle')}
       </>
     ),
   },
   {
     center: carparkRide,
-    popupContent: <p>Park & Ride by the railway station.</p>,
+    popupContent: <p>{t('map-parking-ride')}</p>,
   },
   {
     center: carparkJaracza,
-    popupContent: <p>Stefana Jaracza Street parking lot.</p>,
+    popupContent: <p>{t('map-parking-jaracza')}</p>,
   },
 ]

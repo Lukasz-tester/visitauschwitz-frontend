@@ -8,4 +8,7 @@
 
 - remake the map with localized names
 - replace buildings with the ones actually open
-- remake modal so it remembers where you closed
+
+## Contact
+
+- edit the reply so it looks nice

@@ -18,6 +18,7 @@ type MapCallerProps = {
 
 function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   const [modalOpen, setModalOpen] = useState(false)
+  const [hasOpened, setHasOpened] = useState(false)
   const { currentUrl, setCurrentUrl } = useMapModal()
 
   useLockBodyScroll(modalOpen)
@@ -34,6 +35,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
       // Open modal and set currentUrl
       setCurrentUrl('/map') // Use any non-null string
       setModalOpen(true)
+      setHasOpened(true)
       setMobileNavOpen(false)
     } else {
       // Close modal and reset currentUrl
@@ -67,9 +69,9 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
         </div>
       </button>
 
-      {/* Modal */}
-      {modalOpen && currentUrl && (
-        <div className="fixed inset-0">
+      {/* Modal - stays mounted after first open to preserve map state */}
+      {hasOpened && (
+        <div className={`fixed inset-0 ${modalOpen && currentUrl ? '' : 'invisible pointer-events-none'}`}>
           <LazyMap />
         </div>
       )}
