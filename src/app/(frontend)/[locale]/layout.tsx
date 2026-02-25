@@ -75,7 +75,7 @@ export default async function RootLayout({ children, params }: Args) {
             })(window,document,'script','dataLayer','GTM-MQ9VGDQB');`,
           }}
         />
-        {/* End Tag Manager */}
+        {/* End Google Tag Manager */}
         <InitTheme />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
       </head>
