@@ -1,10 +1,9 @@
 import { getCachedGlobal } from '@/utilities/getGlobals'
 import React from 'react'
 
-import type { Footer } from '@/payload-types'
+import type { Footer, TypedLocale } from '@/payload-types'
 
 import { CMSLink } from '@/components/Link'
-import { TypedLocale } from 'payload'
 import { LogoLink } from '../../components/ui/logoLink'
 
 export async function Footer({ locale }: { locale: TypedLocale }) {

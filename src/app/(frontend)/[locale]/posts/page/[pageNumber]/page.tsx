@@ -10,7 +10,7 @@ import { CollectionArchive } from '@/components/CollectionArchive'
 import { PageRange } from '@/components/PageRange'
 import { Pagination } from '@/components/Pagination'
 import { getTranslations } from 'next-intl/server'
-import type { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 import type { Post } from '@/payload-types'
 import { locales } from '@/i18n/localization'
 

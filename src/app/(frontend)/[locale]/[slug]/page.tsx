@@ -11,7 +11,7 @@ import PageClient from './page.client'
 import { generateMeta } from '@/utilities/generateMeta'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import type { Page as PageType } from '@/payload-types'
-import type { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'
 
 // Generate static params for export

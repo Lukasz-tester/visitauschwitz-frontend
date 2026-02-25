@@ -4,7 +4,6 @@ import { CodeBlock, CodeBlockProps } from '@/blocks/Code/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component.client'
 import React, { Fragment, JSX } from 'react'
 import { CMSLink } from '@/components/Link'
-import { DefaultNodeTypes, SerializedBlockNode } from '@payloadcms/richtext-lexical'
 import type { BannerBlock as BannerBlockProps } from '@/payload-types'
 // import {
 //   OpeningHoursBlock,
@@ -21,6 +20,91 @@ import {
   IS_UNDERLINE,
 } from './nodeFormat'
 import type { Page } from '@/payload-types'
+
+// Inline Lexical node type definitions (replaces @payloadcms/richtext-lexical imports)
+type SerializedTextNode = {
+  type: 'text'
+  text: string
+  format: number
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedLinebreakNode = {
+  type: 'linebreak'
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedParagraphNode = {
+  type: 'paragraph'
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedHeadingNode = {
+  type: 'heading'
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedListNode = {
+  type: 'list'
+  tag: 'ul' | 'ol'
+  listType: 'bullet' | 'number' | 'check'
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedListItemNode = {
+  type: 'listitem'
+  checked?: boolean
+  value?: number
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedQuoteNode = {
+  type: 'quote'
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedLinkNode = {
+  type: 'link'
+  fields: {
+    linkType: 'internal' | 'custom'
+    newTab?: boolean
+    doc?: unknown
+    url?: string
+  }
+  children: NodeTypes[]
+  version: number
+  [k: string]: unknown
+}
+
+type SerializedBlockNode<T = unknown> = {
+  type: 'block'
+  fields: T & { blockType: string }
+  version: number
+  [k: string]: unknown
+}
+
+type DefaultNodeTypes =
+  | SerializedTextNode
+  | SerializedLinebreakNode
+  | SerializedParagraphNode
+  | SerializedHeadingNode
+  | SerializedListNode
+  | SerializedListItemNode
+  | SerializedQuoteNode
+  | SerializedLinkNode
 
 export type NodeTypes =
   | DefaultNodeTypes

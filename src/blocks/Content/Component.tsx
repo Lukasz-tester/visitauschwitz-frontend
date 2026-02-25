@@ -19,8 +19,7 @@ type Props = Extract<Page['layout'][0], { blockType: 'content' }> & {
   fullUrl: string // Already passed URL as a prop
 }
 
-export const ContentBlock: React.FC<{ id?: string } & Props> = React.memo(
-  ({
+const ContentBlockInner: React.FC<{ id?: string } & Props> = ({
     columns,
     heading,
     changeBackground,
@@ -134,5 +133,6 @@ export const ContentBlock: React.FC<{ id?: string } & Props> = React.memo(
         </script>
       </section>
     )
-  },
-)
+  }
+
+export const ContentBlock = React.memo(ContentBlockInner)

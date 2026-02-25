@@ -10,11 +10,10 @@ import React from 'react'
 
 import { Footer } from '@/globals/Footer/Component'
 import { Header } from '@/globals/Header/Component'
-import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
@@ -92,7 +91,6 @@ export default async function RootLayout({ children, params }: Args) {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Providers>
           <NextIntlClientProvider messages={messages}>
-            <LivePreviewListener />
             <Header locale={locale} />
             {children}
             <Footer locale={locale} />

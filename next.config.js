@@ -1,4 +1,3 @@
-import { withPayload } from '@payloadcms/next/withPayload'
 import createNextIntlPlugin from 'next-intl/plugin'
 // import redirects from './redirects.js'
 
@@ -36,4 +35,4 @@ const nextConfig = {
   // redirects,
 }
 
-export default withNextIntl(withPayload(nextConfig))
+export default withNextIntl(nextConfig)

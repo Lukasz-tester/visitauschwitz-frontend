@@ -1,5 +1,5 @@
 'use client'
-import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
+import type { Form as FormType } from './types'
 
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useState } from 'react'

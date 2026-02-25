@@ -8,7 +8,7 @@ import { CollectionArchive } from '@/components/CollectionArchive'
 import { PageRange } from '@/components/PageRange'
 import { Pagination } from '@/components/Pagination'
 import { getTranslations } from 'next-intl/server'
-import type { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 import type { Post } from '@/payload-types'
 import PageClient from '../[slug]/page.client'
 

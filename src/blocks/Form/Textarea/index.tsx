@@ -1,4 +1,4 @@
-import type { TextField } from '@payloadcms/plugin-form-builder/types'
+import type { TextareaField } from '../types'
 import type { FieldErrorsImpl, FieldValues, UseFormRegister } from 'react-hook-form'
 
 import { Label } from '@/components/ui/label'
@@ -9,7 +9,7 @@ import { Error } from '../Error'
 import { Width } from '../Width'
 
 export const Textarea: React.FC<
-  TextField & {
+  TextareaField & {
     errors: Partial<
       FieldErrorsImpl<{
         [x: string]: any

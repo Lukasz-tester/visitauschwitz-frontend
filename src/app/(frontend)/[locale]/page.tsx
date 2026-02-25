@@ -9,7 +9,7 @@ import { RenderHero } from '@/heros/RenderHero'
 import PageClient from './[slug]/page.client'
 import { generateMeta } from '@/utilities/generateMeta'
 import type { Page as PageType } from '@/payload-types'
-import type { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 
 type Args = {

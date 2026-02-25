@@ -1,6 +1,6 @@
 import { useLocale } from 'next-intl'
 import localization from '@/i18n/localization'
-import { TypedLocale } from 'payload'
+import type { TypedLocale } from '@/payload-types'
 import { usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
 import { useTransition } from 'react'
