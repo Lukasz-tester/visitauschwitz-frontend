@@ -22,7 +22,8 @@ type Args = {
 export default async function Page({ params: paramsPromise }: Args) {
   const { slug = 'home', locale = 'en' } = await paramsPromise
   const url = '/' + slug
-  const fullUrl = `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/`
+  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
+  const fullUrl = `${siteUrl}/${locale}`
 
   const page: PageType | null = await fetchPayloadData('pages', slug, locale)
 

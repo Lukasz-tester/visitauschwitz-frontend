@@ -40,10 +40,12 @@ export function extractContentSchema(block, fullUrl) {
     const combinedText = (textStart + ' ' + textEnd).trim()
 
     // Check for media items with a valid media URL
-    const mediaUrl =
-      column.enableMedia && column.media?.url
-        ? process.env.PAYLOAD_PUBLIC_SERVER_URL + column.media.url
-        : undefined
+    const rawMediaUrl = column.enableMedia && column.media?.url ? column.media.url : undefined
+    const mediaUrl = rawMediaUrl
+      ? rawMediaUrl.startsWith('http')
+        ? rawMediaUrl
+        : `${process.env.CMS_PUBLIC_SERVER_URL}${rawMediaUrl}`
+      : undefined
 
     const mediaName = column.media?.filename
     const mediaDescription = column.media?.alt

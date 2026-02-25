@@ -15,6 +15,52 @@ import PageClient from '../../[slug]/page.client'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { locales } from '@/i18n/localization'
 
+const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
+const r2BaseUrl = process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info'
+
+function buildArticleSchema(post: Post, locale: string, slug: string) {
+  const metaImage = post.meta?.image
+  let image: string | undefined
+
+  if (metaImage && typeof metaImage === 'object') {
+    if ('filename' in metaImage && typeof metaImage.filename === 'string') {
+      const webpFilename = metaImage.filename.endsWith('.webp')
+        ? metaImage.filename
+        : metaImage.filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')
+      image = `${r2BaseUrl}/${webpFilename}`
+    } else if ('url' in metaImage && typeof metaImage.url === 'string') {
+      image = metaImage.url.startsWith('http')
+        ? metaImage.url
+        : `${baseUrl}${metaImage.url}`
+    }
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    ...(post.meta?.description ? { description: post.meta.description } : {}),
+    ...(image ? { image } : {}),
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+    ...((post as any).updatedAt ? { dateModified: (post as any).updatedAt } : {}),
+    ...(post.populatedAuthors?.length
+      ? {
+          author: post.populatedAuthors.map((a: any) => ({
+            '@type': 'Person',
+            name: a.name,
+          })),
+        }
+      : {}),
+    publisher: {
+      '@type': 'Organization',
+      name: 'Auschwitz Visiting Guide',
+      url: baseUrl,
+    },
+    url: `${baseUrl}/${locale}/posts/${slug}`,
+    inLanguage: locale,
+  }
+}
+
 type Args = {
   params: Promise<{
     slug: string
@@ -25,6 +71,8 @@ type Args = {
 export default async function PostPage({ params }: Args) {
   const { slug, locale = 'en' } = await params
   const url = `/posts/${slug}`
+  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
+  const fullUrl = `${siteUrl}/${locale}/posts/${slug}`
 
   // Use the helper (static-generation friendly)
   const post = await fetchPayloadData('posts', slug, locale)
@@ -35,14 +83,19 @@ export default async function PostPage({ params }: Args) {
 
   const { layout } = post
 
+  const articleSchema = buildArticleSchema(post as Post, locale, slug)
+
   return (
     <article className="pt-16 pb-16">
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify(articleSchema)}
+      </script>
       <PageClient />
       <PayloadRedirects disableNotFound url={url} />
       <PostHero post={post as Post} />
 
       <div className="container max-w-[50rem] pt-8">
-        <RenderBlocks blocks={layout} locale={locale} url={url} />
+        <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
       </div>
 
       {((post as Post).relatedPosts ?? []).length > 0 && (

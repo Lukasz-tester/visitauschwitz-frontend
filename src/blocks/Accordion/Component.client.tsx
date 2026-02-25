@@ -65,12 +65,13 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
     !isFAQ && fullUrl
       ? {
           '@context': 'https://schema.org',
-          '@type': 'WebPage',
+          '@type': 'ItemList',
           name: blockName || 'Accordion Section',
           url: fullUrl,
-          mainEntity: accordionItems?.map((item) => ({
-            '@type': 'WebPageElement',
-            headline: removeSpecialChars(item.question ?? 'Untitled Item'),
+          itemListElement: accordionItems?.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: removeSpecialChars(item.question ?? 'Untitled Item'),
             url: `${fullUrl}#accordion-item-${item.id}`,
             description: removeSpecialChars(extractTextFromRichText(item.answer)),
           })),
