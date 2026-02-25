@@ -2,7 +2,7 @@
 
 ## Schema
 
-- fix the script ld+json so they matter in search
+- check linked in profile in schema builder
 
 ## Map
 
