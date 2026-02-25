@@ -37,12 +37,18 @@ export const ArchiveBlock: React.FC<
         ? `&where[categories][in]=${flattenedCategories.join(',')}`
         : ''
 
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL}/api/posts?limit=${limit}&locale=${locale}&depth=1${categoryParam}`,
-      { next: { revalidate: false } },
-    )
-    const data = await res.json()
-    posts = data?.docs ?? []
+    try {
+      const res = await fetch(
+        `${process.env.CMS_PUBLIC_SERVER_URL}/api/posts?limit=${limit}&locale=${locale}&depth=1${categoryParam}`,
+        { next: { revalidate: false } },
+      )
+      if (res.ok) {
+        const data = await res.json()
+        posts = data?.docs ?? []
+      }
+    } catch {
+      // CMS unavailable, posts will remain empty
+    }
   } else {
     if (selectedDocs?.length) {
       const filteredSelectedPosts = selectedDocs.map((post) => {

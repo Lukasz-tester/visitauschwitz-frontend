@@ -81,24 +81,29 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  // Fetch once to get totalPages
-  const res = await fetch(
-    `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=12`,
-  )
+  try {
+    // Fetch once to get totalPages
+    const res = await fetch(
+      `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=12`,
+    )
 
-  if (!res.ok) {
-    console.error('Failed to fetch posts for static params')
+    if (!res.ok) {
+      console.error('Failed to fetch posts for static params:', res.status)
+      return []
+    }
+
+    const data = await res.json()
+    const pages: { locale: string; pageNumber: string }[] = []
+
+    for (const locale of locales) {
+      for (let i = 1; i <= (data.totalPages ?? 1); i++) {
+        pages.push({ locale, pageNumber: String(i) })
+      }
+    }
+
+    return pages
+  } catch (err) {
+    console.error('Error generating static params for post pages:', err)
     return []
   }
-
-  const data = await res.json()
-  const pages: { locale: string; pageNumber: string }[] = []
-
-  for (const locale of locales) {
-    for (let i = 1; i <= (data.totalPages ?? 1); i++) {
-      pages.push({ locale, pageNumber: String(i) })
-    }
-  }
-
-  return pages
 }

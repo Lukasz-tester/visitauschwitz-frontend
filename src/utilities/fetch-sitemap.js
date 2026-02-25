@@ -20,7 +20,12 @@ async function main() {
     console.log('✅ Sitemap saved to public/sitemap.xml')
   } catch (err) {
     console.error(err)
-    process.exit(1)
+    const existing = path.resolve('./public/sitemap.xml')
+    if (fs.existsSync(existing)) {
+      console.log('⚠️  Using existing sitemap.xml')
+    } else {
+      console.log('⚠️  No existing sitemap.xml found, skipping')
+    }
   }
 }
 

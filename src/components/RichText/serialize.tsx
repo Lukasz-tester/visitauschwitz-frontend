@@ -196,7 +196,7 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
 
           switch (blockType) {
             case 'cta':
-              return <CallToActionBlock key={index} {...block} />
+              return <CallToActionBlock key={index} {...block} id={block.id ?? undefined} />
             // case 'oh':
             //   return <OpeningHoursBlock key={index} {...block} />
             case 'mediaBlock':
@@ -206,6 +206,7 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                   imgClassName="m-0"
                   key={index}
                   {...block}
+                  id={block.id ?? undefined}
                   captionClassName="mx-auto max-w-[48rem]"
                   enableGutter={false}
                   disableInnerContainer={true}

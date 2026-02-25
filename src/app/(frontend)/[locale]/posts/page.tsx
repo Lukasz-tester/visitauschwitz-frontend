@@ -32,12 +32,22 @@ export default async function Page({ params }: Args) {
     console.error('Failed to fetch posts:', res.statusText)
     return (
       <div className="container pt-24 pb-24 text-center text-red-600">
-        {t('Error loading posts')}
+        Error loading posts ({locale})
       </div>
     )
   }
 
-  const posts = await res.json()
+  let posts
+  try {
+    posts = await res.json()
+  } catch {
+    console.error('Failed to parse posts response as JSON')
+    return (
+      <div className="container pt-24 pb-24 text-center text-red-600">
+        Error loading posts ({locale})
+      </div>
+    )
+  }
 
   return (
     <div className="pt-24 pb-24">

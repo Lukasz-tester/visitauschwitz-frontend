@@ -50,7 +50,7 @@ export const FormBlock: React.FC<
   } = props
 
   const formMethods = useForm({
-    defaultValues: buildInitialFormState(formFromProps.fields),
+    defaultValues: buildInitialFormState(formFromProps.fields ?? []),
   })
   const {
     control,
@@ -139,7 +139,7 @@ export const FormBlock: React.FC<
           <RichText className="mb-8" content={introContent} enableGutter={false} />
         )}
         {!isLoading && hasSubmitted && confirmationType === 'message' && (
-          <RichText content={confirmationMessage} />
+          <RichText content={confirmationMessage as Record<string, any>} />
         )}
         {isLoading && !hasSubmitted && <p>{t('loading')}</p>}
         {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}

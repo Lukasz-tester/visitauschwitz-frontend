@@ -21,6 +21,10 @@ export async function generateStaticParams() {
     const res = await fetch(
       `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/pages?limit=1000`,
     )
+    if (!res.ok) {
+      console.error('Failed to fetch pages for static params:', res.status)
+      return []
+    }
     const data = await res.json()
 
     const params = locales.flatMap((locale) =>

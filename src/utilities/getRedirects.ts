@@ -1,12 +1,21 @@
 import { unstable_cache } from 'next/cache'
 
 export async function getRedirects() {
-  const res = await fetch(
-    `${process.env.CMS_PUBLIC_SERVER_URL}/api/redirects?limit=0`,
-    { next: { revalidate: false } },
-  )
-  const data = await res.json()
-  return data?.docs ?? []
+  try {
+    const res = await fetch(
+      `${process.env.CMS_PUBLIC_SERVER_URL}/api/redirects?limit=0`,
+      { next: { revalidate: false } },
+    )
+    if (!res.ok) {
+      console.error('Failed to fetch redirects:', res.status)
+      return []
+    }
+    const data = await res.json()
+    return data?.docs ?? []
+  } catch (err) {
+    console.error('Error fetching redirects:', err)
+    return []
+  }
 }
 
 /**

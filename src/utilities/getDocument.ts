@@ -2,12 +2,21 @@ import { unstable_cache } from 'next/cache'
 
 async function getDocument(collection: string, slug: string, locale?: string) {
   const localeParam = locale ? `&locale=${locale}` : ''
-  const res = await fetch(
-    `${process.env.CMS_PUBLIC_SERVER_URL}/api/${collection}?where[slug][equals]=${slug}${localeParam}&depth=2`,
-    { next: { revalidate: false } },
-  )
-  const data = await res.json()
-  return data?.docs?.[0] ?? null
+  try {
+    const res = await fetch(
+      `${process.env.CMS_PUBLIC_SERVER_URL}/api/${collection}?where[slug][equals]=${slug}${localeParam}&depth=2`,
+      { next: { revalidate: false } },
+    )
+    if (!res.ok) {
+      console.error(`Failed to fetch ${collection}/${slug}: ${res.status} ${res.statusText}`)
+      return null
+    }
+    const data = await res.json()
+    return data?.docs?.[0] ?? null
+  } catch (err) {
+    console.error(`Error fetching ${collection}/${slug}:`, err)
+    return null
+  }
 }
 
 /**

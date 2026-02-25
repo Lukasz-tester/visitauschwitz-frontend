@@ -71,7 +71,7 @@ const icons = {
 
 type Props = Extract<Page['layout'][0], { blockType: 'cta' }>
 
-export const CallToActionBlock: React.FC<Props & { id?: string }> = ({
+export const CallToActionBlock: React.FC<Props> = ({
   blockName,
   tiles,
   changeBackground,
