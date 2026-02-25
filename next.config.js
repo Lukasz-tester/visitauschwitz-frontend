@@ -25,7 +25,7 @@ const remotePatterns = imageSources
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // static HTML export
+  output: 'export', // static HTML export
   trailingSlash: true, // generate /index.html in folders
   reactStrictMode: true,
   images: {
