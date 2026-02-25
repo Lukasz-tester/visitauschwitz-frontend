@@ -11,6 +11,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+import { buildPageGraph } from '@/utilities/buildSchema'
 
 type Args = {
   params: Promise<{
@@ -33,8 +34,20 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   const { hero, layout } = page
 
+  const schema = buildPageGraph({
+    page,
+    locale,
+    url: fullUrl,
+    breadcrumbItems: [{ name: 'Home', url: `${siteUrl}/` }],
+  })
+
   return (
     <article className="pt-16 pb-24">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <PageClient />
       <PayloadRedirects disableNotFound url={url} />
 

@@ -5,37 +5,20 @@ import dynamic from 'next/dynamic'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from 'src/utilities/cn'
 import type { Page } from '@/payload-types'
-import { extractTextFromRichText, removeSpecialChars } from '@/utilities/helpersSsr'
-
 const LazyRichText = dynamic(() => import('@/components/RichText'), {
   loading: () => <div>Loading content…</div>,
   ssr: true,
 })
 
-type FAQItem = {
-  '@type': 'Question'
-  name: string
-  acceptedAnswer: {
-    '@type': 'Answer'
-    text: string
-  }
-}
-
 type Props = Extract<Page['layout'][0], { blockType: 'accordion' }> & {
   fullUrl?: string
-  collectFAQSchema?: boolean
-  setFAQItems?: (items: FAQItem[]) => void
 }
 
 export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   accordionItems = [],
-  isFAQ = false,
   changeBackground = false,
   addPaddingBottom = false,
   blockName,
-  fullUrl,
-  collectFAQSchema = false,
-  setFAQItems,
 }) => {
   const [openIndices, setOpenIndices] = useState<number[]>([])
 
@@ -44,39 +27,6 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
     )
   }
-
-  // ✅ Collect FAQ schema data upward if needed
-  useEffect(() => {
-    if (isFAQ && collectFAQSchema && setFAQItems && accordionItems) {
-      const faqItems: FAQItem[] = accordionItems.map((item) => ({
-        '@type': 'Question',
-        name: item.question ?? 'Untitled Question',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: removeSpecialChars(extractTextFromRichText(item.answer)),
-        },
-      }))
-      setFAQItems(faqItems)
-    }
-  }, [isFAQ, collectFAQSchema, setFAQItems, accordionItems])
-
-  // ✅ Build schema for non-FAQ sections
-  const nonFAQSchema =
-    !isFAQ && fullUrl
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'ItemList',
-          name: blockName || 'Accordion Section',
-          url: fullUrl,
-          itemListElement: accordionItems?.map((item, index) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            name: removeSpecialChars(item.question ?? 'Untitled Item'),
-            url: `${fullUrl}#accordion-item-${item.id}`,
-            description: removeSpecialChars(extractTextFromRichText(item.answer)),
-          })),
-        }
-      : null
 
   return (
     <section
@@ -105,12 +55,6 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
         </div>
       </div>
 
-      {/* ✅ Only inject schema when NOT FAQ */}
-      {!isFAQ && nonFAQSchema && (
-        <script type="application/ld+json" suppressHydrationWarning>
-          {JSON.stringify(nonFAQSchema)}
-        </script>
-      )}
     </section>
   )
 }

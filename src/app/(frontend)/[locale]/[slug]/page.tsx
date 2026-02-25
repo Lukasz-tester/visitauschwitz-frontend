@@ -13,6 +13,7 @@ import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'
+import { buildPageGraph } from '@/utilities/buildSchema'
 
 // Generate static params for export
 export async function generateStaticParams() {
@@ -59,8 +60,25 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   const { hero, layout } = page
 
+  const homeLabel = locale === 'pl' ? 'Strona główna' : 'Home'
+  const pageLabel = page.meta?.title || page.title
+  const schema = buildPageGraph({
+    page,
+    locale,
+    url: fullUrl,
+    breadcrumbItems: [
+      { name: homeLabel, url: `${siteUrl}/` },
+      { name: pageLabel, url: fullUrl },
+    ],
+  })
+
   return (
     <article className="pt-16 pb-24">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <PageClient />
       <PayloadRedirects disableNotFound url={url} />
       <RenderHero {...hero} />

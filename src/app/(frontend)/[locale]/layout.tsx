@@ -2,26 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 export const revalidate = false
 export const dynamic = 'force-static'
-import { locales } from '@/i18n/localization'
 import React from 'react'
-
-const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Auschwitz Visiting Guide',
-  url: siteUrl,
-  logo: `${siteUrl}/apple-touch-icon.png`,
-}
-
-const webSiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Auschwitz Visiting Guide',
-  url: siteUrl,
-  inLanguage: locales,
-}
 
 import { Footer } from '@/globals/Footer/Component'
 import { Header } from '@/globals/Header/Component'
@@ -92,16 +73,6 @@ export default async function RootLayout({ children, params }: Args) {
         {/* End Google Tag Manager */}
         <InitTheme />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-        />
       </head>
       <body>
         {/* <!-- Google Tag Manager (noscript) --> */}

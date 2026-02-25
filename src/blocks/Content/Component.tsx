@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import { cn } from 'src/utilities/cn'
 import type { Page } from '@/payload-types'
 import RichText from '@/components/RichText'
-import { extractContentSchema } from './extractContentSchema'
 
 function hasRichTextContent(rt: { root: { children?: Array<any> } } | null | undefined): boolean {
   return !!rt?.root?.children?.some((node: any) =>
@@ -27,18 +26,7 @@ const ContentBlockInner: React.FC<{ id?: string } & Props> = ({
     addMarginBottom,
     addPaddingBottom,
     blockName,
-    fullUrl,
   }) => {
-    const schemaData = extractContentSchema(
-      {
-        blockType: 'content',
-        columns,
-        heading,
-        blockName,
-      },
-      fullUrl,
-    )
-
     const colsSpanClasses = {
       full: '12',
       half: '6',
@@ -127,10 +115,6 @@ const ContentBlockInner: React.FC<{ id?: string } & Props> = ({
             })}
           </div>
         </div>
-
-        <script type="application/ld+json" suppressHydrationWarning>
-          {JSON.stringify(schemaData)}
-        </script>
       </section>
     )
   }

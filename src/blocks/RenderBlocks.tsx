@@ -7,18 +7,8 @@ import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component.client'
 import { OpeningHoursBlock } from './OpeningHours/Component.client'
 import { AccordionBlock } from './Accordion/Component.client'
-import { extractTextFromRichText, removeSpecialChars } from '@/utilities/helpersSsr'
 import { CodeBlock } from './Code/Component'
 import { BannerBlock } from './Banner/Component'
-
-type FAQItem = {
-  '@type': 'Question'
-  name: string
-  acceptedAnswer: {
-    '@type': 'Answer'
-    text: string
-  }
-}
 
 const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> = {
   archive: ArchiveBlock,
@@ -39,21 +29,6 @@ export const RenderBlocks: React.FC<{
 }> = ({ blocks, locale, url }) => {
   if (!blocks || blocks.length === 0) return null
 
-  // ✅ Collect all FAQ items directly from blocks
-  const faqItems: FAQItem[] = blocks
-    .filter((block) => block.blockType === 'accordion' && (block as any).isFAQ)
-    .flatMap(
-      (block) =>
-        (block as any).accordionItems?.map((item: any) => ({
-          '@type': 'Question',
-          name: item.question ?? 'Untitled Question',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: removeSpecialChars(extractTextFromRichText(item.answer)),
-          },
-        })) ?? [],
-    )
-
   return (
     <Fragment>
       {blocks.map((block, index) => {
@@ -69,17 +44,6 @@ export const RenderBlocks: React.FC<{
         }
         return null
       })}
-
-      {/* ✅ Inject FAQPage schema once */}
-      {faqItems.length > 0 && (
-        <script type="application/ld+json" suppressHydrationWarning>
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqItems,
-          })}
-        </script>
-      )}
     </Fragment>
   )
 }
