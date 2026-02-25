@@ -3,6 +3,7 @@ import type { TypedLocale } from '@/payload-types'
 
 import React from 'react'
 import RichText from '@/components/RichText'
+import { cmsFetchJSON } from '@/utilities/cmsFetch'
 
 import { CollectionArchive } from '@/components/CollectionArchive'
 
@@ -37,18 +38,10 @@ export const ArchiveBlock: React.FC<
         ? `&where[categories][in]=${flattenedCategories.join(',')}`
         : ''
 
-    try {
-      const res = await fetch(
-        `${process.env.CMS_PUBLIC_SERVER_URL}/api/posts?limit=${limit}&locale=${locale}&depth=1${categoryParam}`,
-        { next: { revalidate: false } },
-      )
-      if (res.ok) {
-        const data = await res.json()
-        posts = data?.docs ?? []
-      }
-    } catch {
-      // CMS unavailable, posts will remain empty
-    }
+    const data = await cmsFetchJSON<{ docs?: Post[] }>(
+      `/api/posts?limit=${limit}&locale=${locale}&depth=1${categoryParam}`,
+    )
+    posts = data?.docs ?? []
   } else {
     if (selectedDocs?.length) {
       const filteredSelectedPosts = selectedDocs.map((post) => {

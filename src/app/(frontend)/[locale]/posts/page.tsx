@@ -11,6 +11,7 @@ import { getTranslations } from 'next-intl/server'
 import type { TypedLocale } from '@/payload-types'
 import type { Post } from '@/payload-types'
 import PageClient from '../[slug]/page.client'
+import { cmsFetchJSON } from '@/utilities/cmsFetch'
 
 type Args = {
   params: Promise<{
@@ -22,26 +23,14 @@ export default async function Page({ params }: Args) {
   const { locale = 'en' } = await params
   const t = await getTranslations({ locale })
 
-  // list fetch — we need pages, so use collection list endpoint
-  const res = await fetch(
-    `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=12&locale=${locale}`,
-    { next: { revalidate: false } },
-  )
+  const posts = await cmsFetchJSON<{
+    docs: Post[]
+    page: number
+    totalDocs: number
+    totalPages: number
+  }>(`/api/posts?limit=12&locale=${locale}`)
 
-  if (!res.ok) {
-    console.error('Failed to fetch posts:', res.statusText)
-    return (
-      <div className="container pt-24 pb-24 text-center text-red-600">
-        Error loading posts ({locale})
-      </div>
-    )
-  }
-
-  let posts
-  try {
-    posts = await res.json()
-  } catch {
-    console.error('Failed to parse posts response as JSON')
+  if (!posts) {
     return (
       <div className="container pt-24 pb-24 text-center text-red-600">
         Error loading posts ({locale})

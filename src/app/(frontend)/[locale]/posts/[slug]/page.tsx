@@ -86,29 +86,15 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  try {
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=1000`,
-    )
+  const { cmsFetchJSON } = await import('@/utilities/cmsFetch')
+  const data = await cmsFetchJSON<{ docs?: { slug?: string }[] }>('/api/posts?limit=1000')
+  if (!data) return []
 
-    if (!res.ok) {
-      console.error('Failed to fetch posts for static params:', res.status)
-      return []
+  const params: { locale: string; slug: string }[] = []
+  for (const locale of locales) {
+    for (const post of data.docs ?? []) {
+      if (post.slug) params.push({ locale, slug: post.slug })
     }
-
-    const data = await res.json()
-    const posts = data.docs ?? []
-
-    const params: { locale: string; slug: string }[] = []
-    for (const locale of locales) {
-      for (const post of posts) {
-        if (post.slug) params.push({ locale, slug: post.slug })
-      }
-    }
-
-    return params
-  } catch (err) {
-    console.error('Error generating static params for posts:', err)
-    return []
   }
+  return params
 }

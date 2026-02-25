@@ -17,30 +17,18 @@ import { buildPageGraph } from '@/utilities/buildSchema'
 
 // Generate static params for export
 export async function generateStaticParams() {
-  try {
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/pages?limit=1000`,
-    )
-    if (!res.ok) {
-      console.error('Failed to fetch pages for static params:', res.status)
-      return []
-    }
-    const data = await res.json()
+  const { cmsFetchJSON } = await import('@/utilities/cmsFetch')
+  const data = await cmsFetchJSON<{ docs?: PageType[] }>('/api/pages?limit=1000')
+  if (!data) return []
 
-    const params = locales.flatMap((locale) =>
-      (data?.docs || [])
-        .filter((doc: PageType) => doc.slug !== 'home')
-        .map((doc: PageType) => ({
-          slug: doc.slug,
-          locale,
-        })),
-    )
-
-    return params
-  } catch (err) {
-    console.error('Failed to generate static params:', err)
-    return []
-  }
+  return locales.flatMap((locale) =>
+    (data.docs || [])
+      .filter((doc) => doc.slug !== 'home')
+      .map((doc) => ({
+        slug: doc.slug,
+        locale,
+      })),
+  )
 }
 
 type Args = {

@@ -7,7 +7,7 @@ import { CMSLink } from '@/components/Link'
 import { LogoLink } from '../../components/ui/logoLink'
 
 export async function Footer({ locale }: { locale: TypedLocale }) {
-  const footer: Footer = await getCachedGlobal('footer', 1, locale)()
+  const footer = await getCachedGlobal<Footer>('footer', 1, locale)()
 
   const navItems = footer?.navItems || []
 

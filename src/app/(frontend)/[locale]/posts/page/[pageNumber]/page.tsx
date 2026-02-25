@@ -13,6 +13,7 @@ import { getTranslations } from 'next-intl/server'
 import type { TypedLocale } from '@/payload-types'
 import type { Post } from '@/payload-types'
 import { locales } from '@/i18n/localization'
+import { cmsFetchJSON } from '@/utilities/cmsFetch'
 
 type Args = {
   params: Promise<{
@@ -28,19 +29,12 @@ export default async function Page({ params }: Args) {
   const page = Number(pageNumber)
   if (!Number.isInteger(page) || page < 1) notFound()
 
-  const res = await fetch(
-    `${
-      process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'
-    }/api/posts?limit=12&page=${page}&locale=${locale}`,
-    { next: { revalidate: false } },
-  )
-
-  if (!res.ok) {
-    console.error('Failed to fetch posts page:', res.statusText)
-    notFound()
-  }
-
-  const posts = await res.json()
+  const posts = await cmsFetchJSON<{
+    docs: Post[]
+    page: number
+    totalDocs: number
+    totalPages: number
+  }>(`/api/posts?limit=12&page=${page}&locale=${locale}`)
 
   if (!posts?.docs?.length) notFound()
 
@@ -81,29 +75,15 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  try {
-    // Fetch once to get totalPages
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL ?? 'https://example.com'}/api/posts?limit=12`,
-    )
+  const data = await cmsFetchJSON<{ totalPages?: number }>('/api/posts?limit=12')
+  if (!data) return []
 
-    if (!res.ok) {
-      console.error('Failed to fetch posts for static params:', res.status)
-      return []
+  const pages: { locale: string; pageNumber: string }[] = []
+  for (const locale of locales) {
+    for (let i = 1; i <= (data.totalPages ?? 1); i++) {
+      pages.push({ locale, pageNumber: String(i) })
     }
-
-    const data = await res.json()
-    const pages: { locale: string; pageNumber: string }[] = []
-
-    for (const locale of locales) {
-      for (let i = 1; i <= (data.totalPages ?? 1); i++) {
-        pages.push({ locale, pageNumber: String(i) })
-      }
-    }
-
-    return pages
-  } catch (err) {
-    console.error('Error generating static params for post pages:', err)
-    return []
   }
+
+  return pages
 }

@@ -1,29 +1,12 @@
-import { unstable_cache } from 'next/cache'
+import { cmsFetchJSON } from './cmsFetch'
+import type { Redirect } from '@/payload-types'
 
-export async function getRedirects() {
-  try {
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL}/api/redirects?limit=0`,
-      { next: { revalidate: false } },
-    )
-    if (!res.ok) {
-      console.error('Failed to fetch redirects:', res.status)
-      return []
-    }
-    const data = await res.json()
-    return data?.docs ?? []
-  } catch (err) {
-    console.error('Error fetching redirects:', err)
-    return []
-  }
+export async function getRedirects(): Promise<Redirect[]> {
+  const data = await cmsFetchJSON<{ docs?: Redirect[] }>('/api/redirects?limit=0')
+  return data?.docs ?? []
 }
 
 /**
- * Returns a unstable_cache function mapped with the cache tag for 'redirects'.
- *
- * Cache all redirects together to avoid multiple fetches.
+ * Returns redirects (no caching wrapper needed for static export)
  */
-export const getCachedRedirects = () =>
-  unstable_cache(async () => getRedirects(), ['redirects'], {
-    tags: ['redirects'],
-  })
+export const getCachedRedirects = () => getRedirects

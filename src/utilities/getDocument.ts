@@ -1,28 +1,17 @@
-import { unstable_cache } from 'next/cache'
+import { cmsFetchJSON } from './cmsFetch'
 
 async function getDocument(collection: string, slug: string, locale?: string) {
   const localeParam = locale ? `&locale=${locale}` : ''
-  try {
-    const res = await fetch(
-      `${process.env.CMS_PUBLIC_SERVER_URL}/api/${collection}?where[slug][equals]=${slug}${localeParam}&depth=2`,
-      { next: { revalidate: false } },
-    )
-    if (!res.ok) {
-      console.error(`Failed to fetch ${collection}/${slug}: ${res.status} ${res.statusText}`)
-      return null
-    }
-    const data = await res.json()
-    return data?.docs?.[0] ?? null
-  } catch (err) {
-    console.error(`Error fetching ${collection}/${slug}:`, err)
-    return null
-  }
+  const data = await cmsFetchJSON<{ docs?: unknown[] }>(
+    `/api/${collection}?where[slug][equals]=${slug}${localeParam}&depth=2`,
+  )
+  return data?.docs?.[0] ?? null
 }
 
 /**
- * Returns a unstable_cache function mapped with the cache tag for the slug
+ * Returns the getDocument function (no caching needed for static export)
  */
 export const getCachedDocument = (collection: string, slug: string, locale?: string) =>
-  unstable_cache(async () => getDocument(collection, slug, locale), [collection, slug], {
-    tags: [`${collection}_${slug}`],
-  })
+  async () => getDocument(collection, slug, locale)
+
+export { getDocument }
