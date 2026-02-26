@@ -557,6 +557,7 @@ export interface User {
 export interface FormBlock {
   form: string | Form;
   enableIntro?: boolean | null;
+  changeBackground?: boolean | null;
   introContent?: {
     root: {
       type: string;
@@ -1147,6 +1148,7 @@ export interface ArchiveBlockSelect<T extends boolean = true> {
 export interface FormBlockSelect<T extends boolean = true> {
   form?: T;
   enableIntro?: T;
+  changeBackground?: T;
   introContent?: T;
   enableOutro?: T;
   outroContent?: T;

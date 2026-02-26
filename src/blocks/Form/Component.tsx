@@ -137,59 +137,63 @@ export const FormBlock: React.FC<
 
   return (
     <div
-      className={`container bg-card-foreground ${changeBackground ? 'bg-card-foreground' : ''}`}
-      // className={cn('container lg:max-w-[48rem] pb-20 bg-card-foreground  ', {
-      //   'bg-card-foreground': changeBackground,
-      // })}
+      className={`w-full ${changeBackground ? 'bg-card-foreground md:px-[17.3%] ' : 'container pb-20 lg:max-w-[48rem]'}`}
     >
-      {/* <div className="container lg:max-w-[48rem] pb-20"> */}
-      <FormProvider {...formMethods}>
-        {enableIntro && introContent && !hasSubmitted && (
-          <RichText className="mb-8" content={introContent} enableGutter={false} />
-        )}
-        {!isLoading && hasSubmitted && confirmationType === 'message' && (
-          <RichText content={confirmationMessage as Record<string, any>} />
-        )}
-        {isLoading && !hasSubmitted && <p>{t('loading')}</p>}
-        {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
-        {!hasSubmitted && (
-          <form id={formID} onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-4 last:mb-0">
-              {formFromProps &&
-                formFromProps.fields &&
-                formFromProps.fields?.map((field, index) => {
-                  const Field: React.FC<any> = fields?.[field.blockType]
-                  if (Field) {
-                    const translationKey = `contact-${field.name}`
-                    const translatedLabel = t.has(translationKey) ? t(translationKey) : field.label
-                    return (
-                      <div className="mb-6 last:mb-0" key={index}>
-                        <Field
-                          form={formFromProps}
-                          {...field}
-                          label={translatedLabel}
-                          {...formMethods}
-                          control={control}
-                          errors={errors}
-                          register={register}
-                        />
-                      </div>
-                    )
-                  }
-                  return null
-                })}
-            </div>
+      <div className={` ${changeBackground ? ' max-w-2xl container' : ''}`}>
+        <FormProvider {...formMethods}>
+          {enableIntro && introContent && !hasSubmitted && (
+            <RichText className="mb-8" content={introContent} enableGutter={false} />
+          )}
+          {!isLoading && hasSubmitted && confirmationType === 'message' && (
+            <RichText content={confirmationMessage as Record<string, any>} />
+          )}
+          {isLoading && !hasSubmitted && <p>{t('loading')}</p>}
+          {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
+          {!hasSubmitted && (
+            <form id={formID} onSubmit={handleSubmit(onSubmit)}>
+              <div className="mb-4 last:mb-0">
+                {formFromProps &&
+                  formFromProps.fields &&
+                  formFromProps.fields?.map((field, index) => {
+                    const Field: React.FC<any> = fields?.[field.blockType]
+                    if (Field) {
+                      const translationKey = `contact-${field.name}`
+                      const translatedLabel = t.has(translationKey)
+                        ? t(translationKey)
+                        : field.label
+                      return (
+                        <div className="mb-6 last:mb-0" key={index}>
+                          <Field
+                            form={formFromProps}
+                            {...field}
+                            label={translatedLabel}
+                            {...formMethods}
+                            control={control}
+                            errors={errors}
+                            register={register}
+                          />
+                        </div>
+                      )
+                    }
+                    return null
+                  })}
+              </div>
 
-            <Button form={formID} type="submit" variant="default" aria-label="Submit Contact Form">
-              {t.has('contact-submit') ? t('contact-submit') : submitButtonLabel}
-            </Button>
-          </form>
-        )}
-        {enableOutro && outroContent && !hasSubmitted && (
-          <RichText className="mt-8" content={outroContent} enableGutter={false} />
-        )}
-      </FormProvider>
+              <Button
+                form={formID}
+                type="submit"
+                variant="default"
+                aria-label="Submit Contact Form"
+              >
+                {t.has('contact-submit') ? t('contact-submit') : submitButtonLabel}
+              </Button>
+            </form>
+          )}
+          {enableOutro && outroContent && !hasSubmitted && (
+            <RichText className="mt-8" content={outroContent} enableGutter={false} />
+          )}
+        </FormProvider>
+      </div>
     </div>
-    //   </section>
   )
 }
