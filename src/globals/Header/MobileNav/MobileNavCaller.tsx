@@ -19,14 +19,14 @@ export const MobileNavCaller: React.FC<{
   const t = useTranslations()
   useLockBodyScroll(modalOpen)
 
-  const links = {
-    supplement: 'tips',
-    '/posts': 'posts',
-    '/#about-me': 'about',
-    '/contact': 'contact',
-    // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
-    // '/': 'books',
-  }
+  // const links = {
+  //   supplement: 'tips',
+  //   '/posts': 'posts',
+  //   '/#about-me': 'about',
+  //   '/contact': 'contact',
+  //   // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
+  //   // '/': 'books',
+  // }
 
   return (
     <div>
@@ -74,13 +74,19 @@ export const MobileNavCaller: React.FC<{
                 <ThemeSelector />
               </div>
             </div>
-            <div className="flex flex-col my-16 py-2 pr-36">
+            <div className="flex flex-col my-8 py-2 pr-36">
+              <div
+                className="pl-2 pb-4 opacity-80 hover:opacity-90"
+                onClick={() => setModalOpen(false)}
+              >
+                <LogoLink />{' '}
+              </div>
               <NavItems
                 header={header}
                 onClick={() => setModalOpen(false)}
                 aria-label="Main Navigation"
               />
-              <div className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold ">
+              {/* <div className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold ">
                 {Object.entries(links).map(([href, label]) => (
                   <CMSLink
                     aria-label="Secondary Navigation"
@@ -92,11 +98,32 @@ export const MobileNavCaller: React.FC<{
                     {t(label)}
                     {label === 'tips' && ' FAQ'}
                   </CMSLink>
-                ))}
-              </div>
+                ))} 
+              </div>*/}
             </div>
-            <div className="absolute bottom-5 left-1" onClick={() => setModalOpen(false)}>
-              <LogoLink className="text-slate-700 dark:text-slate-400 hover:text-amber-700/90" />
+            <div
+              className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold absolute bottom-3 left-1"
+              onClick={() => setModalOpen(false)}
+            >
+              <CMSLink
+                aria-label="Secondary Navigation"
+                key="/contact"
+                className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
+                onClick={() => setModalOpen(false)}
+                url="/contact"
+              >
+                {t('contact')}
+                {/* {label === 'tips' && ' FAQ'} */}
+              </CMSLink>
+              <CMSLink
+                aria-label="Secondary Navigation"
+                key="/posts"
+                className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
+                onClick={() => setModalOpen(false)}
+                url="/posts"
+              >
+                {t('posts')}
+              </CMSLink>
             </div>
           </div>
         </div>

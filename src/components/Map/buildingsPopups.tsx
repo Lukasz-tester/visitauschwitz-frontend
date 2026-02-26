@@ -152,3 +152,262 @@ export const getBuildings = (t: (key: string) => string): { [slug: string]: Buil
     ),
   },
 })
+
+export const getBirkenauBuildings = (t: (key: string) => string): { [slug: string]: BuildingEntry } => ({
+  woodenBarracksLatryny1: {
+    positions: [
+      [50.0352790, 19.1797150],
+      [50.0351920, 19.1797140],
+      [50.0351850, 19.1802850],
+      [50.0352710, 19.1802860],
+      [50.0352790, 19.1797150],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-wooden-barracks-title')}</strong>
+        <br />
+        {t('map-wooden-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#wooden-barracks">{t('map-wooden-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  woodenBarracksLatryny2: {
+    positions: [
+      [50.0354030, 19.1797190],
+      [50.0353950, 19.1802900],
+      [50.0354820, 19.1802930],
+      [50.0354900, 19.1797230],
+      [50.0354030, 19.1797190],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-wooden-barracks-title')}</strong>
+        <br />
+        {t('map-wooden-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#wooden-barracks">{t('map-wooden-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  woodenBarracksBlok16: {
+    positions: [
+      [50.0358470, 19.1797340],
+      [50.0357600, 19.1797330],
+      [50.0357510, 19.1803030],
+      [50.0358370, 19.1803060],
+      [50.0358470, 19.1797340],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-wooden-barracks-title')}</strong>
+        <br />
+        {t('map-wooden-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#wooden-barracks">{t('map-wooden-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  woodenBarracksBlok15: {
+    positions: [
+      [50.0359720, 19.1797400],
+      [50.0359630, 19.1803100],
+      [50.0360500, 19.1803130],
+      [50.0360590, 19.1797430],
+      [50.0359720, 19.1797400],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-wooden-barracks-title')}</strong>
+        <br />
+        {t('map-wooden-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#wooden-barracks">{t('map-wooden-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  krematoriumIII: {
+    positions: [
+      [50.0358421, 19.1694143],
+      [50.0355428, 19.1694119],
+      [50.0355453, 19.1686592],
+      [50.0354676, 19.1686586],
+      [50.0354643, 19.1696725],
+      [50.0353304, 19.1696714],
+      [50.0353297, 19.1699085],
+      [50.0354509, 19.1699095],
+      [50.0354501, 19.1701384],
+      [50.0355856, 19.1701395],
+      [50.0355874, 19.1695811],
+      [50.0358415, 19.1695831],
+      [50.0358421, 19.1694143],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-krematorium-ii-iii-title')}</strong>
+        <br />
+        {t('map-krematorium-ii-iii-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#II-and-III">{t('map-krematorium-ii-iii-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  krematoriumII: {
+    positions: [
+      [50.0340284, 19.1686082],
+      [50.0339481, 19.1686056],
+      [50.0339379, 19.1693727],
+      [50.0336348, 19.1693630],
+      [50.0336332, 19.1694826],
+      [50.0339096, 19.1694915],
+      [50.0339018, 19.1700776],
+      [50.0340079, 19.1700810],
+      [50.0340108, 19.1698631],
+      [50.0341179, 19.1698666],
+      [50.0341209, 19.1696435],
+      [50.0340147, 19.1696401],
+      [50.0340284, 19.1686082],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-krematorium-ii-iii-title')}</strong>
+        <br />
+        {t('map-krematorium-ii-iii-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#II-and-III">{t('map-krematorium-ii-iii-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  woodenBarracksBlok14: {
+    positions: [
+      [50.0361830, 19.1797480],
+      [50.0361740, 19.1803180],
+      [50.0362610, 19.1803210],
+      [50.0362710, 19.1797500],
+      [50.0361830, 19.1797480],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-wooden-barracks-title')}</strong>
+        <br />
+        {t('map-wooden-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#wooden-barracks">{t('map-wooden-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  brickBarracksBlok16: {
+    positions: [
+      [50.0325560, 19.1786860],
+      [50.0325650, 19.1781790],
+      [50.0324620, 19.1781750],
+      [50.0324540, 19.1786820],
+      [50.0325560, 19.1786860],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-brick-barracks-title')}</strong>
+        <br />
+        {t('map-brick-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#brick-barracks">{t('map-brick-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  brickBarracksBlok17: {
+    positions: [
+      [50.0327940, 19.1786960],
+      [50.0328020, 19.1781890],
+      [50.0326990, 19.1781850],
+      [50.0326900, 19.1786910],
+      [50.0327940, 19.1786960],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-brick-barracks-title')}</strong>
+        <br />
+        {t('map-brick-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#brick-barracks">{t('map-brick-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  brickBarracksBlok10: {
+    positions: [
+      [50.0327810, 19.1794810],
+      [50.0327890, 19.1789730],
+      [50.0326860, 19.1789690],
+      [50.0326770, 19.1794760],
+      [50.0327810, 19.1794810],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-brick-barracks-title')}</strong>
+        <br />
+        {t('map-brick-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#brick-barracks">{t('map-brick-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  brickBarracksBlok3: {
+    positions: [
+      [50.0327690, 19.1801960],
+      [50.0327780, 19.1796880],
+      [50.0326760, 19.1796840],
+      [50.0326670, 19.1801910],
+      [50.0327690, 19.1801960],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-brick-barracks-title')}</strong>
+        <br />
+        {t('map-brick-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#brick-barracks">{t('map-brick-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+  brickBarracksBlok2: {
+    positions: [
+      [50.0325320, 19.1801860],
+      [50.0325410, 19.1796780],
+      [50.0324380, 19.1796750],
+      [50.0324290, 19.1801820],
+      [50.0325320, 19.1801860],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-brick-barracks-title')}</strong>
+        <br />
+        {t('map-brick-barracks-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#brick-barracks">{t('map-brick-barracks-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
+})

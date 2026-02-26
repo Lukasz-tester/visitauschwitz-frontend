@@ -62,7 +62,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
 
   return (
     //TODO improve the link looks!
-    <Link href={localizedUrl} onClick={handleClick} className="font-bold text-lg">
+    <Link href={localizedUrl} onClick={handleClick} className="font-bold text-base">
       {children}
     </Link>
   )

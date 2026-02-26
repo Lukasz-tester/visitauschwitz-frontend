@@ -24,6 +24,7 @@
   "books": "BOOKS →",
 
   "map-layer-buildings": "Auschwitz I buildings",
+  "map-layer-birkenau-buildings": "Birkenau buildings",
   "map-layer-routes": "Auschwitz routes",
   "map-layer-entrances": "Museum entrances",
   "map-layer-parking": "Parking lots",
@@ -56,6 +57,15 @@
   "map-roll-call-title": "Roll Call Square",
   "map-roll-call-desc": "Daily roll calls under brutal conditions.",
   "map-roll-call-link": "See the square →",
+  "map-krematorium-ii-iii-title": "Gas Chamber / Crematorium II & III",
+  "map-krematorium-ii-iii-desc": "The largest extermination facilities in Birkenau.",
+  "map-krematorium-ii-iii-link": "See Crematorium II & III →",
+  "map-wooden-barracks-title": "Wooden Barracks (BIIa Sector)",
+  "map-wooden-barracks-desc": "Blocks 14, 15, 16 and latrines in the BIIa quarantine sector of Birkenau.",
+  "map-wooden-barracks-link": "See wooden barracks →",
+  "map-brick-barracks-title": "Brick Barracks (BIa Sector)",
+  "map-brick-barracks-desc": "Blocks 2, 3, 10, 16, 17 — brick barracks in the BIa sector of Birkenau.",
+  "map-brick-barracks-link": "See brick barracks →",
 
   "map-parking-museum-car": "Car: 20 PLN",
   "map-parking-museum-minibus": "Minibus: 30 PLN",
@@ -75,5 +85,10 @@
 
   "map-locate-error": "Could not get your location",
   "map-locate-unsupported": "Geolocation is not supported by this browser.",
-  "map-locate-popup": "Your current location"
+  "map-locate-popup": "Your current location",
+
+  "contact-full-name": "Full Name",
+  "contact-email": "Email",
+  "contact-message": "Message",
+  "contact-submit": "Submit"
 }

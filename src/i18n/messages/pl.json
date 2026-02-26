@@ -24,6 +24,7 @@
   "books": "KSIĄŻKI →",
 
   "map-layer-buildings": "Budynki Auschwitz I",
+  "map-layer-birkenau-buildings": "Budynki Birkenau",
   "map-layer-routes": "Trasy Auschwitz",
   "map-layer-entrances": "Wejścia do muzeum",
   "map-layer-parking": "Parkingi",
@@ -56,6 +57,15 @@
   "map-roll-call-title": "Plac Apelowy",
   "map-roll-call-desc": "Codzienne apele w brutalnych warunkach.",
   "map-roll-call-link": "Zobacz plac →",
+  "map-krematorium-ii-iii-title": "Komora gazowa / Krematorium II i III",
+  "map-krematorium-ii-iii-desc": "Największe obiekty zagłady w Birkenau.",
+  "map-krematorium-ii-iii-link": "Zobacz Krematorium II i III →",
+  "map-wooden-barracks-title": "Drewniane baraki (sektor BIIa)",
+  "map-wooden-barracks-desc": "Bloki 14, 15, 16 i latryny w sektorze kwarantannowym BIIa w Birkenau.",
+  "map-wooden-barracks-link": "Zobacz drewniane baraki →",
+  "map-brick-barracks-title": "Baraki murowane (sektor BIa)",
+  "map-brick-barracks-desc": "Bloki 2, 3, 10, 16, 17 — murowane baraki w sektorze BIa w Birkenau.",
+  "map-brick-barracks-link": "Zobacz murowane baraki →",
 
   "map-parking-museum-car": "Samochód: 20 PLN",
   "map-parking-museum-minibus": "Minibus: 30 PLN",
@@ -75,5 +85,10 @@
 
   "map-locate-error": "Nie udało się pobrać Twojej lokalizacji",
   "map-locate-unsupported": "Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.",
-  "map-locate-popup": "Twoja aktualna lokalizacja"
+  "map-locate-popup": "Twoja aktualna lokalizacja",
+
+  "contact-full-name": "Imię i nazwisko",
+  "contact-email": "Email",
+  "contact-message": "Wiadomość",
+  "contact-submit": "Wyślij"
 }

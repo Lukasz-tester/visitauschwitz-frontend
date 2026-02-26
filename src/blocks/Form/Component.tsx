@@ -6,6 +6,7 @@ import React, { useCallback, useState } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import RichText from '@/components/RichText'
 import { Button } from '@/components/ui/button'
+import { cn } from 'src/utilities/cn'
 
 import { buildInitialFormState } from './buildInitialFormState'
 import { fields } from './fields'
@@ -24,6 +25,7 @@ export interface Data {
 export type FormBlockType = {
   blockName?: string
   blockType?: 'formBlock'
+  changeBackground?: boolean | null
   enableIntro: boolean
   enableOutro: boolean
   form: FormType
@@ -41,6 +43,7 @@ export const FormBlock: React.FC<
   } & FormBlockType
 > = (props) => {
   const {
+    changeBackground,
     enableIntro,
     enableOutro,
     form: formFromProps,
@@ -133,7 +136,13 @@ export const FormBlock: React.FC<
   )
 
   return (
-    <div className="container lg:max-w-[48rem] pb-20">
+    <div
+      className={`container bg-card-foreground ${changeBackground ? 'bg-card-foreground' : ''}`}
+      // className={cn('container lg:max-w-[48rem] pb-20 bg-card-foreground  ', {
+      //   'bg-card-foreground': changeBackground,
+      // })}
+    >
+      {/* <div className="container lg:max-w-[48rem] pb-20"> */}
       <FormProvider {...formMethods}>
         {enableIntro && introContent && !hasSubmitted && (
           <RichText className="mb-8" content={introContent} enableGutter={false} />
@@ -151,11 +160,14 @@ export const FormBlock: React.FC<
                 formFromProps.fields?.map((field, index) => {
                   const Field: React.FC<any> = fields?.[field.blockType]
                   if (Field) {
+                    const translationKey = `contact-${field.name}`
+                    const translatedLabel = t.has(translationKey) ? t(translationKey) : field.label
                     return (
                       <div className="mb-6 last:mb-0" key={index}>
                         <Field
                           form={formFromProps}
                           {...field}
+                          label={translatedLabel}
                           {...formMethods}
                           control={control}
                           errors={errors}
@@ -169,7 +181,7 @@ export const FormBlock: React.FC<
             </div>
 
             <Button form={formID} type="submit" variant="default" aria-label="Submit Contact Form">
-              {submitButtonLabel}
+              {t.has('contact-submit') ? t('contact-submit') : submitButtonLabel}
             </Button>
           </form>
         )}
@@ -178,5 +190,6 @@ export const FormBlock: React.FC<
         )}
       </FormProvider>
     </div>
+    //   </section>
   )
 }

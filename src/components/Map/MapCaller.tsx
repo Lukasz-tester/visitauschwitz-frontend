@@ -63,15 +63,20 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
 
         {/* Map Icon visibility logic */}
         <div
-          className={`transition-opacity ease-in-out duration-500 ${modalOpen ? 'opacity-0' : 'opacity-100'}`}
+          className={`transition-opacity ease-in-out duration-500 flex flex-col items-center ${modalOpen ? 'opacity-0' : 'opacity-100'}`}
         >
+          <span className="text-[14px] font-semibold leading-none dark:text-white/80 text-black/70">
+            MAP
+          </span>
           <MapPlaceholder />
         </div>
       </button>
 
       {/* Modal - stays mounted after first open to preserve map state */}
       {hasOpened && (
-        <div className={`fixed inset-0 ${modalOpen && currentUrl ? '' : 'invisible pointer-events-none'}`}>
+        <div
+          className={`fixed inset-0 ${modalOpen && currentUrl ? '' : 'invisible pointer-events-none'}`}
+        >
           <LazyMap />
         </div>
       )}

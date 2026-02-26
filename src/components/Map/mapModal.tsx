@@ -16,7 +16,7 @@ import {
 } from 'react-leaflet'
 
 import { LatLngExpression } from 'leaflet'
-import { getBuildings } from './buildingsPopups'
+import { getBuildings, getBirkenauBuildings } from './buildingsPopups'
 import { routes } from './routes'
 import { LocateMeButton } from './LocateMeButton'
 import { getParkingLots, carparkRadius, carparkColor } from './parkingLots'
@@ -38,6 +38,7 @@ export default function MapModal() {
   const t = useTranslations()
 
   const buildings = getBuildings(t)
+  const birkenauBuildings = getBirkenauBuildings(t)
   const parkingLots = getParkingLots(t)
 
   const layers = [
@@ -46,6 +47,37 @@ export default function MapModal() {
       defaultChecked: true,
       markers: Object.keys(buildings).map((slug) => {
         const building = buildings[slug]
+        const isPoint = building.positions.length === 1
+
+        if (isPoint) {
+          return (
+            <Circle
+              key={slug}
+              center={building.positions[0] as [number, number]}
+              radius={12}
+              pathOptions={{ color: 'green', fillColor: '', fillOpacity: 0.5 }}
+            >
+              {building.popup && <Popup>{building.popup}</Popup>}
+            </Circle>
+          )
+        } else {
+          return (
+            <Polygon
+              key={slug}
+              positions={building.positions}
+              pathOptions={{ color: 'green', weight: 2, fillOpacity: 0.5 }}
+            >
+              {building.popup && <Popup>{building.popup}</Popup>}
+            </Polygon>
+          )
+        }
+      }),
+    },
+    {
+      name: t('map-layer-birkenau-buildings'),
+      defaultChecked: true,
+      markers: Object.keys(birkenauBuildings).map((slug) => {
+        const building = birkenauBuildings[slug]
         const isPoint = building.positions.length === 1
 
         if (isPoint) {
