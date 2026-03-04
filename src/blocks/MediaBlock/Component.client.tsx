@@ -25,14 +25,14 @@ export const MediaBlock: React.FC<Props> = (props) => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [startX, setStartX] = React.useState<number | null>(null)
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % images.length)
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + images.length) % images.length)
+  const nextSlide = React.useCallback(() => setCurrentSlide((prev) => (prev + 1) % images.length), [images.length])
+  const prevSlide = React.useCallback(() => setCurrentSlide((prev) => (prev - 1 + images.length) % images.length), [images.length])
 
   // Auto slide
   React.useEffect(() => {
     const timer = setInterval(nextSlide, 7000)
     return () => clearInterval(timer)
-  }, [])
+  }, [nextSlide])
 
   // Touch support
   const handleTouchStart = (e: React.TouchEvent) => setStartX(e.touches[0].clientX)
@@ -62,7 +62,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [])
+  }, [nextSlide, prevSlide])
 
   return (
     <div

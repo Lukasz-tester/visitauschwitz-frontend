@@ -14,6 +14,7 @@ import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'
 import { buildPageGraph } from '@/utilities/buildSchema'
+import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 
 // Generate static params for export
 export async function generateStaticParams() {
@@ -51,6 +52,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   }
 
   const { hero, layout } = page
+  const heroImageUrl = getHeroImageUrl(page)
 
   const homeLabel = locale === 'pl' ? 'Strona główna' : 'Home'
   const pageLabel = page.meta?.title || page.title
@@ -66,6 +68,9 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <article className="pt-16 pb-24">
+      {heroImageUrl && (
+        <link rel="preload" as="image" href={heroImageUrl} />
+      )}
       <script
         type="application/ld+json"
         suppressHydrationWarning

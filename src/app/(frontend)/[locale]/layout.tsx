@@ -7,7 +7,6 @@ import React from 'react'
 import { Footer } from '@/globals/Footer/Component'
 import { Header } from '@/globals/Header/Component'
 import { Providers } from '@/providers'
-import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import type { TypedLocale } from '@/payload-types'
 
@@ -16,7 +15,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { CookiePopup } from '@/components/Cookies/cookiePopup'
-import Script from 'next/script' //'next/dist/client/script'
+import Script from 'next/script'
 
 type Args = {
   children: React.ReactNode
@@ -38,16 +37,22 @@ export default async function RootLayout({ children, params }: Args) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Inline theme init — runs synchronously before paint to prevent flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('payload-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';localStorage.setItem('payload-theme',t)}document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        />
         {/* Google Analytics tag (gtag.js) */}
         <Script
           id="google-gtag"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XR28GR07KB"
         ></Script>
         <Script
           id="google-tag-analytics"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -61,7 +66,7 @@ export default async function RootLayout({ children, params }: Args) {
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -71,7 +76,6 @@ export default async function RootLayout({ children, params }: Args) {
           }}
         />
         {/* End Google Tag Manager */}
-        <InitTheme />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
       </head>
       <body>
@@ -100,11 +104,6 @@ export default async function RootLayout({ children, params }: Args) {
 
 export const metadata: Metadata = {
   icons: {
-    // icon: [
-    //   { url: '/favicon.ico' }, // default fallback
-    //   { url: '/favicon.png' },
-    //   { url: '/icon.ico', sizes: '32x32', type: 'image/png' },
-    // ],
     apple: '/apple-touch-icon.png',
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'visitauschwitz.info'),

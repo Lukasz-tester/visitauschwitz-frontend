@@ -24,11 +24,11 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
 
   useEffect(() => {
     setHeaderTheme(null)
-  }, [pathname])
+  }, [pathname, setHeaderTheme])
 
   useEffect(() => {
     if (headerTheme && headerTheme !== theme) setTheme(headerTheme)
-  }, [headerTheme])
+  }, [headerTheme, theme])
 
   return (
     <header

@@ -15,6 +15,7 @@ import PageClient from '../../[slug]/page.client'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { locales } from '@/i18n/localization'
 import { buildPostGraph } from '@/utilities/buildSchema'
+import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 
 const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
 
@@ -39,6 +40,7 @@ export default async function PostPage({ params }: Args) {
   }
 
   const { layout } = post
+  const heroImageUrl = getHeroImageUrl(post as Post)
 
   const homeLabel = locale === 'pl' ? 'Strona główna' : 'Home'
   const blogLabel = locale === 'pl' ? 'Blog' : 'Blog'
@@ -55,6 +57,9 @@ export default async function PostPage({ params }: Args) {
 
   return (
     <article className="pt-16 pb-16">
+      {heroImageUrl && (
+        <link rel="preload" as="image" href={heroImageUrl} />
+      )}
       <script
         type="application/ld+json"
         suppressHydrationWarning

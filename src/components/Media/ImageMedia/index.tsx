@@ -1,5 +1,3 @@
-'use client'
-
 import type { StaticImageData } from 'next/image'
 import NextImage from 'next/image'
 import React from 'react'
@@ -11,15 +9,11 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     alt: altFromProps,
     fill,
     imgClassName,
-    onClick,
-    onLoad: onLoadFromProps,
     priority,
     resource,
     size: sizeFromProps,
     src: srcFromProps,
   } = props
-
-  const [isLoading, setIsLoading] = React.useState(true)
 
   let width: number | undefined
   let height: number | undefined
@@ -56,13 +50,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       fill={fill}
       height={!fill ? height : undefined}
       width={!fill ? width : undefined}
-      onClick={onClick}
-      onLoad={() => {
-        setIsLoading(false)
-        if (typeof onLoadFromProps === 'function') onLoadFromProps()
-      }}
       priority={priority}
-      quality={50}
       sizes={sizes}
       src={src}
       loading={priority ? 'eager' : 'lazy'}

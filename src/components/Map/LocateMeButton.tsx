@@ -1,7 +1,7 @@
 'use client'
 
 import { LocateIcon } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useMap } from 'react-leaflet'
 import L from 'leaflet'
 import { useTranslations } from 'next-intl'
@@ -13,12 +13,12 @@ export function LocateMeButton() {
   const t = useTranslations()
 
   // Custom Geolocation Icon
-  const geolocationIcon = new L.Icon({
+  const geolocationIcon = useMemo(() => new L.Icon({
     iconUrl: 'https://cdn-icons-png.flaticon.com/512/622/622669.png',
     iconSize: [30, 30],
     iconAnchor: [15, 30],
     popupAnchor: [0, -30],
-  })
+  }), [])
 
   const handleClick = () => {
     setLoading(true)
@@ -51,7 +51,7 @@ export function LocateMeButton() {
         map.removeLayer(marker)
       }
     }
-  }, [position, map])
+  }, [position, map, geolocationIcon, t])
 
   return (
     <>

@@ -12,6 +12,7 @@
   }
 
   :root {
+    color-scheme: light dark;
     --background: 30 80% 98%;
     --foreground: 222.2 47% 11%;
     --card: 4 9% 95%;
@@ -37,15 +38,6 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-html {
-  opacity: 0;
-}
-
-html[data-theme='dark'],
-html[data-theme='light'] {
-  opacity: initial;
 }
 
 .placeholder-icon-wrapper {

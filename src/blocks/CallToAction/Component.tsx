@@ -1,15 +1,11 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 import type { Page } from '@/payload-types'
 import { cn } from '@/utilities/cn'
 
 import { CMSLink } from '@/components/Link'
-// import Link from 'next/link'
 
 import RichText from '@/components/RichText'
-const ImageMedia = dynamic(() =>
-  import('@/components/Media/ImageMedia').then((mod) => mod.ImageMedia),
-)
+import { ImageMedia } from '@/components/Media/ImageMedia'
 
 import {
   Bus,

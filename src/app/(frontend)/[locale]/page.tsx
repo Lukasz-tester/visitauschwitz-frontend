@@ -12,6 +12,7 @@ import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import { buildPageGraph } from '@/utilities/buildSchema'
+import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 
 type Args = {
   params: Promise<{
@@ -33,6 +34,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   }
 
   const { hero, layout } = page
+  const heroImageUrl = getHeroImageUrl(page)
 
   const schema = buildPageGraph({
     page,
@@ -43,6 +45,9 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <article className="pt-16 pb-24">
+      {heroImageUrl && (
+        <link rel="preload" as="image" href={heroImageUrl} />
+      )}
       <script
         type="application/ld+json"
         suppressHydrationWarning

@@ -1,18 +1,14 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 import { cn } from 'src/utilities/cn'
 import type { Page } from '@/payload-types'
 import RichText from '@/components/RichText'
+import { ImageMedia } from '@/components/Media/ImageMedia'
 
 function hasRichTextContent(rt: { root: { children?: Array<any> } } | null | undefined): boolean {
   return !!rt?.root?.children?.some((node: any) =>
     node?.children?.some((child: any) => !!child?.text),
   )
 }
-
-const ImageMedia = dynamic(() =>
-  import('@/components/Media/ImageMedia').then((mod) => mod.ImageMedia),
-)
 
 type Props = Extract<Page['layout'][0], { blockType: 'content' }> & {
   fullUrl: string // Already passed URL as a prop

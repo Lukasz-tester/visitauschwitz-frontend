@@ -11,7 +11,6 @@ export interface Props {
   htmlElement?: ElementType | null
   imgClassName?: string
   onClick?: () => void
-  onLoad?: () => void
   priority?: boolean // for NextImage only
   ref?: Ref<HTMLImageElement | HTMLVideoElement | null>
   resource?: MediaType | string | number | null // for Payload media
