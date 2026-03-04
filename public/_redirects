@@ -1,10 +1,7 @@
 /sitemap.xml   /sitemap.xml   200
-/              /en/           301!
-
 /en            /en/index.html 200
 /en/           /en/index.html 200
 /pl            /pl/index.html 200
 /pl/           /pl/index.html 200
 /en/*          /en/:splat/index.html 200
 /pl/*          /pl/:splat/index.html 200
-/*             /404.html      404

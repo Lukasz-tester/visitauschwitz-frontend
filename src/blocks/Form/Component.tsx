@@ -161,7 +161,7 @@ export const FormBlock: React.FC<
                         ? t(translationKey)
                         : field.label
                       return (
-                        <div className="mb-6 last:mb-0" key={index}>
+                        <div className={`mb-6 last:mb-0 ${!changeBackground ? '[&_input]:bg-card [&_textarea]:bg-card [&_[role=combobox]]:bg-card' : ''}`} key={index}>
                           <Field
                             form={formFromProps}
                             {...field}
