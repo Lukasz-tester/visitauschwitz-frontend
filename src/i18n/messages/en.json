@@ -14,6 +14,10 @@
   "next": "Next",
   "more-pages": "More pages",
   "contact": "Contact",
+  "contact-full-name": "Name",
+  "contact-email": "Email",
+  "contact-message": "Message",
+  "contact-submit": "Submit",
 
   "cookie-message": "We use essential cookies required for the site to work, and with your consent, additional cookies for analytics and performance. Read more in: ",
   "accept": "Accept",
@@ -85,10 +89,5 @@
 
   "map-locate-error": "Could not get your location",
   "map-locate-unsupported": "Geolocation is not supported by this browser.",
-  "map-locate-popup": "Your current location",
-
-  "contact-full-name": "Full Name",
-  "contact-email": "Email",
-  "contact-message": "Message",
-  "contact-submit": "Submit"
+  "map-locate-popup": "Your current location"
 }

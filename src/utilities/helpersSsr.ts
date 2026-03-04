@@ -10,12 +10,14 @@ export function getCookie(name) {
   return null
 }
 
-export const removeSpecialChars = (text: string) => {
-  let cleanedText = text.replace(/[\p{So}\p{C}]|\u200B|\u200C|\u200D|↓/gu, '')
-  cleanedText = cleanedText.trim()
-  cleanedText = cleanedText.replace(/\s+/g, ' ')
-  return cleanedText
-}
+export const removeSpecialChars = (text: string): string =>
+  text
+    .replace(/\p{Extended_Pictographic}/gu, '')    // all emoji pictographs (🕒, 🚾, 😀, etc.)
+    .replace(/[\u200B-\u200D\uFE0E\uFE0F]/g, '')  // zero-width chars & variation selectors
+    .replace(/[^\p{L}\p{N}\p{P}\p{Z}]/gu, '')     // strip any remaining non-text symbols
+    .replace(/\s+/g, ' ')
+    .trim();
+
 
 export const extractTextFromRichText = (richText: any, maxLength: number = 250) => {
   if (!richText || !richText.root || !Array.isArray(richText.root.children)) {

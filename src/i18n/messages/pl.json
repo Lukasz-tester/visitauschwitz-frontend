@@ -14,6 +14,11 @@
   "next": "Następna",
   "more-pages": "Więcej stron",
 
+  "contact-full-name": "Imię",
+  "contact-email": "Email",
+  "contact-message": "Wiadomość",
+  "contact-submit": "Wyślij",
+
   "cookie-message": "Używamy niezbędnych plików cookie wymaganych do działania strony, a za Twoją zgodą także dodatkowych plików cookie do analityki i wydajności. Dowiedz się więcej w: ",
   "accept": "Akceptuj",
   "decline": "Odrzuć",
@@ -85,10 +90,5 @@
 
   "map-locate-error": "Nie udało się pobrać Twojej lokalizacji",
   "map-locate-unsupported": "Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.",
-  "map-locate-popup": "Twoja aktualna lokalizacja",
-
-  "contact-full-name": "Imię i nazwisko",
-  "contact-email": "Email",
-  "contact-message": "Wiadomość",
-  "contact-submit": "Wyślij"
+  "map-locate-popup": "Twoja aktualna lokalizacja"
 }

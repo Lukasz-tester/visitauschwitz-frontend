@@ -6,7 +6,6 @@ import React, { useCallback, useState } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import RichText from '@/components/RichText'
 import { Button } from '@/components/ui/button'
-import { cn } from 'src/utilities/cn'
 
 import { buildInitialFormState } from './buildInitialFormState'
 import { fields } from './fields'
