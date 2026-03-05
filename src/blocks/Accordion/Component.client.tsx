@@ -15,12 +15,30 @@ type Props = Extract<Page['layout'][0], { blockType: 'accordion' }> & {
 }
 
 export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
+  id,
   accordionItems = [],
   changeBackground = false,
   addPaddingBottom = false,
   blockName,
+  fullUrl,
 }) => {
-  const [openIndices, setOpenIndices] = useState<number[]>([])
+  const storageKey = `accordion-state-${fullUrl || ''}-${blockName || id || 'default'}`
+
+  const [openIndices, setOpenIndices] = useState<number[]>(() => {
+    if (typeof window === 'undefined') return []
+    try {
+      const stored = sessionStorage.getItem(storageKey)
+      return stored ? JSON.parse(stored) : []
+    } catch {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify(openIndices))
+    } catch {}
+  }, [openIndices, storageKey])
 
   const handleItemClick = (index: number) => {
     setOpenIndices((prev) =>
