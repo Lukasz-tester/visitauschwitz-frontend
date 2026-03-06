@@ -12,6 +12,7 @@ pnpm lint             # Run ESLint
 pnpm lint:fix         # Run ESLint with auto-fix
 pnpm generate:types   # Regenerate Payload TypeScript types
 pnpm generate:importmap  # Regenerate Payload import map
+pnpm preview          # build && npx wrangler pages dev out
 ```
 
 ## Architecture Overview
@@ -19,6 +20,7 @@ pnpm generate:importmap  # Regenerate Payload import map
 This is a **Next.js 15 + Payload CMS 3** project with internationalization (next-intl) for a multi-language website.
 
 ### Tech Stack
+
 - **Framework:** Next.js 15 (App Router) with React 19
 - **CMS:** Payload CMS 3 with MongoDB
 - **i18n:** next-intl with locale-based routing (`/en/`, `/pl/`)
@@ -55,6 +57,7 @@ src/
 **Hero Variants:** Pages can have different hero styles (none, highImpact, mediumImpact, lowImpact). Configuration in `src/heros/config.ts`, rendering via `RenderHero`.
 
 **Localization:**
+
 - Supported locales: `en` (default), `pl`
 - Translations in `src/i18n/messages/`
 - All routes prefixed with locale: `/en/about`, `/pl/about`
@@ -63,6 +66,7 @@ src/
 **Static Generation:** Project uses static export with `dynamic = 'force-static'`. Sitemap generated at build time via `pnpm generate:sitemap`.
 
 **Access Control:** Three patterns in `src/access/`:
+
 - `authenticated` - logged-in users only
 - `authenticatedOrPublished` - public sees published content
 - `anyone` - fully public
@@ -70,6 +74,7 @@ src/
 ### Payload CMS Plugins
 
 The project uses several Payload plugins configured in `payload.config.ts`:
+
 - **Translator** - AI translations using OpenAI
 - **Redirects** - URL redirect management
 - **Nested Docs** - Hierarchical categories
@@ -93,6 +98,7 @@ The project uses several Payload plugins configured in `payload.config.ts`:
 ### Type Generation
 
 After modifying Payload collections or fields, regenerate types:
+
 ```bash
 pnpm generate:types
 ```

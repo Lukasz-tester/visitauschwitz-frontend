@@ -2,7 +2,7 @@
 import type { Form as FormType } from './types'
 
 import { useRouter } from 'next/navigation'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import RichText from '@/components/RichText'
 import { Button } from '@/components/ui/button'
@@ -61,6 +61,7 @@ export const FormBlock: React.FC<
     register,
   } = formMethods
 
+  const honeypotRef = useRef<HTMLInputElement>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [hasSubmitted, setHasSubmitted] = useState<boolean>()
   const [error, setError] = useState<{ message: string; status?: string } | undefined>()
@@ -72,6 +73,9 @@ export const FormBlock: React.FC<
       let loadingTimerID: ReturnType<typeof setTimeout>
       const submitForm = async () => {
         setError(undefined)
+
+        // Honeypot: reject if the hidden field was filled
+        if (honeypotRef.current?.value) return
 
         const dataToSend = Object.entries(data).map(([name, value]) => ({
           field: name,
@@ -150,6 +154,17 @@ export const FormBlock: React.FC<
           {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
           {!hasSubmitted && (
             <form id={formID} onSubmit={handleSubmit(onSubmit)}>
+              {/* Honeypot field — hidden from real users, bots will fill it */}
+              <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+                <label htmlFor="_hp_name">Do not fill this field</label>
+                <input
+                  id="_hp_name"
+                  type="text"
+                  autoComplete="off"
+                  tabIndex={-1}
+                  ref={honeypotRef}
+                />
+              </div>
               <div className="mb-4 last:mb-0">
                 {formFromProps &&
                   formFromProps.fields &&

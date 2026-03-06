@@ -23,6 +23,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   fullUrl,
 }) => {
   const storageKey = `accordion-state-${fullUrl || ''}-${blockName || id || 'default'}`
+  const [hasMounted, setHasMounted] = useState(false)
 
   const [openIndices, setOpenIndices] = useState<number[]>(() => {
     if (typeof window === 'undefined') return []
@@ -33,6 +34,10 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
       return []
     }
   })
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
   useEffect(() => {
     try {
@@ -66,6 +71,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                   isOpen={openIndices.includes(index)}
                   onClick={() => handleItemClick(index)}
                   changedBackground={!!changeBackground}
+                  hasMounted={hasMounted}
                 />
               </div>
             )
@@ -85,6 +91,7 @@ type ItemProps = {
   isOpen: boolean
   onClick: () => void
   changedBackground: boolean
+  hasMounted: boolean
 }
 
 const AccordionItem: React.FC<ItemProps> = ({
@@ -94,6 +101,7 @@ const AccordionItem: React.FC<ItemProps> = ({
   onClick,
   changedBackground,
   uniqueId,
+  hasMounted,
 }) => {
   const contentRef = useRef<HTMLDivElement>(null)
   const [measuredHeight, setMeasuredHeight] = useState(0)
@@ -121,20 +129,24 @@ const AccordionItem: React.FC<ItemProps> = ({
         )}
         onClick={onClick}
         id={uniqueId}
+        aria-expanded={isOpen}
+        aria-controls={`content-${uniqueId}`}
       >
         <h3 className="pr-2 text-left font-semibold">{question}</h3>
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+        {isOpen ? <ChevronUp aria-hidden="true" /> : <ChevronDown aria-hidden="true" />}
       </button>
 
       <div
         id={`content-${uniqueId}`}
         ref={contentRef}
-        className="px-5 overflow-hidden transition-[max-height] duration-500 ease-in-out"
+        className={cn('px-5 overflow-hidden', hasMounted && 'transition-[max-height] duration-500 ease-in-out')}
         role="region"
-        style={{
-          maxHeight: isOpen ? measuredHeight : 0,
-          transition: 'max-height 0.5s ease-in-out',
-        }}
+        aria-labelledby={uniqueId}
+        style={
+          hasMounted
+            ? { maxHeight: isOpen ? measuredHeight : 0 }
+            : undefined
+        }
       >
         <div className="py-2 mb-4">
           <LazyRichText content={answer} enableGutter={false} />

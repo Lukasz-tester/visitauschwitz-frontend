@@ -199,11 +199,11 @@ function buildBreadcrumbNode(pageUrl: string, items: BreadcrumbItem[]) {
   }
 }
 
-function buildFAQNode(items: { name: string; text: string }[], pageUrl: string) {
+function buildFAQNode(items: { name: string; text: string }[], pageUrl: string, locale: string = 'en') {
   return {
     '@type': 'FAQPage',
     '@id': `${pageUrl}#faq`,
-    inLanguage: 'en',
+    inLanguage: locale,
     mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
     mainEntity: items.map((item) => ({
       '@type': 'Question',
@@ -284,7 +284,7 @@ export function buildPageGraph({
   ]
 
   if (pageImage) nodes.push(buildImageNode(pageImage, url))
-  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url))
+  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale))
 
   return { '@context': 'https://schema.org', '@graph': nodes }
 }
@@ -313,7 +313,7 @@ export function buildPostGraph({
     buildBreadcrumbNode(url, breadcrumbItems),
   ]
 
-  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url))
+  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale))
 
   return { '@context': 'https://schema.org', '@graph': nodes }
 }

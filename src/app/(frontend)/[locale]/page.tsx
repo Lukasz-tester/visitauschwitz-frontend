@@ -40,7 +40,7 @@ export default async function Page({ params: paramsPromise }: Args) {
     page,
     locale,
     url: fullUrl,
-    breadcrumbItems: [{ name: 'Home', url: `${siteUrl}/` }],
+    breadcrumbItems: [{ name: locale === 'pl' ? 'Strona główna' : 'Home', url: `${siteUrl}/` }],
   })
 
   return (

@@ -1,0 +1,36 @@
+# Visit Auschwitz
+
+> Practical visitor guide for the Auschwitz-Birkenau Memorial and Museum,
+> created by a licensed Auschwitz guide with experience since 2006.
+> Covers tickets, transportation, tour routes, regulations, and preparation tips.
+
+Website: https://www.visitauschwitz.info
+Languages: en, pl
+
+## Pages
+
+- [Privacy policy](https://www.visitauschwitz.info/en/privacy-policy)
+- [Discover Auschwitz Visiting Guidelines & Extra Info](https://www.visitauschwitz.info/en/supplement): Up-to-date reliable information on Auschwitz tours, including important regulations, visit conditions, and helpful visitor details.
+- [Auschwitz Routes: Main Sites & Hidden Spots with Map](https://www.visitauschwitz.info/en/tour): Navigate Auschwitz Memorial using detailed routes, photos of key sites, and an interactive map designed to guide your visit.
+- [Auschwitz Entry Guidelines: Rules, Facilities & Tips](https://www.visitauschwitz.info/en/museum): Discover what to expect at the Memorial, including Auschwitz map, visitor guidelines, site rules, and tips for a meaningful visit.
+- [Auschwitz Directions: Find the Best Way to Get There](https://www.visitauschwitz.info/en/arrival): Get to Auschwitz easily with complete transportation info, including parking and routes from Kraków.
+- [Auschwitz Tickets: Discover Tour Types & Booking Tips](https://www.visitauschwitz.info/en/tickets): How to get tickets to Auschwitz, including booking options, pricing details and tips for visitors from a licensed guide.
+- [Contact Us: Auschwitz Memorial Visitor Information](https://www.visitauschwitz.info/en/contact): Reach out for support with tickets, tours, or general visitor info. A response will be sent within a few days.
+- [Auschwitz Visit: Key Information and Guidelines](https://www.visitauschwitz.info/en): Get expert insights on visiting Auschwitz-Birkenau Memorial, including ticket booking, arrival tips, tour types and routes.
+
+## Posts
+
+- [Auschwitz Guide Turned Developer to Help Visitors Prepare](https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare): For years, I guided visitors through Auschwitz and answered the same questions. That’s why I created a website to help people prepare for their visit.
+
+## Key Facts
+
+- Location: Oświęcim, Poland (70 km / 43 mi from Kraków, ~1 hour by train)
+- Address: Więźniów Oświęcimia 55, 32-600 Oświęcim, Poland
+- Official museum site: https://www.auschwitz.org/
+- Official booking: https://visit.auschwitz.org/
+- The memorial consists of two sites: Auschwitz I (Main Camp) and Auschwitz II-Birkenau
+- UNESCO World Heritage Site since 1979
+
+## Detailed version
+
+For more detail see [llms-full.txt](https://www.visitauschwitz.info/llms-full.txt)
