@@ -4,8 +4,8 @@
   "description": "An example of how to use Payload's localization features",
   "type": "module",
   "scripts": {
-    "generate:sitemap": "node src/utilities/fetch-sitemap.js",
-    "generate:llms": "node src/utilities/generate-llms-txt.js",
+    "generate:sitemap": "tsx src/utilities/fetch-sitemap.ts",
+    "generate:llms": "tsx src/utilities/generate-llms-txt.ts",
     "build": "pnpm run generate:sitemap && pnpm run generate:llms && cross-env NODE_OPTIONS=--no-deprecation next build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
@@ -54,6 +54,7 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.21.0",
     "typescript": "5.7.2"
   },
   "engines": {

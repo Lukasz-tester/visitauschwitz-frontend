@@ -1,24 +1,19 @@
 import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
-import fetch from 'node-fetch'
+import { locales } from '@/i18n/localization'
 
 const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
 // Always use the production URL for llms.txt (it's a public-facing file)
 const SITE_URL = 'https://www.visitauschwitz.info'
 
-// Read locales from the single source of truth (src/i18n/localization.ts)
-const locFile = fs.readFileSync(path.resolve('./src/i18n/localization.ts'), 'utf-8')
-const localesLine = locFile.match(/export const locales\s*=\s*\[([^\]]+)\]/)?.[1] || "'en'"
-const LOCALES = [...localesLine.matchAll(/['"](\w+)['"]/g)].map((m) => m[1])
-
-async function fetchJSON(endpoint) {
+async function fetchJSON(endpoint: string) {
   const res = await fetch(`${CMS_URL}${endpoint}`)
   if (!res.ok) throw new Error(`Failed to fetch ${endpoint}: ${res.status}`)
   return res.json()
 }
 
-function extractText(richText, maxLength = 500) {
+function extractText(richText: any, maxLength = 500): string {
   if (!richText?.root?.children) return ''
   const traverse = (nodes) =>
     nodes
@@ -32,7 +27,7 @@ function extractText(richText, maxLength = 500) {
   return maxLength ? full.slice(0, maxLength) : full
 }
 
-function extractFAQs(blocks) {
+function extractFAQs(blocks: any[]) {
   if (!blocks) return []
   return blocks
     .filter((b) => b.blockType === 'accordion' && b.isFAQ)
@@ -45,7 +40,7 @@ function extractFAQs(blocks) {
     )
 }
 
-function pageUrl(locale, slug) {
+function pageUrl(locale: string, slug: string) {
   if (!slug || slug === 'home') return `${SITE_URL}/${locale}`
   return `${SITE_URL}/${locale}/${slug}`
 }
@@ -62,7 +57,7 @@ async function main() {
   const posts = postsData.docs || []
 
   // --- llms.txt (concise) ---
-  const lines = []
+  const lines: string[] = []
   lines.push('# Visit Auschwitz')
   lines.push('')
   lines.push('> Practical visitor guide for the Auschwitz-Birkenau Memorial and Museum,')
@@ -70,7 +65,7 @@ async function main() {
   lines.push('> Covers tickets, transportation, tour routes, regulations, and preparation tips.')
   lines.push('')
   lines.push(`Website: ${SITE_URL}`)
-  lines.push(`Languages: ${LOCALES.join(', ')}`)
+  lines.push(`Languages: ${locales.join(', ')}`)
   lines.push('')
 
   lines.push('## Pages')
@@ -108,14 +103,14 @@ async function main() {
   lines.push(`For more detail see [llms-full.txt](${SITE_URL}/llms-full.txt)`)
 
   // --- llms-full.txt (detailed with FAQ content) ---
-  const full = []
+  const full: string[] = []
   full.push('# Visit Auschwitz - Full Content Reference')
   full.push('')
   full.push('> Comprehensive visitor guide for the Auschwitz-Birkenau Memorial and Museum.')
   full.push('> Author: Łukasz, licensed Auschwitz guide since 2006.')
   full.push('')
   full.push(`Website: ${SITE_URL}`)
-  full.push(`Languages: ${LOCALES.join(', ')}`)
+  full.push(`Languages: ${locales.join(', ')}`)
   full.push('')
 
   for (const page of pages) {
@@ -141,7 +136,7 @@ async function main() {
     }
 
     // Extract headings from content blocks for structure
-    const headings = []
+    const headings: string[] = []
     for (const block of page.layout || []) {
       if (block.blockType === 'content' && block.heading?.root?.children) {
         const heading = extractText(block.heading, 200)

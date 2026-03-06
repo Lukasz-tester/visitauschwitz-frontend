@@ -71,66 +71,28 @@ Missing elements:
 - Missing meta title/description on privacy policy page (CMS shows empty)
 - No cookie list — the policy should enumerate all cookies used (GA, GTM, cookie-consent, payload-theme, sessionStorage accordion states)
 
-  1.4 ACCORDION ACCESSIBILITY ISSUES
+  1.4 ~~ACCORDION ACCESSIBILITY ISSUES~~ DONE
 
-Impact: SEO + USABILITY
-
-The accordion component (Accordion/Component.client.tsx) has several problems:
-
-- Missing aria-expanded attribute on the button — screen readers can't tell if items are open/closed
-- Missing aria-controls linking button to content panel
-- Missing aria-labelledby on the content region
-- No keyboard navigation — no Enter/Space key handling (only onClick)
-- The content panel uses role="region" but lacks the required aria-labelledby
+- ~~Missing aria-expanded, aria-controls, aria-labelledby~~ Fixed
+- ~~Content hidden from crawlers (maxHeight:0 on SSR)~~ Fixed — content now visible before hydration
 
 ---
 
 2. SEO & AI SEARCH ISSUES
 
-2.1 FAQ PAGE & ACCORDION SCHEMA — YOUR SPECIFIC QUESTION
+2.1 FAQ PAGE & ACCORDION SCHEMA
 
-Current state: Your buildSchema.ts already has excellent FAQPage schema generation. It:
+~~Accordion SSR visibility~~ DONE — content visible before hydration for crawlers/AI agents
+~~inLanguage hardcoded to 'en'~~ DONE — now passes locale parameter
 
-- Filters accordion blocks where isFAQ === true
-- Extracts question/answer pairs
-- Generates proper FAQPage + Question + Answer schema.org markup
-- Links FAQ to the WebPage node via hasPart
+Remaining:
+- FAQ answers extracted as plain text — consider preserving basic HTML for richer schema
+- Verify isFAQ checkbox is set on accordion blocks you want indexed as FAQ
 
-For a new FAQ page using accordions: YES, this will work well for SEO and AI search, BUT with these improvements:
+~~2.2 ROBOTS.TXT — AI AGENT BLOCKING~~ DONE
 
-1. The accordion content is client-rendered — The AccordionBlock is a 'use client' component that lazy-loads RichText. While the JSON-LD is
-   server-rendered (good), Google and AI crawlers need the actual answer text in the HTML. Currently, accordion answers are hidden
-   (maxHeight: 0) and only revealed on click. Google can typically handle this, but AI agents (ChatGPT, Perplexity, Claude) parsing your HTML
-   may miss collapsed content.
-
-1. Fix: Render accordion answers in the HTML always (for SSR), and only hide visually with CSS. Use ssr: true on the LazyRichText (which
-   you already do) but ensure the content div is not maxHeight: 0 on initial server render. Consider adding <noscript> fallback or rendering
-   the content visible and collapsing it only after hydration.
-1. inLanguage is hardcoded to 'en' in buildFAQNode (line 206). This means Polish FAQ pages claim to be English. Fix: pass locale parameter.
-1. FAQ answers are extracted as plain text (extractTextFromRichText). If your answers contain links, lists, or emphasis, that markup is
-   lost in the schema. Google supports HTML in FAQ answers — consider preserving basic HTML.
-1. The isFAQ flag — Looking at the CMS data, the accordion blocks on the supplement page don't seem to have titles coming through. Verify
-   the isFAQ checkbox is set on the accordion blocks you want indexed as FAQ.
-
-2.2 ROBOTS.TXT — AI AGENT BLOCKING
-
-Impact: DIRECTLY AGAINST YOUR STATED GOAL
-
-Your robots.txt blocks: ClaudeBot, GPTBot, Amazonbot, Google-Extended, CCBot, FacebookExternalHit, Bytespider, Applebot-Extended,
-PerplexityBot, cohere-ai
-
-You said you want to optimize for AI agent search results, but you're blocking every major AI search bot. These bots power:
-
-- ChatGPT Search (GPTBot)
-- Perplexity (PerplexityBot)
-- Claude/Anthropic search (ClaudeBot)
-- Amazon Alexa answers (Amazonbot)
-- Apple Intelligence (Applebot-Extended)
-- Google AI Overviews (Google-Extended)
-
-Fix: Remove the blocks on GPTBot, PerplexityBot, ClaudeBot, Amazonbot, Applebot-Extended, and Google-Extended. Keep the ai-train=no
-declaration if you want to prevent training but still appear in AI search results. Most of these bots respect the distinction between
-indexing for search vs. training.
+Explicit Allow directives added for GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Amazonbot, Google-Extended, Applebot-Extended, Cohere-ai, FacebookBot.
+Note: Check Cloudflare Bot Management dashboard if bots are still blocked at CDN level.
 
 2.3 MISSING STRUCTURED DATA OPPORTUNITIES
 
@@ -149,15 +111,12 @@ Missing:
 - VideoObject — If you add video content
 - SiteNavigationElement — For the header nav
 
-  2.4 SITEMAP ISSUES
+  ~~2.4 SITEMAP ISSUES~~ DONE
 
-- All pages have priority: 1 — This makes priority meaningless. Use differentiated values: homepage=1.0, tickets/arrival/museum/tour=0.8,
-  supplement/contact=0.6, privacy-policy=0.3
-- changefreq: monthly for all pages — tickets/museum info may change more frequently
-- Missing <xhtml:link rel="alternate" hreflang="..."> inside sitemap entries. While you have hreflang in the HTML head (via Next.js
-  metadata), it's best practice to also include them in the sitemap for reinforcement
-- FAQ page is in sitemap (lastmod: 2026-02-25) but actually redirects to the tickets page (based on the WebFetch results). This is
-  confusing for crawlers.
+- ~~All pages have priority: 1~~ DONE — fetch-sitemap.ts now post-processes CMS sitemap: homepage=1.0, tickets/arrival/museum/tour=0.8, supplement/contact=0.6, privacy-policy=0.3, posts=0.5
+- ~~changefreq: monthly for all pages~~ DONE — tickets/museum=weekly, privacy-policy=yearly, rest=monthly
+- ~~Missing xhtml:link rel="alternate" hreflang~~ Already present — CMS-generated sitemap already includes hreflang links
+- ~~FAQ page in sitemap redirecting~~ N/A — no /faq URL exists in the sitemap
 
   2.5 META TAGS ISSUES
 
@@ -287,7 +246,7 @@ Recommendations:
 
 - Contact form sends to /api/contact — but the site is a static export (output: 'export'). How does this API route work? If it's a Next.js
   API route, it won't exist in static export. This may be broken or proxied through Vercel.
-- No CAPTCHA or bot protection on the form
+- ~~No CAPTCHA or bot protection on the form~~ DONE — honeypot field added
 - No form validation feedback beyond basic HTML required attributes
 - No email confirmation after submission ("within a few days" is vague)
 - Confirmation message is a CMS rich text block — verify it actually renders well
@@ -312,7 +271,7 @@ The theme uses payload-theme localStorage key — this is a leftover from the Pa
 
 - RenderBlocks.tsx:17-18 — Block type mappings are misleading: Image: CodeBlock and Text: BannerBlock. These should match their actual
   block types.
-- extractContentSchema.ts — Uses Math.random() for IDs (line 53, 86) — not ideal for deterministic builds
+- ~~extractContentSchema.ts — Uses Math.random() for IDs (line 53, 86) — not ideal for deterministic builds~~ DONE — replaced with deterministic `col-${index}` and `'content'` fallbacks
 - generateMeta.ts:74 — logo property is a custom addition that won't be used by Next.js metadata system (the TODO comment confirms it)
 - No error boundary wrapping blocks — one broken block could crash the whole page
 
@@ -331,15 +290,8 @@ The theme uses payload-theme localStorage key — this is a leftover from the Pa
 
 Beyond unblocking AI bots (section 2.2), here's how to optimize for AI search:
 
-1. Add llms.txt — A new standard (like robots.txt for AI). Create /llms.txt with a summary of your site, key facts, and structured
-   information. AI agents are starting to look for this. Contents should include:
-
-   - Site purpose
-   - Key facts (location, hours, prices)
-   - Content structure
-   - Authoritative sources
-
-2. Add llms-full.txt — A more detailed version with comprehensive content that AI agents can consume
+1. ~~Add llms.txt~~ DONE — auto-generated at build time from CMS content (generate-llms-txt.ts)
+2. ~~Add llms-full.txt~~ DONE — includes all FAQ items, section headings, descriptions
 3. Structured FAQ is your best asset — AI agents love well-structured Q&A pairs. Your accordion-to-FAQPage schema is excellent. For the new
    FAQ page:
 
@@ -349,8 +301,7 @@ Beyond unblocking AI bots (section 2.2), here's how to optimize for AI search:
    - Ensure answers are self-contained (don't just say "see our tickets page")
 
 4. Add SpeakableSpecification — Already in your schema (good!). Extend it to cover the most asked questions.
-5. Ensure content is in HTML, not just client-rendered JS — AI agents often can't execute JavaScript. Your static export helps here, but
-   verify the built HTML contains the full content, not just loading placeholders.
+5. ~~Ensure content is in HTML, not just client-rendered JS~~ DONE — accordion content now visible in SSR HTML before hydration
 
 6.2 FAQ PAGE ARCHITECTURE RECOMMENDATION
 
@@ -378,8 +329,8 @@ For your new FAQ page:
 Key technical requirements for FAQ SEO:
 
 - Each accordion group needs isFAQ: true in CMS
-- Fix the inLanguage hardcoding bug (line 206 of buildSchema.ts)
-- Ensure answers render in initial HTML (not hidden by JS)
+- ~~Fix the inLanguage hardcoding bug~~ DONE
+- ~~Ensure answers render in initial HTML (not hidden by JS)~~ DONE
 - Keep answers between 50-300 words for optimal AI agent extraction
 - Include specific data points in answers (prices, times, distances) — AI agents love concrete facts
 
@@ -389,19 +340,23 @@ Key technical requirements for FAQ SEO:
 
 Immediate (This Week)
 
-2. Fix GA consent violation — Load GA only after cookie acceptance
+1. Fix GA consent violation — Load GA only after cookie acceptance
 
-DONE Unblock AI search bots in robots.txt — 5 minutes, massive impact
-DONE Fix inLanguage hardcoding in FAQ schema
-DONE Add aria-expanded/aria-controls to accordion
+DONE:
+- Unblock AI search bots in robots.txt
+- Fix inLanguage hardcoding in FAQ schema
+- Add aria-expanded/aria-controls to accordion
+- Accordion SSR visibility for crawlers (content visible before hydration)
+- Add llms.txt + llms-full.txt (auto-generated at build time)
+- Form honeypot bot protection
+- Homepage breadcrumb locale fix
 
 Short-Term (Next 2 Weeks)
 
 5. Add email capture form — Homepage + footer on all pages
 6. Create lead magnet — "Auschwitz Visit Checklist" PDF
-7. Add llms.txt file
-8. Fix privacy policy — Add all missing GDPR elements + meta tags
-9. Fix sitemap priorities — Differentiate page importance
+7. Fix privacy policy — Add all missing GDPR elements + meta tags
+8. Fix sitemap priorities — Differentiate page importance
 
 Medium-Term (Next Month)
 

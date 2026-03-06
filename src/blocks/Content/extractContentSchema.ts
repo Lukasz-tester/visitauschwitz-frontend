@@ -34,7 +34,7 @@ export function extractContentSchema(block, fullUrl) {
 
   const filteredColumns = block.columns?.filter((col) => col.size !== 'oneSixth') || []
 
-  for (const column of filteredColumns) {
+  for (const [index, column] of filteredColumns.entries()) {
     const textStart = extractText(column.richText)
     const textEnd = extractText(column.richTextEnd)
     const combinedText = (textStart + ' ' + textEnd).trim()
@@ -50,7 +50,7 @@ export function extractContentSchema(block, fullUrl) {
     const mediaName = column.media?.filename
     const mediaDescription = column.media?.alt
 
-    const id = column.id || Math.random().toString(36).slice(2)
+    const id = column.id || `col-${index}`
 
     if (!combinedText && !mediaUrl && !mediaName) continue // Skip completely empty items
 
@@ -83,7 +83,7 @@ export function extractContentSchema(block, fullUrl) {
     .join(' ')
     .slice(0, 500)
 
-  const blockId = block.id || block.blockName || Math.random().toString(36).slice(2)
+  const blockId = block.id || block.blockName || 'content'
 
   return {
     '@context': 'https://schema.org',
