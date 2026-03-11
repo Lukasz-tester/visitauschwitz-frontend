@@ -6,6 +6,7 @@ import type { Footer, TypedLocale } from '@/payload-types'
 import { CMSLink } from '@/components/Link'
 import { LogoLink } from '../../components/ui/logoLink'
 import { FooterNewsletter } from './FooterNewsletter'
+import { FooterCookieSettings } from './FooterCookieSettings'
 
 export async function Footer({ locale }: { locale: TypedLocale }) {
   const footer = await getCachedGlobal<Footer>('footer', 1, locale)()
@@ -30,6 +31,9 @@ export async function Footer({ locale }: { locale: TypedLocale }) {
               )
             })}
           </nav>
+          <div className="pt-5 pl-2">
+            <FooterCookieSettings />
+          </div>
 
           <div className="md:w-1/2">
             <FooterNewsletter />

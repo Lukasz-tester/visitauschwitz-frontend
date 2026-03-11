@@ -19,10 +19,6 @@
   "contact-message": "Message",
   "contact-submit": "Submit",
 
-  "cookie-message": "We use essential cookies required for the site to work, and with your consent, additional cookies for analytics and performance. Read more in: ",
-  "accept": "Accept",
-  "decline": "Decline",
-  "privacy-policy": "Privacy policy",
   "tips": "Tips",
   "about": "About Me",
   "books": "BOOKS →",
@@ -269,6 +265,29 @@
     "contact": {
       "title": "Contact",
       "content": "For questions regarding these Terms of Use, please contact: visitauschwitzinfo@gmail.com"
+    }
+  },
+  "cookies": {
+    "banner": {
+      "message": "This site uses cookies essential for functionality and analytics cookies (Google Analytics) that help me analyze traffic and improve content. Analytics cookies are set only with your consent. You can change your mind at any time.",
+      "privacyLink": "Privacy Policy",
+      "termsLink": "Terms of Use",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject non-essential",
+      "settings": "Cookie settings"
+    },
+    "settings": {
+      "title": "Cookie settings",
+      "necessary": {
+        "name": "Essential",
+        "description": "Required for the website to function properly (preferences, dark mode, etc.). No consent needed."
+      },
+      "analytics": {
+        "name": "Analytics",
+        "description": "Google Analytics 4 — anonymous visit statistics. Data retained for max 14 months."
+      },
+      "save": "Save preferences",
+      "acceptAll": "Accept all"
     }
   }
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { getCookie } from '@/utilities/helpersSsr'
+import { getConsentPreferences } from '@/components/Cookies/CookieConsent'
 import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 const DISMISS_KEY = 'newsletter-popup-dismissed'
@@ -71,12 +71,12 @@ export function NewsletterPopup() {
     const cleanupRef = { current: () => {} }
 
     // If cookie consent already exists, activate immediately
-    if (getCookie('cookie-consent')) {
+    if (getConsentPreferences()) {
       activateTriggers()
     } else {
       // Poll for cookie consent (user hasn't accepted yet)
       const poll = setInterval(() => {
-        if (getCookie('cookie-consent')) {
+        if (getConsentPreferences()) {
           clearInterval(poll)
           activateTriggers()
         }
