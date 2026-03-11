@@ -41,7 +41,7 @@ export default async function RootLayout({ children, params }: Args) {
         {/* Inline theme init — runs synchronously before paint to prevent flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('payload-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';localStorage.setItem('payload-theme',t)}document.documentElement.setAttribute('data-theme',t)})()`,
+            __html: `(function(){var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';localStorage.setItem('theme',t)}document.documentElement.setAttribute('data-theme',t)})()`,
           }}
         />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   icons: {
     apple: '/apple-touch-icon.png',
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'visitauschwitz.info'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'),
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',

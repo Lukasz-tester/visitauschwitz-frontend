@@ -23,7 +23,7 @@ export const generateMeta = async ({
 }: {
   doc: Page | Post
   locale: string
-}): Promise<Metadata & { logo?: string }> => {
+}): Promise<Metadata> => {
   const date = new Date()
 
   const title = doc?.meta?.title
@@ -52,9 +52,6 @@ export const generateMeta = async ({
     }
   }
 
-  // ✅ Use same image for og:logo
-  const ogLogo = ogImage
-
   const languages = Object.fromEntries(locales.map((lng) => [lng, formatUrl(lng)]))
   languages['x-default'] = formatUrl('en')
 
@@ -71,6 +68,5 @@ export const generateMeta = async ({
       title,
       url: canonicalUrl,
     }),
-    logo: ogLogo, // TODO - does not show up?
   }
 }

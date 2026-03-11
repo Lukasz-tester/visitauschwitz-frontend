@@ -64,6 +64,7 @@ export const FormBlock: React.FC<
   } = formMethods
 
   const honeypotRef = useRef<HTMLInputElement>(null)
+  const lastSubmitRef = useRef(0)
   const [isLoading, setIsLoading] = useState(false)
   const [hasSubmitted, setHasSubmitted] = useState<boolean>()
   const [error, setError] = useState<{ message: string; status?: string } | undefined>()
@@ -79,6 +80,11 @@ export const FormBlock: React.FC<
 
         // Honeypot: reject if the hidden field was filled
         if (honeypotRef.current?.value) return
+
+        // Rate limit: 10s cooldown between submissions
+        const now = Date.now()
+        if (now - lastSubmitRef.current < 10_000) return
+        lastSubmitRef.current = now
 
         const dataToSend = Object.entries(data).map(([name, value]) => ({
           field: name,

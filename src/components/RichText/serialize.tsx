@@ -1,6 +1,6 @@
-import { BannerBlock } from '@/blocks/Banner/Component'
+import { TextBlock } from '@/blocks/Banner/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
-import { CodeBlock, CodeBlockProps } from '@/blocks/Code/Component'
+import { ImageBlock, ImageBlockProps } from '@/blocks/Code/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component.client'
 import React, { Fragment, JSX } from 'react'
 import { CMSLink } from '@/components/Link'
@@ -112,7 +112,7 @@ export type NodeTypes =
       | Extract<Page['layout'][0], { blockType: 'cta' }>
       | Extract<Page['layout'][0], { blockType: 'mediaBlock' }>
       | BannerBlockProps
-      | CodeBlockProps
+      | ImageBlockProps
       // | OpeningHoursProps
     >
 
@@ -213,9 +213,9 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                 />
               )
             case 'Text':
-              return <BannerBlock key={index} {...block} />
+              return <TextBlock key={index} {...block} />
             case 'code':
-              return <CodeBlock key={index} {...block} />
+              return <ImageBlock key={index} {...block} />
             default:
               return null
           }

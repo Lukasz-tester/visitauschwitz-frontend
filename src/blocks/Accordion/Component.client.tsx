@@ -25,19 +25,15 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   const storageKey = `accordion-state-${fullUrl || ''}-${blockName || id || 'default'}`
   const [hasMounted, setHasMounted] = useState(false)
 
-  const [openIndices, setOpenIndices] = useState<number[]>(() => {
-    if (typeof window === 'undefined') return []
-    try {
-      const stored = sessionStorage.getItem(storageKey)
-      return stored ? JSON.parse(stored) : []
-    } catch {
-      return []
-    }
-  })
+  const [openIndices, setOpenIndices] = useState<number[]>([])
 
   useEffect(() => {
+    try {
+      const stored = sessionStorage.getItem(storageKey)
+      if (stored) setOpenIndices(JSON.parse(stored))
+    } catch {}
     setHasMounted(true)
-  }, [])
+  }, [storageKey])
 
   useEffect(() => {
     try {

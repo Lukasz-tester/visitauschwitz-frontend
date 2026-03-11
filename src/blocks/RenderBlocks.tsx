@@ -7,15 +7,16 @@ import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component.client'
 import { OpeningHoursBlock } from './OpeningHours/Component.client'
 import { AccordionBlock } from './Accordion/Component.client'
-import { CodeBlock } from './Code/Component'
-import { BannerBlock } from './Banner/Component'
+import { ImageBlock } from './Code/Component'
+import { TextBlock } from './Banner/Component'
+import { BlockErrorBoundary } from './BlockErrorBoundary'
 
 const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> = {
   archive: ArchiveBlock,
   content: ContentBlock,
   cta: CallToActionBlock,
-  Image: CodeBlock,
-  Text: BannerBlock,
+  Image: ImageBlock,
+  Text: TextBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
   oh: OpeningHoursBlock,
@@ -42,9 +43,11 @@ export const RenderBlocks: React.FC<{
           return (
             <Fragment key={index}>
               {index === insertIndex && insertBeforeLast}
-              <div>
-                <Block {...block} locale={locale} fullUrl={url} />
-              </div>
+              <BlockErrorBoundary blockType={blockType}>
+                <div>
+                  <Block {...block} locale={locale} fullUrl={url} />
+                </div>
+              </BlockErrorBoundary>
             </Fragment>
           )
         }

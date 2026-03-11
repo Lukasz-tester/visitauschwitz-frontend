@@ -6,7 +6,7 @@ type Props = {
   className?: string
 } & BannerBlockProps
 
-export const BannerBlock: React.FC<Props> = ({ className, content, style }) => {
+export const TextBlock: React.FC<Props> = ({ className, content, style }) => {
   return (
     <>
       {style === 'text' && (
@@ -17,7 +17,7 @@ export const BannerBlock: React.FC<Props> = ({ className, content, style }) => {
       {style === 'quote' && (
         <div className="py-8 lg:py-2">
           <div className="py-4 flex rounded bg-card">
-            <div className="text-6xl md:text-7xl font-serif ml-5 md:ml-7 mr-3">“</div>
+            <div className="text-6xl md:text-7xl font-serif ml-5 md:ml-7 mr-3">&ldquo;</div>
             <div>
               <RichText content={content} className="px-3" />
             </div>

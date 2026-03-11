@@ -2,17 +2,17 @@ import React from 'react'
 import RichText from '@/components/RichText'
 import { ImageMedia } from '@/components/Media/ImageMedia'
 
-export type CodeBlockProps = {
+export type ImageBlockProps = {
   caption: Record<string, any>
-  blockType: 'code'
+  blockType: 'Image'
   media?: any
 }
 
-type Props = CodeBlockProps & {
+type Props = ImageBlockProps & {
   className?: string
 }
 
-export const CodeBlock: React.FC<Props> = ({ media, caption }) => {
+export const ImageBlock: React.FC<Props> = ({ media, caption }) => {
   return (
     <div className="mb-10 pt-5 place-self-center">
       <ImageMedia imgClassName="rounded mb-3" resource={media} />
