@@ -1,6 +1,16 @@
 # TO DO list
 
-- redirect from .../ > ro locale /en
+## LEGAL
+
+- order: add map blocks 8+9 better info > translate en into other jsons > add terms + privacy pages from book site > add texts into messages: MongoDB Atlas add in privacy instead of Cloudflare D1, add geolocation (below) > create geolocation page section > test
+
+- in "dataCollection": add:
+  "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"
+
+- add cookies info to jsons + popup change
+- test - redirect from .../ > ro locale /en
+- newsletter > create the downloadable!
+- contact > confirmation text into locale & segment add like newsletter
 
 ## Schema
 
@@ -86,6 +96,7 @@ Missing elements:
 ~~inLanguage hardcoded to 'en'~~ DONE — now passes locale parameter
 
 Remaining:
+
 - FAQ answers extracted as plain text — consider preserving basic HTML for richer schema
 - Verify isFAQ checkbox is set on accordion blocks you want indexed as FAQ
 
@@ -343,6 +354,7 @@ Immediate (This Week)
 1. Fix GA consent violation — Load GA only after cookie acceptance
 
 DONE:
+
 - Unblock AI search bots in robots.txt
 - Fix inLanguage hardcoding in FAQ schema
 - Add aria-expanded/aria-controls to accordion

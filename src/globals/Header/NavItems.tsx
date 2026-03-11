@@ -4,7 +4,7 @@ import type { Header as HeaderType } from '@/payload-types'
 
 import { CMSLink } from '@/components/Link'
 
-const NavItems: React.FC<{ header: HeaderType, onClick?(): void }> = ({ header, onClick }) => {
+const NavItems: React.FC<{ header: HeaderType; onClick?(): void }> = ({ header, onClick }) => {
   const navItems = header?.navItems || []
 
   return (
@@ -15,7 +15,7 @@ const NavItems: React.FC<{ header: HeaderType, onClick?(): void }> = ({ header, 
           {...link}
           onClick={onClick}
           appearance="link"
-          className="p-3 pl-5 text-2xl lg:text-3xl opacity-85"
+          className="p-2 pl-5 text-2xl lg:text-3xl opacity-85"
         />
       ))}
     </>

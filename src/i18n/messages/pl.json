@@ -28,9 +28,8 @@
   "contact": "Kontakt",
   "books": "KSIĄŻKI →",
 
-  "map-layer-buildings": "Budynki Auschwitz I",
-  "map-layer-birkenau-buildings": "Budynki Birkenau",
-  "map-layer-routes": "Trasy Auschwitz",
+  "map-layer-buildings": "Budynki - regular",
+  "map-layer-routes": "Trasa standardowa",
   "map-layer-entrances": "Wejścia do muzeum",
   "map-layer-parking": "Parkingi",
 
@@ -90,5 +89,21 @@
 
   "map-locate-error": "Nie udało się pobrać Twojej lokalizacji",
   "map-locate-unsupported": "Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.",
-  "map-locate-popup": "Twoja aktualna lokalizacja"
+  "map-locate-popup": "Twoja aktualna lokalizacja",
+
+  "newsletter-heading": "Pobierz darmową checklistę przygotowania do wizyty w Auschwitz",
+  "newsletter-subheading": "Dołącz do tysięcy odwiedzających, którzy lepiej się przygotowali. Otrzymaj praktyczne wskazówki, listę rzeczy do zabrania i plan dnia prosto na swoją skrzynkę.",
+  "newsletter-email-placeholder": "Twój adres email",
+  "newsletter-firstname-placeholder": "Imię (opcjonalnie)",
+  "newsletter-submit": "Pobierz darmową checklistę",
+  "newsletter-submit-footer": "Subskrybuj",
+  "newsletter-success": "Dziękujemy! Sprawdź swoją skrzynkę.",
+  "newsletter-error": "Coś poszło nie tak. Spróbuj ponownie.",
+  "newsletter-contact-optin": "Chcę również otrzymywać newsletter Visit Auschwitz",
+  "newsletter-popup-heading": "Zanim wyjdziesz — darmowa checklista przygotowań",
+  "newsletter-popup-subheading": "Nie przegap najważniejszych rzeczy. Otrzymaj checklistę do wydruku na swoją skrzynkę.",
+  "newsletter-privacy": "Szanujemy Twoją prywatność. Możesz zrezygnować w każdej chwili.",
+  "newsletter-heading-short": "Darmowa checklista",
+  "newsletter-close": "Zamknij",
+  "consent-commercial": "Wyrażam zgodę na otrzymywanie aktualizacji projektu drogą mailową. Mogę zrezygnować w dowolnym momencie. "
 }

@@ -19,7 +19,7 @@ export async function onRequestPost(context) {
       if (data.submissionData) {
         for (const name of possibleNames) {
           const field = data.submissionData.find(
-            (f) => f.field.toLowerCase() === name.toLowerCase()
+            (f) => f.field.toLowerCase() === name.toLowerCase(),
           )
           if (field?.value) return field.value
         }
@@ -32,9 +32,12 @@ export async function onRequestPost(context) {
     }
 
     // Extract form fields - handle various field naming conventions
-    const name = findField(['name', 'full-name', 'fullName', 'full_name', 'your-name', 'yourName']) || 'Unknown'
+    const name =
+      findField(['name', 'full-name', 'fullName', 'full_name', 'your-name', 'yourName']) ||
+      'Unknown'
     const email = findField(['email', 'e-mail', 'emailAddress', 'email-address']) || 'No email'
-    const message = findField(['message', 'content', 'body', 'inquiry', 'comments', 'comment']) || 'No message'
+    const message =
+      findField(['message', 'content', 'body', 'inquiry', 'comments', 'comment']) || 'No message'
 
     const fromEmail = env.EMAIL_FROM || 'contact@visitauschwitz.info'
     const toEmail = env.EMAIL_TO || 'lukaszcelta@gmail.com'

@@ -26,8 +26,11 @@ export const RenderBlocks: React.FC<{
   blocks: Page['layout'][0][]
   locale: TypedLocale
   url: string
-}> = ({ blocks, locale, url }) => {
+  insertBeforeLast?: React.ReactNode
+}> = ({ blocks, locale, url, insertBeforeLast }) => {
   if (!blocks || blocks.length === 0) return null
+
+  const insertIndex = blocks.length - 2
 
   return (
     <Fragment>
@@ -37,9 +40,12 @@ export const RenderBlocks: React.FC<{
         if (blockType && blockType in blockComponents) {
           const Block = blockComponents[blockType]
           return (
-            <div key={index}>
-              <Block {...block} locale={locale} fullUrl={url} />
-            </div>
+            <Fragment key={index}>
+              {index === insertIndex && insertBeforeLast}
+              <div>
+                <Block {...block} locale={locale} fullUrl={url} />
+              </div>
+            </Fragment>
           )
         }
         return null

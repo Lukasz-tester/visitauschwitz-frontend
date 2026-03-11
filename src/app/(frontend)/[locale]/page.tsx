@@ -13,6 +13,7 @@ import type { TypedLocale } from '@/payload-types'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import { buildPageGraph } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
+import { HomepageNewsletter } from '@/components/NewsletterSignup/HomepageNewsletter'
 
 type Args = {
   params: Promise<{
@@ -57,7 +58,7 @@ export default async function Page({ params: paramsPromise }: Args) {
       <PayloadRedirects disableNotFound url={url} />
 
       <RenderHero {...hero} />
-      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
+      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} insertBeforeLast={<HomepageNewsletter />} />
     </article>
   )
 }

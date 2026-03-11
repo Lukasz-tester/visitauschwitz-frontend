@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
 import { CMSLink } from '@/components/Link'
+import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 export const MobileNavCaller: React.FC<{
   header: HeaderType
@@ -31,7 +32,7 @@ export const MobileNavCaller: React.FC<{
   return (
     <div>
       <button
-        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 lg:right-0 rounded-bl-3xl w-16 h-16'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
+        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 rounded-bl-3xl w-16 h-16'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
         onClick={() => setModalOpen(!modalOpen)}
         aria-label="Open Navigation"
       >
@@ -50,7 +51,7 @@ export const MobileNavCaller: React.FC<{
       {modalOpen && (
         <div className="fixed inset-0 w-full z-20 bg-black/40" onClick={() => setModalOpen(false)}>
           <div
-            className="pt-2 bg-card h-screen gap-6 md:w-fit md:absolute md:right-0 md:bg-card/95"
+            className="pt-2 h-screen flex flex-col max-w-[350px] absolute right-0 bg-card md:bg-card/95"
             onClick={(e) => e.stopPropagation()}
           >
             {/* TODO: Add search functionality
@@ -63,11 +64,8 @@ export const MobileNavCaller: React.FC<{
               <SearchIcon size={26} className="opacity-85" />
             </CMSLink> */}
             {/* TODO: jak ponizej daje opacity-85 to powyzej lupka przestaje byc linkiem...? */}
-            <div className="flex place-items-center text-xl top-0">
-              <div
-                className="pl-5 py-2 flex items-center justify-center gap-1"
-                aria-label="Select Language"
-              >
+            <div className="flex items-center justify-end gap-1 text-xl pr-16 pt-1">
+              <div aria-label="Select Language">
                 <LocaleSwitcher />
               </div>
               <div aria-label="Change Theme">
@@ -86,44 +84,37 @@ export const MobileNavCaller: React.FC<{
                 onClick={() => setModalOpen(false)}
                 aria-label="Main Navigation"
               />
-              {/* <div className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold ">
-                {Object.entries(links).map(([href, label]) => (
-                  <CMSLink
-                    aria-label="Secondary Navigation"
-                    key={href}
-                    className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
-                    onClick={() => setModalOpen(false)}
-                    url={href}
-                  >
-                    {t(label)}
-                    {label === 'tips' && ' FAQ'}
-                  </CMSLink>
-                ))} 
-              </div>*/}
             </div>
-            <div
-              className="pl-2 mt-2 w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold absolute bottom-3 left-1"
-              onClick={() => setModalOpen(false)}
-            >
-              <CMSLink
-                aria-label="Secondary Navigation"
-                key="/contact"
-                className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
+            <div className="mt-auto pb-6 px-5 flex flex-col gap-3">
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-3 ml-1">
+                  {t('newsletter-heading-short')}
+                </p>
+                <NewsletterSignup variant="mobilenav" />
+              </div>
+              {/* <div
+                className="w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold"
                 onClick={() => setModalOpen(false)}
-                url="/contact"
               >
-                {t('contact')}
-                {/* {label === 'tips' && ' FAQ'} */}
-              </CMSLink>
-              <CMSLink
-                aria-label="Secondary Navigation"
-                key="/posts"
-                className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
-                onClick={() => setModalOpen(false)}
-                url="/posts"
-              >
-                {t('posts')}
-              </CMSLink>
+                <CMSLink
+                  aria-label="Secondary Navigation"
+                  key="/contact"
+                  className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
+                  onClick={() => setModalOpen(false)}
+                  url="/contact"
+                >
+                  {t('contact')}
+                </CMSLink>
+                <CMSLink
+                  aria-label="Secondary Navigation"
+                  key="/posts"
+                  className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
+                  onClick={() => setModalOpen(false)}
+                  url="/posts"
+                >
+                  {t('posts')}
+                </CMSLink>
+              </div> */}
             </div>
           </div>
         </div>

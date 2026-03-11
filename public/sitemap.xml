@@ -5,16 +5,16 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy-policy" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy-policy" />
 <lastmod>2025-09-05T23:39:56.877Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/privacy-policy</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy-policy" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy-policy" />
 <lastmod>2025-09-05T23:39:56.877Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/supplement</loc>
@@ -22,7 +22,7 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
 <lastmod>2025-09-28T10:53:24.993Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.6</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/supplement</loc>
@@ -30,7 +30,7 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
 <lastmod>2025-09-28T10:53:24.993Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.6</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/tour</loc>
@@ -38,7 +38,7 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
 <lastmod>2026-02-25T21:59:20.670Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/tour</loc>
@@ -46,23 +46,23 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
 <lastmod>2026-02-25T21:59:20.670Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/museum</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
 <lastmod>2025-10-21T07:23:57.792Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/museum</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
 <lastmod>2025-10-21T07:23:57.792Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/arrival</loc>
@@ -70,7 +70,7 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
 <lastmod>2025-09-27T13:52:20.070Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/arrival</loc>
@@ -78,55 +78,55 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
 <lastmod>2025-09-27T13:52:20.070Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/tickets</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
 <lastmod>2025-10-03T12:29:45.551Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/tickets</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
 <lastmod>2025-10-03T12:29:45.551Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/contact</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/contact" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/contact" />
-<lastmod>2026-02-25T23:15:42.427Z</lastmod>
+<lastmod>2026-03-10T08:26:06.951Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.6</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/contact</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/contact" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/contact" />
-<lastmod>2026-02-25T23:15:42.427Z</lastmod>
+<lastmod>2026-03-10T08:26:06.951Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.6</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-02-26T11:09:22.965Z</lastmod>
+<lastmod>2026-03-10T08:26:39.672Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>1.0</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-02-26T11:09:22.965Z</lastmod>
+<lastmod>2026-03-10T08:26:39.672Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>1.0</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare</loc>
@@ -134,7 +134,7 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare" />
 <lastmod>2025-10-21T07:23:02.805Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.5</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare</loc>
@@ -142,6 +142,6 @@
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare" />
 <lastmod>2025-10-21T07:23:02.805Z</lastmod>
 <changefreq>monthly</changefreq>
-<priority>1</priority>
+<priority>0.5</priority>
 </url>
 </urlset>

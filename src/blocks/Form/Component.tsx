@@ -1,11 +1,13 @@
 'use client'
 import type { Form as FormType } from './types'
 
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useRef, useState } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import RichText from '@/components/RichText'
 import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox'
 
 import { buildInitialFormState } from './buildInitialFormState'
 import { fields } from './fields'
@@ -65,6 +67,7 @@ export const FormBlock: React.FC<
   const [isLoading, setIsLoading] = useState(false)
   const [hasSubmitted, setHasSubmitted] = useState<boolean>()
   const [error, setError] = useState<{ message: string; status?: string } | undefined>()
+  const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false)
   const router = useRouter()
   const t = useTranslations()
 
@@ -117,6 +120,19 @@ export const FormBlock: React.FC<
           setIsLoading(false)
           setHasSubmitted(true)
 
+          if (subscribeToNewsletter) {
+            const emailField = Object.entries(data).find(([key]) =>
+              key.toLowerCase().includes('email'),
+            )
+            fetch('/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: emailField?.[1] || '',
+              }),
+            }).catch(() => {})
+          }
+
           if (confirmationType === 'redirect' && redirect) {
             const { url } = redirect
 
@@ -135,12 +151,12 @@ export const FormBlock: React.FC<
 
       void submitForm()
     },
-    [router, formID, redirect, confirmationType],
+    [router, formID, redirect, confirmationType, subscribeToNewsletter],
   )
 
   return (
     <div
-      className={`w-full ${changeBackground ? 'bg-card-foreground md:px-[17.3%] ' : 'container pb-20 lg:max-w-[48rem]'}`}
+      className={`w-full ${changeBackground ? 'bg-card-foreground md:px-[17.3%] ' : 'container pb-20 max-w-[600]'}`}
     >
       <div className={` ${changeBackground ? ' max-w-2xl container' : ''}`}>
         <FormProvider {...formMethods}>
@@ -155,7 +171,16 @@ export const FormBlock: React.FC<
           {!hasSubmitted && (
             <form id={formID} onSubmit={handleSubmit(onSubmit)}>
               {/* Honeypot field — hidden from real users, bots will fill it */}
-              <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  opacity: 0,
+                  height: 0,
+                  overflow: 'hidden',
+                }}
+              >
                 <label htmlFor="_hp_name">Do not fill this field</label>
                 <input
                   id="_hp_name"
@@ -165,7 +190,7 @@ export const FormBlock: React.FC<
                   ref={honeypotRef}
                 />
               </div>
-              <div className="mb-4 last:mb-0">
+              <div className="mb-5 last:mb-0">
                 {formFromProps &&
                   formFromProps.fields &&
                   formFromProps.fields?.map((field, index) => {
@@ -177,7 +202,7 @@ export const FormBlock: React.FC<
                         : field.label
                       return (
                         <div
-                          className={`mb-6 last:mb-0 ${!changeBackground ? '[&_input]:bg-card [&_textarea]:bg-card [&_[role=combobox]]:bg-card' : ''}`}
+                          className={`mb-4 last:mb-0 ${!changeBackground ? '[&_input]:bg-card [&_textarea]:bg-card [&_[role=combobox]]:bg-card' : ''}`}
                           key={index}
                         >
                           <Field
@@ -196,11 +221,27 @@ export const FormBlock: React.FC<
                   })}
               </div>
 
+              <div className="mb-6 flex items-center gap-2">
+                <Checkbox
+                  id="newsletter-optin"
+                  checked={subscribeToNewsletter}
+                  onCheckedChange={(checked) => setSubscribeToNewsletter(checked === true)}
+                  className="h-4 w-4 shrink-0 rounded border border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                />
+                <label htmlFor="newsletter-optin" className="text-sm cursor-pointer select-none">
+                  {t('consent-commercial')}
+                  <Link href="/privacy" className="underline hover:text-primary">
+                    {t('privacy-policy')}
+                  </Link>
+                </label>
+              </div>
+
               <Button
                 form={formID}
                 type="submit"
                 variant="default"
                 aria-label="Submit Contact Form"
+                disabled={!subscribeToNewsletter}
               >
                 {t.has('contact-submit') ? t('contact-submit') : submitButtonLabel}
               </Button>

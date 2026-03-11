@@ -27,9 +27,8 @@
   "about": "About Me",
   "books": "BOOKS →",
 
-  "map-layer-buildings": "Auschwitz I buildings",
-  "map-layer-birkenau-buildings": "Birkenau buildings",
-  "map-layer-routes": "Auschwitz routes",
+  "map-layer-buildings": "Buildings - regular tour",
+  "map-layer-routes": "Regular route",
   "map-layer-entrances": "Museum entrances",
   "map-layer-parking": "Parking lots",
 
@@ -89,5 +88,21 @@
 
   "map-locate-error": "Could not get your location",
   "map-locate-unsupported": "Geolocation is not supported by this browser.",
-  "map-locate-popup": "Your current location"
+  "map-locate-popup": "Your current location",
+
+  "newsletter-heading": "Get Your Free Auschwitz Visit Preparation Checklist",
+  "newsletter-subheading": "Join thousands of visitors who prepared better. Get practical tips, packing lists, and a day-by-day itinerary straight to your inbox.",
+  "newsletter-email-placeholder": "Your email address",
+  "newsletter-firstname-placeholder": "First name (optional)",
+  "newsletter-submit": "Get the Free Checklist",
+  "newsletter-submit-footer": "Subscribe",
+  "newsletter-success": "Thank you! Check your inbox for the checklist.",
+  "newsletter-error": "Something went wrong. Please try again.",
+  "newsletter-contact-optin": "Also subscribe me to the Visit Auschwitz newsletter",
+  "newsletter-popup-heading": "Before You Go — Free Preparation Checklist",
+  "newsletter-popup-subheading": "Don't miss the most important things. Get a printable checklist delivered to your inbox.",
+  "newsletter-privacy": "We respect your privacy. Unsubscribe at any time.",
+  "newsletter-heading-short": "Free Visit Checklist",
+  "newsletter-close": "Close",
+  "consent-commercial": "I agree to receive project updates by email. I can unsubscribe at any time. "
 }
