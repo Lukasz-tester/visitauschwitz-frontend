@@ -76,6 +76,8 @@ async function main() {
     const slug = page.slug
     lines.push(`- [${title}](${pageUrl('en', slug)})${desc ? ': ' + desc : ''}`)
   }
+  lines.push(`- [Privacy Policy](${SITE_URL}/en/privacy): How your personal data is collected, used, and protected.`)
+  lines.push(`- [Terms of Use](${SITE_URL}/en/terms): Terms and conditions governing use of the website.`)
   lines.push('')
 
   if (posts.length > 0) {
@@ -152,6 +154,18 @@ async function main() {
       full.push('')
     }
   }
+
+  full.push('## Privacy Policy')
+  full.push('')
+  full.push(`URL: ${SITE_URL}/en/privacy`)
+  full.push('Description: How your personal data is collected, used, and protected.')
+  full.push('')
+
+  full.push('## Terms of Use')
+  full.push('')
+  full.push(`URL: ${SITE_URL}/en/terms`)
+  full.push('Description: Terms and conditions governing use of the website.')
+  full.push('')
 
   if (posts.length > 0) {
     full.push('---')

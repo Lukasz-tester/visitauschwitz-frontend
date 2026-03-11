@@ -1,11 +1,7 @@
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
 import { Container } from '@/components/ui/container'
-import { getCachedGlobal } from '@/utilities/getGlobals'
-import { PayloadRedirects } from '@/components/PayloadRedirects'
 import { generateSimplePageJsonLd } from '@/utilities/buildSchema'
 import { routing } from '@/i18n/routing'
 
@@ -80,13 +76,11 @@ export default async function PrivacyPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <main className="py-16 md:py-24">
         <Container>
           <PrivacyContent />
         </Container>
       </main>
-      <Footer />
     </>
   )
 }

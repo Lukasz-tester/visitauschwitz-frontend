@@ -115,7 +115,7 @@
       "item1": "Ihre E-Mail-Adresse",
       "item2": "Von Ihnen ausgewählte Interessensgebiete/Themen",
       "item3": "Von Ihnen mitgeteilte Buchideen, historische Informationen oder sonstige Vorschläge",
-      "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden"
+      "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden, sowie ungefähre Geolokalisierungsdaten (Land/Region), die aus Ihrer IP-Adresse abgeleitet werden"
     },
     "legalBasis": {
       "title": "Rechtsgrundlagen der Verarbeitung",
@@ -136,7 +136,7 @@
     },
     "dataRetention": {
       "title": "Speicherdauer",
-      "content": "Personenbezogene Daten werden so lange gespeichert, bis Sie Ihre Einwilligung widerrufen oder sich von der Kommunikation abmelden. Daten, die zur Erfüllung gesetzlicher oder buchhalterischer Pflichten erforderlich sind (soweit künftig anwendbar), werden für die gesetzlich vorgeschriebene Dauer aufbewahrt. Von Cloudflare verarbeitete Server-Sicherheitsprotokolle werden entsprechend den Richtlinien dieses Infrastrukturanbieters gespeichert."
+      "content": "Personenbezogene Daten werden so lange gespeichert, bis Sie Ihre Einwilligung widerrufen oder sich von der Kommunikation abmelden. In MongoDB Atlas gespeicherte Daten werden auf Anfrage oder wenn sie für die in dieser Datenschutzerklärung beschriebenen Zwecke nicht mehr erforderlich sind, gelöscht. Daten, die zur Erfüllung gesetzlicher oder buchhalterischer Pflichten erforderlich sind (soweit künftig anwendbar), werden für die gesetzlich vorgeschriebene Dauer aufbewahrt. Von Cloudflare verarbeitete Server-Sicherheitsprotokolle werden entsprechend den Richtlinien dieses Infrastrukturanbieters gespeichert."
     },
     "cookies": {
       "title": "Cookies und Tracking-Technologien",
@@ -153,15 +153,15 @@
     },
     "dataStorage": {
       "title": "Datenspeicherung",
-      "content": "Derzeit werden personenbezogene Daten, die über diese Website übermittelt werden, ausschließlich per E-Mail (Resend API) verarbeitet und nicht in einer Datenbank gespeichert. Im Zuge der Weiterentwicklung der Website zu einem Online-Shop wird der Verantwortliche Cloudflare D1 als Datenbank einführen, um Nutzerdaten, einschließlich Kontoinformationen, Bestellhistorie und anderer für die Erbringung der in dieser Datenschutzerklärung beschriebenen Dienste erforderlichen Daten, sicher zu speichern. Diese Datenschutzerklärung wird entsprechend aktualisiert, sobald die Datenbankspeicherung implementiert wird, und gegebenenfalls wird eine zusätzliche Einwilligung eingeholt."
+      "content": "Personenbezogene Daten, die über diese Website übermittelt werden, werden in MongoDB Atlas gespeichert, einem Cloud-Datenbankdienst von MongoDB, Inc. Die Daten werden auf Servern innerhalb der Europäischen Union (EU-Region) gespeichert. MongoDB Atlas dient der sicheren Speicherung von Nutzerdaten, einschließlich Kontoinformationen, Newsletter-Abonnements und anderer für die Erbringung der in dieser Datenschutzerklärung beschriebenen Dienste erforderlichen Daten. Darüber hinaus können ungefähre Geolokalisierungsdaten (Land/Region, abgeleitet aus Ihrer IP-Adresse) gespeichert werden, um die Relevanz der Inhalte zu verbessern und regionale gesetzliche Anforderungen zu erfüllen. MongoDB Atlas verwendet Verschlüsselung im Ruhezustand und bei der Übertragung, Zugriffskontrollen sowie regelmäßige Sicherheitsaudits."
     },
     "thirdParty": {
       "title": "Dienstleister (Auftragsverarbeiter)",
-      "content": "Die Website nutzt folgende Dienstleister: Cloudflare (Hosting, Infrastruktur und Sicherheitsdienste), Resend (E-Mail-Versand) und Google (Google Analytics). Diese Dienstleister verarbeiten personenbezogene Daten im Auftrag des Verantwortlichen auf Grundlage von Auftragsverarbeitungsverträgen."
+      "content": "Die Website nutzt folgende Dienstleister: Cloudflare (Hosting, Infrastruktur und Sicherheitsdienste), MongoDB Atlas (Cloud-Datenbank, EU-Region), Resend (E-Mail-Versand) und Google (Google Analytics). Diese Dienstleister verarbeiten personenbezogene Daten im Auftrag des Verantwortlichen auf Grundlage von Auftragsverarbeitungsverträgen."
     },
     "internationalTransfers": {
       "title": "Internationale Datenübermittlungen",
-      "content": "Einige Dienstleister, darunter Cloudflare, Resend und Google, können personenbezogene Daten außerhalb des Europäischen Wirtschaftsraums (EWR), insbesondere in den Vereinigten Staaten, verarbeiten. Die Übermittlungen erfolgen auf Grundlage von Standardvertragsklauseln (SCC) oder anderen gesetzlich anerkannten Garantien, einschließlich der Teilnahme am EU-US Data Privacy Framework, soweit anwendbar."
+      "content": "In MongoDB Atlas gespeicherte Daten werden innerhalb der Europäischen Union gehostet. Einige andere Dienstleister, darunter Cloudflare, Resend und Google, können personenbezogene Daten außerhalb des Europäischen Wirtschaftsraums (EWR), insbesondere in den Vereinigten Staaten, verarbeiten. Die Übermittlungen erfolgen auf Grundlage von Standardvertragsklauseln (SCC) oder anderen gesetzlich anerkannten Garantien, einschließlich der Teilnahme am EU-US Data Privacy Framework, soweit anwendbar."
     },
     "thirdPartyData": {
       "title": "Daten Dritter",

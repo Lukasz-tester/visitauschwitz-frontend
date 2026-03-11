@@ -119,7 +119,7 @@
       "item1": "Il tuo indirizzo email",
       "item2": "Gli argomenti di interesse che selezioni",
       "item3": "Eventuali idee per libri, informazioni storiche o suggerimenti che decidi di condividere",
-      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell’indirizzo IP trattati da Cloudflare per motivi di sicurezza"
+      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell’indirizzo IP trattati da Cloudflare per motivi di sicurezza e dati approssimativi di geolocalizzazione (paese/regione) derivati dal tuo indirizzo IP"
     },
     "legalBasis": {
       "title": "Base giuridica del trattamento",
@@ -140,7 +140,7 @@
     },
     "dataRetention": {
       "title": "Periodo di conservazione",
-      "content": "I dati personali sono conservati fino alla revoca del consenso o alla disiscrizione dalle comunicazioni. I dati necessari per obblighi di legge o contabili (se applicabili in futuro) saranno conservati per il periodo previsto dalla normativa. I log di sicurezza del server elaborati da Cloudflare seguono le policy di tale infrastruttura."
+      "content": "I dati personali sono conservati fino alla revoca del consenso o alla disiscrizione dalle comunicazioni. I dati conservati in MongoDB Atlas vengono eliminati su richiesta o quando non sono più necessari per le finalità descritte nella presente informativa. I dati necessari per obblighi di legge o contabili (se applicabili in futuro) saranno conservati per il periodo previsto dalla normativa. I log di sicurezza del server elaborati da Cloudflare seguono le policy di tale infrastruttura."
     },
     "cookies": {
       "title": "Cookie e tecnologie di tracciamento",
@@ -157,15 +157,15 @@
     },
     "dataStorage": {
       "title": "Conservazione dei dati",
-      "content": "Attualmente, i dati personali inviati tramite questo sito web sono trattati esclusivamente via e-mail (Resend API) e non sono conservati in un database. Con l'evoluzione del sito web in un negozio online, il Titolare del trattamento introdurrà Cloudflare D1 come database per conservare in modo sicuro i dati degli utenti, comprese le informazioni sull'account, la cronologia degli ordini e gli altri dati necessari per la fornitura dei servizi descritti nella presente informativa. La presente Informativa sulla privacy sarà aggiornata di conseguenza quando verrà implementata la conservazione in database e, ove necessario, sarà ottenuto un ulteriore consenso."
+      "content": "I dati personali inviati tramite questo sito web sono conservati in MongoDB Atlas, un servizio di database cloud fornito da MongoDB, Inc. I dati sono conservati su server situati nell'Unione Europea (regione UE). MongoDB Atlas viene utilizzato per conservare in modo sicuro i dati degli utenti, comprese le informazioni sull'account, le iscrizioni alla newsletter e gli altri dati necessari per la fornitura dei servizi descritti nella presente informativa. Inoltre, possono essere conservati dati approssimativi di geolocalizzazione (paese/regione, derivati dal tuo indirizzo IP) per migliorare la pertinenza dei contenuti e rispettare i requisiti legali regionali. MongoDB Atlas utilizza la crittografia a riposo e in transito, controlli di accesso e audit di sicurezza periodici."
     },
     "thirdParty": {
       "title": "Fornitori di servizi terzi",
-      "content": "Il sito utilizza i seguenti fornitori: Cloudflare (hosting, infrastruttura e sicurezza), Resend (invio email) e Google (Google Analytics). Questi soggetti trattano dati personali per conto del Titolare in virtù di accordi di trattamento dati."
+      "content": "Il sito utilizza i seguenti fornitori: Cloudflare (hosting, infrastruttura e sicurezza), MongoDB Atlas (database cloud, regione UE), Resend (invio email) e Google (Google Analytics). Questi soggetti trattano dati personali per conto del Titolare in virtù di accordi di trattamento dati."
     },
     "internationalTransfers": {
       "title": "Trasferimenti internazionali di dati",
-      "content": "Alcuni fornitori, tra cui Cloudflare, Resend e Google, possono trattare dati personali al di fuori dello Spazio Economico Europeo (SEE), inclusi gli Stati Uniti. I trasferimenti avvengono sulla base di Clausole Contrattuali Standard (SCC) o altre garanzie riconosciute dalla legge, inclusa la partecipazione al Data Privacy Framework UE-USA ove applicabile."
+      "content": "I dati conservati in MongoDB Atlas sono ospitati all'interno dell'Unione Europea. Alcuni altri fornitori, tra cui Cloudflare, Resend e Google, possono trattare dati personali al di fuori dello Spazio Economico Europeo (SEE), inclusi gli Stati Uniti. I trasferimenti avvengono sulla base di Clausole Contrattuali Standard (SCC) o altre garanzie riconosciute dalla legge, inclusa la partecipazione al Data Privacy Framework UE-USA ove applicabile."
     },
     "thirdPartyData": {
       "title": "Dati relativi a terzi",

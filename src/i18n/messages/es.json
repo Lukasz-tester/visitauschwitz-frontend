@@ -119,7 +119,7 @@
       "item1": "Su direcci\u00f3n de correo electr\u00f3nico",
       "item2": "Los temas de inter\u00e9s que seleccione",
       "item3": "Cualquier idea de libro, informaci\u00f3n hist\u00f3rica o sugerencia que decida compartir",
-      "item4": "Datos t\u00e9cnicos procesados autom\u00e1ticamente por los proveedores de infraestructura, incluidos los registros de direcciones IP procesados por Cloudflare con fines de seguridad"
+      "item4": "Datos t\u00e9cnicos procesados autom\u00e1ticamente por los proveedores de infraestructura, incluidos los registros de direcciones IP procesados por Cloudflare con fines de seguridad y datos aproximados de geolocalizaci\u00f3n (pa\u00eds/regi\u00f3n) derivados de su direcci\u00f3n IP"
     },
     "legalBasis": {
       "title": "Base jur\u00eddica del tratamiento",
@@ -140,7 +140,7 @@
     },
     "dataRetention": {
       "title": "Conservaci\u00f3n de datos",
-      "content": "Los datos personales se conservan hasta que usted retire su consentimiento o cancele la suscripci\u00f3n a las comunicaciones. Los datos necesarios para el cumplimiento de obligaciones legales o contables (si fueran aplicables en el futuro) podr\u00e1n conservarse durante el per\u00edodo exigido por la legislaci\u00f3n vigente. Los registros de seguridad del servidor procesados por Cloudflare se conservan conforme a sus pol\u00edticas de infraestructura."
+      "content": "Los datos personales se conservan hasta que usted retire su consentimiento o cancele la suscripci\u00f3n a las comunicaciones. Los datos almacenados en MongoDB Atlas se eliminan a solicitud o cuando ya no sean necesarios para los fines descritos en esta pol\u00edtica. Los datos necesarios para el cumplimiento de obligaciones legales o contables (si fueran aplicables en el futuro) podr\u00e1n conservarse durante el per\u00edodo exigido por la legislaci\u00f3n vigente. Los registros de seguridad del servidor procesados por Cloudflare se conservan conforme a sus pol\u00edticas de infraestructura."
     },
     "cookies": {
       "title": "Cookies y tecnolog\u00edas de seguimiento",
@@ -157,15 +157,15 @@
     },
     "dataStorage": {
       "title": "Almacenamiento de datos",
-      "content": "Actualmente, los datos personales enviados a trav\u00e9s de este sitio web se procesan exclusivamente por correo electr\u00f3nico (Resend API) y no se almacenan en una base de datos. A medida que el sitio web evolucione hacia una tienda en l\u00ednea, el Responsable del tratamiento introducir\u00e1 Cloudflare D1 como base de datos para almacenar de forma segura los datos de los usuarios, incluida la informaci\u00f3n de la cuenta, el historial de pedidos y otros datos necesarios para la prestaci\u00f3n de los servicios descritos en esta pol\u00edtica. Esta Pol\u00edtica de Privacidad se actualizar\u00e1 en consecuencia cuando se implemente el almacenamiento en base de datos y, cuando sea necesario, se obtendr\u00e1 un consentimiento adicional."
+      "content": "Los datos personales enviados a trav\u00e9s de este sitio web se almacenan en MongoDB Atlas, un servicio de base de datos en la nube proporcionado por MongoDB, Inc. Los datos se almacenan en servidores ubicados dentro de la Uni\u00f3n Europea (regi\u00f3n UE). MongoDB Atlas se utiliza para almacenar de forma segura los datos de los usuarios, incluida la informaci\u00f3n de la cuenta, las suscripciones al bolet\u00edn informativo y otros datos necesarios para la prestaci\u00f3n de los servicios descritos en esta pol\u00edtica. Adem\u00e1s, pueden almacenarse datos aproximados de geolocalizaci\u00f3n (pa\u00eds/regi\u00f3n, derivados de su direcci\u00f3n IP) para mejorar la relevancia del contenido y cumplir con los requisitos legales regionales. MongoDB Atlas emplea cifrado en reposo y en tr\u00e1nsito, controles de acceso y auditor\u00edas de seguridad peri\u00f3dicas."
     },
     "thirdParty": {
       "title": "Proveedores de servicios de terceros",
-      "content": "El sitio web utiliza los siguientes proveedores de servicios: Cloudflare (alojamiento, infraestructura y servicios de seguridad), Resend (entrega de correo electr\u00f3nico) y Google (Google Analytics). Estos proveedores pueden tratar datos personales por cuenta del Responsable del tratamiento en virtud de acuerdos de tratamiento de datos."
+      "content": "El sitio web utiliza los siguientes proveedores de servicios: Cloudflare (alojamiento, infraestructura y servicios de seguridad), MongoDB Atlas (base de datos en la nube, regi\u00f3n UE), Resend (entrega de correo electr\u00f3nico) y Google (Google Analytics). Estos proveedores pueden tratar datos personales por cuenta del Responsable del tratamiento en virtud de acuerdos de tratamiento de datos."
     },
     "internationalTransfers": {
       "title": "Transferencias internacionales de datos",
-      "content": "Algunos proveedores de servicios, incluyendo Cloudflare, Resend y Google, pueden tratar datos personales fuera del Espacio Econ\u00f3mico Europeo (EEE), incluyendo en Estados Unidos. Las transferencias se realizan sobre la base de Cl\u00e1usulas Contractuales Tipo (CCT) u otras salvaguardas legalmente reconocidas, incluyendo la participaci\u00f3n en el Marco de Privacidad de Datos UE-EE. UU. cuando sea aplicable."
+      "content": "Los datos almacenados en MongoDB Atlas se alojan dentro de la Uni\u00f3n Europea. Algunos otros proveedores de servicios, incluyendo Cloudflare, Resend y Google, pueden tratar datos personales fuera del Espacio Econ\u00f3mico Europeo (EEE), incluyendo en Estados Unidos. Las transferencias se realizan sobre la base de Cl\u00e1usulas Contractuales Tipo (CCT) u otras salvaguardas legalmente reconocidas, incluyendo la participaci\u00f3n en el Marco de Privacidad de Datos UE-EE. UU. cuando sea aplicable."
     },
     "thirdPartyData": {
       "title": "Datos relativos a terceros",

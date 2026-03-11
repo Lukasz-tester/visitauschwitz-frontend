@@ -4,6 +4,9 @@ import path from 'path'
 import fetch from 'node-fetch'
 
 const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
+const SITE_URL = 'https://www.visitauschwitz.info'
+const LOCALES = ['en', 'pl']
+const STATIC_PAGES = ['privacy', 'terms']
 
 console.log('Fetching sitemap from CMS at:', `${CMS_URL}/sitemap.xml`)
 
@@ -17,18 +20,28 @@ function getPriority(slug: string): string {
   if (slug === '') return '1.0'
   if (['tickets', 'arrival', 'museum', 'tour'].includes(slug)) return '0.8'
   if (['supplement', 'contact'].includes(slug)) return '0.6'
-  if (slug === 'privacy-policy') return '0.3'
+  if (['privacy', 'terms'].includes(slug)) return '0.3'
   return '0.5'
 }
 
 function getChangefreq(slug: string): string {
-  if (slug === 'privacy-policy') return 'yearly'
+  if (['privacy', 'terms'].includes(slug)) return 'yearly'
   if (['tickets', 'museum'].includes(slug)) return 'weekly'
   return 'monthly'
 }
 
+function buildStaticPageEntries(): string {
+  const today = new Date().toISOString().slice(0, 10)
+  return STATIC_PAGES.flatMap((slug) =>
+    LOCALES.map(
+      (locale) =>
+        `  <url>\n    <loc>${SITE_URL}/${locale}/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${getChangefreq(slug)}</changefreq>\n    <priority>${getPriority(slug)}</priority>\n  </url>`,
+    ),
+  ).join('\n')
+}
+
 function adjustSitemap(xml: string): string {
-  return xml.replace(/<url>([\s\S]*?)<\/url>/g, (urlBlock) => {
+  let adjusted = xml.replace(/<url>([\s\S]*?)<\/url>/g, (urlBlock) => {
     const locMatch = urlBlock.match(/<loc>([^<]+)<\/loc>/)
     if (!locMatch) return urlBlock
 
@@ -40,6 +53,12 @@ function adjustSitemap(xml: string): string {
       .replace(/<priority>[^<]+<\/priority>/, `<priority>${priority}</priority>`)
       .replace(/<changefreq>[^<]+<\/changefreq>/, `<changefreq>${changefreq}</changefreq>`)
   })
+
+  // Append static frontend-only pages
+  const staticEntries = buildStaticPageEntries()
+  adjusted = adjusted.replace('</urlset>', `${staticEntries}\n</urlset>`)
+
+  return adjusted
 }
 
 async function main() {

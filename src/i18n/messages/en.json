@@ -125,7 +125,7 @@
       "item1": "Your email address",
       "item2": "Topics of interest you select",
       "item3": "Any book ideas, historical information, or suggestions you choose to share",
-      "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes"
+      "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes and approximate geolocation data (country/region) derived from your IP address"
     },
     "legalBasis": {
       "title": "Legal Basis for Processing",
@@ -146,7 +146,7 @@
     },
     "dataRetention": {
       "title": "Data Retention",
-      "content": "Personal data is retained until you withdraw your consent or unsubscribe from communications. Data necessary for legal or accounting obligations (if applicable in the future) may be retained for the period required by law. Server security logs processed by Cloudflare are retained according to their infrastructure policies."
+      "content": "Personal data is retained until you withdraw your consent or unsubscribe from communications. Data stored in MongoDB Atlas is deleted upon request or when no longer necessary for the purposes described in this policy. Data necessary for legal or accounting obligations (if applicable in the future) may be retained for the period required by law. Server security logs processed by Cloudflare are retained according to their infrastructure policies."
     },
     "cookies": {
       "title": "Cookies and Tracking Technologies",
@@ -163,15 +163,15 @@
     },
     "dataStorage": {
       "title": "Data Storage",
-      "content": "Currently, personal data submitted through this website is processed exclusively via email (Resend API) and is not stored in a database. As the website develops into an online shop, the Administrator will introduce Cloudflare D1 as a database to securely store user data, including account information, order history, and other data necessary for the provision of services described in this policy. This Privacy Policy will be updated accordingly when database storage is implemented, and where required, additional consent will be obtained."
+      "content": "Personal data submitted through this website is stored in MongoDB Atlas, a cloud-hosted database service provided by MongoDB, Inc. Data is stored on servers located within the European Union (EU region). MongoDB Atlas is used to securely store user data, including account information, newsletter subscriptions, and other data necessary for the provision of services described in this policy. Additionally, approximate geolocation data (country/region level, derived from your IP address) may be stored to improve content relevance and comply with regional legal requirements. MongoDB Atlas employs encryption at rest and in transit, access controls, and regular security audits."
     },
     "thirdParty": {
       "title": "Third-Party Service Providers",
-      "content": "The website uses the following service providers: Cloudflare (hosting, infrastructure, and security services), Resend (email delivery), and Google (Google Analytics). These providers may process personal data on behalf of the Administrator under data processing agreements."
+      "content": "The website uses the following service providers: Cloudflare (hosting, infrastructure, and security services), MongoDB Atlas (cloud database, EU region), Resend (email delivery), and Google (Google Analytics). These providers may process personal data on behalf of the Administrator under data processing agreements."
     },
     "internationalTransfers": {
       "title": "International Data Transfers",
-      "content": "Some service providers, including Cloudflare, Resend, and Google, may process personal data outside the European Economic Area (EEA), including in the United States. Transfers are carried out based on Standard Contractual Clauses (SCC) or other legally recognized safeguards, including participation in the EU–US Data Privacy Framework where applicable."
+      "content": "Data stored in MongoDB Atlas is hosted within the European Union. Some other service providers, including Cloudflare, Resend, and Google, may process personal data outside the European Economic Area (EEA), including in the United States. Transfers are carried out based on Standard Contractual Clauses (SCC) or other legally recognized safeguards, including participation in the EU–US Data Privacy Framework where applicable."
     },
     "thirdPartyData": {
       "title": "Data Concerning Third Parties",
