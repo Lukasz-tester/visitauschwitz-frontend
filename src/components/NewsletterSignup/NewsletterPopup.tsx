@@ -12,49 +12,77 @@ const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000 // 7 days
 export function NewsletterPopup() {
   const [show, setShow] = useState(false)
   const suppressedRef = useRef(false)
+  const activatedRef = useRef(false)
   const t = useTranslations()
 
   useEffect(() => {
-    const shouldSuppress = () => {
-      if (localStorage.getItem(SUBSCRIBED_KEY) === 'true') return true
-      if (!getCookie('cookie-consent')) return true
-      const dismissed = localStorage.getItem(DISMISS_KEY)
-      if (dismissed && Date.now() - Number(dismissed) < COOLDOWN_MS) return true
-      return false
+    // Permanent suppression checks (won't change during session)
+    if (localStorage.getItem(SUBSCRIBED_KEY) === 'true') {
+      suppressedRef.current = true
+      return
     }
-
-    if (shouldSuppress()) {
+    const dismissed = localStorage.getItem(DISMISS_KEY)
+    if (dismissed && Date.now() - Number(dismissed) < COOLDOWN_MS) {
       suppressedRef.current = true
       return
     }
 
-    // Timer trigger
-    const timer = setTimeout(() => {
-      if (!suppressedRef.current) {
-        suppressedRef.current = true
-        setShow(true)
-      }
-    }, 30000)
+    // Activate triggers once cookie consent exists
+    function activateTriggers() {
+      if (activatedRef.current || suppressedRef.current) return
+      activatedRef.current = true
 
-    // Exit-intent trigger (desktop only)
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !suppressedRef.current) {
-        suppressedRef.current = true
-        setShow(true)
+      // Timer trigger — 30s from when consent was granted
+      const timer = setTimeout(() => {
+        if (!suppressedRef.current) {
+          suppressedRef.current = true
+          setShow(true)
+        }
+      }, 30000)
+
+      // Exit-intent trigger (desktop only)
+      const handleMouseLeave = (e: MouseEvent) => {
+        if (e.clientY <= 0 && !suppressedRef.current) {
+          suppressedRef.current = true
+          setShow(true)
+        }
+      }
+      document.documentElement.addEventListener('mouseleave', handleMouseLeave)
+
+      // Exit-intent trigger (mobile: back button via History API)
+      history.pushState({ newsletterGuard: true }, '', window.location.href)
+      const handlePopState = () => {
+        if (!suppressedRef.current) {
+          suppressedRef.current = true
+          setShow(true)
+          history.pushState({ newsletterGuard: true }, '', window.location.href)
+        }
+      }
+      window.addEventListener('popstate', handlePopState)
+
+      // Store cleanup for when effect unmounts
+      cleanupRef.current = () => {
+        clearTimeout(timer)
+        document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
+        window.removeEventListener('popstate', handlePopState)
       }
     }
-    document.documentElement.addEventListener('mouseleave', handleMouseLeave)
 
-    // Exit-intent trigger (mobile: back button via History API)
-    history.pushState({ newsletterGuard: true }, '', window.location.href)
-    const handlePopState = () => {
-      if (!suppressedRef.current) {
-        suppressedRef.current = true
-        setShow(true)
-        history.pushState({ newsletterGuard: true }, '', window.location.href)
-      }
+    const cleanupRef = { current: () => {} }
+
+    // If cookie consent already exists, activate immediately
+    if (getCookie('cookie-consent')) {
+      activateTriggers()
+    } else {
+      // Poll for cookie consent (user hasn't accepted yet)
+      const poll = setInterval(() => {
+        if (getCookie('cookie-consent')) {
+          clearInterval(poll)
+          activateTriggers()
+        }
+      }, 1000)
+      cleanupRef.current = () => clearInterval(poll)
     }
-    window.addEventListener('popstate', handlePopState)
 
     // Listen for subscription from other tabs or from the popup's form
     const handleStorage = (e: StorageEvent) => {
@@ -66,9 +94,7 @@ export function NewsletterPopup() {
     window.addEventListener('storage', handleStorage)
 
     return () => {
-      clearTimeout(timer)
-      document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
-      window.removeEventListener('popstate', handlePopState)
+      cleanupRef.current()
       window.removeEventListener('storage', handleStorage)
     }
   }, [])
