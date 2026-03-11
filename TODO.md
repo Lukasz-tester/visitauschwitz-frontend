@@ -2,7 +2,7 @@
 
 ## LEGAL
 
-> translate en into other jsons > add terms + privacy pages from book site > add texts into messages: MongoDB Atlas add in privacy instead of Cloudflare D1, add geolocation (below) > create geolocation page section > test > remove cms privacy site and fix privacy linking!
+add terms + privacy pages from book site > add texts into messages: MongoDB Atlas add in privacy instead of Cloudflare D1, add geolocation (below) > create geolocation page section > test > remove cms privacy site and fix privacy linking!
 
 - in "dataCollection": add:
   "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"

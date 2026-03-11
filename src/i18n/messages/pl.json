@@ -108,5 +108,167 @@
   "newsletter-privacy": "Szanujemy Twoją prywatność. Możesz zrezygnować w każdej chwili.",
   "newsletter-heading-short": "Darmowa checklista",
   "newsletter-close": "Zamknij",
-  "consent-commercial": "Wyrażam zgodę na otrzymywanie aktualizacji projektu drogą mailową. Mogę zrezygnować w dowolnym momencie. "
+  "consent-commercial": "Wyrażam zgodę na otrzymywanie aktualizacji projektu drogą mailową. Mogę zrezygnować w dowolnym momencie. ",
+  "privacy": {
+    "metadata": {
+      "title": "Polityka prywatności — projekt książkowy Visit Auschwitz",
+      "description": "Dowiedz się, jak Twoje dane osobowe są zbierane, wykorzystywane i chronione podczas korzystania ze strony projektu książkowego o Auschwitz."
+    },
+    "title": "Polityka prywatności",
+    "lastUpdated": "Ostatnia aktualizacja: marzec 2026",
+    "intro": {
+      "title": "Wstęp",
+      "content": "Niniejsza strona internetowa jest prowadzona przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod nazwą ŁUKASZ TARNOWSKI, wpisanego do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polska („Administrator”). Niniejsza strona internetowa stanowi osobisty i zawodowy projekt i nie jest powiązana, nie jest rekomendowana ani oficjalnie związana z Państwowym Muzeum Auschwitz-Birkenau ani żadną inną instytucją. Niniejsza Polityka prywatności wyjaśnia, w jaki sposób dane osobowe są zbierane, wykorzystywane i chronione zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej: „RODO”), ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych oraz innymi obowiązującymi przepisami prawa."
+    },
+    "dataCollection": {
+      "title": "Informacje, które zbieram",
+      "intro": "Zbieram następujące dane osobowe dobrowolnie podane za pośrednictwem formularza kontaktowego oraz zapisu do newslettera:",
+      "item1": "Twój adres e-mail",
+      "item2": "Wybrane przez Ciebie tematy zainteresowań",
+      "item3": "Wszystkie pomysły na książki, informacje historyczne lub sugestie, które zdecydujesz się przekazać",
+      "item4": "Dane techniczne przetwarzane automatycznie przez dostawców infrastruktury, w tym dzienniki adresów IP przetwarzane przez Cloudflare w celach bezpieczeństwa"
+    },
+    "legalBasis": {
+      "title": "Podstawa prawna przetwarzania",
+      "content": "Dane osobowe są przetwarzane na następujących podstawach prawnych określonych w art. 6 RODO: a) Twoja zgoda (art. 6 ust. 1 lit. a RODO) w odniesieniu do komunikacji e-mailowej oraz plików cookie analitycznych; b) prawnie uzasadniony interes Administratora (art. 6 ust. 1 lit. f RODO) w zakresie odpowiadania na zapytania, doskonalenia strony internetowej, zapewnienia bezpieczeństwa oraz ochrony przed nadużyciami; c) w miarę potrzeb w przyszłości – wykonanie umowy (art. 6 ust. 1 lit. b RODO), jeżeli oferowane będą odpłatne produkty lub usługi."
+    },
+    "dataUse": {
+      "title": "W jaki sposób wykorzystuję Twoje informacje",
+      "intro": "Twoje dane mogą być wykorzystywane w następujących celach:",
+      "item1": "Odpowiadania na zapytania i komunikacji w sprawie projektu książki oraz powiązanych inicjatyw",
+      "item2": "Przesyłania informacji i komunikatów promocyjnych dotyczących moich projektów historycznych, edukacyjnych, wydawniczych lub przyszłych komercyjnych, w tym książek, produktów cyfrowych, konsultacji, usług przewodnickich oraz powiązanych zasobów",
+      "item3": "Zrozumienia zainteresowań odbiorców i doskonalenia treści",
+      "item4": "Zapewnienia bezpieczeństwa strony internetowej oraz zapobiegania nadużyciom",
+      "item5": "Opracowywania przyszłych usług, w tym konsultacji online, zasobów edukacyjnych lub oferty e-commerce"
+    },
+    "emailMarketing": {
+      "title": "Komunikacja e-mailowa",
+      "content": "Przesyłając swój adres e-mail, wyrażasz zgodę na otrzymywanie okazjonalnych informacji i komunikatów promocyjnych związanych z moimi działaniami historycznymi, edukacyjnymi i wydawniczymi. Mogą one obejmować aktualizacje dotyczące książek, produktów cyfrowych, konsultacji oraz powiązanych inicjatyw. Zgoda może być wycofana w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem. Każda wiadomość e-mail zawiera możliwość rezygnacji (link do wypisu). Przysługuje Ci również prawo do wniesienia w dowolnym momencie sprzeciwu wobec przetwarzania Twoich danych osobowych na potrzeby marketingu bezpośredniego na podstawie art. 21 ust. 2 RODO. Po otrzymaniu takiego sprzeciwu Twoje dane nie będą już przetwarzane w celach marketingu bezpośredniego."
+    },
+    "dataRetention": {
+      "title": "Okres przechowywania danych",
+      "content": "Dane osobowe są przechowywane do czasu wycofania przez Ciebie zgody lub wypisania się z komunikacji. Dane niezbędne do wypełnienia obowiązków prawnych lub rachunkowych (jeżeli będą miały zastosowanie w przyszłości) mogą być przechowywane przez okres wymagany przepisami prawa. Dzienniki bezpieczeństwa serwera przetwarzane przez Cloudflare są przechowywane zgodnie z politykami ich infrastruktury."
+    },
+    "cookies": {
+      "title": "Pliki cookie i podobne technologie",
+      "intro": "Niniejsza strona internetowa wykorzystuje pliki cookie oraz podobne technologie.",
+      "essential": {
+        "title": "Pliki cookie niezbędne i funkcjonalne",
+        "content": "Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony internetowej, w tym zapamiętywania Twoich preferencji dotyczących plików cookie oraz ustawień interfejsu, takich jak tryb ciemny. Te pliki cookie nie wymagają uzyskania zgody."
+      },
+      "analytics": {
+        "title": "Pliki cookie analityczne",
+        "content": "Za Twoją zgodą wykorzystywany jest Google Analytics 4 w celu analizy ruchu na stronie i doskonalenia doświadczenia użytkownika. Okres retencji danych w Google Analytics ustawiony jest na maksymalny dostępny okres. Pliki cookie analityczne są aktywowane wyłącznie po uzyskaniu Twojej wyraźnej zgody."
+      },
+      "control": "Możesz zaakceptować lub odrzucić pliki cookie analityczne za pośrednictwem banera cookie wyświetlanego podczas odwiedzania strony. Możesz również dostosować ustawienia swojej przeglądarki w celu kontroli plików cookie."
+    },
+    "dataStorage": {
+      "title": "Przechowywanie danych",
+      "content": "Obecnie dane osobowe przesyłane za pośrednictwem tej strony internetowej są przetwarzane wyłącznie drogą mailową (Resend API) i nie są przechowywane w bazie danych. W miarę rozwoju strony w kierunku sklepu internetowego Administrator wprowadzi Cloudflare D1 jako bazę danych w celu bezpiecznego przechowywania danych użytkowników, w tym informacji o koncie, historii zamówień oraz innych danych niezbędnych do świadczenia usług opisanych w niniejszej polityce. Niniejsza Polityka Prywatności zostanie odpowiednio zaktualizowana po wdrożeniu przechowywania w bazie danych, a w razie potrzeby zostanie uzyskana dodatkowa zgoda."
+    },
+    "thirdParty": {
+      "title": "Dostawcy usług zewnętrznych",
+      "content": "Strona internetowa korzysta z usług następujących dostawców: Cloudflare (hosting, infrastruktura i usługi bezpieczeństwa), Resend (dostarczanie poczty e-mail) oraz Google (Google Analytics). Ci dostawcy mogą przetwarzać dane osobowe w imieniu Administratora na podstawie umów powierzenia przetwarzania danych."
+    },
+    "internationalTransfers": {
+      "title": "Przekazywanie danych osobowych poza EOG",
+      "content": "Niektórzy dostawcy usług, w tym Cloudflare, Resend oraz Google, mogą przetwarzać dane osobowe poza Europejskim Obszarem Gospodarczym (EOG), w tym w Stanach Zjednoczonych. Przekazywanie odbywa się na podstawie Standardowych klauzul umownych (SKU) lub innych prawnie uznanych zabezpieczeń, w tym – w stosownych przypadkach – udziału w programie EU–US Data Privacy Framework."
+    },
+    "thirdPartyData": {
+      "title": "Dane dotyczące osób trzecich",
+      "content": "Jeżeli dobrowolnie podasz dane osobowe dotyczące osób trzecich (na przykład historyczne odniesienia do członków rodziny), ponosisz odpowiedzialność za zapewnienie istnienia podstawy prawnej do udostępnienia takich informacji. Dane szczególne kategorii powinny być przekazywane wyłącznie dobrowolnie i według Twojego uznania."
+    },
+    "automatedDecisions": {
+      "title": "Zautomatyzowane podejmowanie decyzji",
+      "content": "Niniejsza strona internetowa nie korzysta z zautomatyzowanego podejmowania decyzji ani profilowania, które wywołują wobec Ciebie skutki prawne lub w podobny sposób istotnie na Ciebie wpływają."
+    },
+    "minimumAge": {
+      "title": "Minimalny wiek",
+      "content": "Niniejsza strona internetowa i jej us\u0142ugi s\u0105 przeznaczone dla os\u00f3b, kt\u00f3re uko\u0144czy\u0142y 16 lat, zgodnie z art. 8 RODO oraz jego implementacj\u0105 w prawie polskim. Je\u015bli nie masz uko\u0144czonych 16 lat, nie mo\u017cesz przesy\u0142a\u0107 danych osobowych za po\u015brednictwem tej strony internetowej bez zgody rodzica lub opiekuna prawnego. Administrator \u015bwiadomie nie gromadzi danych osobowych os\u00f3b poni\u017cej 16 roku \u017cycia bez takiej zgody."
+    },
+    "rights": {
+      "title": "Twoje uprawnienia",
+      "intro": "Na podstawie RODO przysługują Ci następujące prawa:",
+      "item1": "Prawo dostępu do swoich danych osobowych",
+      "item2": "Prawo do sprostowania nieprawidłowych danych",
+      "item3": "Prawo do usunięcia danych („prawo do bycia zapomnianym”)",
+      "item4": "Prawo do ograniczenia przetwarzania",
+      "item5": "Prawo do przenoszenia danych",
+      "item6": "Prawo do cofnięcia zgody w dowolnym momencie",
+      "item7": "Prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO) w Polsce",
+      "item8": "Prawo do wniesienia w dowolnym momencie sprzeciwu wobec przetwarzania danych osobowych na potrzeby marketingu bezpośredniego (art. 21 ust. 2 RODO) \u2014 jest to prawo bezwzględne, niewymagające uzasadnienia"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "W celu skorzystania z przysługujących Ci praw lub w razie pytań dotyczących prywatności, proszę o kontakt: visitauschwitzinfo@gmail.com"
+    },
+    "changes": {
+      "title": "Zmiany w niniejszej Polityce",
+      "content": "Niniejsza Polityka prywatności może być aktualizowana w celu odzwierciedlenia zmian prawnych, technicznych lub biznesowych. Aktualna wersja będzie zawsze dostępna na tej stronie wraz z datą aktualizacji."
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Regulamin — projekt książkowy Visit Auschwitz",
+      "description": "Zapoznaj się z zasadami korzystania ze strony projektu książkowego o Auschwitz, w tym z prawami własności intelektualnej i obowiązkami użytkownika."
+    },
+    "title": "Regulamin korzystania z serwisu",
+    "lastUpdated": "Ostatnia aktualizacja: marzec 2026",
+    "intro": {
+      "title": "Wstęp",
+      "content": "Niniejszy Regulamin określa zasady dostępu do oraz korzystania z niniejszej strony internetowej prowadzonej przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod nazwą ŁUKASZ TARNOWSKI, wpisanego do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy ul. dr Janusza Korczaka 17, 32-600 Rajsko, Polska („Usługodawca”). Korzystając z niniejszej strony internetowej lub uzyskując do niej dostęp, akceptujesz niniejszy Regulamin i zobowiązujesz się do jego przestrzegania."
+    },
+    "eligibility": {
+      "title": "Uprawnienie",
+      "content": "Niniejsza strona internetowa oraz jej usługi przeznaczone są dla osób w wieku 16 lat lub starszych. Korzystając z tej strony internetowej i przekazując dane osobowe, potwierdzasz, że masz co najmniej 16 lat. Jeżeli masz mniej niż 16 lat, możesz korzystać z tej strony internetowej wyłącznie przy udziale i za zgodą rodzica lub opiekuna prawnego."
+    },
+    "natureOfWebsite": {
+      "title": "Charakter serwisu",
+      "content": "Serwis udostępnia treści o charakterze historycznym, edukacyjnym i informacyjnym dotyczące Auschwitz oraz powiązanych zagadnień. Serwis może oferować również książki, produkty cyfrowe, konsultacje, usługi przewodnickie oraz inne powiązane usługi. Serwis stanowi niezależny projekt prywatny i nie jest powiązany, nie jest rekomendowany ani oficjalnie związany z Państwowym Muzeum Auschwitz-Birkenau ani z jakąkolwiek inną instytucją."
+    },
+    "intellectualProperty": {
+      "title": "Prawa własności intelektualnej",
+      "content": "Wszystkie treści dostępne w serwisie, w tym teksty, artykuły, grafiki, elementy identyfikacji wizualnej oraz materiały cyfrowe, podlegają ochronie prawnoautorskiej oraz innym przepisom dotyczącym ochrony własności intelektualnej. O ile nie wskazano wyraźnie inaczej, wszelkie prawa przysługują Usługodawcy. Bez uprzedniej pisemnej zgody Usługodawcy zabronione jest kopiowanie, rozpowszechnianie, modyfikowanie, publiczne udostępnianie, odtwarzanie lub wykorzystywanie komercyjne jakichkolwiek treści serwisu."
+    },
+    "acceptableUse": {
+      "title": "Dopuszczalne korzystanie z serwisu",
+      "content": "Zobowiązujesz się korzystać z serwisu w sposób zgodny z prawem, dobrymi obyczajami oraz niniejszym Regulaminem. Zabronione jest w szczególności zamieszczanie treści bezprawnych, naruszających prawa osób trzecich, podejmowanie prób nieuprawnionego dostępu do systemów informatycznych Usługodawcy, ingerowanie w prawidłowe funkcjonowanie serwisu lub podejmowanie działań o charakterze spamu, ataków czy sabotażu."
+    },
+    "userSubmissions": {
+      "title": "Materiały przesyłane przez użytkowników",
+      "content": "Przesyłając za pośrednictwem serwisu sugestie, pomysły, materiały historyczne lub inne treści („Materiały użytkownika”), oświadczasz, że posiadasz do nich stosowne prawa lub uprawnienia pozwalające na ich legalne udostępnienie. Przesyłając Materiały użytkownika, udzielasz Usługodawcy niewyłącznej, nieodpłatnej, nieograniczonej terytorialnie i czasowo licencji na ich wykorzystywanie, przeglądanie, analizę oraz ewentualne włączenie do przyszłych projektów Usługodawcy, chyba że strony postanowią inaczej w odrębnej umowie."
+    },
+    "servicesAndSales": {
+      "title": "Usługi i produkty cyfrowe",
+      "content": "Serwis może oferować odpłatne produkty lub usługi, w tym książki, materiały cyfrowe, konsultacje, usługi przewodnickie oraz zasoby edukacyjne. Szczegółowe warunki, cennik, zasady płatności oraz polityka zwrotów i odstąpienia od umowy będą każdorazowo przedstawione przed dokonaniem zakupu. Do poszczególnych usług mogą stosować się odrębne regulaminy lub warunki umowne."
+    },
+    "consumerRights": {
+      "title": "Prawa konsumenta (Unia Europejska)",
+      "content": "Jeżeli jesteś konsumentem w rozumieniu przepisów Unii Europejskiej lub polskich, przysługują Ci ustawowe uprawnienia konsumenckie, w tym prawo odstąpienia od umowy zawartej na odległość w terminie 14 dni bez podania przyczyny – o ile nie zachodzi wyjątek (np. świadczenie treści cyfrowych rozpoczęte za Twoją wyraźną zgodą przed upływem terminu do odstąpienia). Prawa te nie ulegają wyłączeniu ani ograniczeniu na podstawie niniejszego Regulaminu."
+    },
+    "disclaimer": {
+      "title": "Ograniczenie odpowiedzialności",
+      "content": "Treści serwisu mają charakter wyłącznie informacyjny i edukacyjny. Usługodawca dokłada starań, aby informacje były rzetelne i aktualne, jednak nie gwarantuje ich kompletności, aktualności, dokładności ani braku błędów. Usługodawca nie ponosi odpowiedzialności za szkody pośrednie, przypadkowe, następcze lub utracone korzyści powstałe w związku z korzystaniem z serwisu – w najszerszym zakresie dozwolonym przez obowiązujące prawo."
+    },
+    "externalLinks": {
+      "title": "Linki do stron zewnętrznych",
+      "content": "Serwis może zawierać odnośniki (linki) do stron internetowych osób trzecich. Usługodawca nie ponosi odpowiedzialności za treści, politykę prywatności ani praktyki stosowane na tych stronach zewnętrznych."
+    },
+    "technicalAvailability": {
+      "title": "Dostępność techniczna serwisu",
+      "content": "Usługodawca nie gwarantuje ciągłej, nieprzerwanej i bezbłędnej dostępności serwisu. Dostęp do serwisu może być czasowo ograniczony lub zawieszony z przyczyn technicznych, konserwacyjnych, aktualizacyjnych lub niezależnych od Usługodawcy."
+    },
+    "modifications": {
+      "title": "Zmiany Regulaminu",
+      "content": "Usługodawca zastrzega sobie prawo do zmiany niniejszego Regulaminu w dowolnym czasie. Aktualna wersja Regulaminu wraz z datą ostatniej aktualizacji będzie zawsze dostępna na stronie serwisu."
+    },
+    "governingLaw": {
+      "title": "Prawo właściwe i właściwość sądów",
+      "content": "Niniejszy Regulamin podlega prawu Rzeczypospolitej Polskiej oraz prawu Unii Europejskiej. Wszelkie spory wynikłe z niniejszego Regulaminu lub związane z korzystaniem z serwisu będą rozstrzygane przez właściwe sądy polskie, z uwzględnieniem bezwzględnie obowiązujących przepisów o ochronie konsumentów."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Wszelkie pytania dotyczące niniejszego Regulaminu prosimy kierować na adres: visitauschwitzinfo@gmail.com"
+    }
+  }
 }

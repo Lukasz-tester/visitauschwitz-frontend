@@ -96,5 +96,168 @@
   "newsletter-privacy": "Wir respektieren Ihre Privatsphäre. Sie können sich jederzeit abmelden.",
   "newsletter-heading-short": "Kostenlose Besuchs-Checkliste",
   "newsletter-close": "Schließen",
-  "consent-commercial": "Ich stimme zu, Projekt-Updates per E-Mail zu erhalten. Ich kann mich jederzeit abmelden."
+  "consent-commercial": "Ich stimme zu, Projekt-Updates per E-Mail zu erhalten. Ich kann mich jederzeit abmelden.",
+
+  "privacy": {
+    "metadata": {
+      "title": "Datenschutzerklärung — Visit Auschwitz Book Project",
+      "description": "Erfahren Sie, wie Ihre personenbezogenen Daten beim Besuch der Website des Auschwitz-Buch-Projekts erhoben, verwendet und geschützt werden. DSGVO-konforme Datenverarbeitung."
+    },
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "intro": {
+      "title": "Einleitung",
+      "content": "Diese Website wird betrieben von ŁUKASZ TARNOWSKI, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Verantwortlicher“). Diese Website ist ein persönliches und berufliches Projekt und steht in keiner Verbindung, wird nicht unterstützt oder offiziell vertreten durch das Staatliche Museum Auschwitz-Birkenau oder eine andere Institution. Diese Datenschutzerklärung erläutert, wie personenbezogene Daten gemäß der Datenschutz-Grundverordnung (EU) 2016/679 (DSGVO), dem polnischen Gesetz zum Schutz personenbezogener Daten sowie sonstigem anwendbarem Recht erhoben, verwendet und geschützt werden."
+    },
+    "dataCollection": {
+      "title": "Erhobene Informationen",
+      "intro": "Ich erhebe die folgenden personenbezogenen Daten, die freiwillig über das Kontaktformular und die Newsletter-Anmeldung bereitgestellt werden:",
+      "item1": "Ihre E-Mail-Adresse",
+      "item2": "Von Ihnen ausgewählte Interessensgebiete/Themen",
+      "item3": "Von Ihnen mitgeteilte Buchideen, historische Informationen oder sonstige Vorschläge",
+      "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden"
+    },
+    "legalBasis": {
+      "title": "Rechtsgrundlagen der Verarbeitung",
+      "content": "Personenbezogene Daten werden auf Grundlage der folgenden Rechtsgrundlagen gemäß Art. 6 DSGVO verarbeitet: (a) Ihre Einwilligung (Art. 6 Abs. 1 lit. a) für E-Mail-Kommunikation und Analyse-Cookies; (b) das berechtigte Interesse des Verantwortlichen (Art. 6 Abs. 1 lit. f) zur Beantwortung von Anfragen, Verbesserung der Website, Gewährleistung der Sicherheit und Schutz vor Missbrauch; (c) soweit künftig anwendbar, Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b), falls entgeltliche Produkte oder Dienstleistungen angeboten werden."
+    },
+    "dataUse": {
+      "title": "Verwendung Ihrer Daten",
+      "intro": "Ihre Daten können zu folgenden Zwecken verwendet werden:",
+      "item1": "Beantwortung von Anfragen und Kommunikation im Zusammenhang mit dem Buchprojekt und damit verbundenen Initiativen",
+      "item2": "Versand von Informations- und Werbe-E-Mails zu meinen historischen, bildenden, verlegerischen oder künftigen kommerziellen Projekten, einschließlich Büchern, digitalen Produkten, Beratungen, Führungen und zugehörigen Ressourcen",
+      "item3": "Verständnis der Interessen des Publikums und Verbesserung der Inhalte",
+      "item4": "Sicherstellung der Sicherheit der Website und Verhinderung von Missbrauch",
+      "item5": "Entwicklung künftiger Dienstleistungen, einschließlich Online-Beratungen, Bildungsressourcen oder E-Commerce-Angebote"
+    },
+    "emailMarketing": {
+      "title": "E-Mail-Kommunikation",
+      "content": "Mit Angabe Ihrer E-Mail-Adresse willigen Sie in den gelegentlichen Empfang von Informations- und Werbe-Mitteilungen ein, die mit meinen historischen, bildenden und verlegerischen Tätigkeiten zusammenhängen. Dies kann Aktualisierungen zu Büchern, digitalen Produkten, Beratungen und verwandten Initiativen umfassen. Die Einwilligung kann jederzeit ohne Angabe von Gründen widerrufen werden, ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird. Jede E-Mail enthält eine Abmeldeoption. Sie haben außerdem das Recht, der Verarbeitung Ihrer personenbezogenen Daten zum Zwecke der Direktwerbung jederzeit gemäß Artikel 21 Absatz 2 DSGVO zu widersprechen. Nach Eingang eines solchen Widerspruchs werden Ihre Daten nicht mehr für Direktwerbung verarbeitet."
+    },
+    "dataRetention": {
+      "title": "Speicherdauer",
+      "content": "Personenbezogene Daten werden so lange gespeichert, bis Sie Ihre Einwilligung widerrufen oder sich von der Kommunikation abmelden. Daten, die zur Erfüllung gesetzlicher oder buchhalterischer Pflichten erforderlich sind (soweit künftig anwendbar), werden für die gesetzlich vorgeschriebene Dauer aufbewahrt. Von Cloudflare verarbeitete Server-Sicherheitsprotokolle werden entsprechend den Richtlinien dieses Infrastrukturanbieters gespeichert."
+    },
+    "cookies": {
+      "title": "Cookies und Tracking-Technologien",
+      "intro": "Diese Website verwendet Cookies und ähnliche Technologien.",
+      "essential": {
+        "title": "Essenzielle und funktionale Cookies",
+        "content": "Diese Cookies sind für die ordnungsgemäße Funktion der Website erforderlich, einschließlich der Speicherung Ihrer Cookie-Präferenzen und Oberflächeneinstellungen wie Dark Mode. Diese Cookies bedürfen keiner Einwilligung."
+      },
+      "analytics": {
+        "title": "Analyse-Cookies",
+        "content": "Mit Ihrer Einwilligung wird Google Analytics 4 zur Analyse des Website-Traffics und zur Verbesserung der Nutzererfahrung eingesetzt. Die Speicherdauer in Google Analytics ist auf den maximal verfügbaren Zeitraum eingestellt. Analyse-Cookies werden erst nach Ihrer ausdrücklichen Einwilligung aktiviert."
+      },
+      "control": "Sie können Analyse-Cookies über das Cookie-Banner beim Besuch der Website akzeptieren oder ablehnen. Sie können auch Ihre Browsereinstellungen anpassen, um Cookies zu kontrollieren."
+    },
+    "dataStorage": {
+      "title": "Datenspeicherung",
+      "content": "Derzeit werden personenbezogene Daten, die über diese Website übermittelt werden, ausschließlich per E-Mail (Resend API) verarbeitet und nicht in einer Datenbank gespeichert. Im Zuge der Weiterentwicklung der Website zu einem Online-Shop wird der Verantwortliche Cloudflare D1 als Datenbank einführen, um Nutzerdaten, einschließlich Kontoinformationen, Bestellhistorie und anderer für die Erbringung der in dieser Datenschutzerklärung beschriebenen Dienste erforderlichen Daten, sicher zu speichern. Diese Datenschutzerklärung wird entsprechend aktualisiert, sobald die Datenbankspeicherung implementiert wird, und gegebenenfalls wird eine zusätzliche Einwilligung eingeholt."
+    },
+    "thirdParty": {
+      "title": "Dienstleister (Auftragsverarbeiter)",
+      "content": "Die Website nutzt folgende Dienstleister: Cloudflare (Hosting, Infrastruktur und Sicherheitsdienste), Resend (E-Mail-Versand) und Google (Google Analytics). Diese Dienstleister verarbeiten personenbezogene Daten im Auftrag des Verantwortlichen auf Grundlage von Auftragsverarbeitungsverträgen."
+    },
+    "internationalTransfers": {
+      "title": "Internationale Datenübermittlungen",
+      "content": "Einige Dienstleister, darunter Cloudflare, Resend und Google, können personenbezogene Daten außerhalb des Europäischen Wirtschaftsraums (EWR), insbesondere in den Vereinigten Staaten, verarbeiten. Die Übermittlungen erfolgen auf Grundlage von Standardvertragsklauseln (SCC) oder anderen gesetzlich anerkannten Garantien, einschließlich der Teilnahme am EU-US Data Privacy Framework, soweit anwendbar."
+    },
+    "thirdPartyData": {
+      "title": "Daten Dritter",
+      "content": "Sofern Sie freiwillig personenbezogene Daten Dritter (z. B. historische Bezüge zu Familienmitgliedern) angeben, sind Sie dafür verantwortlich, dass Sie eine Rechtsgrundlage zur Weitergabe dieser Informationen besitzen. Besonders sensible Daten sollten nur freiwillig und nach eigenem Ermessen übermittelt werden."
+    },
+    "automatedDecisions": {
+      "title": "Automatisierte Entscheidungsfindung",
+      "content": "Diese Website verwendet keine automatisierte Entscheidungsfindung oder Profiling, die Ihnen gegenüber rechtliche Wirkung entfaltet oder Sie in ähnlicher Weise erheblich beeinträchtigt."
+    },
+    "minimumAge": {
+      "title": "Mindestalter",
+      "content": "Diese Website und ihre Dienste sind für Personen ab 16 Jahren bestimmt, gemäß Artikel 8 der DSGVO und dessen Umsetzung im polnischen Recht. Wenn Sie unter 16 Jahre alt sind, dürfen Sie ohne die Einwilligung Ihres Elternteils oder gesetzlichen Vertreters keine personenbezogenen Daten über diese Website übermitteln. Der Verantwortliche erhebt wissentlich keine personenbezogenen Daten von Personen unter 16 Jahren ohne eine solche Einwilligung."
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "intro": "Nach der DSGVO stehen Ihnen folgende Rechte zu:",
+      "item1": "Auskunftsrecht bezüglich Ihrer personenbezogenen Daten",
+      "item2": "Recht auf Berichtigung unrichtiger Daten",
+      "item3": "Recht auf Löschung („Recht auf Vergessenwerden“)",
+      "item4": "Recht auf Einschränkung der Verarbeitung",
+      "item5": "Recht auf Datenübertragbarkeit",
+      "item6": "Recht, die Einwilligung jederzeit zu widerrufen",
+      "item7": "Recht, eine Beschwerde bei der Präsidentin / dem Präsidenten des Amtes für den Schutz personenbezogener Daten (UODO) in Polen einzureichen",
+      "item8": "Recht, der Verarbeitung Ihrer personenbezogenen Daten zum Zwecke der Direktwerbung jederzeit zu widersprechen (Artikel 21 Absatz 2 DSGVO) \u2014 dies ist ein absolutes Recht, das keiner Begründung bedarf"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Zur Ausübung Ihrer Rechte oder bei Fragen zum Datenschutz kontaktieren Sie bitte: visitauschwitzinfo@gmail.com"
+    },
+    "changes": {
+      "title": "Änderungen dieser Erklärung",
+      "content": "Diese Datenschutzerklärung kann aktualisiert werden, um rechtliche, technische oder geschäftliche Änderungen widerzuspiegeln. Die jeweils aktuelle Fassung ist stets auf dieser Seite mit dem aktualisierten Datum verfügbar."
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Nutzungsbedingungen — Visit Auschwitz Book Project",
+      "description": "Lesen Sie die Nutzungsbedingungen, die für die Nutzung der Website des Auschwitz-Buch-Projekts gelten, einschließlich geistigen Eigentums und Nutzerpflichten."
+    },
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "intro": {
+      "title": "Einleitung",
+      "content": "Diese Nutzungsbedingungen regeln Ihren Zugang zu und die Nutzung dieser Website, die von ŁUKASZ TARNOWSKI betrieben wird, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Diensteanbieter”). Durch den Zugriff auf oder die Nutzung dieser Website erklären Sie sich mit diesen Bedingungen einverstanden."
+    },
+    "eligibility": {
+      "title": "Berechtigung",
+      "content": "Diese Website und ihre Dienste sind für Personen ab 16 Jahren bestimmt. Durch die Nutzung dieser Website und die Übermittlung personenbezogener Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind. Wenn Sie unter 16 Jahre alt sind, dürfen Sie diese Website nur unter Mitwirkung und mit Einwilligung Ihres Elternteils oder gesetzlichen Vertreters nutzen."
+    },
+    "natureOfWebsite": {
+      "title": "Art der Website",
+      "content": "Diese Website bietet historische, bildende und informative Inhalte zu Auschwitz und verwandten Themen. Sie kann auch Bücher, digitale Produkte, Beratungen, Führungen und andere damit verbundene Dienstleistungen anbieten. Die Website ist ein unabhängiges Projekt und steht in keiner Verbindung, wird nicht unterstützt oder offiziell vertreten durch das Staatliche Museum Auschwitz-Birkenau oder eine andere Institution."
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "content": "Sämtliche auf dieser Website verfügbaren Inhalte, einschließlich Texte, Artikel, Grafiken, Markenelemente und digitaler Materialien, sind durch Urheberrecht und sonstige Gesetze zum geistigen Eigentum geschützt. Soweit nicht anders angegeben, behält sich der Diensteanbieter alle Rechte vor. Eine Vervielfältigung, Verbreitung, Änderung, Veröffentlichung oder kommerzielle Nutzung ist ohne vorherige schriftliche Zustimmung untersagt."
+    },
+    "acceptableUse": {
+      "title": "Zulässige Nutzung",
+      "content": "Sie verpflichten sich, die Website rechtmäßig und respektvoll zu nutzen. Es ist untersagt, rechtswidrige Inhalte zu übermitteln, Rechte Dritter zu verletzen, unbefugten Zugriff auf Systeme zu versuchen oder die ordnungsgemäße Funktion der Website zu stören."
+    },
+    "userSubmissions": {
+      "title": "Nutzerbeiträge",
+      "content": "Wenn Sie Vorschläge, Ideen, historische Materialien oder sonstige Inhalte über die Website einreichen, bestätigen Sie, dass Sie berechtigt sind, diese Materialien zu übermitteln. Durch die Übermittlung räumen Sie dem Diensteanbieter eine nicht-ausschließliche, weltweite, vergütungsfreie Lizenz ein, diese Beiträge zu nutzen, zu prüfen und gegebenenfalls in künftige Projekte einzubinden, soweit nicht anders vereinbart."
+    },
+    "servicesAndSales": {
+      "title": "Dienstleistungen und digitale Produkte",
+      "content": "Die Website kann entgeltliche Produkte oder Dienstleistungen anbieten, einschließlich Büchern, digitalen Materialien, Beratungen, Führungen oder Bildungsressourcen. Detaillierte Bedingungen, Preise, Zahlungsmodalitäten und Rückerstattungsrichtlinien werden vor Abschluss eines Kaufs angegeben. Für bestimmte Dienstleistungen können gesonderte Vertragsbedingungen gelten."
+    },
+    "consumerRights": {
+      "title": "Verbraucherrechte (EU)",
+      "content": "Als Verbraucher in der Europäischen Union können Ihnen gesetzliche Rechte zustehen, einschließlich des Widerrufsrechts bei bestimmten Fernabsatzverträgen innerhalb von 14 Tagen, soweit keine Ausnahmen greifen (z. B. bei digitalen Inhalten mit vorheriger Zustimmung zur sofortigen Ausführung). Diese Rechte bleiben von diesen Nutzungsbedingungen unberührt."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": "Die Inhalte der Website dienen ausschließlich Informations- und Bildungszwecken. Trotz angemessener Bemühungen um Richtigkeit wird keine Gewähr für Vollständigkeit, Aktualität oder Fehlerfreiheit übernommen. Der Diensteanbieter haftet nicht für mittelbare, zufällige oder Folgeschäden aus der Nutzung der Website, soweit eine Haftung nicht nach anwendbarem Recht ausgeschlossen werden kann."
+    },
+    "externalLinks": {
+      "title": "Externe Links",
+      "content": "Die Website kann Links zu Websites Dritter enthalten. Der Diensteanbieter ist nicht verantwortlich für Inhalte, Datenschutzpraktiken oder Richtlinien externer Websites."
+    },
+    "technicalAvailability": {
+      "title": "Technische Verfügbarkeit",
+      "content": "Der Diensteanbieter garantiert keinen ununterbrochenen oder fehlerfreien Zugang zur Website. Der Zugang kann vorübergehend eingeschränkt sein aufgrund von Wartungsarbeiten, Aktualisierungen oder technischen Störungen."
+    },
+    "modifications": {
+      "title": "Änderungen der Bedingungen",
+      "content": "Der Diensteanbieter behält sich das Recht vor, diese Nutzungsbedingungen jederzeit zu aktualisieren oder zu ändern. Die jeweils aktuelle Fassung ist stets auf dieser Seite mit dem aktualisierten Datum verfügbar."
+    },
+    "governingLaw": {
+      "title": "Anwendbares Recht",
+      "content": "Diese Nutzungsbedingungen unterliegen dem Recht der Republik Polen sowie dem anwendbaren Recht der Europäischen Union. Etwaige Streitigkeiten werden von den zuständigen Gerichten nach den geltenden Verbraucherschutzvorschriften entschieden."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie bitte: visitauschwitzinfo@gmail.com"
+    }
+  }
 }

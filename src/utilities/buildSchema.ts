@@ -1,4 +1,3 @@
-
 import type { Page, Post } from '@/payload-types'
 import { extractTextFromRichText, removeSpecialChars } from '@/utilities/helpersSsr'
 
@@ -177,9 +176,7 @@ function buildArticleNode({
         : metaImage.filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')
       image = `${R2_BASE}/${webpFilename}`
     } else if ('url' in metaImage && typeof metaImage.url === 'string') {
-      image = metaImage.url.startsWith('http')
-        ? metaImage.url
-        : `${SITE_URL}${metaImage.url}`
+      image = metaImage.url.startsWith('http') ? metaImage.url : `${SITE_URL}${metaImage.url}`
     }
   }
 
@@ -191,9 +188,7 @@ function buildArticleNode({
     ...(post.meta?.description ? { description: post.meta.description } : {}),
     ...(image ? { image: { '@id': `${url}#primaryimage` } } : {}),
     ...(post.publishedAt ? { datePublished: post.publishedAt.slice(0, 10) } : {}),
-    ...((post as any).updatedAt
-      ? { dateModified: (post as any).updatedAt.slice(0, 10) }
-      : {}),
+    ...((post as any).updatedAt ? { dateModified: (post as any).updatedAt.slice(0, 10) } : {}),
     inLanguage: locale,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#museum` },
@@ -218,7 +213,11 @@ function buildBreadcrumbNode(pageUrl: string, items: BreadcrumbItem[]) {
   }
 }
 
-function buildFAQNode(items: { name: string; text: string }[], pageUrl: string, locale: string = 'en') {
+function buildFAQNode(
+  items: { name: string; text: string }[],
+  pageUrl: string,
+  locale: string = 'en',
+) {
   return {
     '@type': 'FAQPage',
     '@id': `${pageUrl}#faq`,
@@ -293,9 +292,7 @@ function buildTouristTripNode(url: string, locale: string) {
   return {
     '@type': 'TouristTrip',
     '@id': `${url}#touristtrip`,
-    name: isPolish
-      ? 'Zwiedzanie Auschwitz-Birkenau'
-      : 'Auschwitz-Birkenau Memorial Tour',
+    name: isPolish ? 'Zwiedzanie Auschwitz-Birkenau' : 'Auschwitz-Birkenau Memorial Tour',
     description: isPolish
       ? 'Trasa zwiedzania po byłym niemieckim nazistowskim obozie koncentracyjnym i zagłady Auschwitz I oraz Auschwitz II-Birkenau.'
       : 'Tour of the former German Nazi concentration and extermination camp Auschwitz I and Auschwitz II-Birkenau.',
@@ -391,9 +388,7 @@ function buildHowToNode(url: string, locale: string) {
   return {
     '@type': 'HowTo',
     '@id': `${url}#howto`,
-    name: isPolish
-      ? 'Jak zarezerwować bilety do Auschwitz'
-      : 'How to Book Auschwitz Tickets',
+    name: isPolish ? 'Jak zarezerwować bilety do Auschwitz' : 'How to Book Auschwitz Tickets',
     description: isPolish
       ? 'Przewodnik krok po kroku jak zarezerwować bilety do Muzeum Auschwitz-Birkenau.'
       : 'Step-by-step guide to booking tickets for the Auschwitz-Birkenau Memorial and Museum.',
@@ -474,9 +469,7 @@ export function buildPageGraph({
         : metaImage.filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')
       pageImage = `${R2_BASE}${webpFilename}`
     } else if ('url' in metaImage && typeof metaImage.url === 'string') {
-      pageImage = metaImage.url.startsWith('http')
-        ? metaImage.url
-        : `${SITE_URL}${metaImage.url}`
+      pageImage = metaImage.url.startsWith('http') ? metaImage.url : `${SITE_URL}${metaImage.url}`
     }
   }
 
@@ -542,6 +535,33 @@ export function buildPostGraph({
 
   if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale))
   if (navItems?.length) nodes.push(buildSiteNavigationNode(navItems, locale))
+
+  return { '@context': 'https://schema.org', '@graph': nodes }
+}
+
+export function generateSimplePageJsonLd({
+  locale,
+  path,
+  name,
+  description,
+}: {
+  locale: string
+  path: string
+  name: string
+  description: string
+}) {
+  const pageUrl = `${SITE_URL}/${locale}/${path}`
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: 'Home', url: `${SITE_URL}/${locale}` },
+    { name, url: pageUrl },
+  ]
+
+  const nodes: object[] = [
+    organizationNode,
+    websiteNode,
+    buildWebPageNode({ url: pageUrl, name, description, locale }),
+    buildBreadcrumbNode(pageUrl, breadcrumbItems),
+  ]
 
   return { '@context': 'https://schema.org', '@graph': nodes }
 }

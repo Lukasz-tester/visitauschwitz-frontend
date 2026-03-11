@@ -107,5 +107,167 @@
   "newsletter-privacy": "We respect your privacy. Unsubscribe at any time.",
   "newsletter-heading-short": "Free Visit Checklist",
   "newsletter-close": "Close",
-  "consent-commercial": "I agree to receive project updates by email. I can unsubscribe at any time. "
+  "consent-commercial": "I agree to receive project updates by email. I can unsubscribe at any time. ",
+  "privacy": {
+    "metadata": {
+      "title": "Privacy Policy — Visit Auschwitz Book Project",
+      "description": "Learn how your personal data is collected, used, and protected when you use the Auschwitz book project website. GDPR-compliant data handling."
+    },
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": {
+      "title": "Introduction",
+      "content": "This website is operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Administrator\"). This website is a personal and professional project and is not affiliated with, endorsed by, or officially connected to the Auschwitz-Birkenau State Museum or any other institution. This Privacy Policy explains how personal data is collected, used, and protected in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR), the Polish Personal Data Protection Act, and other applicable laws."
+    },
+    "dataCollection": {
+      "title": "Information I Collect",
+      "intro": "I collect the following personal data voluntarily provided through the contact form and newsletter signup:",
+      "item1": "Your email address",
+      "item2": "Topics of interest you select",
+      "item3": "Any book ideas, historical information, or suggestions you choose to share",
+      "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes"
+    },
+    "legalBasis": {
+      "title": "Legal Basis for Processing",
+      "content": "Personal data is processed on the following legal bases under Article 6 GDPR: (a) your consent (Article 6(1)(a)) for email communications and analytics cookies; (b) the legitimate interest of the Administrator (Article 6(1)(f)) for responding to inquiries, improving the website, ensuring security, and protecting against abuse; (c) where applicable in the future, performance of a contract (Article 6(1)(b)) if paid products or services are offered."
+    },
+    "dataUse": {
+      "title": "How I Use Your Information",
+      "intro": "Your data may be used for the following purposes:",
+      "item1": "Responding to inquiries and communicating regarding the book project and related initiatives",
+      "item2": "Sending informational and promotional emails regarding my historical, educational, publishing, or future commercial projects, including books, digital products, consultations, guided services, and related resources",
+      "item3": "Understanding audience interests and improving content",
+      "item4": "Ensuring website security and preventing abuse",
+      "item5": "Developing future services, including online consultations, educational resources, or e-commerce offerings"
+    },
+    "emailMarketing": {
+      "title": "Email Communications",
+      "content": "By submitting your email address, you consent to receiving occasional informational and promotional communications related to my historical, educational, and publishing activities. This may include updates about books, digital products, consultations, and related initiatives. Consent may be withdrawn at any time without affecting the lawfulness of processing carried out before withdrawal. Each email contains an unsubscribe option. You also have the right to object to the processing of your personal data for direct marketing purposes at any time under Article 21(2) GDPR. Upon receiving such an objection, your data will no longer be processed for direct marketing."
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "content": "Personal data is retained until you withdraw your consent or unsubscribe from communications. Data necessary for legal or accounting obligations (if applicable in the future) may be retained for the period required by law. Server security logs processed by Cloudflare are retained according to their infrastructure policies."
+    },
+    "cookies": {
+      "title": "Cookies and Tracking Technologies",
+      "intro": "This website uses cookies and similar technologies.",
+      "essential": {
+        "title": "Essential and Functional Cookies",
+        "content": "These cookies are necessary for the website to function properly, including remembering your cookie preferences and interface settings such as dark mode. These cookies do not require consent."
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "content": "With your consent, Google Analytics 4 is used to analyze website traffic and improve user experience. Data retention in Google Analytics is set to the maximum available period. Analytics cookies are activated only after your explicit consent."
+      },
+      "control": "You can accept or decline analytics cookies via the cookie banner when visiting the site. You may also adjust your browser settings to control cookies."
+    },
+    "dataStorage": {
+      "title": "Data Storage",
+      "content": "Currently, personal data submitted through this website is processed exclusively via email (Resend API) and is not stored in a database. As the website develops into an online shop, the Administrator will introduce Cloudflare D1 as a database to securely store user data, including account information, order history, and other data necessary for the provision of services described in this policy. This Privacy Policy will be updated accordingly when database storage is implemented, and where required, additional consent will be obtained."
+    },
+    "thirdParty": {
+      "title": "Third-Party Service Providers",
+      "content": "The website uses the following service providers: Cloudflare (hosting, infrastructure, and security services), Resend (email delivery), and Google (Google Analytics). These providers may process personal data on behalf of the Administrator under data processing agreements."
+    },
+    "internationalTransfers": {
+      "title": "International Data Transfers",
+      "content": "Some service providers, including Cloudflare, Resend, and Google, may process personal data outside the European Economic Area (EEA), including in the United States. Transfers are carried out based on Standard Contractual Clauses (SCC) or other legally recognized safeguards, including participation in the EU–US Data Privacy Framework where applicable."
+    },
+    "thirdPartyData": {
+      "title": "Data Concerning Third Parties",
+      "content": "If you voluntarily provide personal data concerning third parties (for example historical references to family members), you are responsible for ensuring that you have a legal basis to share such information. Sensitive data should only be shared voluntarily and at your discretion."
+    },
+    "automatedDecisions": {
+      "title": "Automated Decision-Making",
+      "content": "This website does not use automated decision-making or profiling that produces legal effects or similarly significantly affects you."
+    },
+    "minimumAge": {
+      "title": "Minimum Age",
+      "content": "This website and its services are intended for individuals aged 16 years or older, in accordance with Article 8 of the GDPR and its implementation under Polish law. If you are under 16, you may not submit personal data through this website without the consent of your parent or legal guardian. The Administrator does not knowingly collect personal data from individuals under 16 years of age without such consent."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "intro": "Under GDPR, you have the following rights:",
+      "item1": "Right of access to your personal data",
+      "item2": "Right to rectification of inaccurate data",
+      "item3": "Right to erasure (\"right to be forgotten\")",
+      "item4": "Right to restriction of processing",
+      "item5": "Right to data portability",
+      "item6": "Right to withdraw consent at any time",
+      "item7": "Right to lodge a complaint with the President of the Personal Data Protection Office (UODO) in Poland",
+      "item8": "Right to object to the processing of your personal data for direct marketing purposes at any time (Article 21(2) GDPR) \u2014 this is an absolute right that requires no justification"
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "To exercise your rights or for any privacy-related questions, contact: visitauschwitzinfo@gmail.com"
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "This Privacy Policy may be updated to reflect legal, technical, or business changes. The current version will always be available on this page with the updated date."
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Terms of Use — Visit Auschwitz Book Project",
+      "description": "Review the terms and conditions governing your use of the Auschwitz book project website, including intellectual property and user obligations."
+    },
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": {
+      "title": "Introduction",
+      "content": "These Terms of Use govern your access to and use of this website operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Service Provider\"). By accessing or using this website, you agree to comply with these Terms."
+    },
+    "eligibility": {
+      "title": "Eligibility",
+      "content": "This website and its services are intended for individuals aged 16 years or older. By using this website and submitting personal data, you confirm that you are at least 16 years of age. If you are under 16, you may use this website only with the involvement and consent of your parent or legal guardian."
+    },
+    "natureOfWebsite": {
+      "title": "Nature of the Website",
+      "content": "This website provides historical, educational, and informational content related to Auschwitz and related topics. It may also offer books, digital products, consultations, guided services, and other related services. The website is an independent project and is not affiliated with, endorsed by, or officially connected to the Auschwitz-Birkenau State Museum or any other institution."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "All content available on this website, including texts, articles, graphics, branding elements, and digital materials, is protected by copyright and intellectual property laws. Unless otherwise stated, all rights are reserved by the Service Provider. You may not reproduce, distribute, modify, publish, or commercially exploit any content without prior written consent."
+    },
+    "acceptableUse": {
+      "title": "Acceptable Use",
+      "content": "You agree to use the website in a lawful and respectful manner. It is prohibited to submit unlawful content, infringe the rights of third parties, attempt to gain unauthorized access to systems, or interfere with the proper functioning of the website."
+    },
+    "userSubmissions": {
+      "title": "User Submissions",
+      "content": "If you submit suggestions, ideas, historical materials, or other content through the website, you confirm that you have the right to share such materials. By submitting content, you grant the Service Provider a non-exclusive, worldwide, royalty-free license to use, review, and potentially incorporate such submissions into future projects, unless otherwise agreed."
+    },
+    "servicesAndSales": {
+      "title": "Services and Digital Products",
+      "content": "The website may offer paid products or services, including books, digital materials, consultations, guided services, or educational resources. Detailed terms, pricing, payment conditions, and refund policies will be provided before any purchase is completed. Separate contractual terms may apply to specific services."
+    },
+    "consumerRights": {
+      "title": "Consumer Rights (EU)",
+      "content": "If you are a consumer within the European Union, you may have statutory rights, including the right to withdraw from certain distance contracts within 14 days, unless exceptions apply (such as digital content delivered with prior consent to immediate performance). These rights remain unaffected by these Terms."
+    },
+    "disclaimer": {
+      "title": "Disclaimer of Liability",
+      "content": "The website content is provided for informational and educational purposes only. While reasonable efforts are made to ensure accuracy, no guarantee is given that all information is complete, up-to-date, or free of errors. The Service Provider shall not be liable for indirect, incidental, or consequential damages arising from the use of the website, except where liability cannot be excluded under applicable law."
+    },
+    "externalLinks": {
+      "title": "External Links",
+      "content": "The website may contain links to third-party websites. The Service Provider is not responsible for the content, privacy practices, or policies of external websites."
+    },
+    "technicalAvailability": {
+      "title": "Technical Availability",
+      "content": "The Service Provider does not guarantee uninterrupted or error-free access to the website. Access may be temporarily restricted due to maintenance, updates, or technical issues."
+    },
+    "modifications": {
+      "title": "Changes to the Terms",
+      "content": "The Service Provider reserves the right to update or modify these Terms of Use at any time. The current version will always be available on this page with the updated date."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "These Terms of Use are governed by the laws of the Republic of Poland and applicable European Union law. Any disputes shall be resolved by competent courts in accordance with applicable consumer protection regulations."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions regarding these Terms of Use, please contact: visitauschwitzinfo@gmail.com"
+    }
+  }
 }
