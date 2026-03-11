@@ -9,7 +9,6 @@ Languages: en, pl
 
 ## Pages
 
-- [Privacy policy](https://www.visitauschwitz.info/en/privacy-policy)
 - [Discover Auschwitz Visiting Guidelines & Extra Info](https://www.visitauschwitz.info/en/supplement): Up-to-date reliable information on Auschwitz tours, including important regulations, visit conditions, and helpful visitor details.
 - [Auschwitz Routes: Main Sites & Hidden Spots with Map](https://www.visitauschwitz.info/en/tour): Navigate Auschwitz Memorial using detailed routes, photos of key sites, and an interactive map designed to guide your visit.
 - [Auschwitz Entry Guidelines: Rules, Facilities & Tips](https://www.visitauschwitz.info/en/museum): Discover what to expect at the Memorial, including Auschwitz map, visitor guidelines, site rules, and tips for a meaningful visit.

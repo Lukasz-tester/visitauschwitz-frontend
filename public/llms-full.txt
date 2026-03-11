@@ -6,14 +6,6 @@
 Website: https://www.visitauschwitz.info
 Languages: en, pl
 
-## Privacy policy
-
-URL: https://www.visitauschwitz.info/en/privacy-policy
-
-### Sections
-
-- 1. Contact Form When you use the contact form on this website, you may be asked to provide your name and email address. Purpose: This information is used solely to respond to your inquiry. Storage: Yo
-
 ## Discover Auschwitz Visiting Guidelines & Extra Info
 
 URL: https://www.visitauschwitz.info/en/supplement

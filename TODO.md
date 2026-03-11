@@ -1,5 +1,7 @@
 # TO DO list
 
+- (privacy, terms) — currently missing hreflang alternate tags in sitemap - moze kiedys?
+
 ## LEGAL
 
 - add cookies info to jsons + popup change

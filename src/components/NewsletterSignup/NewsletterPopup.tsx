@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { getCookie } from '@/utilities/helpersSsr'
 import { NewsletterSignup } from '@/components/NewsletterSignup'
@@ -11,6 +11,7 @@ const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000 // 7 days
 
 export function NewsletterPopup() {
   const [show, setShow] = useState(false)
+  const suppressedRef = useRef(false)
   const t = useTranslations()
 
   useEffect(() => {
@@ -22,24 +23,66 @@ export function NewsletterPopup() {
       return false
     }
 
-    if (shouldSuppress()) return
+    if (shouldSuppress()) {
+      suppressedRef.current = true
+      return
+    }
 
     // Timer trigger
-    const timer = setTimeout(() => setShow(true), 30000)
+    const timer = setTimeout(() => {
+      if (!suppressedRef.current) {
+        suppressedRef.current = true
+        setShow(true)
+      }
+    }, 30000)
 
     // Exit-intent trigger (desktop only)
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0) setShow(true)
+      if (e.clientY <= 0 && !suppressedRef.current) {
+        suppressedRef.current = true
+        setShow(true)
+      }
     }
     document.documentElement.addEventListener('mouseleave', handleMouseLeave)
+
+    // Exit-intent trigger (mobile: back button via History API)
+    history.pushState({ newsletterGuard: true }, '', window.location.href)
+    const handlePopState = () => {
+      if (!suppressedRef.current) {
+        suppressedRef.current = true
+        setShow(true)
+        history.pushState({ newsletterGuard: true }, '', window.location.href)
+      }
+    }
+    window.addEventListener('popstate', handlePopState)
+
+    // Listen for subscription from other tabs or from the popup's form
+    const handleStorage = (e: StorageEvent) => {
+      if (e.key === SUBSCRIBED_KEY && e.newValue === 'true') {
+        suppressedRef.current = true
+        setShow(false)
+      }
+    }
+    window.addEventListener('storage', handleStorage)
 
     return () => {
       clearTimeout(timer)
       document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
+      window.removeEventListener('popstate', handlePopState)
+      window.removeEventListener('storage', handleStorage)
     }
   }, [])
 
+  // Also check localStorage on re-renders (handles same-tab subscription)
+  useEffect(() => {
+    if (show && localStorage.getItem(SUBSCRIBED_KEY) === 'true') {
+      suppressedRef.current = true
+      setShow(false)
+    }
+  }, [show])
+
   const dismiss = () => {
+    suppressedRef.current = true
     localStorage.setItem(DISMISS_KEY, String(Date.now()))
     setShow(false)
   }
@@ -47,9 +90,12 @@ export function NewsletterPopup() {
   if (!show) return null
 
   return (
-    <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/60" onClick={dismiss}>
+    <div
+      className="fixed inset-x-0 top-0 z-[100000] flex items-center justify-center bg-black/60 h-[100dvh] overflow-y-auto"
+      onClick={dismiss}
+    >
       <div
-        className="relative bg-background rounded-xl shadow-2xl max-w-md w-full mx-4 p-8"
+        className="relative bg-background rounded-xl shadow-2xl max-w-md w-full mx-4 my-4 p-8 shrink-0"
         onClick={(e) => e.stopPropagation()}
       >
         <button

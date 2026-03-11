@@ -51,19 +51,9 @@ export const MobileNavCaller: React.FC<{
       {modalOpen && (
         <div className="fixed inset-0 w-full z-20 bg-black/40" onClick={() => setModalOpen(false)}>
           <div
-            className="pt-2 h-screen flex flex-col max-w-[350px] absolute right-0 bg-card md:bg-card/95"
+            className="pt-2 h-screen flex flex-col max-w-[500px] sm:max-w-[350px] absolute right-0 bg-card md:bg-card/95"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* TODO: Add search functionality
-            <CMSLink
-              aria-label="Search"
-              className="w-12 h-16 flex items-center justify-center fixed top-0 right-16 "
-              url="search"
-              onClick={() => setModalOpen(!modalOpen)}
-            >
-              <SearchIcon size={26} className="opacity-85" />
-            </CMSLink> */}
-            {/* TODO: jak ponizej daje opacity-85 to powyzej lupka przestaje byc linkiem...? */}
             <div className="flex items-center justify-end gap-1 text-xl pr-16 pt-1">
               <div aria-label="Select Language">
                 <LocaleSwitcher />
