@@ -13,8 +13,10 @@ import { fetchPayloadData } from '@/utilities/fetchPayloadData'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'
-import { buildPageGraph } from '@/utilities/buildSchema'
+import { buildPageGraph, type SchemaNavItem } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
+import { getCachedGlobal } from '@/utilities/getGlobals'
+import type { Header } from '@/payload-types'
 
 // Generate static params for export
 export async function generateStaticParams() {
@@ -54,6 +56,9 @@ export default async function Page({ params: paramsPromise }: Args) {
   const { hero, layout } = page
   const heroImageUrl = getHeroImageUrl(page)
 
+  const header = await getCachedGlobal<Header>('header', 1, locale)()
+  const navItems = (header?.navItems ?? []) as SchemaNavItem[]
+
   const homeLabel = locale === 'pl' ? 'Strona główna' : 'Home'
   const pageLabel = page.meta?.title || page.title
   const schema = buildPageGraph({
@@ -64,6 +69,7 @@ export default async function Page({ params: paramsPromise }: Args) {
       { name: homeLabel, url: `${siteUrl}/` },
       { name: pageLabel, url: fullUrl },
     ],
+    navItems,
   })
 
   return (

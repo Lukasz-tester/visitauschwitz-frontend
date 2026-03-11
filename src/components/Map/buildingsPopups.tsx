@@ -76,6 +76,26 @@ export const getBuildings = (t: (key: string) => string): { [slug: string]: Buil
       </>
     ),
   },
+  blok9: {
+    positions: [
+      [50.0256815, 19.2037352],
+      [50.0255824, 19.2036215],
+      [50.0253393, 19.2041277],
+      [50.0254385, 19.2042422],
+      [50.0256815, 19.2037352],
+    ],
+    popup: (
+      <>
+        <strong>{t('map-blok9-title')}</strong>
+        <br />
+        {t('map-blok9-desc')}
+        <br /> <br />
+        <strong>
+          <MapLink url="tour#block-9">{t('map-blok9-link')}</MapLink>
+        </strong>
+      </>
+    ),
+  },
   blok11wewnetrznewiezieniebloksmierci: {
     positions: [
       [50.0253112, 19.2033089],

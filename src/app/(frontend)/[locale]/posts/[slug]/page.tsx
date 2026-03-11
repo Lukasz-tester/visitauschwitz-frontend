@@ -14,8 +14,10 @@ import type { TypedLocale } from '@/payload-types'
 import PageClient from '../../[slug]/page.client'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { locales } from '@/i18n/localization'
-import { buildPostGraph } from '@/utilities/buildSchema'
+import { buildPostGraph, type SchemaNavItem } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
+import { getCachedGlobal } from '@/utilities/getGlobals'
+import type { Header } from '@/payload-types'
 
 const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
 
@@ -42,6 +44,9 @@ export default async function PostPage({ params }: Args) {
   const { layout } = post
   const heroImageUrl = getHeroImageUrl(post as Post)
 
+  const header = await getCachedGlobal<Header>('header', 1, locale)()
+  const navItems = (header?.navItems ?? []) as SchemaNavItem[]
+
   const homeLabel = locale === 'pl' ? 'Strona główna' : 'Home'
   const blogLabel = locale === 'pl' ? 'Blog' : 'Blog'
   const schema = buildPostGraph({
@@ -53,6 +58,7 @@ export default async function PostPage({ params }: Args) {
       { name: blogLabel, url: `${baseUrl}/${locale}/posts` },
       { name: (post as Post).title, url: fullUrl },
     ],
+    navItems,
   })
 
   return (

@@ -11,8 +11,10 @@ import { generateMeta } from '@/utilities/generateMeta'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
-import { buildPageGraph } from '@/utilities/buildSchema'
+import { buildPageGraph, type SchemaNavItem } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
+import { getCachedGlobal } from '@/utilities/getGlobals'
+import type { Header } from '@/payload-types'
 import { HomepageNewsletter } from '@/components/NewsletterSignup/HomepageNewsletter'
 
 type Args = {
@@ -37,11 +39,15 @@ export default async function Page({ params: paramsPromise }: Args) {
   const { hero, layout } = page
   const heroImageUrl = getHeroImageUrl(page)
 
+  const header = await getCachedGlobal<Header>('header', 1, locale)()
+  const navItems = (header?.navItems ?? []) as SchemaNavItem[]
+
   const schema = buildPageGraph({
     page,
     locale,
     url: fullUrl,
     breadcrumbItems: [{ name: locale === 'pl' ? 'Strona główna' : 'Home', url: `${siteUrl}/` }],
+    navItems,
   })
 
   return (

@@ -2,7 +2,7 @@
 
 ## LEGAL
 
-- order: add map blocks 8+9 better info > translate en into other jsons > add terms + privacy pages from book site > add texts into messages: MongoDB Atlas add in privacy instead of Cloudflare D1, add geolocation (below) > create geolocation page section > test
+> translate en into other jsons > add terms + privacy pages from book site > add texts into messages: MongoDB Atlas add in privacy instead of Cloudflare D1, add geolocation (below) > create geolocation page section > test > remove cms privacy site and fix privacy linking!
 
 - in "dataCollection": add:
   "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"
@@ -113,14 +113,14 @@ Currently implemented (good):
 
 Missing:
 
-- TouristTrip schema — Perfect for tour pages. Google supports this for travel content.
-- Event schema — For guided tour schedules/bookings
+- ~~TouristTrip schema — Perfect for tour pages. Google supports this for travel content.~~ DONE
+- ~~Event schema — For guided tour schedules/bookings~~ DONE
 - Offer / AggregateOffer — Ticket pricing (130 PLN, 170 PLN etc.) could appear as rich snippets
-- HowTo schema — The booking process, the day-of-visit steps — these are natural HowTo content
-- LocalBusiness or TravelAgency — For your guide service specifically
+- ~~HowTo schema — The booking process, the day-of-visit steps — these are natural HowTo content~~ DONE
+- ~~LocalBusiness or TravelAgency — For your guide service specifically~~ DONE
 - Review / AggregateRating — If you can collect reviews, this dramatically improves CTR in search results
 - VideoObject — If you add video content
-- SiteNavigationElement — For the header nav
+- ~~SiteNavigationElement — For the header nav~~ DONE
 
   ~~2.4 SITEMAP ISSUES~~ DONE
 
