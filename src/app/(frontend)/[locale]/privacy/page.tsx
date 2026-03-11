@@ -106,6 +106,7 @@ function PrivacyContent() {
           <li>{t('dataCollection.item2')}</li>
           <li>{t('dataCollection.item3')}</li>
           <li>{t('dataCollection.item4')}</li>
+          <li>{t('dataCollection.item5')}</li>
         </ul>
       </section>
 

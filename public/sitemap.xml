@@ -5,16 +5,16 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy-policy" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy-policy" />
 <lastmod>2025-09-05T23:39:56.877Z</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/pl/privacy-policy</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy-policy" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy-policy" />
 <lastmod>2025-09-05T23:39:56.877Z</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
 </url>
 <url>
 <loc>https://www.visitauschwitz.info/en/supplement</loc>
@@ -144,4 +144,28 @@
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
+  <url>
+    <loc>https://www.visitauschwitz.info/en/privacy</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.visitauschwitz.info/pl/privacy</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.visitauschwitz.info/en/terms</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.visitauschwitz.info/pl/terms</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

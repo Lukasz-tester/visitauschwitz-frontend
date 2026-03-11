@@ -115,7 +115,8 @@
       "item1": "Ihre E-Mail-Adresse",
       "item2": "Von Ihnen ausgewählte Interessensgebiete/Themen",
       "item3": "Von Ihnen mitgeteilte Buchideen, historische Informationen oder sonstige Vorschläge",
-      "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden, sowie ungefähre Geolokalisierungsdaten (Land/Region), die aus Ihrer IP-Adresse abgeleitet werden"
+      "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden, sowie ungefähre Geolokalisierungsdaten (Land/Region), die aus Ihrer IP-Adresse abgeleitet werden",
+      "item5": "Geolokalisierungsdaten — nur wenn Sie ausdrücklich die Funktion \"Mich finden\" auf der interaktiven Karte verwenden. Ihr Standort wird lokal im Browser verarbeitet, um Ihre Position auf der Karte anzuzeigen, und wird weder gespeichert noch an einen Server übermittelt"
     },
     "legalBasis": {
       "title": "Rechtsgrundlagen der Verarbeitung",

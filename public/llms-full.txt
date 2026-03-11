@@ -269,6 +269,16 @@ Description: Get expert insights on visiting Auschwitz-Birkenau Memorial, includ
 - Auschwitz Then and Now
 - Key Information for Auschwitz Visit
 
+## Privacy Policy
+
+URL: https://www.visitauschwitz.info/en/privacy
+Description: How your personal data is collected, used, and protected.
+
+## Terms of Use
+
+URL: https://www.visitauschwitz.info/en/terms
+Description: Terms and conditions governing use of the website.
+
 ---
 
 ## Blog Posts

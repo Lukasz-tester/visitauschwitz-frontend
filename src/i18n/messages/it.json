@@ -119,7 +119,8 @@
       "item1": "Il tuo indirizzo email",
       "item2": "Gli argomenti di interesse che selezioni",
       "item3": "Eventuali idee per libri, informazioni storiche o suggerimenti che decidi di condividere",
-      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell’indirizzo IP trattati da Cloudflare per motivi di sicurezza e dati approssimativi di geolocalizzazione (paese/regione) derivati dal tuo indirizzo IP"
+      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell’indirizzo IP trattati da Cloudflare per motivi di sicurezza e dati approssimativi di geolocalizzazione (paese/regione) derivati dal tuo indirizzo IP",
+      "item5": "Dati di geolocalizzazione — solo quando utilizzi espressamente la funzione \"Localizzami\" sulla mappa interattiva. La tua posizione viene elaborata localmente nel browser per mostrare la tua posizione sulla mappa e non viene memorizzata né trasmessa ad alcun server"
     },
     "legalBasis": {
       "title": "Base giuridica del trattamento",

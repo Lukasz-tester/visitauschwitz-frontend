@@ -2,9 +2,6 @@
 
 ## LEGAL
 
-create geolocation page section and add eng text, e.g. in "dataCollection": add:
-"item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"
-
 - add cookies info to jsons + popup change
 - test - redirect from .../ > ro locale /en
 - newsletter > create the downloadable!
@@ -13,11 +10,6 @@ create geolocation page section and add eng text, e.g. in "dataCollection": add:
 ## Schema
 
 - check linked in profile in schema builder
-
-## Map
-
-- remake the map with localized names
-- replace buildings with the ones actually open
 
 ## Contact
 

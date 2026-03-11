@@ -17,6 +17,8 @@ Languages: en, pl
 - [Auschwitz Tickets: Discover Tour Types & Booking Tips](https://www.visitauschwitz.info/en/tickets): How to get tickets to Auschwitz, including booking options, pricing details and tips for visitors from a licensed guide.
 - [Contact Us: Auschwitz Memorial Visitor Information](https://www.visitauschwitz.info/en/contact): Reach out for support with tickets, tours, or general visitor info. A response will be sent within a few days.
 - [Auschwitz Visit: Key Information and Guidelines](https://www.visitauschwitz.info/en): Get expert insights on visiting Auschwitz-Birkenau Memorial, including ticket booking, arrival tips, tour types and routes.
+- [Privacy Policy](https://www.visitauschwitz.info/en/privacy): How your personal data is collected, used, and protected.
+- [Terms of Use](https://www.visitauschwitz.info/en/terms): Terms and conditions governing use of the website.
 
 ## Posts
 

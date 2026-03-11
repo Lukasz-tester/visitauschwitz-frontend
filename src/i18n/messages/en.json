@@ -125,7 +125,8 @@
       "item1": "Your email address",
       "item2": "Topics of interest you select",
       "item3": "Any book ideas, historical information, or suggestions you choose to share",
-      "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes and approximate geolocation data (country/region) derived from your IP address"
+      "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes and approximate geolocation data (country/region) derived from your IP address",
+      "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"
     },
     "legalBasis": {
       "title": "Legal Basis for Processing",

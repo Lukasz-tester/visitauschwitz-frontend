@@ -119,7 +119,8 @@
       "item1": "Votre adresse e-mail",
       "item2": "Les sujets d’intérêt que vous sélectionnez",
       "item3": "Toute idée de livre, information historique ou suggestion que vous choisissez de partager",
-      "item4": "Les données techniques traitées automatiquement par les fournisseurs d’infrastructure, y compris les journaux d’adresses IP traités par Cloudflare à des fins de sécurité et les données approximatives de géolocalisation (pays/région) dérivées de votre adresse IP"
+      "item4": "Les données techniques traitées automatiquement par les fournisseurs d’infrastructure, y compris les journaux d’adresses IP traités par Cloudflare à des fins de sécurité et les données approximatives de géolocalisation (pays/région) dérivées de votre adresse IP",
+      "item5": "Les données de géolocalisation — uniquement lorsque vous utilisez expressément la fonction « Me localiser » sur la carte interactive. Votre position est traitée localement dans le navigateur pour afficher votre emplacement sur la carte et n’est ni stockée ni transmise à aucun serveur"
     },
     "legalBasis": {
       "title": "Base juridique du traitement",

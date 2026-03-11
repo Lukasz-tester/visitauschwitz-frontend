@@ -126,7 +126,8 @@
       "item1": "Twój adres e-mail",
       "item2": "Wybrane przez Ciebie tematy zainteresowań",
       "item3": "Wszystkie pomysły na książki, informacje historyczne lub sugestie, które zdecydujesz się przekazać",
-      "item4": "Dane techniczne przetwarzane automatycznie przez dostawców infrastruktury, w tym dzienniki adresów IP przetwarzane przez Cloudflare w celach bezpieczeństwa oraz przybliżone dane geolokalizacyjne (kraj/region) uzyskane na podstawie Twojego adresu IP"
+      "item4": "Dane techniczne przetwarzane automatycznie przez dostawców infrastruktury, w tym dzienniki adresów IP przetwarzane przez Cloudflare w celach bezpieczeństwa oraz przybliżone dane geolokalizacyjne (kraj/region) uzyskane na podstawie Twojego adresu IP",
+      "item5": "Dane geolokalizacyjne — wyłącznie gdy wyraźnie skorzystasz z funkcji \"Zlokalizuj mnie\" na interaktywnej mapie. Twoja lokalizacja jest przetwarzana lokalnie w przeglądarce w celu wyświetlenia Twojej pozycji na mapie i nie jest przechowywana ani przesyłana na żaden serwer"
     },
     "legalBasis": {
       "title": "Podstawa prawna przetwarzania",

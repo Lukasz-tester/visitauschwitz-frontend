@@ -119,7 +119,8 @@
       "item1": "Uw e-mailadres",
       "item2": "Geselecteerde onderwerpen van interesse",
       "item3": "Eventuele ideeën voor boeken, historische informatie of suggesties die u kiest te delen",
-      "item4": "Technische gegevens die automatisch door infrastructuuraanbieders worden verwerkt, waaronder IP-adreslogs die door Cloudflare worden verwerkt voor beveiligingsdoeleinden en geschatte geolocatiegegevens (land/regio) afgeleid van uw IP-adres"
+      "item4": "Technische gegevens die automatisch door infrastructuuraanbieders worden verwerkt, waaronder IP-adreslogs die door Cloudflare worden verwerkt voor beveiligingsdoeleinden en geschatte geolocatiegegevens (land/regio) afgeleid van uw IP-adres",
+      "item5": "Geolocatiegegevens — alleen wanneer u uitdrukkelijk de functie \"Lokaliseer mij\" op de interactieve kaart gebruikt. Uw locatie wordt lokaal in de browser verwerkt om uw positie op de kaart weer te geven en wordt niet opgeslagen of naar een server verzonden"
     },
     "legalBasis": {
       "title": "Rechtsgrond voor verwerking",
