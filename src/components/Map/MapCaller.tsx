@@ -57,32 +57,35 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   }
 
   return (
-    <div className={`z-50 fixed ${useScrolledFromTop() ? '' : 'hidden'}`}>
+    <div className={`z-50 fixed ${useScrolledFromTop() ? '' : 'hidden sm:block'}`}>
       <button
-        className={`z-50 ease-in-out duration-1000 ${
+        className={`z-50 ease-in-out duration-500 fixed flex items-center justify-center font-thin dark:text-white/80 text-black/70 ${
           modalOpen
             ? 'bg-card bottom-4 right-0 w-14 h-14 rounded-s-3xl'
-            : 'pb-2 bg-background/70 bottom-0 right-0 rounded-tl-3xl w-16 h-16 md:hover:bg-card-foreground'
-        } pr-1 flex items-center justify-center font-thin fixed dark:text-white/80 text-3xl`}
+            : 'bottom-3 right-5 w-14 h-14 rounded-full shadow-lg bg-background/80 md:hover:bg-card-foreground'
+        }`}
         onClick={handleToggle}
       >
         {/* X Icon visibility logic */}
         <div
-          className={`transition-opacity ease-in-out duration-500 fixed right-3 ${modalOpen ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute transition-opacity ease-in-out duration-500 ${modalOpen ? 'opacity-100' : 'opacity-0'}`}
         >
-          <X strokeWidth={1} size={32} />
+          <X strokeWidth={1} size={modalOpen ? 32 : 28} />
         </div>
 
         {/* Map Icon visibility logic */}
         <div
-          className={`transition-opacity ease-in-out duration-500 flex flex-col items-center ${modalOpen ? 'opacity-0' : 'opacity-100'}`}
+          className={`transition-opacity ease-in-out duration-500 flex flex-col items-center -mt-1 ${modalOpen ? 'opacity-0' : 'opacity-100'}`}
         >
-          <span className="text-[14px] font-semibold leading-none dark:text-white/80 text-black/70">
-            MAP
-          </span>
           <MapPlaceholder />
         </div>
       </button>
+      {/* MAP label - only visible when mobile nav is open */}
+      {!modalOpen && (
+        <span className="hidden [[data-mobile-nav=open]_&]:block fixed bottom-1 right-5 w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-50">
+          MAP
+        </span>
+      )}
 
       {/* Modal - stays mounted after first open to preserve map state */}
       {hasOpened && (

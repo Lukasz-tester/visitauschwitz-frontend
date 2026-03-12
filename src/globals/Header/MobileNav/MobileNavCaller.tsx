@@ -7,6 +7,7 @@ import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
 import { useTranslations } from 'next-intl'
+import { useEffect } from 'react'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
 import { CMSLink } from '@/components/Link'
@@ -19,6 +20,10 @@ export const MobileNavCaller: React.FC<{
 }> = ({ header, modalOpen, setModalOpen }) => {
   const t = useTranslations()
   useLockBodyScroll(modalOpen)
+
+  useEffect(() => {
+    document.documentElement.dataset.mobileNav = modalOpen ? 'open' : ''
+  }, [modalOpen])
 
   // const links = {
   //   supplement: 'tips',

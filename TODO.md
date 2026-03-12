@@ -1,13 +1,15 @@
 # TO DO list
 
-- (privacy, terms) — currently missing hreflang alternate tags in sitemap - moze kiedys?
+- dodaj ponownie sitemap w GSC
+- usun z tej listy rzeczy zrobione
+- testuj ten false back button / exit intent
+- test on mobile nav bottom button visible?
 
 ## LEGAL
 
 - ~~add cookies info to jsons + popup change~~ DONE — cookie consent banner with Accept/Reject/Settings, translations in en.json cookies section
-- test - redirect from .../ > ro locale /en
 - newsletter > create the downloadable!
-- contact > confirmation text into locale & segment add like newsletter
+- contact form > confirmation text only eng, add info in lang of locale & segment add like newsletter
 
 ## Schema
 
@@ -163,11 +165,40 @@ Remaining content tasks:
 - No visitor count ("Helped 50,000+ visitors prepare")
 - No trust badges or certifications displayed
 
-  3.3 BLOG IS UNDERUTILIZED — **CONTENT TASK**
+  3.3 BLOG IS UNDERUTILIZED
 
-  3.4 CTA STRATEGY — **CONTENT TASK**
+- Only 1 blog post in the entire CMS
+- Blog is a major SEO asset — each post is a new ranking opportunity
+- The existing post is good content but categorized as "Event" which seems wrong
 
-  3.5 MISSING LANGUAGE VERSIONS — **CONTENT TASK**
+Blog content calendar suggestions (high search volume topics):
+
+- "Auschwitz in Winter: What to Expect"
+- "What to Eat Near Auschwitz: Restaurant Guide"
+- "Auschwitz with Children: Age-Appropriate Preparation"
+- "Kraków to Auschwitz: Complete Transport Guide 2026"
+- "Auschwitz Photography Guide: What You Can and Can't Capture"
+- "Emotional Preparation for Visiting Auschwitz"
+- "Auschwitz vs. Other Holocaust Memorials"
+- "Behind the Scenes: What Guides Wish Visitors Knew"
+
+  3.4 CTA STRATEGY
+
+Current CTAs all point to visit.auschwitz.org (external). This sends users away permanently.
+
+Recommendation: Before sending users to book externally:
+
+1. Capture their email first: "Get booking reminders + preparation tips"
+2. Offer your guide service as a premium option
+3. Add affiliate tracking if applicable to tour operator links
+
+3.5 MISSING LANGUAGE VERSIONS
+
+The site has EN and PL content, but translation files exist for DE, FR, ES, IT, NL, RU, UK. You have the infrastructure for 9 languages but
+only content in 2. Given that Auschwitz receives visitors from all over the world:
+
+- German, French, Italian, Spanish versions would capture massive additional traffic
+- Even partial translations (key pages only) would help
 
 ---
 
@@ -218,27 +249,6 @@ sticky sidebar or top nav.
 - No loading="lazy" visible on below-fold images (relies on browser defaults)
 - ~~SessionStorage used for accordion state — hydration mismatch risk~~ DONE — moved sessionStorage read from useState initializer to useEffect
 
-  ~~5.2 CODE QUALITY ISSUES~~ DONE
-
-- ~~RenderBlocks.tsx — Block type mappings misleading: Image: CodeBlock and Text: BannerBlock~~ DONE — renamed to ImageBlock and TextBlock
-- ~~extractContentSchema.ts — Uses Math.random() for IDs~~ DONE — replaced with deterministic fallbacks
-- ~~generateMeta.ts — logo property unused by Next.js metadata system~~ DONE — removed dead ogLogo and logo field
-- ~~No error boundary wrapping blocks~~ DONE — BlockErrorBoundary wraps each block in RenderBlocks
-
-  ~~5.3 SECURITY~~ PARTIALLY DONE
-
-- ~~No rate limiting on form submission (client-side)~~ DONE — 10s cooldown
-- ~~No bot protection on forms~~ DONE — honeypot field
-- dangerouslySetInnerHTML is used for JSON-LD scripts — verified safe (only JSON.stringify, not user input)
-
----
-
-6. AI SEARCH OPTIMIZATION (YOUR SPECIAL INTEREST)
-
-~~6.1 MAKING YOUR SITE AI-AGENT FRIENDLY~~ DONE
-
-1. ~~Add llms.txt~~ DONE — auto-generated at build time from CMS content (generate-llms-txt.ts)
-2. ~~Add llms-full.txt~~ DONE — includes all FAQ items, section headings, descriptions
 3. Structured FAQ is your best asset — content task to ensure all accordions have isFAQ: true
 4. Add SpeakableSpecification — Already in your schema (good!). Extend it to cover the most asked questions.
 5. ~~Ensure content is in HTML, not just client-rendered JS~~ DONE — accordion content now visible in SSR HTML before hydration
