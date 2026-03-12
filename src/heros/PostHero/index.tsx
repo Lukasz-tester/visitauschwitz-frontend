@@ -75,7 +75,7 @@ export const PostHero: React.FC<{
           </div>
         </div>
       </div>
-      <div className="min-h-[75vh] select-none">
+      <div className="absolute inset-0 min-h-[75vh] select-none">
         {metaImage && typeof metaImage !== 'string' && (
           <Media fill imgClassName="-z-10 object-cover" resource={metaImage} priority />
         )}

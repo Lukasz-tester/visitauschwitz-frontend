@@ -66,7 +66,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          'fixed bottom-3 right-[5.5rem] z-30 flex items-center justify-center [[data-map-open]_&]:hidden',
+          'fixed bottom-3 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
@@ -79,7 +79,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       </button>
       {/* LIST label - only visible when mobile nav is open */}
       {!isOpen && (
-        <span className="hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-30">
+        <span className="hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40">
           LIST
         </span>
       )}

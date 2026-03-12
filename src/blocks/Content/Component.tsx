@@ -5,9 +5,11 @@ import RichText from '@/components/RichText'
 import { ImageMedia } from '@/components/Media/ImageMedia'
 
 function hasRichTextContent(rt: { root: { children?: Array<any> } } | null | undefined): boolean {
-  return !!rt?.root?.children?.some((node: any) =>
-    node?.children?.some((child: any) => !!child?.text),
-  )
+  const hasText = (node: any): boolean => {
+    if (node?.text) return true
+    return Array.isArray(node?.children) && node.children.some(hasText)
+  }
+  return !!rt?.root?.children?.some(hasText)
 }
 
 type Props = Extract<Page['layout'][0], { blockType: 'content' }> & {

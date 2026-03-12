@@ -39,7 +39,7 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
         </div>
       </div>
       {media && typeof media === 'object' && (
-        <div>
+        <div className="absolute inset-0">
           <ImageMedia
             fill
             imgClassName=" object-cover select-none"
