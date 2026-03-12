@@ -26,8 +26,11 @@
   "map-layer-entrances": "Входи до музею",
   "map-layer-parking": "Парковки",
 
-  "map-entrance-auschwitz-title": "Основний табір Аушвіц I",
-  "map-entrance-auschwitz-desc": "Почніть екскурсію тут і продовжіть у Біркенау.",
+  "map-entrance-auschwitz-title": "Почніть огляд в Аушвіц I",
+  "map-entrance-auschwitz-desc-1": "З головної парковки",
+  "map-entrance-auschwitz-desc-2": " пройдіть до будівлі прийому, щоб розпочати огляд ",
+  "map-entrance-auschwitz-desc-3": "Аушвіц I",
+  "map-entrance-auschwitz-desc-4": ". Далі екскурсія продовжується у Біркенау.",
   "map-entrance-auschwitz-link": "Перейти до Біркенау →",
   "map-entrance-birkenau-title": "Аушвіц II-Біркенау",
   "map-entrance-birkenau-desc": "Друга частина екскурсії починається біля головних воріт Біркенау.",

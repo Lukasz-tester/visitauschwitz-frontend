@@ -76,7 +76,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
-          isOpen && 'bg-card',
+          isOpen && 'bg-card right-4 sm:right-[5.5rem]',
           scrolled ? '' : 'hidden sm:flex',
         )}
         aria-label={isOpen ? 'Close table of contents' : 'Open table of contents'}
@@ -84,8 +84,13 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
         {isOpen ? <X strokeWidth={1} size={28} /> : <List strokeWidth={1.5} size={28} />}
       </button>
       {/* LIST label - only visible when mobile nav is open */}
-      {!isOpen && scrolled && (
-        <span className="hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40">
+      {!isOpen && (
+        <span
+          className={cn(
+            'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
+            !scrolled && 'max-sm:!hidden',
+          )}
+        >
           LIST
         </span>
       )}

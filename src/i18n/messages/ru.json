@@ -26,8 +26,11 @@
   "map-layer-entrances": "Входы в музей",
   "map-layer-parking": "Парковки",
 
-  "map-entrance-auschwitz-title": "Основной лагерь Аушвиц I",
-  "map-entrance-auschwitz-desc": "Начните экскурсию здесь и продолжите в Биркенау.",
+  "map-entrance-auschwitz-title": "Начните осмотр в Аушвиц I",
+  "map-entrance-auschwitz-desc-1": "С главной парковки",
+  "map-entrance-auschwitz-desc-2": " пройдите в здание приёма, чтобы начать осмотр ",
+  "map-entrance-auschwitz-desc-3": "Аушвиц I",
+  "map-entrance-auschwitz-desc-4": ". Затем экскурсия продолжается в Биркенау.",
   "map-entrance-auschwitz-link": "Перейти к Биркенау →",
   "map-entrance-birkenau-title": "Аушвиц II-Биркенау",
   "map-entrance-birkenau-desc": "Вторая часть экскурсии начинается у главных ворот Биркенау.",

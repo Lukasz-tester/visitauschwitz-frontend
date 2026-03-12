@@ -26,8 +26,11 @@
   "map-layer-entrances": "Ingangen van het museum",
   "map-layer-parking": "Parkeerplaatsen",
 
-  "map-entrance-auschwitz-title": "Auschwitz I Stammlager",
-  "map-entrance-auschwitz-desc": "Begin uw rondleiding hier en vervolg deze in Birkenau.",
+  "map-entrance-auschwitz-title": "Begin uw bezoek bij Auschwitz I",
+  "map-entrance-auschwitz-desc-1": "Vanaf de hoofdparkeerplaats",
+  "map-entrance-auschwitz-desc-2": ", betreedt u het ontvangstgebouw om uw rondleiding door ",
+  "map-entrance-auschwitz-desc-3": "Auschwitz I",
+  "map-entrance-auschwitz-desc-4": " te beginnen. De rondleiding gaat daarna verder in Birkenau.",
   "map-entrance-auschwitz-link": "Ga naar Birkenau →",
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "U begint het tweede deel van uw rondleiding bij de hoofdpoort van Birkenau.",

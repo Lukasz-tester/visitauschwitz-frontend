@@ -28,8 +28,11 @@
   "map-layer-entrances": "Museum entrances",
   "map-layer-parking": "Parking lots",
 
-  "map-entrance-auschwitz-title": "Auschwitz I Main Camp",
-  "map-entrance-auschwitz-desc": "Start your tour here and continue in Birkenau.",
+  "map-entrance-auschwitz-title": "Start your visit at Auschwitz I",
+  "map-entrance-auschwitz-desc-1": "From the main parking lot",
+  "map-entrance-auschwitz-desc-2": ", enter the reception building to begin your tour of ",
+  "map-entrance-auschwitz-desc-3": "Auschwitz I",
+  "map-entrance-auschwitz-desc-4": ". The tour then continues in Birkenau.",
   "map-entrance-auschwitz-link": "Get to Birkenau →",
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "You start the second part of your tour by the main Birkenau gate.",

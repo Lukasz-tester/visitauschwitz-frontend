@@ -91,12 +91,14 @@ export default function MapModal() {
             <Popup>
               <strong>{t('map-entrance-auschwitz-title')}</strong>
               <br />
-              {t('map-entrance-auschwitz-desc')} <br />
+              <MapLink url="museum#main-entry">{t('map-entrance-auschwitz-desc-1')}</MapLink>
+              {t('map-entrance-auschwitz-desc-2')}
+              <MapLink url="tour#auschwitz-gate">{t('map-entrance-auschwitz-desc-3')}</MapLink>
+              {t('map-entrance-auschwitz-desc-4')}
+              <br />
               <br />
               <strong>
-                <MapLink url="arrival#get-to-birkenau">
-                  {t('map-entrance-auschwitz-link')}
-                </MapLink>
+                <MapLink url="arrival#get-to-birkenau">{t('map-entrance-auschwitz-link')}</MapLink>
               </strong>
             </Popup>
           </Marker>

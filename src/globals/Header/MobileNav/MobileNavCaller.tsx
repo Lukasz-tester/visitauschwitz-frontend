@@ -1,16 +1,13 @@
 import LocaleSwitcher from '../LocaleSwitcher'
-
-import { SearchIcon } from 'lucide-react'
-
 import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
 import { useTranslations } from 'next-intl'
 import { useEffect } from 'react'
+import { usePathname } from '@/i18n/routing'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
-import { CMSLink } from '@/components/Link'
 import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 export const MobileNavCaller: React.FC<{
@@ -19,7 +16,13 @@ export const MobileNavCaller: React.FC<{
   setModalOpen: (open: boolean) => void
 }> = ({ header, modalOpen, setModalOpen }) => {
   const t = useTranslations()
+  const pathname = usePathname()
   useLockBodyScroll(modalOpen)
+
+  // Close mobile nav on route change
+  useEffect(() => {
+    setModalOpen(false)
+  }, [pathname, setModalOpen])
 
   useEffect(() => {
     document.documentElement.dataset.mobileNav = modalOpen ? 'open' : ''

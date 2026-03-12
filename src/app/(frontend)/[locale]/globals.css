@@ -40,6 +40,17 @@
   }
 }
 
+.leaflet-popup-content {
+  font-size: 0.875rem !important;
+  line-height: 1rem !important;
+}
+
+.leaflet-popup-content > strong:first-child {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0rem;
+}
+
 .placeholder-icon-wrapper {
   display: flex;
   align-items: center;

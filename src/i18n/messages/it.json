@@ -26,8 +26,11 @@
   "map-layer-entrances": "Ingressi del museo",
   "map-layer-parking": "Parcheggi",
 
-  "map-entrance-auschwitz-title": "Campo principale Auschwitz I",
-  "map-entrance-auschwitz-desc": "Iniziate la vostra visita qui e proseguite a Birkenau.",
+  "map-entrance-auschwitz-title": "Inizia la visita ad Auschwitz I",
+  "map-entrance-auschwitz-desc-1": "Dal parcheggio principale",
+  "map-entrance-auschwitz-desc-2": ", entra nell'edificio di accoglienza per iniziare la visita di ",
+  "map-entrance-auschwitz-desc-3": "Auschwitz I",
+  "map-entrance-auschwitz-desc-4": ". La visita prosegue poi a Birkenau.",
   "map-entrance-auschwitz-link": "Andare a Birkenau →",
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "Inizierete la seconda parte della visita presso la porta principale di Birkenau.",
