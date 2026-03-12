@@ -6,7 +6,8 @@
   "scripts": {
     "generate:sitemap": "tsx src/utilities/fetch-sitemap.ts",
     "generate:llms": "tsx src/utilities/generate-llms-txt.ts",
-    "build": "pnpm run generate:sitemap && pnpm run generate:llms && cross-env NODE_OPTIONS=--no-deprecation next build",
+    "generate:meta": "tsx src/utilities/generate-meta-txt.ts",
+    "build": "pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",

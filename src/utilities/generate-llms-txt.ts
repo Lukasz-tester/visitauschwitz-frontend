@@ -7,15 +7,17 @@ const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
 // Always use the production URL for llms.txt (it's a public-facing file)
 const SITE_URL = 'https://www.visitauschwitz.info'
 
+const EXCLUDED_SLUGS = ['contact', 'privacy', 'terms']
+
 async function fetchJSON(endpoint: string) {
   const res = await fetch(`${CMS_URL}${endpoint}`)
   if (!res.ok) throw new Error(`Failed to fetch ${endpoint}: ${res.status}`)
   return res.json()
 }
 
-function extractText(richText: any, maxLength = 500): string {
+function extractText(richText: any, maxLength = 600): string {
   if (!richText?.root?.children) return ''
-  const traverse = (nodes) =>
+  const traverse = (nodes: any[]) =>
     nodes
       .map((n) => {
         if (n.text) return n.text
@@ -24,7 +26,14 @@ function extractText(richText: any, maxLength = 500): string {
       })
       .join(' ')
   const full = traverse(richText.root.children).replace(/\s+/g, ' ').trim()
-  return maxLength ? full.slice(0, maxLength) : full
+  if (!maxLength || full.length <= maxLength) return full
+  const truncated = full.slice(0, maxLength)
+  const lastSentence = Math.max(
+    truncated.lastIndexOf('. '),
+    truncated.lastIndexOf('! '),
+    truncated.lastIndexOf('? '),
+  )
+  return lastSentence > 0 ? truncated.slice(0, lastSentence + 1) : truncated
 }
 
 function extractFAQs(blocks: any[]) {
@@ -33,9 +42,9 @@ function extractFAQs(blocks: any[]) {
     .filter((b) => b.blockType === 'accordion' && b.isFAQ)
     .flatMap(
       (b) =>
-        (b.accordionItems || []).map((item) => ({
+        (b.accordionItems || []).map((item: any) => ({
           question: item.question || '',
-          answer: extractText(item.answer, 300),
+          answer: extractText(item.answer),
         })),
     )
 }
@@ -48,13 +57,21 @@ function pageUrl(locale: string, slug: string) {
 async function main() {
   console.log('Generating llms.txt from CMS at:', CMS_URL)
 
-  const [pagesData, postsData] = await Promise.all([
-    fetchJSON('/api/pages?limit=100&depth=1&locale=en'),
-    fetchJSON('/api/posts?limit=100&depth=1&locale=en'),
-  ])
-
-  const pages = pagesData.docs || []
-  const posts = postsData.docs || []
+  // Fetch pages and posts for all locales
+  const dataByLocale: Record<string, { pages: any[]; posts: any[] }> = {}
+  for (const locale of locales) {
+    const [pagesData, postsData] = await Promise.all([
+      fetchJSON(`/api/pages?limit=100&depth=1&locale=${locale}`),
+      fetchJSON(`/api/posts?limit=100&depth=1&locale=${locale}`),
+    ])
+    const pages = (pagesData.docs || [])
+      .filter((p: any) => !EXCLUDED_SLUGS.includes(p.slug))
+      .sort((a: any, b: any) => (a.slug || '').localeCompare(b.slug || ''))
+    const posts = (postsData.docs || []).sort((a: any, b: any) =>
+      (a.slug || '').localeCompare(b.slug || ''),
+    )
+    dataByLocale[locale] = { pages, posts }
+  }
 
   // --- llms.txt (concise) ---
   const lines: string[] = []
@@ -66,29 +83,33 @@ async function main() {
   lines.push('')
   lines.push(`Website: ${SITE_URL}`)
   lines.push(`Languages: ${locales.join(', ')}`)
+  lines.push('Default language: en')
   lines.push('')
 
-  lines.push('## Pages')
-  lines.push('')
-  for (const page of pages) {
-    const title = page.meta?.title || page.title || page.slug
-    const desc = page.meta?.description || ''
-    const slug = page.slug
-    lines.push(`- [${title}](${pageUrl('en', slug)})${desc ? ': ' + desc : ''}`)
-  }
-  lines.push(`- [Privacy Policy](${SITE_URL}/en/privacy): How your personal data is collected, used, and protected.`)
-  lines.push(`- [Terms of Use](${SITE_URL}/en/terms): Terms and conditions governing use of the website.`)
-  lines.push('')
+  for (const locale of locales) {
+    const { pages, posts } = dataByLocale[locale]
 
-  if (posts.length > 0) {
-    lines.push('## Posts')
+    lines.push(`## Pages (${locale.toUpperCase()})`)
     lines.push('')
-    for (const post of posts) {
-      const title = post.meta?.title || post.title || post.slug
-      const desc = post.meta?.description || ''
-      lines.push(`- [${title}](${SITE_URL}/en/posts/${post.slug})${desc ? ': ' + desc : ''}`)
+    for (const page of pages) {
+      const title = page.meta?.title || page.title || page.slug
+      const desc = page.meta?.description || ''
+      lines.push(`- [${title}](${pageUrl(locale, page.slug)})${desc ? ': ' + desc : ''}`)
     }
     lines.push('')
+
+    if (posts.length > 0) {
+      lines.push(`## Posts (${locale.toUpperCase()})`)
+      lines.push('')
+      for (const post of posts) {
+        const title = post.meta?.title || post.title || post.slug
+        const desc = post.meta?.description || ''
+        lines.push(
+          `- [${title}](${SITE_URL}/${locale}/posts/${post.slug})${desc ? ': ' + desc : ''}`,
+        )
+      }
+      lines.push('')
+    }
   }
 
   lines.push('## Key Facts')
@@ -113,74 +134,65 @@ async function main() {
   full.push('')
   full.push(`Website: ${SITE_URL}`)
   full.push(`Languages: ${locales.join(', ')}`)
+  full.push('Default language: en')
   full.push('')
 
-  for (const page of pages) {
-    const title = page.meta?.title || page.title || page.slug
-    const desc = page.meta?.description || ''
-    const slug = page.slug
-    full.push(`## ${title}`)
-    full.push('')
-    full.push(`URL: ${pageUrl('en', slug)}`)
-    if (desc) full.push(`Description: ${desc}`)
-    full.push('')
+  for (const locale of locales) {
+    const { pages, posts } = dataByLocale[locale]
 
-    // Extract FAQ items from this page
-    const faqs = extractFAQs(page.layout)
-    if (faqs.length > 0) {
-      full.push('### FAQ')
+    for (const page of pages) {
+      const title = page.meta?.title || page.title || page.slug
+      const desc = page.meta?.description || ''
+      const slug = page.slug
+      full.push(`## ${title} (${locale.toUpperCase()})`)
       full.push('')
-      for (const faq of faqs) {
-        full.push(`**Q: ${faq.question}**`)
-        full.push(`A: ${faq.answer}`)
+      full.push(`URL: ${pageUrl(locale, slug)}`)
+      if (desc) full.push(`Description: ${desc}`)
+      full.push('')
+
+      const faqs = extractFAQs(page.layout)
+      if (faqs.length > 0) {
+        full.push('### FAQ')
+        full.push('')
+        for (const faq of faqs) {
+          full.push(`**Q: ${faq.question}**`)
+          full.push(`A: ${faq.answer}`)
+          full.push('')
+        }
+      }
+
+      const headings: string[] = []
+      for (const block of page.layout || []) {
+        if (block.blockType === 'content' && block.heading?.root?.children) {
+          const heading = extractText(block.heading, 200)
+          if (heading) headings.push(heading)
+        }
+      }
+      if (headings.length > 0) {
+        full.push('### Sections')
+        full.push('')
+        for (const h of headings) {
+          full.push(`- ${h}`)
+        }
         full.push('')
       }
     }
 
-    // Extract headings from content blocks for structure
-    const headings: string[] = []
-    for (const block of page.layout || []) {
-      if (block.blockType === 'content' && block.heading?.root?.children) {
-        const heading = extractText(block.heading, 200)
-        if (heading) headings.push(heading)
+    if (posts.length > 0) {
+      full.push('---')
+      full.push('')
+      full.push(`## Blog Posts (${locale.toUpperCase()})`)
+      full.push('')
+      for (const post of posts) {
+        const title = post.meta?.title || post.title || post.slug
+        const desc = post.meta?.description || ''
+        full.push(`### ${title}`)
+        full.push('')
+        full.push(`URL: ${SITE_URL}/${locale}/posts/${post.slug}`)
+        if (desc) full.push(`Description: ${desc}`)
+        if (post.publishedAt) full.push(`Published: ${post.publishedAt.slice(0, 10)}`)
+        full.push('')
       }
-    }
-    if (headings.length > 0) {
-      full.push('### Sections')
-      full.push('')
-      for (const h of headings) {
-        full.push(`- ${h}`)
-      }
-      full.push('')
-    }
-  }
-
-  full.push('## Privacy Policy')
-  full.push('')
-  full.push(`URL: ${SITE_URL}/en/privacy`)
-  full.push('Description: How your personal data is collected, used, and protected.')
-  full.push('')
-
-  full.push('## Terms of Use')
-  full.push('')
-  full.push(`URL: ${SITE_URL}/en/terms`)
-  full.push('Description: Terms and conditions governing use of the website.')
-  full.push('')
-
-  if (posts.length > 0) {
-    full.push('---')
-    full.push('')
-    full.push('## Blog Posts')
-    full.push('')
-    for (const post of posts) {
-      const title = post.meta?.title || post.title || post.slug
-      const desc = post.meta?.description || ''
-      full.push(`### ${title}`)
-      full.push('')
-      full.push(`URL: ${SITE_URL}/en/posts/${post.slug}`)
-      if (desc) full.push(`Description: ${desc}`)
-      if (post.publishedAt) full.push(`Published: ${post.publishedAt.slice(0, 10)}`)
-      full.push('')
     }
   }
 

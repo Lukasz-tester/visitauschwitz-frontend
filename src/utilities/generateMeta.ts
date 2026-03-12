@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { mergeOpenGraph } from './mergeOpenGraph'
 import type { Page, Post } from '../payload-types'
 import { locales } from '@/i18n/localization'
+import { formatMetaTitle } from './formatMetaTitle'
 
 const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
 const r2BaseUrl = process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info'
@@ -24,11 +25,7 @@ export const generateMeta = async ({
   doc: Page | Post
   locale: string
 }): Promise<Metadata> => {
-  const date = new Date()
-
-  const title = doc?.meta?.title
-    ? `${doc.meta.title} | ${date.getFullYear()}`
-    : `Auschwitz Visitor Information | ${date.getFullYear()}`
+  const title = formatMetaTitle(doc?.meta?.title || doc?.title || '')
 
   const safeSlug = getSafeSlug(doc)
   const formatUrl = (lng: string) =>
