@@ -72,7 +72,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          'fixed bottom-3 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden',
+          'fixed bottom-4 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
@@ -84,7 +84,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
         {isOpen ? <X strokeWidth={1} size={28} /> : <List strokeWidth={1.5} size={28} />}
       </button>
       {/* LIST label - only visible when mobile nav is open */}
-      {!isOpen && (
+      {!isOpen && scrolled && (
         <span className="hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40">
           LIST
         </span>
@@ -93,7 +93,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       {/* Sidebar panel */}
       <nav
         className={cn(
-          'fixed left-0 top-0 z-30 h-screen w-64 bg-background/95 backdrop-blur-sm border-r border-border shadow-lg',
+          'fixed left-0 top-0 z-30 h-screen w-80 bg-background/95 backdrop-blur-sm border-r border-border shadow-lg',
           'transition-transform duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : '-translate-x-full',
         )}
@@ -109,7 +109,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
                 ref={activeId === item.id ? activeRef : undefined}
                 onClick={() => handleClick(item.id)}
                 className={cn(
-                  'text-left text-xs leading-snug hover:text-foreground transition-colors duration-200 w-full py-1 px-2 rounded',
+                  'text-left text-sm leading-snug hover:text-foreground transition-colors duration-200 w-full py-1 px-2 rounded',
                   activeId === item.id
                     ? 'text-foreground bg-card-foreground'
                     : 'text-muted-foreground hover:bg-accent/50',

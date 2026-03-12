@@ -20,7 +20,7 @@ export async function Footer({ locale }: { locale: TypedLocale }) {
     <footer className="border-t border-border bg-black dark:bg-card">
       <div className="container gap-8 flex flex-col">
         <div className="flex flex-col md:flex-row md:justify-between md:gap-8">
-          <nav className="pt-5 pl-2 flex flex-wrap content-start gap-6 text-xl">
+          <nav className="py-5 px-2 flex flex-wrap content-start gap-6 text-xl">
             {navItems.map(({ link }, i) => {
               return (
                 <CMSLink
@@ -30,12 +30,10 @@ export async function Footer({ locale }: { locale: TypedLocale }) {
                 />
               )
             })}
-          </nav>
-          <div className="pt-5 pl-2">
             <FooterCookieSettings />
-          </div>
+          </nav>
 
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 px-2">
             <FooterNewsletter />
           </div>
         </div>

@@ -51,13 +51,16 @@ function savePreferences(prefs: ConsentPreferences) {
 type View = 'banner' | 'settings' | null
 
 export function CookieConsent() {
-  const [view, setView] = useState<View>(() => {
-    if (typeof document === 'undefined') return null
-    return getConsentPreferences() ? null : 'banner'
-  })
+  const [view, setView] = useState<View>(null)
   const [analyticsOn, setAnalyticsOn] = useState(false)
   const tBanner = useTranslations('cookies.banner')
   const tSettings = useTranslations('cookies.settings')
+
+  useEffect(() => {
+    if (!getConsentPreferences()) {
+      setView('banner')
+    }
+  }, [])
 
   useEffect(() => {
     const handler = () => {
