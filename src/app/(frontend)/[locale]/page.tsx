@@ -16,30 +16,8 @@ import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 import { getCachedGlobal } from '@/utilities/getGlobals'
 import type { Header } from '@/payload-types'
 import { HomepageNewsletter } from '@/components/NewsletterSignup/HomepageNewsletter'
-import { TableOfContents, type TocItem } from '@/components/TableOfContents'
-
-function extractText(node: any): string {
-  if (node.text) return node.text
-  if (node.children) return node.children.map(extractText).join('')
-  return ''
-}
-
-function extractTocItems(blocks: PageType['layout'][0][]): TocItem[] {
-  if (!blocks) return []
-  return blocks
-    .filter((block) => block.blockName)
-    .map((block) => {
-      let label = block.blockName!.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
-      if (block.blockType === 'content' && 'heading' in block && block.heading?.root?.children) {
-        const firstChild = block.heading.root.children[0]
-        if (firstChild) {
-          const text = extractText(firstChild).trim()
-          if (text) label = text.length > 50 ? text.slice(0, 47) + '...' : text
-        }
-      }
-      return { id: block.blockName!, label }
-    })
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { extractTocItems } from '@/utilities/extractTocItems'
 
 const MIN_TOC_ITEMS = 3
 
