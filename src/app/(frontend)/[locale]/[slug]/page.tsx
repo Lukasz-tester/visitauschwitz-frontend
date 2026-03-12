@@ -58,7 +58,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   }
 
   const { hero, layout } = page
-  const tocItems = extractTocItems(layout)
+  const tocItems = extractTocItems(layout, hero)
   const heroImageUrl = getHeroImageUrl(page)
 
   const header = await getCachedGlobal<Header>('header', 1, locale)()

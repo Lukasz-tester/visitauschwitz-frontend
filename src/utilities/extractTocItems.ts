@@ -9,38 +9,64 @@ function extractText(node: any): string {
   return ''
 }
 
-function extractFirstText(richText: { root?: { children?: any[] } } | null | undefined): string {
-  const firstChild = richText?.root?.children?.[0]
-  if (!firstChild) return ''
-  return extractText(firstChild).trim()
+/** Find the first h2 or h3 node in a rich-text root and return its text + tag */
+function findFirstHeading(
+  rt: { root?: { children?: any[] } } | null | undefined,
+): { text: string; tag: string } | null {
+  if (!rt?.root?.children) return null
+  for (const node of rt.root.children) {
+    if (node.tag === 'h2' || node.tag === 'h3') {
+      const text = extractText(node).trim()
+      if (text) return { text, tag: node.tag }
+    }
+  }
+  return null
 }
 
-function truncate(text: string, max = 50): string {
-  return text.length > max ? text.slice(0, max - 3) + '...' : text
-}
-
-export function extractTocItems(blocks: Block[]): TocItem[] {
+export function extractTocItems(
+  blocks: Block[],
+  hero?: PageType['hero'],
+): TocItem[] {
   if (!blocks) return []
 
   const items: TocItem[] = []
+
+  // Extract h1 from hero richText
+  if (hero?.richText?.root?.children) {
+    for (const node of hero.richText.root.children) {
+      if (node.tag === 'h1') {
+        const text = extractText(node).trim()
+        if (text) {
+          items.push({ id: '_hero', label: text, divider: true })
+          break
+        }
+      }
+    }
+  }
 
   for (const block of blocks) {
     if (!block.blockName) continue
 
     if (block.blockType === 'content') {
-      // Try heading first
-      let text = 'heading' in block ? extractFirstText(block.heading) : ''
+      // Try heading field first
+      let found = 'heading' in block ? findFirstHeading(block.heading) : null
 
-      // Fall back to first column's richText
-      if (!text && 'columns' in block && Array.isArray(block.columns)) {
+      // Fall back to columns richText and richTextEnd
+      if (!found && 'columns' in block && Array.isArray(block.columns)) {
         for (const col of block.columns) {
-          text = extractFirstText(col.richText)
-          if (text) break
+          found = findFirstHeading(col.richText)
+          if (found) break
+          found = findFirstHeading((col as any).richTextEnd)
+          if (found) break
         }
       }
 
-      if (!text) continue
-      items.push({ id: block.blockName, label: truncate(text) })
+      if (!found) continue
+      items.push({
+        id: block.blockName,
+        label: found.text,
+        indent: found.tag === 'h3',
+      })
     } else if (block.blockType === 'cta') {
       if (!('tiles' in block) || !Array.isArray(block.tiles)) continue
       if (block.tiles.length !== 1) continue
@@ -48,7 +74,7 @@ export function extractTocItems(blocks: Block[]): TocItem[] {
       const tile = block.tiles[0]
       if (!tile.title || tile.title === 'Quotation') continue
 
-      items.push({ id: block.blockName, label: truncate(tile.title) })
+      items.push({ id: block.blockName, label: tile.title })
     }
     // All other block types are skipped
   }

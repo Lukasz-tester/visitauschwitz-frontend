@@ -8,6 +8,8 @@ import { useScrolledFromTop } from '@/utilities/helpers'
 export type TocItem = {
   id: string
   label: string
+  divider?: boolean
+  indent?: boolean
 }
 
 export function TableOfContents({ items }: { items: TocItem[] }) {
@@ -51,10 +53,14 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
   }, [activeId])
 
   const handleClick = useCallback((id: string) => {
-    const el = document.getElementById(id)
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY
-      window.scrollTo({ top, behavior: 'smooth' })
+    if (id === '_hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      const el = document.getElementById(id)
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY
+        window.scrollTo({ top, behavior: 'smooth' })
+      }
     }
     setIsOpen(false)
     window.dispatchEvent(new CustomEvent('close-mobile-nav'))
@@ -98,7 +104,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
           className="h-full overflow-y-auto py-6 pl-6 pr-4 space-y-0.5 overscroll-contain"
         >
           {items.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className={item.indent ? 'pl-3' : undefined}>
               <button
                 ref={activeId === item.id ? activeRef : undefined}
                 onClick={() => handleClick(item.id)}
@@ -111,6 +117,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
               >
                 {item.label}
               </button>
+              {item.divider && <hr className="my-2 border-border" />}
             </li>
           ))}
         </ul>
