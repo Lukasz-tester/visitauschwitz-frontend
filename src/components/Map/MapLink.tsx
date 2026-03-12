@@ -61,7 +61,6 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
   // If the link is internal, handle it using Next.js router
 
   return (
-    //TODO improve the link looks!
     <Link href={localizedUrl} onClick={handleClick} className="font-bold text-base">
       {children}
     </Link>

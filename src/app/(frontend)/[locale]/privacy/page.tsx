@@ -89,7 +89,7 @@ function PrivacyContent() {
   const t = useTranslations('privacy')
 
   return (
-    <article className="prose prose-stone max-w-none">
+    <article className="prose max-w-none">
       <h1 className="text-3xl md:text-4xl font-serif font-medium mb-8">{t('title')}</h1>
       <p className="text-muted mb-8">{t('lastUpdated')}</p>
 

@@ -1,7 +1,7 @@
 'use client'
 import type { Form as FormType } from './types'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useRef, useState } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'

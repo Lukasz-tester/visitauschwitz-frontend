@@ -260,5 +260,28 @@
       "title": "Kontakt",
       "content": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie bitte: visitauschwitzinfo@gmail.com"
     }
+  },
+  "cookies": {
+    "banner": {
+      "message": "Diese Website verwendet essenzielle Cookies zur Funktionalität sowie Analyse-Cookies (Google Analytics), die mir helfen, den Besucherverkehr zu analysieren und Inhalte zu verbessern. Analyse-Cookies werden ausschließlich mit Ihrer Einwilligung gesetzt. Sie können Ihre Einwilligung jederzeit widerrufen oder ändern.",
+      "privacyLink": "Datenschutzerklärung",
+      "termsLink": "Nutzungsbedingungen",
+      "acceptAll": "Alle akzeptieren",
+      "rejectAll": "Nicht erforderliche ablehnen",
+      "settings": "Cookie-Einstellungen"
+    },
+    "settings": {
+      "title": "Cookie-Einstellungen",
+      "necessary": {
+        "name": "Essenziell",
+        "description": "Erforderlich für die ordnungsgemäße Funktion der Website (z. B. Präferenzen, Dark Mode etc.). Diese Cookies benötigen keine Einwilligung."
+      },
+      "analytics": {
+        "name": "Analyse",
+        "description": "Google Analytics 4 – anonymisierte Besuchsstatistiken. Die Daten werden maximal 14 Monate gespeichert."
+      },
+      "save": "Einstellungen speichern",
+      "acceptAll": "Alle akzeptieren"
+    }
   }
 }

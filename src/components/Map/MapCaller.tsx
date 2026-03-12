@@ -30,6 +30,18 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
     }
   }, [currentUrl, modalOpen])
 
+  useEffect(() => {
+    if (!modalOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setCurrentUrl(null)
+        setModalOpen(false)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [modalOpen, setCurrentUrl])
+
   const handleToggle = () => {
     if (!modalOpen) {
       // Open modal and set currentUrl

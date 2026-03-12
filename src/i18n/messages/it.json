@@ -264,5 +264,28 @@
       "title": "Contatti",
       "content": "Per quesiti sulle presenti Condizioni d’uso, contatta: visitauschwitzinfo@gmail.com"
     }
+  },
+  "cookies": {
+    "banner": {
+      "message": "Questo sito utilizza cookie essenziali per il funzionamento e cookie di analisi (Google Analytics) che mi aiutano ad analizzare il traffico e migliorare i contenuti. I cookie di analisi vengono impostati solo con il tuo consenso. Puoi cambiare idea in qualsiasi momento.",
+      "privacyLink": "Informativa sulla privacy",
+      "termsLink": "Condizioni d’uso",
+      "acceptAll": "Accetta tutti",
+      "rejectAll": "Rifiuta i non essenziali",
+      "settings": "Impostazioni cookie"
+    },
+    "settings": {
+      "title": "Impostazioni cookie",
+      "necessary": {
+        "name": "Essenziali",
+        "description": "Necessari per il corretto funzionamento del sito (preferenze, modalità scura, ecc.). Non richiedono consenso."
+      },
+      "analytics": {
+        "name": "Analisi",
+        "description": "Google Analytics 4 — statistiche di visita anonime. Dati conservati per un massimo di 14 mesi."
+      },
+      "save": "Salva le preferenze",
+      "acceptAll": "Accetta tutti"
+    }
   }
 }

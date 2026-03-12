@@ -264,5 +264,28 @@
       "title": "Contact",
       "content": "Voor vragen over deze gebruiksvoorwaarden kunt u contact opnemen via: visitauschwitzinfo@gmail.com"
     }
+  },
+  "cookies": {
+    "banner": {
+      "message": "Deze site gebruikt essentiële cookies voor functionaliteit en analytische cookies (Google Analytics) die mij helpen verkeer te analyseren en inhoud te verbeteren. Analytische cookies worden alleen geplaatst met uw toestemming. U kunt op elk moment van gedachten veranderen.",
+      "privacyLink": "Privacybeleid",
+      "termsLink": "Gebruiksvoorwaarden",
+      "acceptAll": "Alles accepteren",
+      "rejectAll": "Niet-essentiële weigeren",
+      "settings": "Cookie-instellingen"
+    },
+    "settings": {
+      "title": "Cookie-instellingen",
+      "necessary": {
+        "name": "Essentieel",
+        "description": "Vereist voor de goede werking van de website (voorkeuren, donkere modus, enz.). Geen toestemming nodig."
+      },
+      "analytics": {
+        "name": "Analytics",
+        "description": "Google Analytics 4 — anonieme bezoekstatistieken. Gegevens bewaard maximaal 14 maanden."
+      },
+      "save": "Voorkeuren opslaan",
+      "acceptAll": "Alles accepteren"
+    }
   }
 }

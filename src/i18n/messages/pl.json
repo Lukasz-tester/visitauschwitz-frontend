@@ -271,5 +271,28 @@
       "title": "Kontakt",
       "content": "Wszelkie pytania dotyczące niniejszego Regulaminu prosimy kierować na adres: visitauschwitzinfo@gmail.com"
     }
+  },
+  "cookies": {
+    "banner": {
+      "message": "Ta strona używa plików cookie niezbędnych do działania oraz plików cookie analitycznych (Google Analytics), które pomagają analizować ruch i ulepszać treści. Pliki analityczne są ustawiane wyłącznie za Twoją zgodą. Możesz zmienić zdanie w dowolnym momencie.",
+      "privacyLink": "Polityka Prywatności",
+      "termsLink": "Regulamin",
+      "acceptAll": "Akceptuj wszystkie",
+      "rejectAll": "Odrzuć opcjonalne",
+      "settings": "Ustawienia cookie"
+    },
+    "settings": {
+      "title": "Ustawienia cookie",
+      "necessary": {
+        "name": "Niezbędne",
+        "description": "Wymagane do prawidłowego działania strony (preferencje, tryb ciemny itp.). Nie wymagają zgody."
+      },
+      "analytics": {
+        "name": "Analityczne",
+        "description": "Google Analytics 4 — anonimowe statystyki odwiedzin. Dane przechowywane maksymalnie 14 miesięcy."
+      },
+      "save": "Zapisz preferencje",
+      "acceptAll": "Akceptuj wszystkie"
+    }
   }
 }

@@ -214,8 +214,6 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
               )
             case 'Text':
               return <TextBlock key={index} {...block} />
-            case 'code':
-              return <ImageBlock key={index} {...block} />
             default:
               return null
           }

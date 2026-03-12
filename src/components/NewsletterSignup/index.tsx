@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { useNewsletterSubmit } from './useNewsletterSubmit'
 
 type Variant = 'footer' | 'homepage' | 'popup' | 'mobilenav'

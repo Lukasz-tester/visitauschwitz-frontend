@@ -45,7 +45,7 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
             imgClassName=" object-cover select-none"
             priority
             resource={media}
-            size="100vw" // FIX #3
+            size="100vw"
           />
           <div
             className="absolute pointer-events-none left-0 bottom-0 w-full h-full
