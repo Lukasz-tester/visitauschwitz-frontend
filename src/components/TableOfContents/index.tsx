@@ -53,7 +53,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
   const handleClick = useCallback((id: string) => {
     const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 20
+      const top = el.getBoundingClientRect().top + window.scrollY
       window.scrollTo({ top, behavior: 'smooth' })
     }
     setIsOpen(false)

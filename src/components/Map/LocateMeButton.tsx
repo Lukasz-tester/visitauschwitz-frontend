@@ -13,12 +13,16 @@ export function LocateMeButton() {
   const t = useTranslations()
 
   // Custom Geolocation Icon
-  const geolocationIcon = useMemo(() => new L.Icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/622/622669.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
-    popupAnchor: [0, -30],
-  }), [])
+  const geolocationIcon = useMemo(
+    () =>
+      new L.Icon({
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/622/622669.png',
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -30],
+      }),
+    [],
+  )
 
   const handleClick = () => {
     setLoading(true)
@@ -58,13 +62,9 @@ export function LocateMeButton() {
       <button
         onClick={handleClick}
         disabled={loading}
-        className="bg-card bottom-20 right-0 w-14 h-14 rounded-s-3xl flex items-center justify-center fixed z-[10001] dark:text-white/80"
+        className="bg-card bottom-20 right-0 w-14 h-14 rounded-s-full flex items-center justify-center fixed z-[10001] dark:text-white/80"
       >
-        {loading ? (
-          <div className="spinner"></div>
-        ) : (
-          <LocateIcon strokeWidth={1} size={32} />
-        )}
+        {loading ? <div className="spinner"></div> : <LocateIcon strokeWidth={1} size={32} />}
       </button>
 
       <style jsx>{`

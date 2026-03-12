@@ -61,7 +61,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
       <button
         className={`z-50 ease-in-out duration-500 fixed flex items-center justify-center font-thin dark:text-white/80 text-black/70 ${
           modalOpen
-            ? 'bg-card bottom-4 right-0 w-14 h-14 rounded-s-3xl'
+            ? 'bg-card bottom-4 right-0 w-14 h-14 rounded-s-full'
             : 'bottom-3 right-5 w-14 h-14 rounded-full shadow-lg bg-background/80 md:hover:bg-card-foreground'
         }`}
         onClick={handleToggle}
