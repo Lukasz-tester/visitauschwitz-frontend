@@ -89,7 +89,7 @@ export const MobileNavCaller: React.FC<{
               aria-label="Main Navigation"
             />
           </div>
-          <div className="mt-auto pb-6 px-5 flex flex-col gap-3">
+          <div className="mt-auto pb-16 sm:pb-6 px-5 flex flex-col gap-3">
             <div>
               <p className="text-sm font-medium text-muted-foreground mb-3 ml-1">
                 {t('newsletter-heading-short')}
