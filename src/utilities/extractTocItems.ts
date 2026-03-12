@@ -70,11 +70,21 @@ export function extractTocItems(
     } else if (block.blockType === 'cta') {
       if (!('tiles' in block) || !Array.isArray(block.tiles)) continue
       if (block.tiles.length !== 1) continue
+      if (block.blockName === 'Quotation') continue
 
       const tile = block.tiles[0]
-      if (!tile.title || tile.title === 'Quotation') continue
 
-      items.push({ id: block.blockName, label: tile.title })
+      // Try h2/h3 heading inside tile richText
+      const found = findFirstHeading((tile as any).richText)
+      if (found) {
+        items.push({
+          id: block.blockName,
+          label: found.text,
+          indent: found.tag === 'h3',
+        })
+      } else if (tile.title) {
+        items.push({ id: block.blockName, label: tile.title })
+      }
     }
     // All other block types are skipped
   }
