@@ -16,6 +16,32 @@ import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 import { getCachedGlobal } from '@/utilities/getGlobals'
 import type { Header } from '@/payload-types'
 import { HomepageNewsletter } from '@/components/NewsletterSignup/HomepageNewsletter'
+import { TableOfContents, type TocItem } from '@/components/TableOfContents'
+
+function extractText(node: any): string {
+  if (node.text) return node.text
+  if (node.children) return node.children.map(extractText).join('')
+  return ''
+}
+
+function extractTocItems(blocks: PageType['layout'][0][]): TocItem[] {
+  if (!blocks) return []
+  return blocks
+    .filter((block) => block.blockName)
+    .map((block) => {
+      let label = block.blockName!.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+      if (block.blockType === 'content' && 'heading' in block && block.heading?.root?.children) {
+        const firstChild = block.heading.root.children[0]
+        if (firstChild) {
+          const text = extractText(firstChild).trim()
+          if (text) label = text.length > 50 ? text.slice(0, 47) + '...' : text
+        }
+      }
+      return { id: block.blockName!, label }
+    })
+}
+
+const MIN_TOC_ITEMS = 3
 
 type Args = {
   params: Promise<{
@@ -37,6 +63,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   }
 
   const { hero, layout } = page
+  const tocItems = extractTocItems(layout)
   const heroImageUrl = getHeroImageUrl(page)
 
   const header = await getCachedGlobal<Header>('header', 1, locale)()
@@ -64,6 +91,7 @@ export default async function Page({ params: paramsPromise }: Args) {
       <PayloadRedirects disableNotFound url={url} />
 
       <RenderHero {...hero} />
+      {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
       <RenderBlocks blocks={layout} locale={locale} url={fullUrl} insertBeforeLast={<HomepageNewsletter />} />
     </article>
   )

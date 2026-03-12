@@ -57,6 +57,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       window.scrollTo({ top, behavior: 'smooth' })
     }
     setIsOpen(false)
+    window.dispatchEvent(new CustomEvent('close-mobile-nav'))
   }, [])
 
   return (
@@ -65,7 +66,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          'fixed bottom-3 right-[5.5rem] z-30 flex items-center justify-center',
+          'fixed bottom-3 right-[5.5rem] z-30 flex items-center justify-center [[data-map-open]_&]:hidden',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
@@ -78,7 +79,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       </button>
       {/* LIST label - only visible when mobile nav is open */}
       {!isOpen && (
-        <span className="hidden [[data-mobile-nav=open]_&]:block fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-30">
+        <span className="hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-30">
           LIST
         </span>
       )}
@@ -104,7 +105,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
                 className={cn(
                   'text-left text-xs leading-snug hover:text-foreground transition-colors duration-200 w-full py-1 px-2 rounded',
                   activeId === item.id
-                    ? 'text-foreground font-semibold bg-accent'
+                    ? 'text-foreground bg-card-foreground'
                     : 'text-muted-foreground hover:bg-accent/50',
                 )}
               >
@@ -117,10 +118,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
 
       {/* Backdrop overlay when open */}
       {isOpen && (
-        <div
-          className="fixed inset-0 z-20 bg-black/20"
-          onClick={() => setIsOpen(false)}
-        />
+        <div className="fixed inset-0 z-20 bg-black/20" onClick={() => setIsOpen(false)} />
       )}
     </>
   )

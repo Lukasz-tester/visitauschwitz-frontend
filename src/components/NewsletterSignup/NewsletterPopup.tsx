@@ -38,7 +38,7 @@ export function NewsletterPopup() {
           suppressedRef.current = true
           setShow(true)
         }
-      }, 30000)
+      }, 90000)
 
       // Exit-intent trigger (desktop only)
       const handleMouseLeave = (e: MouseEvent) => {

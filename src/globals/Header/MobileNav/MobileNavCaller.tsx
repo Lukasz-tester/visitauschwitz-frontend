@@ -25,6 +25,12 @@ export const MobileNavCaller: React.FC<{
     document.documentElement.dataset.mobileNav = modalOpen ? 'open' : ''
   }, [modalOpen])
 
+  useEffect(() => {
+    const close = () => setModalOpen(false)
+    window.addEventListener('close-mobile-nav', close)
+    return () => window.removeEventListener('close-mobile-nav', close)
+  }, [setModalOpen])
+
   // const links = {
   //   supplement: 'tips',
   //   '/posts': 'posts',

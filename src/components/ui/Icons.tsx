@@ -286,7 +286,7 @@ export const MapLookingGlass = ({ fill = '#64748b', size = '110', viewBox = '-10
 )
 
 // MapPlaceholder for MobileNav
-export const MapPlaceholder = ({ size = '48', viewBox = '-150 0 800 500' }) => (
+export const MapPlaceholder = ({ size = '36', viewBox = '-150 0 800 500' }) => (
   <svg
     width={size}
     height={size}

@@ -24,6 +24,11 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   useLockBodyScroll(modalOpen)
 
   useEffect(() => {
+    document.documentElement.toggleAttribute('data-map-open', modalOpen)
+    return () => document.documentElement.removeAttribute('data-map-open')
+  }, [modalOpen])
+
+  useEffect(() => {
     // Close the modal if currentUrl is null and modalOpen is true
     if (currentUrl === null && modalOpen) {
       setModalOpen(false)

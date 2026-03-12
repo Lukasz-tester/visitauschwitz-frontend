@@ -102,9 +102,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <article className="pt-16 pb-24">
-      {heroImageUrl && (
-        <link rel="preload" as="image" href={heroImageUrl} />
-      )}
+      {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
       <script
         type="application/ld+json"
         suppressHydrationWarning
