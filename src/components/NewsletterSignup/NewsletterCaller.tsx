@@ -18,6 +18,12 @@ export function NewsletterCaller() {
     return () => document.documentElement.removeAttribute('data-newsletter-open')
   }, [isOpen])
 
+  useEffect(() => {
+    const open = () => setIsOpen(true)
+    window.addEventListener('open-contact-form', open)
+    return () => window.removeEventListener('open-contact-form', open)
+  }, [])
+
   return (
     <>
       {/* Envelope toggle button — between List and Map */}

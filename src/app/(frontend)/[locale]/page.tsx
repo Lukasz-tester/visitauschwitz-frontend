@@ -57,9 +57,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <article className="pt-16 pb-24">
-      {heroImageUrl && (
-        <link rel="preload" as="image" href={heroImageUrl} />
-      )}
+      {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -70,7 +68,13 @@ export default async function Page({ params: paramsPromise }: Args) {
 
       <RenderHero {...hero} />
       {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
-      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} insertAtIndex={5} insertNode={<HomepageNewsletter />} />
+      <RenderBlocks
+        blocks={layout}
+        locale={locale}
+        url={fullUrl}
+        insertAtIndex={4}
+        insertNode={<HomepageNewsletter />}
+      />
     </article>
   )
 }

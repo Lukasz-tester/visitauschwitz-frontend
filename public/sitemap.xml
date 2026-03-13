@@ -100,7 +100,7 @@
 <loc>https://www.visitauschwitz.info/en/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-03-12T12:56:39.630Z</lastmod>
+<lastmod>2026-03-13T18:19:59.509Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1.0</priority>
 </url>
@@ -108,7 +108,7 @@
 <loc>https://www.visitauschwitz.info/pl/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-03-12T12:56:39.630Z</lastmod>
+<lastmod>2026-03-13T18:19:59.509Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1.0</priority>
 </url>
@@ -130,25 +130,25 @@
 </url>
   <url>
     <loc>https://www.visitauschwitz.info/en/privacy</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.visitauschwitz.info/pl/privacy</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.visitauschwitz.info/en/terms</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.visitauschwitz.info/pl/terms</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

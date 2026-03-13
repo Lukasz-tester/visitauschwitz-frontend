@@ -75,7 +75,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
           'fixed bottom-4 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden [[data-newsletter-open]_&]:hidden',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
-          'transition-colors duration-500 dark:text-white/80 text-black/70',
+          'transition-colors duration-500 dark:text-white/80 text-black/80',
           isOpen && 'bg-card',
           scrolled ? '' : 'hidden sm:flex [[data-mobile-nav=open]_&]:flex',
         )}

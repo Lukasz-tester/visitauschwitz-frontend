@@ -13,29 +13,7 @@
   "previous": "Poprzednia",
   "next": "Następna",
   "more-pages": "Więcej stron",
-
-  "contact-full-name": "Imię",
-  "contact-email": "Email",
-  "contact-message": "Wiadomość",
-  "contact-submit": "Wyślij",
-  "contact-form-heading": "Skontaktuj się",
-  "contact-form-subheading": "Masz pytanie dotyczące wizyty w Auschwitz? Napisz do mnie, a odpowiem najszybciej jak to możliwe.",
-  "contact-email-placeholder": "Twój adres email",
-  "contact-message-placeholder": "Twoja wiadomość...",
-  "contact-email-error": "Proszę podać prawidłowy adres email.",
-  "contact-message-error": "Proszę wpisać wiadomość.",
-  "contact-send": "Wyślij wiadomość",
-  "contact-success": "Dziękuję! Twoja wiadomość została wysłana. Odpowiem najszybciej jak to możliwe.",
-  "contact-error": "Coś poszło nie tak. Spróbuj ponownie.",
-
-  "cookie-message": "Używamy niezbędnych plików cookie wymaganych do działania strony, a za Twoją zgodą także dodatkowych plików cookie do analityki i wydajności. Dowiedz się więcej w: ",
-  "accept": "Akceptuj",
-  "decline": "Odrzuć",
-  "privacy-policy": "Polityka Prywatności",
-  "tips": "Wskazówki",
-  "about": "O mnie",
   "contact": "Kontakt",
-  "books": "KSIĄŻKI →",
 
   "map-layer-buildings": "Budynki - standard",
   "map-layer-routes": "Trasa standardowa",
@@ -120,6 +98,17 @@
   "newsletter-privacy": "Szanujemy Twoją prywatność. Możesz zrezygnować w każdej chwili.",
   "newsletter-heading-short": "Darmowa checklista",
   "newsletter-close": "Zamknij",
+
+  "contact-form-heading": "Skontaktuj się",
+  "contact-form-subheading": "Masz pytanie dotyczące wizyty w Auschwitz? Napisz do mnie, a odpowiem najszybciej jak to możliwe.",
+  "contact-email-placeholder": "Twój adres email",
+  "contact-message-placeholder": "Twoja wiadomość...",
+  "contact-email-error": "Proszę podać prawidłowy adres email.",
+  "contact-message-error": "Proszę wpisać wiadomość.",
+  "contact-send": "Wyślij wiadomość",
+  "contact-success": "Dziękuję! Twoja wiadomość została wysłana. Odpowiem najszybciej jak to możliwe.",
+  "contact-error": "Coś poszło nie tak. Spróbuj ponownie.",
+
   "consent-commercial": "Wyrażam zgodę na otrzymywanie aktualizacji projektu drogą mailową. Mogę zrezygnować w dowolnym momencie. ",
   "privacy": {
     "metadata": {

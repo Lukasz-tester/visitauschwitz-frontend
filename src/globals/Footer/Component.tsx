@@ -7,6 +7,7 @@ import { CMSLink } from '@/components/Link'
 import { LogoLink } from '../../components/ui/logoLink'
 import { FooterNewsletter } from './FooterNewsletter'
 import { FooterCookieSettings } from './FooterCookieSettings'
+import { FooterContactButton } from './FooterContactButton'
 
 export async function Footer({ locale }: { locale: TypedLocale }) {
   const footer = await getCachedGlobal<Footer>('footer', 1, locale)()
@@ -21,6 +22,7 @@ export async function Footer({ locale }: { locale: TypedLocale }) {
       <div className="container gap-8 flex flex-col">
         <div className="flex flex-col md:flex-row md:justify-between md:gap-8">
           <nav className="py-5 px-2 flex flex-wrap content-start gap-6 text-xl">
+            <FooterContactButton />
             {navItems.map(({ link }, i) => {
               return (
                 <CMSLink
