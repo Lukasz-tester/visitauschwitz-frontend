@@ -9,6 +9,7 @@ import { usePathname } from '@/i18n/routing'
 import MobileNavCaller from './MobileNav/MobileNavCaller'
 import { LogoLink } from '../../components/ui/logoLink'
 import MapCaller from '@/components/Map/MapCaller'
+import { NewsletterCaller } from '@/components/NewsletterSignup/NewsletterCaller'
 import { MapModalProvider } from '@/providers/MapModalContext'
 
 interface HeaderClientProps {
@@ -47,6 +48,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
             setModalOpen={setMobileNavOpen}
           />
 
+          <NewsletterCaller />
           <MapCaller setMobileNavOpen={setMobileNavOpen} />
         </>
       </MapModalProvider>

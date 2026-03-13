@@ -21,6 +21,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   const [hasOpened, setHasOpened] = useState(false)
   const { currentUrl, setCurrentUrl } = useMapModal()
 
+  const scrolled = useScrolledFromTop()
   useLockBodyScroll(modalOpen)
 
   useEffect(() => {
@@ -62,7 +63,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
   }
 
   return (
-    <div className={`z-50 fixed ${useScrolledFromTop() ? '' : 'hidden sm:block'}`}>
+    <div className={`z-50 fixed [[data-newsletter-open]_&]:hidden ${modalOpen || scrolled ? '' : 'hidden sm:block [[data-mobile-nav=open]_&]:block'}`}>
       <button
         className={`bottom-4 z-50 ease-in-out duration-500 fixed flex items-center justify-center font-thin dark:text-white/80 text-black/70 ${
           modalOpen

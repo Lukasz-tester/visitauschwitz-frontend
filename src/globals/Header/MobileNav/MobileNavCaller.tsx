@@ -3,19 +3,17 @@ import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
-import { useTranslations } from 'next-intl'
+
 import { useEffect } from 'react'
 import { usePathname } from '@/i18n/routing'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
-import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 export const MobileNavCaller: React.FC<{
   header: HeaderType
   modalOpen: boolean
   setModalOpen: (open: boolean) => void
 }> = ({ header, modalOpen, setModalOpen }) => {
-  const t = useTranslations()
   const pathname = usePathname()
   useLockBodyScroll(modalOpen)
 
@@ -92,14 +90,8 @@ export const MobileNavCaller: React.FC<{
               aria-label="Main Navigation"
             />
           </div>
-          <div className="mt-auto pb-16 sm:pb-6 px-5 flex flex-col gap-3">
-            <div>
-              <p className="text-sm font-medium text-muted-foreground mb-3 ml-1">
-                {t('newsletter-heading-short')}
-              </p>
-              <NewsletterSignup variant="mobilenav" />
-            </div>
-            {/* <div
+          {/* <div className="mt-auto pb-16 sm:pb-6 px-5 flex flex-col gap-3">
+              <div
                 className="w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold"
                 onClick={() => setModalOpen(false)}
               >
@@ -121,8 +113,8 @@ export const MobileNavCaller: React.FC<{
                 >
                   {t('posts')}
                 </CMSLink>
-              </div> */}
-          </div>
+              </div>
+          </div> */}
         </div>
       </div>
     </div>

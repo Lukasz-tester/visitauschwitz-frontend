@@ -24,7 +24,13 @@ type StoredState = {
 function readStorage(key: string): StoredState {
   try {
     const stored = sessionStorage.getItem(key)
-    if (stored) return JSON.parse(stored)
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      return {
+        openIndices: Array.isArray(parsed.openIndices) ? parsed.openIndices : [],
+        heights: parsed.heights && typeof parsed.heights === 'object' ? parsed.heights : {},
+      }
+    }
   } catch {}
   return { openIndices: [], heights: {} }
 }

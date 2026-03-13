@@ -70,7 +70,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
       <RenderHero {...hero} />
       {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
-      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} insertBeforeLast={<HomepageNewsletter />} />
+      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} insertAtIndex={5} insertNode={<HomepageNewsletter />} />
     </article>
   )
 }

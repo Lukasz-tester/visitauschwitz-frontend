@@ -72,12 +72,12 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          'fixed bottom-4 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden',
+          'fixed bottom-4 right-[5.5rem] z-40 flex items-center justify-center [[data-map-open]_&]:hidden [[data-newsletter-open]_&]:hidden',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
-          isOpen && 'bg-card right-4 sm:right-[5.5rem]',
-          scrolled ? '' : 'hidden sm:flex',
+          isOpen && 'bg-card',
+          scrolled ? '' : 'hidden sm:flex [[data-mobile-nav=open]_&]:flex',
         )}
         aria-label={isOpen ? 'Close table of contents' : 'Open table of contents'}
       >
@@ -87,8 +87,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
       {!isOpen && (
         <span
           className={cn(
-            'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
-            !scrolled && 'max-sm:!hidden',
+            'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden [[data-newsletter-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
           )}
         >
           LIST
