@@ -20,6 +20,11 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
   const listRef = useRef<HTMLUListElement>(null)
 
   useEffect(() => {
+    document.documentElement.toggleAttribute('data-toc-present', true)
+    return () => document.documentElement.removeAttribute('data-toc-present')
+  }, [])
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
