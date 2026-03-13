@@ -22,13 +22,17 @@ type StoredState = {
 }
 
 function readStorage(key: string): StoredState {
-  if (typeof window === 'undefined') return { openIndices: [], heights: {} }
   try {
     const stored = sessionStorage.getItem(key)
     if (stored) return JSON.parse(stored)
   } catch {}
   return { openIndices: [], heights: {} }
 }
+
+// After initial hydration this becomes true, so client-side navigations
+// (back/forward) can restore state from sessionStorage.
+// On hard reload the module re-evaluates and resets to false → fresh start.
+let hasHydrated = false
 
 export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   id,
@@ -41,16 +45,19 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   const storageKey = `accordion-state-${fullUrl || ''}-${blockName || id || 'default'}`
   const [hasMounted, setHasMounted] = useState(false)
 
-  // Read from sessionStorage on first render so the layout is correct before scroll restoration
-  const [openIndices, setOpenIndices] = useState<number[]>(
-    () => readStorage(storageKey).openIndices,
+  const [openIndices, setOpenIndices] = useState<number[]>(() =>
+    hasHydrated ? readStorage(storageKey).openIndices : [],
   )
-  const [storedHeights, setStoredHeights] = useState<Record<number, number>>(
-    () => readStorage(storageKey).heights,
+  const [storedHeights, setStoredHeights] = useState<Record<number, number>>(() =>
+    hasHydrated ? readStorage(storageKey).heights : {},
   )
 
   useIsomorphicLayoutEffect(() => {
     setHasMounted(true)
+  }, [])
+
+  useEffect(() => {
+    hasHydrated = true
   }, [])
 
   useEffect(() => {
