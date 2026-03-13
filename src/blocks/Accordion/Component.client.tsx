@@ -1,6 +1,8 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 import dynamic from 'next/dynamic'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from 'src/utilities/cn'
@@ -14,6 +16,20 @@ type Props = Extract<Page['layout'][0], { blockType: 'accordion' }> & {
   fullUrl?: string
 }
 
+type StoredState = {
+  openIndices: number[]
+  heights: Record<number, number>
+}
+
+function readStorage(key: string): StoredState {
+  if (typeof window === 'undefined') return { openIndices: [], heights: {} }
+  try {
+    const stored = sessionStorage.getItem(key)
+    if (stored) return JSON.parse(stored)
+  } catch {}
+  return { openIndices: [], heights: {} }
+}
+
 export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   id,
   accordionItems = [],
@@ -25,21 +41,32 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   const storageKey = `accordion-state-${fullUrl || ''}-${blockName || id || 'default'}`
   const [hasMounted, setHasMounted] = useState(false)
 
-  const [openIndices, setOpenIndices] = useState<number[]>([])
+  // Read from sessionStorage on first render so the layout is correct before scroll restoration
+  const [openIndices, setOpenIndices] = useState<number[]>(
+    () => readStorage(storageKey).openIndices,
+  )
+  const [storedHeights, setStoredHeights] = useState<Record<number, number>>(
+    () => readStorage(storageKey).heights,
+  )
 
-  useEffect(() => {
-    try {
-      const stored = sessionStorage.getItem(storageKey)
-      if (stored) setOpenIndices(JSON.parse(stored))
-    } catch {}
+  useIsomorphicLayoutEffect(() => {
     setHasMounted(true)
-  }, [storageKey])
+  }, [])
 
   useEffect(() => {
+    if (!hasMounted) return
     try {
-      sessionStorage.setItem(storageKey, JSON.stringify(openIndices))
+      const state: StoredState = { openIndices, heights: storedHeights }
+      sessionStorage.setItem(storageKey, JSON.stringify(state))
     } catch {}
-  }, [openIndices, storageKey])
+  }, [openIndices, storedHeights, storageKey, hasMounted])
+
+  const handleHeightMeasured = useCallback((index: number, height: number) => {
+    setStoredHeights((prev) => {
+      if (prev[index] === height) return prev
+      return { ...prev, [index]: height }
+    })
+  }, [])
 
   const handleItemClick = (index: number) => {
     setOpenIndices((prev) =>
@@ -65,7 +92,9 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                   answer={item.answer}
                   question={item.question ?? ''}
                   isOpen={openIndices.includes(index)}
+                  initialHeight={storedHeights[index] ?? 0}
                   onClick={() => handleItemClick(index)}
+                  onHeightMeasured={handleHeightMeasured}
                   changedBackground={!!changeBackground}
                   hasMounted={hasMounted}
                 />
@@ -74,7 +103,6 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
           })}
         </div>
       </div>
-
     </section>
   )
 }
@@ -85,28 +113,41 @@ type ItemProps = {
   question: string
   answer: any
   isOpen: boolean
+  initialHeight: number
   onClick: () => void
+  onHeightMeasured: (index: number, height: number) => void
   changedBackground: boolean
   hasMounted: boolean
 }
 
 const AccordionItem: React.FC<ItemProps> = ({
+  index,
   question,
   answer,
   isOpen,
+  initialHeight,
   onClick,
+  onHeightMeasured,
   changedBackground,
   uniqueId,
   hasMounted,
 }) => {
   const contentRef = useRef<HTMLDivElement>(null)
-  const [measuredHeight, setMeasuredHeight] = useState(0)
+  const [measuredHeight, setMeasuredHeight] = useState(initialHeight)
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (contentRef.current && isOpen) {
-      setMeasuredHeight(contentRef.current.scrollHeight)
+      const h = contentRef.current.scrollHeight
+      onHeightMeasured(index, h)
+      if (measuredHeight === 0) {
+        // First open — defer so browser sees maxHeight: 0 first, then animates to h
+        requestAnimationFrame(() => setMeasuredHeight(h))
+      } else {
+        setMeasuredHeight(h)
+      }
     }
-  }, [isOpen])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, index, onHeightMeasured])
 
   return (
     <article
@@ -135,14 +176,13 @@ const AccordionItem: React.FC<ItemProps> = ({
       <div
         id={`content-${uniqueId}`}
         ref={contentRef}
-        className={cn('px-5 overflow-hidden', hasMounted && 'transition-[max-height] duration-500 ease-in-out')}
+        className={cn(
+          'px-5 overflow-hidden',
+          hasMounted && 'transition-[max-height] duration-500 ease-in-out',
+        )}
         role="region"
         aria-labelledby={uniqueId}
-        style={
-          hasMounted
-            ? { maxHeight: isOpen ? measuredHeight : 0 }
-            : undefined
-        }
+        style={hasMounted ? { maxHeight: isOpen ? measuredHeight : 0 } : undefined}
       >
         <div className="py-2 mb-4">
           <LazyRichText content={answer} enableGutter={false} />
