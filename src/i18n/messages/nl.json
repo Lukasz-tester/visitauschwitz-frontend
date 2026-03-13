@@ -14,12 +14,10 @@
   "next": "Volgende",
   "more-pages": "Meer pagina's",
   "contact": "Contact",
-
   "map-layer-buildings": "Gebouwen - reguliere rondleiding",
   "map-layer-routes": "Reguliere route",
   "map-layer-entrances": "Ingangen van het museum",
   "map-layer-parking": "Parkeerplaatsen",
-
   "map-entrance-auschwitz-title": "Begin uw bezoek bij Auschwitz I",
   "map-entrance-auschwitz-desc-1": "Vanaf de hoofdparkeerplaats",
   "map-entrance-auschwitz-desc-2": ", betreedt u het ontvangstgebouw om uw rondleiding door ",
@@ -29,7 +27,6 @@
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "U begint het tweede deel van uw rondleiding bij de hoofdpoort van Birkenau.",
   "map-entrance-birkenau-link": "Bekijk de poort van Birkenau →",
-
   "map-blok4-title": "Tentoonstelling over de uitroeiing",
   "map-blok4-desc": "Details over de massamoord op Joden in Auschwitz.",
   "map-blok4-link": "Bekijk blok 4 →",
@@ -63,7 +60,6 @@
   "map-brick-barracks-title": "Stenen barakken en latrines (sector BIa)",
   "map-brick-barracks-desc": "Levensomstandigheden en sanitaire voorzieningen in de sector BIa van Birkenau.",
   "map-brick-barracks-link": "Bekijk de stenen barakken →",
-
   "map-parking-museum-car": "Auto: 20 PLN",
   "map-parking-museum-minibus": "Minibus: 30 PLN",
   "map-parking-museum-bus": "Bus: 40 PLN",
@@ -79,25 +75,28 @@
   "map-parking-birkenau2-motorcycle": "Motorfiets: 10 PLN",
   "map-parking-ride": "Park & Ride bij het treinstation.",
   "map-parking-jaracza": "Parkeerplaats aan de Stefana Jaracza-straat.",
-
   "map-locate-error": "Kan uw locatie niet ophalen",
   "map-locate-unsupported": "Geolocatie wordt niet ondersteund door deze browser.",
   "map-locate-popup": "Uw huidige locatie",
-
   "newsletter-heading": "Ontvang uw gratis checklist voor de voorbereiding van uw bezoek aan Auschwitz",
-  "newsletter-subheading": "Sluit u aan bij duizenden bezoekers die zich beter hebben voorbereid. Ontvang praktische tips, inpaklijsten en een dagschema rechtstreeks in uw inbox.",
   "newsletter-email-placeholder": "Uw e-mailadres",
-  "newsletter-firstname-placeholder": "Voornaam (optioneel)",
   "newsletter-submit": "Ontvang de gratis checklist",
   "newsletter-submit-footer": "Inschrijven",
   "newsletter-success": "Bedankt! Controleer uw inbox voor de checklist.",
   "newsletter-error": "Er is iets misgegaan. Probeer het opnieuw.",
-  "newsletter-contact-optin": "Meld mij ook aan voor de Visit Auschwitz-nieuwsbrief",
   "newsletter-popup-heading": "Voordat u vertrekt — gratis voorbereidingschecklist",
   "newsletter-popup-subheading": "Mis de belangrijkste zaken niet. Ontvang een printbare checklist in uw inbox.",
-  "newsletter-privacy": "Wij respecteren uw privacy. U kunt zich op elk moment uitschrijven.",
-  "newsletter-heading-short": "Gratis checklist voor uw bezoek",
   "newsletter-close": "Sluiten",
+  "contact-form-heading": "Neem contact op",
+  "contact-form-subheading": "Heeft u een vraag over het bezoek aan Auschwitz? Stuur mij een bericht en ik neem contact met u op.",
+  "contact-email-placeholder": "Uw e-mailadres",
+  "contact-message-placeholder": "Uw bericht...",
+  "contact-email-error": "Voer een geldig e-mailadres in.",
+  "contact-message-error": "Voer een bericht in.",
+  "contact-send": "Bericht verzenden",
+  "contact-success": "Bedankt! Uw bericht is verzonden. Ik neem binnenkort contact met u op.",
+  "contact-error": "Er is iets misgegaan. Probeer het opnieuw.",
+  "privacy-policy": "Privacybeleid",
   "consent-commercial": "Ik ga ermee akkoord om projectupdates per e-mail te ontvangen. Ik kan mij op elk moment uitschrijven.",
   "privacy": {
     "metadata": {
@@ -187,7 +186,7 @@
       "item5": "Recht op gegevensoverdraagbaarheid",
       "item6": "Recht om toestemming te allen tijde in te trekken",
       "item7": "Recht om een klacht in te dienen bij de voorzitter van het Bureau voor de bescherming van persoonsgegevens (UODO) in Polen",
-      "item8": "Recht om te allen tijde bezwaar te maken tegen de verwerking van uw persoonsgegevens voor direct marketing doeleinden (artikel 21, lid 2, AVG) \u2014 dit is een absoluut recht waarvoor geen motivering vereist is"
+      "item8": "Recht om te allen tijde bezwaar te maken tegen de verwerking van uw persoonsgegevens voor direct marketing doeleinden (artikel 21, lid 2, AVG) — dit is een absoluut recht waarvoor geen motivering vereist is"
     },
     "contact": {
       "title": "Contact",

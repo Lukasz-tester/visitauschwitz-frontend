@@ -81,22 +81,6 @@
 <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/contact</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/contact" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/contact" />
-<lastmod>2026-03-10T08:26:06.951Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://www.visitauschwitz.info/pl/contact</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/contact" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/contact" />
-<lastmod>2026-03-10T08:26:06.951Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
 <loc>https://www.visitauschwitz.info/en/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
 <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />

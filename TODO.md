@@ -1,16 +1,6 @@
 # TO DO list
 
-- newsletter-... > remove some from messages
-  6 unused keys (verify):
-  - newsletter-subheading
-  - newsletter-firstname-placeholder
-  - newsletter-contact-optin
-  - newsletter-privacy
-  - newsletter-heading-short
-- contact-... > translate if ok, now only pl and en
 - cookies opcje: akceptuj / zarzadzaj opcjami (tam dopiero odrzuc wszystkie)
-- list icon appears on pages with min nr of elements, remember for new pages to check! as leaves gap in nav between mail and map icons
-- Auschwitz I Obóz Główny Rozpocznij zwiedzanie tutaj i kontynuuj w Birkenau. - na mapie zmienic na tekst z linkiem do parkingu i do bramy w brzezince, zwieksz czcionke
 
 By the main parking lot you entrer the reception building to start your tour at Auschwitz I. The second tour part is in Birkenau.
 

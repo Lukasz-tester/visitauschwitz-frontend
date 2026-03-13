@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -20,6 +20,7 @@ type Status = 'idle' | 'loading' | 'success' | 'error'
 
 export function ContactForm({ variant }: { variant: Variant }) {
   const t = useTranslations()
+  const locale = useLocale()
   const honeypotRef = useRef<HTMLInputElement>(null)
   const lastSubmitRef = useRef(0)
   const [status, setStatus] = useState<Status>('idle')
@@ -47,6 +48,8 @@ export function ContactForm({ variant }: { variant: Variant }) {
           email: data.email,
           message: data.message,
           name: 'Website visitor',
+          locale,
+          _hp_company: '',
         }),
       })
       if (!res.ok) throw new Error()

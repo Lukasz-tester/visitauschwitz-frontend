@@ -14,12 +14,10 @@
   "next": "Successivo",
   "more-pages": "Altre pagine",
   "contact": "Contatto",
-
   "map-layer-buildings": "Edifici - percorso regolare",
   "map-layer-routes": "Percorso regolare",
   "map-layer-entrances": "Ingressi del museo",
   "map-layer-parking": "Parcheggi",
-
   "map-entrance-auschwitz-title": "Inizia la visita ad Auschwitz I",
   "map-entrance-auschwitz-desc-1": "Dal parcheggio principale",
   "map-entrance-auschwitz-desc-2": ", entra nell'edificio di accoglienza per iniziare la visita di ",
@@ -29,7 +27,6 @@
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "Inizierete la seconda parte della visita presso la porta principale di Birkenau.",
   "map-entrance-birkenau-link": "Vedere la porta di Birkenau →",
-
   "map-blok4-title": "Mostra sullo sterminio",
   "map-blok4-desc": "Dettagli sullo sterminio di massa degli ebrei ad Auschwitz.",
   "map-blok4-link": "Vedere il blocco 4 →",
@@ -63,7 +60,6 @@
   "map-brick-barracks-title": "Baracche in mattoni e latrines (settore BIa)",
   "map-brick-barracks-desc": "Condizioni di vita e igienico-sanitarie nel settore BIa di Birkenau.",
   "map-brick-barracks-link": "Vedere le baracche in mattoni →",
-
   "map-parking-museum-car": "Auto: 20 PLN",
   "map-parking-museum-minibus": "Minibus: 30 PLN",
   "map-parking-museum-bus": "Autobus: 40 PLN",
@@ -79,25 +75,28 @@
   "map-parking-birkenau2-motorcycle": "Motocicletta: 10 PLN",
   "map-parking-ride": "Parcheggio Park & Ride presso la stazione ferroviaria.",
   "map-parking-jaracza": "Parcheggio di via Stefana Jaracza.",
-
   "map-locate-error": "Impossibile ottenere la tua posizione",
   "map-locate-unsupported": "La geolocalizzazione non è supportata da questo browser.",
   "map-locate-popup": "La tua posizione attuale",
-
   "newsletter-heading": "Ottieni la tua checklist gratuita per preparare la visita ad Auschwitz",
-  "newsletter-subheading": "Unisciti a migliaia di visitatori che si sono preparati al meglio. Ricevi consigli pratici, liste per il bagaglio e un itinerario dettagliato direttamente nella tua casella di posta.",
   "newsletter-email-placeholder": "Il tuo indirizzo email",
-  "newsletter-firstname-placeholder": "Nome (opzionale)",
   "newsletter-submit": "Ottieni la checklist gratuita",
   "newsletter-submit-footer": "Iscriviti",
   "newsletter-success": "Grazie! Controlla la tua casella di posta per la checklist.",
   "newsletter-error": "Qualcosa è andato storto. Riprova più tardi.",
-  "newsletter-contact-optin": "Iscrivimi anche alla newsletter di Visit Auschwitz",
   "newsletter-popup-heading": "Prima di andare — checklist gratuita di preparazione",
   "newsletter-popup-subheading": "Non dimenticare le cose più importanti. Ricevi una checklist stampabile nella tua casella di posta.",
-  "newsletter-privacy": "Rispettiamo la tua privacy. Puoi disiscriverti in qualsiasi momento.",
-  "newsletter-heading-short": "Checklist di visita gratuita",
   "newsletter-close": "Chiudi",
+  "contact-form-heading": "Contattaci",
+  "contact-form-subheading": "Hai una domanda sulla visita ad Auschwitz? Inviami un messaggio e ti risponderò.",
+  "contact-email-placeholder": "Il tuo indirizzo email",
+  "contact-message-placeholder": "Il tuo messaggio...",
+  "contact-email-error": "Inserisci un indirizzo email valido.",
+  "contact-message-error": "Inserisci un messaggio.",
+  "contact-send": "Invia messaggio",
+  "contact-success": "Grazie! Il tuo messaggio è stato inviato. Ti risponderò presto.",
+  "contact-error": "Qualcosa è andato storto. Riprova più tardi.",
+  "privacy-policy": "Informativa sulla privacy",
   "consent-commercial": "Acconsento a ricevere aggiornamenti sul progetto via email. Posso disiscrivermi in qualsiasi momento.",
   "privacy": {
     "metadata": {
@@ -187,7 +186,7 @@
       "item5": "Diritto alla portabilità dei dati",
       "item6": "Diritto di revocare il consenso in qualsiasi momento",
       "item7": "Diritto di proporre reclamo al Presidente dell’Ufficio per la Protezione dei Dati Personali (UODO) in Polonia",
-      "item8": "Diritto di opporsi in qualsiasi momento al trattamento dei Suoi dati personali a fini di marketing diretto (articolo 21, paragrafo 2, del RGPD) \u2014 si tratta di un diritto assoluto che non richiede alcuna giustificazione"
+      "item8": "Diritto di opporsi in qualsiasi momento al trattamento dei Suoi dati personali a fini di marketing diretto (articolo 21, paragrafo 2, del RGPD) — si tratta di un diritto assoluto che non richiede alcuna giustificazione"
     },
     "contact": {
       "title": "Contatti",

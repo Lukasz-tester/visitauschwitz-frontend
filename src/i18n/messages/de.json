@@ -14,7 +14,6 @@
   "next": "Nächste",
   "more-pages": "Weitere Seiten",
   "contact": "Kontakt",
-
   "map-layer-buildings": "Gebäude – reguläre",
   "map-layer-routes": "Reguläre Route",
   "map-layer-entrances": "Museumseingänge",
@@ -80,21 +79,25 @@
   "map-locate-unsupported": "Geolocation wird von diesem Browser nicht unterstützt.",
   "map-locate-popup": "Ihr aktueller Standort",
   "newsletter-heading": "Holen Sie sich Ihre kostenlose Checkliste für den Auschwitz-Besuch",
-  "newsletter-subheading": "Schließen Sie sich Tausenden von Besuchern an, die sich besser vorbereitet haben. Erhalten Sie praktische Tipps, Packlisten und einen Tagesplan direkt in Ihr Postfach.",
   "newsletter-email-placeholder": "Ihre E-Mail-Adresse",
-  "newsletter-firstname-placeholder": "Vorname (optional)",
   "newsletter-submit": "Kostenlose Checkliste erhalten",
   "newsletter-submit-footer": "Abonnieren",
   "newsletter-success": "Danke! Prüfen Sie Ihr Postfach für die Checkliste.",
   "newsletter-error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
-  "newsletter-contact-optin": "Abonnieren Sie mich auch für den Visit Auschwitz Newsletter",
   "newsletter-popup-heading": "Bevor Sie gehen – kostenlose Checkliste",
   "newsletter-popup-subheading": "Verpassen Sie nichts Wichtiges. Erhalten Sie eine druckbare Checkliste in Ihr Postfach.",
-  "newsletter-privacy": "Wir respektieren Ihre Privatsphäre. Sie können sich jederzeit abmelden.",
-  "newsletter-heading-short": "Kostenlose Besuchs-Checkliste",
   "newsletter-close": "Schließen",
+  "contact-form-heading": "Kontakt aufnehmen",
+  "contact-form-subheading": "Haben Sie eine Frage zum Besuch von Auschwitz? Schreiben Sie mir eine Nachricht und ich melde mich bei Ihnen.",
+  "contact-email-placeholder": "Ihre E-Mail-Adresse",
+  "contact-message-placeholder": "Ihre Nachricht...",
+  "contact-email-error": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "contact-message-error": "Bitte geben Sie eine Nachricht ein.",
+  "contact-send": "Nachricht senden",
+  "contact-success": "Vielen Dank! Ihre Nachricht wurde gesendet. Ich melde mich bald bei Ihnen.",
+  "contact-error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+  "privacy-policy": "Datenschutzerklärung",
   "consent-commercial": "Ich stimme zu, Projekt-Updates per E-Mail zu erhalten. Ich kann mich jederzeit abmelden.",
-
   "privacy": {
     "metadata": {
       "title": "Datenschutzerklärung — Visit Auschwitz Book Project",
@@ -183,7 +186,7 @@
       "item5": "Recht auf Datenübertragbarkeit",
       "item6": "Recht, die Einwilligung jederzeit zu widerrufen",
       "item7": "Recht, eine Beschwerde bei der Präsidentin / dem Präsidenten des Amtes für den Schutz personenbezogener Daten (UODO) in Polen einzureichen",
-      "item8": "Recht, der Verarbeitung Ihrer personenbezogenen Daten zum Zwecke der Direktwerbung jederzeit zu widersprechen (Artikel 21 Absatz 2 DSGVO) \u2014 dies ist ein absolutes Recht, das keiner Begründung bedarf"
+      "item8": "Recht, der Verarbeitung Ihrer personenbezogenen Daten zum Zwecke der Direktwerbung jederzeit zu widersprechen (Artikel 21 Absatz 2 DSGVO) — dies ist ein absolutes Recht, das keiner Begründung bedarf"
     },
     "contact": {
       "title": "Kontakt",

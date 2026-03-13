@@ -79,19 +79,24 @@
   "map-locate-unsupported": "La geolocalización no es compatible con este navegador.",
   "map-locate-popup": "Su ubicación actual",
   "newsletter-heading": "Consiga su lista de verificación gratuita para preparar su visita a Auschwitz",
-  "newsletter-subheading": "Únase a miles de visitantes que se han preparado mejor. Reciba consejos prácticos, listas de equipaje y un itinerario detallado directamente en su bandeja de entrada.",
   "newsletter-email-placeholder": "Su dirección de correo electrónico",
-  "newsletter-firstname-placeholder": "Nombre (opcional)",
   "newsletter-submit": "Obtener la lista de verificación gratuita",
   "newsletter-submit-footer": "Suscribirse",
   "newsletter-success": "¡Gracias! Revise su bandeja de entrada para ver la lista de verificación.",
   "newsletter-error": "Algo salió mal. Por favor, inténtelo de nuevo.",
-  "newsletter-contact-optin": "Suscribirme también al boletín de Visit Auschwitz",
   "newsletter-popup-heading": "Antes de ir — lista de verificación gratuita de preparación",
   "newsletter-popup-subheading": "No pase por alto lo más importante. Reciba una lista de verificación imprimible en su bandeja de entrada.",
-  "newsletter-privacy": "Respetamos su privacidad. Cancele su suscripción en cualquier momento.",
-  "newsletter-heading-short": "Lista de verificación de visita gratuita",
   "newsletter-close": "Cerrar",
+  "contact-form-heading": "Contacto",
+  "contact-form-subheading": "¿Tiene alguna pregunta sobre la visita a Auschwitz? Envíeme un mensaje y le responderé.",
+  "contact-email-placeholder": "Su dirección de correo electrónico",
+  "contact-message-placeholder": "Su mensaje...",
+  "contact-email-error": "Por favor, introduzca una dirección de correo electrónico válida.",
+  "contact-message-error": "Por favor, introduzca un mensaje.",
+  "contact-send": "Enviar mensaje",
+  "contact-success": "¡Gracias! Su mensaje ha sido enviado. Le responderé pronto.",
+  "contact-error": "Algo salió mal. Por favor, inténtelo de nuevo.",
+  "privacy-policy": "Política de privacidad",
   "consent-commercial": "Acepto recibir actualizaciones del proyecto por correo electrónico. Puedo cancelar mi suscripción en cualquier momento. ",
   "privacy": {
     "metadata": {
@@ -258,22 +263,22 @@
   },
   "cookies": {
     "banner": {
-      "message": "Este sitio utiliza cookies esenciales para su funcionamiento y cookies anal\u00edticas (Google Analytics) que me ayudan a analizar el tr\u00e1fico y mejorar el contenido. Las cookies anal\u00edticas solo se activan con tu consentimiento. Puedes cambiar de opini\u00f3n en cualquier momento.",
-      "privacyLink": "Pol\u00edtica de privacidad",
+      "message": "Este sitio utiliza cookies esenciales para su funcionamiento y cookies analíticas (Google Analytics) que me ayudan a analizar el tráfico y mejorar el contenido. Las cookies analíticas solo se activan con tu consentimiento. Puedes cambiar de opinión en cualquier momento.",
+      "privacyLink": "Política de privacidad",
       "termsLink": "Condiciones de uso",
       "acceptAll": "Aceptar todas",
       "rejectAll": "Rechazar no esenciales",
-      "settings": "Configuraci\u00f3n de cookies"
+      "settings": "Configuración de cookies"
     },
     "settings": {
-      "title": "Configuraci\u00f3n de cookies",
+      "title": "Configuración de cookies",
       "necessary": {
         "name": "Esenciales",
         "description": "Necesarias para el correcto funcionamiento del sitio web (preferencias, modo oscuro, etc.). No requieren consentimiento."
       },
       "analytics": {
-        "name": "Anal\u00edticas",
-        "description": "Google Analytics 4 \u2014 estad\u00edsticas de visitas an\u00f3nimas. Los datos se conservan durante un m\u00e1ximo de 14 meses."
+        "name": "Analíticas",
+        "description": "Google Analytics 4 — estadísticas de visitas anónimas. Los datos se conservan durante un máximo de 14 meses."
       },
       "save": "Guardar preferencias",
       "acceptAll": "Aceptar todas"

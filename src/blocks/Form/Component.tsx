@@ -130,11 +130,12 @@ export const FormBlock: React.FC<
             const emailField = Object.entries(data).find(([key]) =>
               key.toLowerCase().includes('email'),
             )
-            fetch('/api/subscribe', {
+            fetch('/api/contact', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 email: emailField?.[1] || '',
+                _hp_company: '',
               }),
             }).catch(() => {})
           }

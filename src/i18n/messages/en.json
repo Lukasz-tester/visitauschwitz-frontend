@@ -14,12 +14,10 @@
   "next": "Next",
   "more-pages": "More pages",
   "contact": "Contact",
-
   "map-layer-buildings": "Buildings - standard",
   "map-layer-routes": "Regular route",
   "map-layer-entrances": "Museum entrances",
   "map-layer-parking": "Parking lots",
-
   "map-entrance-auschwitz-title": "Start your visit at Auschwitz I",
   "map-entrance-auschwitz-desc-1": "From the main parking lot",
   "map-entrance-auschwitz-desc-2": ", enter the reception building to begin your tour of ",
@@ -29,7 +27,6 @@
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "You start the second part of your tour by the main Birkenau gate.",
   "map-entrance-birkenau-link": "See Birkenau gate →",
-
   "map-blok4-title": "Extermination Exhibition",
   "map-blok4-desc": "Details about the mass murder of Jews at Auschwitz.",
   "map-blok4-link": "See block 4 →",
@@ -63,7 +60,6 @@
   "map-brick-barracks-title": "Brick Barracks and Latrines (BIa Sector)",
   "map-brick-barracks-desc": "Living and sanitary conditions in the BIa sector of Birkenau.",
   "map-brick-barracks-link": "See brick barracks →",
-
   "map-parking-museum-car": "Car: 20 PLN",
   "map-parking-museum-minibus": "Minibus: 30 PLN",
   "map-parking-museum-bus": "Bus: 40 PLN",
@@ -79,26 +75,18 @@
   "map-parking-birkenau2-motorcycle": "Motorcycle: 10 PLN",
   "map-parking-ride": "Park & Ride by the railway station.",
   "map-parking-jaracza": "Stefana Jaracza Street parking lot.",
-
   "map-locate-error": "Could not get your location",
   "map-locate-unsupported": "Geolocation is not supported by this browser.",
   "map-locate-popup": "Your current location",
-
   "newsletter-heading": "Get Your Free Auschwitz Visit Preparation Checklist",
-  "newsletter-subheading": "Join thousands of visitors who prepared better. Get practical tips, packing lists, and a day-by-day itinerary straight to your inbox.",
-  "newsletter-email-placeholder": "Your email address",
-  "newsletter-firstname-placeholder": "First name (optional)",
-  "newsletter-submit": "Get the Free Checklist",
   "newsletter-submit-footer": "Subscribe",
-  "newsletter-success": "Thank you! Check your inbox for the checklist.",
-  "newsletter-error": "Something went wrong. Please try again.",
-  "newsletter-contact-optin": "Also subscribe me to the Visit Auschwitz newsletter",
+  "newsletter-email-placeholder": "Your email address",
+  "newsletter-submit": "Get the Free Checklist",
   "newsletter-popup-heading": "Before You Go — Free Preparation Checklist",
   "newsletter-popup-subheading": "Don't miss the most important things. Get a printable checklist delivered to your inbox.",
-  "newsletter-privacy": "We respect your privacy. Unsubscribe at any time.",
-  "newsletter-heading-short": "Free Visit Checklist",
+  "newsletter-success": "Thank you! Check your inbox for the checklist.",
+  "newsletter-error": "Something went wrong. Please try again.",
   "newsletter-close": "Close",
-
   "contact-form-heading": "Get in Touch",
   "contact-form-subheading": "Have a question about visiting Auschwitz? Send me a message and I'll get back to you.",
   "contact-email-placeholder": "Your email address",
@@ -108,9 +96,8 @@
   "contact-send": "Send Message",
   "contact-success": "Thank you! Your message has been sent. I'll get back to you soon.",
   "contact-error": "Something went wrong. Please try again.",
-
-  "consent-commercial": "I agree to receive project updates by email. I can unsubscribe at any time. ",
   "privacy-policy": "Privacy Policy",
+  "consent-commercial": "I agree to receive project updates by email. I can unsubscribe at any time. ",
   "privacy": {
     "metadata": {
       "title": "Privacy Policy — Visit Auschwitz Book Project",
@@ -199,7 +186,7 @@
       "item5": "Right to data portability",
       "item6": "Right to withdraw consent at any time",
       "item7": "Right to lodge a complaint with the President of the Personal Data Protection Office (UODO) in Poland",
-      "item8": "Right to object to the processing of your personal data for direct marketing purposes at any time (Article 21(2) GDPR) \u2014 this is an absolute right that requires no justification"
+      "item8": "Right to object to the processing of your personal data for direct marketing purposes at any time (Article 21(2) GDPR) — this is an absolute right that requires no justification"
     },
     "contact": {
       "title": "Contact",

@@ -14,12 +14,10 @@
   "next": "Suivant",
   "more-pages": "Plus de pages",
   "contact": "Contact",
-
   "map-layer-buildings": "Bâtiments - visite régulière",
   "map-layer-routes": "Itinéraire régulier",
   "map-layer-entrances": "Entrées du musée",
   "map-layer-parking": "Parkings",
-
   "map-entrance-auschwitz-title": "Commencez votre visite à Auschwitz I",
   "map-entrance-auschwitz-desc-1": "Depuis le parking principal",
   "map-entrance-auschwitz-desc-2": ", entrez dans le bâtiment d'accueil pour commencer votre visite d'",
@@ -29,7 +27,6 @@
   "map-entrance-birkenau-title": "Auschwitz II-Birkenau",
   "map-entrance-birkenau-desc": "Vous commencez la deuxième partie de votre visite par la porte principale de Birkenau.",
   "map-entrance-birkenau-link": "Voir la porte de Birkenau →",
-
   "map-blok4-title": "Exposition sur l'extermination",
   "map-blok4-desc": "Détails sur l'assassinat en masse des Juifs à Auschwitz.",
   "map-blok4-link": "Voir le bloc 4 →",
@@ -63,7 +60,6 @@
   "map-brick-barracks-title": "Baraquements en briques et latrines (secteur BIa)",
   "map-brick-barracks-desc": "Conditions de vie et d'hygiène dans le secteur BIa de Birkenau.",
   "map-brick-barracks-link": "Voir les baraquements en briques →",
-
   "map-parking-museum-car": "Voiture : 20 PLN",
   "map-parking-museum-minibus": "Minibus : 30 PLN",
   "map-parking-museum-bus": "Bus : 40 PLN",
@@ -79,25 +75,28 @@
   "map-parking-birkenau2-motorcycle": "Moto : 10 PLN",
   "map-parking-ride": "Parc relais (Park & Ride) près de la gare.",
   "map-parking-jaracza": "Parking de la rue Stefana Jaracza.",
-
   "map-locate-error": "Impossible d'obtenir votre position",
   "map-locate-unsupported": "La géolocalisation n'est pas prise en charge par ce navigateur.",
   "map-locate-popup": "Votre position actuelle",
-
   "newsletter-heading": "Obtenez votre liste de préparation gratuite pour la visite d'Auschwitz",
-  "newsletter-subheading": "Rejoignez des milliers de visiteurs qui se sont mieux préparés. Recevez des conseils pratiques, des listes de bagages et un itinéraire détaillé directement dans votre boîte de réception.",
   "newsletter-email-placeholder": "Votre adresse e-mail",
-  "newsletter-firstname-placeholder": "Prénom (facultatif)",
   "newsletter-submit": "Obtenir la liste de préparation gratuite",
   "newsletter-submit-footer": "S'abonner",
   "newsletter-success": "Merci ! Vérifiez votre boîte de réception pour trouver la liste de préparation.",
   "newsletter-error": "Une erreur s'est produite. Veuillez réessayer.",
-  "newsletter-contact-optin": "Abonnez-moi également à la newsletter de Visit Auschwitz",
   "newsletter-popup-heading": "Avant de partir — liste de préparation gratuite",
   "newsletter-popup-subheading": "Ne manquez pas l'essentiel. Recevez une liste imprimable dans votre boîte de réception.",
-  "newsletter-privacy": "Nous respectons votre vie privée. Désabonnez-vous à tout moment.",
-  "newsletter-heading-short": "Liste de visite gratuite",
   "newsletter-close": "Fermer",
+  "contact-form-heading": "Nous contacter",
+  "contact-form-subheading": "Vous avez une question sur la visite d'Auschwitz ? Envoyez-moi un message et je vous répondrai.",
+  "contact-email-placeholder": "Votre adresse e-mail",
+  "contact-message-placeholder": "Votre message...",
+  "contact-email-error": "Veuillez entrer une adresse e-mail valide.",
+  "contact-message-error": "Veuillez entrer un message.",
+  "contact-send": "Envoyer le message",
+  "contact-success": "Merci ! Votre message a été envoyé. Je vous répondrai bientôt.",
+  "contact-error": "Une erreur s'est produite. Veuillez réessayer.",
+  "privacy-policy": "Politique de confidentialité",
   "consent-commercial": "J'accepte de recevoir les mises à jour du projet par e-mail. Je peux me désabonner à tout moment. ",
   "privacy": {
     "metadata": {
@@ -187,7 +186,7 @@
       "item5": "Droit à la portabilité des données",
       "item6": "Droit de retirer votre consentement à tout moment",
       "item7": "Droit d’introduire une réclamation auprès du Président de l’Office de protection des données personnelles (UODO) en Pologne",
-      "item8": "Droit de vous opposer à tout moment au traitement de vos données personnelles à des fins de prospection commerciale (article 21, paragraphe 2, du RGPD) \u2014 il s’agit d’un droit absolu qui ne nécessite aucune justification"
+      "item8": "Droit de vous opposer à tout moment au traitement de vos données personnelles à des fins de prospection commerciale (article 21, paragraphe 2, du RGPD) — il s’agit d’un droit absolu qui ne nécessite aucune justification"
     },
     "contact": {
       "title": "Contact",
@@ -210,8 +209,8 @@
       "content": "Les présentes Conditions d’utilisation régissent votre accès et votre utilisation de ce site web exploité par ŁUKASZ TARNOWSKI, exerçant sous le nom ŁUKASZ TARNOWSKI, inscrit au Registre central et informations sur l’activité économique (CEIDG), NIP : 5492257321, REGON : 12022820400000, dont le siège est situé UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Pologne (« Prestataire de services »). En accédant ou en utilisant ce site, vous acceptez de respecter les présentes Conditions."
     },
     "eligibility": {
-      "title": "Conditions d'admissibilit\u00e9",
-      "content": "Ce site web et ses services sont destin\u00e9s aux personnes \u00e2g\u00e9es de 16 ans ou plus. En utilisant ce site web et en soumettant des donn\u00e9es personnelles, vous confirmez que vous avez au moins 16 ans. Si vous avez moins de 16 ans, vous ne pouvez utiliser ce site web qu'avec la participation et le consentement de votre parent ou tuteur l\u00e9gal."
+      "title": "Conditions d'admissibilité",
+      "content": "Ce site web et ses services sont destinés aux personnes âgées de 16 ans ou plus. En utilisant ce site web et en soumettant des données personnelles, vous confirmez que vous avez au moins 16 ans. Si vous avez moins de 16 ans, vous ne pouvez utiliser ce site web qu'avec la participation et le consentement de votre parent ou tuteur légal."
     },
     "natureOfWebsite": {
       "title": "Nature du site web",
