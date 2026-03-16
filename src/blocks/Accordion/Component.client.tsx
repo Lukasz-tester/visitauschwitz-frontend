@@ -3,14 +3,10 @@
 import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
-import dynamic from 'next/dynamic'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from 'src/utilities/cn'
 import type { Page } from '@/payload-types'
-const LazyRichText = dynamic(() => import('@/components/RichText'), {
-  loading: () => <div>Loading content…</div>,
-  ssr: true,
-})
+import RichText from '@/components/RichText'
 
 type Props = Extract<Page['layout'][0], { blockType: 'accordion' }> & {
   fullUrl?: string
@@ -198,7 +194,7 @@ const AccordionItem: React.FC<ItemProps> = ({
         style={hasMounted ? { maxHeight: isOpen ? measuredHeight : 0 } : undefined}
       >
         <div className="py-2 mb-4">
-          <LazyRichText content={answer} enableGutter={false} />
+          <RichText content={answer} enableGutter={false} />
         </div>
       </div>
     </article>

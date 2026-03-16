@@ -1,5 +1,6 @@
 import type { Page, Post } from '@/payload-types'
-import { extractTextFromRichText, removeSpecialChars } from '@/utilities/helpersSsr'
+import type { Locale } from '@/i18n/localization'
+import { removeSpecialChars, richTextToHtml } from '@/utilities/helpersSsr'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
 const R2_BASE = process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info'
@@ -123,7 +124,7 @@ function buildWebPageNode({
   url: string
   name: string
   description?: string | null
-  locale: string
+  locale: Locale
   datePublished?: string | null
   dateModified?: string | null
   image?: string
@@ -147,7 +148,9 @@ function buildWebPageNode({
     ...(image ? { primaryImageOfPage: { '@id': `${url}#primaryimage` } } : {}),
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2'],
+      cssSelector: faqId
+        ? ['h1', 'h2', 'article > button h3', '[role="region"]']
+        : ['h1', 'h2'],
     },
     ...(faqId ? { hasPart: { '@id': faqId } } : {}),
   }
@@ -160,7 +163,7 @@ function buildArticleNode({
   faqId,
 }: {
   post: Post
-  locale: string
+  locale: Locale
   slug: string
   faqId?: string
 }) {
@@ -216,7 +219,7 @@ function buildBreadcrumbNode(pageUrl: string, items: BreadcrumbItem[]) {
 function buildFAQNode(
   items: { name: string; text: string }[],
   pageUrl: string,
-  locale: string = 'en',
+  locale: Locale = 'en',
 ) {
   return {
     '@type': 'FAQPage',
@@ -243,7 +246,7 @@ export type SchemaNavItem = {
   }
 }
 
-function buildSiteNavigationNode(navItems: SchemaNavItem[], locale: string) {
+function buildSiteNavigationNode(navItems: SchemaNavItem[], locale: Locale) {
   return {
     '@type': 'SiteNavigationElement',
     '@id': `${SITE_URL}/${locale}#sitenav`,
@@ -278,7 +281,7 @@ export function extractFAQItems(
       (block) =>
         (block as any).accordionItems?.map((item: any) => ({
           name: removeSpecialChars(item.question ?? 'Untitled Question'),
-          text: removeSpecialChars(extractTextFromRichText(item.answer)),
+          text: richTextToHtml(item.answer),
         })) ?? [],
     )
 }
@@ -287,7 +290,7 @@ export function extractFAQItems(
    TRAVEL-SPECIFIC BUILDERS
 ───────────────────────────────────────────────────────────── */
 
-function buildTouristTripNode(url: string, locale: string) {
+function buildTouristTripNode(url: string, locale: Locale) {
   const isPolish = locale === 'pl'
   return {
     '@type': 'TouristTrip',
@@ -339,8 +342,13 @@ function buildTouristTripNode(url: string, locale: string) {
   }
 }
 
-function buildEventNode(url: string, locale: string) {
+function buildEventNode(url: string, locale: Locale) {
   const isPolish = locale === 'pl'
+  const today = new Date()
+  const startDate = today.toISOString().slice(0, 10)
+  const endDate = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+    .toISOString()
+    .slice(0, 10)
   return {
     '@type': 'Event',
     '@id': `${url}#event`,
@@ -350,6 +358,7 @@ function buildEventNode(url: string, locale: string) {
     description: isPolish
       ? 'Zwiedzanie z licencjonowanym przewodnikiem po Miejscu Pamięci i Muzeum Auschwitz-Birkenau. Dostępne codziennie.'
       : 'Guided tour with a licensed educator at the Auschwitz-Birkenau Memorial and Museum. Available daily.',
+    startDate,
     inLanguage: locale,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
@@ -358,6 +367,8 @@ function buildEventNode(url: string, locale: string) {
     performer: { '@id': `${SITE_URL}/#museum` },
     eventSchedule: {
       '@type': 'Schedule',
+      startDate,
+      endDate,
       repeatFrequency: 'P1D',
       byDay: [
         'https://schema.org/Monday',
@@ -383,7 +394,7 @@ function buildEventNode(url: string, locale: string) {
   }
 }
 
-function buildHowToNode(url: string, locale: string) {
+function buildHowToNode(url: string, locale: Locale) {
   const isPolish = locale === 'pl'
   return {
     '@type': 'HowTo',
@@ -451,7 +462,7 @@ export function buildPageGraph({
   navItems,
 }: {
   page: Page
-  locale: string
+  locale: Locale
   url: string
   breadcrumbItems: BreadcrumbItem[]
   navItems?: SchemaNavItem[]
@@ -514,7 +525,7 @@ export function buildPostGraph({
   navItems,
 }: {
   post: Post
-  locale: string
+  locale: Locale
   slug: string
   breadcrumbItems: BreadcrumbItem[]
   navItems?: SchemaNavItem[]
@@ -545,7 +556,7 @@ export function generateSimplePageJsonLd({
   name,
   description,
 }: {
-  locale: string
+  locale: Locale
   path: string
   name: string
   description: string

@@ -6,10 +6,7 @@ import { useLocale } from 'next-intl'
 import React from 'react'
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
 import Link from 'next/link'
-// import { usePathname } from 'next/navigation'
-
 import type { Page, Post } from '@/payload-types'
-// import { Link } from '@/i18n/routing'
 
 type CMSLinkType = {
   appearance?: 'inline' | ButtonProps['variant']
@@ -62,9 +59,6 @@ export const CMSLink: React.FC<CMSLinkType> = ({
     )
   }
 
-  // inside your CMSLink component
-  // const pathname = usePathname()
-
   // INTERNAL LINKING - THE SAME PAGE
   if (href.startsWith('#')) {
     // const fullHref = `${pathname}${href}` // combine current path with hash
@@ -95,8 +89,6 @@ export const CMSLink: React.FC<CMSLinkType> = ({
   if (isInternal) {
     href = `/${locale}${href}`
   }
-
-  // console.log(`[CMSLink] locale=${locale}, href=${href}`)
 
   const linkProps: LinkProps = {
     href,

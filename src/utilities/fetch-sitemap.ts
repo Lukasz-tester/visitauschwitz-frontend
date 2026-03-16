@@ -41,6 +41,7 @@ function buildStaticPageEntries(): string {
 }
 
 function adjustSitemap(xml: string): string {
+  const today = new Date().toISOString().slice(0, 10)
   let adjusted = xml.replace(/<url>([\s\S]*?)<\/url>/g, (urlBlock) => {
     const locMatch = urlBlock.match(/<loc>([^<]+)<\/loc>/)
     if (!locMatch) return urlBlock
@@ -50,6 +51,7 @@ function adjustSitemap(xml: string): string {
     const changefreq = getChangefreq(slug)
 
     return urlBlock
+      .replace(/<lastmod>[^<]+<\/lastmod>/, `<lastmod>${today}</lastmod>`)
       .replace(/<priority>[^<]+<\/priority>/, `<priority>${priority}</priority>`)
       .replace(/<changefreq>[^<]+<\/changefreq>/, `<changefreq>${changefreq}</changefreq>`)
   })

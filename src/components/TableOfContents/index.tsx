@@ -118,7 +118,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
                 ref={activeId === item.id ? activeRef : undefined}
                 onClick={() => handleClick(item.id)}
                 className={cn(
-                  'text-left text-sm leading-snug hover:text-foreground transition-colors duration-200 w-full py-1 px-2 rounded',
+                  'text-left text-md leading-snug hover:text-foreground transition-colors duration-200 w-full py-1 px-2 rounded',
                   activeId === item.id
                     ? 'text-foreground bg-card-foreground'
                     : 'text-muted-foreground hover:bg-accent/50',

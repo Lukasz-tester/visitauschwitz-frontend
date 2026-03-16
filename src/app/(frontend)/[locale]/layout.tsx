@@ -17,6 +17,7 @@ import { notFound } from 'next/navigation'
 import { CookieConsent } from '@/components/Cookies/CookieConsent'
 import { Analytics } from '@/components/Cookies/Analytics'
 import { NewsletterPopup } from '@/components/NewsletterSignup/NewsletterPopup'
+import { HashScrollHandler } from '@/components/HashScrollHandler'
 
 type Args = {
   children: React.ReactNode
@@ -54,6 +55,7 @@ export default async function RootLayout({ children, params }: Args) {
             <Footer locale={locale} />
             <CookieConsent />
             <NewsletterPopup />
+            <HashScrollHandler />
           </NextIntlClientProvider>
         </Providers>
         <Analytics />

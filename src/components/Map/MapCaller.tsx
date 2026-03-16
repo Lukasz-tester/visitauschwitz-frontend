@@ -70,6 +70,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
             ? 'bg-card right-0 w-14 h-14 rounded-s-full'
             : 'right-4 w-14 h-14 rounded-full shadow-lg bg-background/80 md:hover:bg-card-foreground'
         }`}
+        aria-label={modalOpen ? 'Close map' : 'Open map'}
         onClick={handleToggle}
       >
         {/* X Icon visibility logic */}

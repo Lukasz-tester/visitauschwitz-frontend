@@ -3,7 +3,6 @@ import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
-
 import { useEffect } from 'react'
 import { usePathname } from '@/i18n/routing'
 import { useLockBodyScroll } from '@/utilities/helpers'
@@ -31,15 +30,6 @@ export const MobileNavCaller: React.FC<{
     window.addEventListener('close-mobile-nav', close)
     return () => window.removeEventListener('close-mobile-nav', close)
   }, [setModalOpen])
-
-  // const links = {
-  //   supplement: 'tips',
-  //   '/posts': 'posts',
-  //   '/#about-me': 'about',
-  //   '/contact': 'contact',
-  //   // TODO - odkomentuj ponizej i dodaj odpowiedni link jak bedzie
-  //   // '/': 'books',
-  // }
 
   return (
     <div>
@@ -90,31 +80,6 @@ export const MobileNavCaller: React.FC<{
               aria-label="Main Navigation"
             />
           </div>
-          {/* <div className="mt-auto pb-16 sm:pb-6 px-5 flex flex-col gap-3">
-              <div
-                className="w-full flex flex-col text-xl text-slate-700 dark:text-slate-400 font-semibold"
-                onClick={() => setModalOpen(false)}
-              >
-                <CMSLink
-                  aria-label="Secondary Navigation"
-                  key="/contact"
-                  className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
-                  onClick={() => setModalOpen(false)}
-                  url="/contact"
-                >
-                  {t('contact')}
-                </CMSLink>
-                <CMSLink
-                  aria-label="Secondary Navigation"
-                  key="/posts"
-                  className="p-2 px-3 lg:text-2xl hover:text-amber-700/90"
-                  onClick={() => setModalOpen(false)}
-                  url="/posts"
-                >
-                  {t('posts')}
-                </CMSLink>
-              </div>
-          </div> */}
         </div>
       </div>
     </div>

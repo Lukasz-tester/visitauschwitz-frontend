@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 
@@ -26,8 +26,7 @@ export function getCookie(name: string): string | null {
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i]
     while (c.charAt(0) === ' ') c = c.substring(1, c.length)
-    if (c.indexOf(nameEQ) === 0)
-      return decodeURIComponent(c.substring(nameEQ.length, c.length))
+    if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length))
   }
   return null
 }
@@ -38,7 +37,7 @@ export function getConsentPreferences(): ConsentPreferences | null {
   try {
     return JSON.parse(raw) as ConsentPreferences
   } catch {
-    // Legacy format ("true"/"false") — treat as no consent
+    // Legacy format ("accepted"/"declined") — treat as no consent
     return null
   }
 }
@@ -51,21 +50,21 @@ function savePreferences(prefs: ConsentPreferences) {
 type View = 'banner' | 'settings' | null
 
 export function CookieConsent() {
-  const [view, setView] = useState<View>(null)
+  const [view, setView] = useState<View>(() => {
+    if (typeof document === 'undefined') return null
+    return getConsentPreferences() ? null : 'banner'
+  })
   const [analyticsOn, setAnalyticsOn] = useState(false)
+  const [openedFrom, setOpenedFrom] = useState<'banner' | 'footer'>('banner')
   const tBanner = useTranslations('cookies.banner')
   const tSettings = useTranslations('cookies.settings')
 
-  useEffect(() => {
-    if (!getConsentPreferences()) {
-      setView('banner')
-    }
-  }, [])
-
+  // Listen for external "open settings" event (from Footer)
   useEffect(() => {
     const handler = () => {
       const prefs = getConsentPreferences()
       setAnalyticsOn(prefs?.analytics ?? false)
+      setOpenedFrom('footer')
       setView('settings')
     }
     window.addEventListener(SETTINGS_OPEN_EVENT, handler)
@@ -85,6 +84,7 @@ export function CookieConsent() {
   const openSettings = useCallback(() => {
     const prefs = getConsentPreferences()
     setAnalyticsOn(prefs?.analytics ?? false)
+    setOpenedFrom('banner')
     setView('settings')
   }, [])
 
@@ -93,37 +93,78 @@ export function CookieConsent() {
     setView(null)
   }, [analyticsOn])
 
+  // Focus trap: keep Tab within the dialog
+  const dialogRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!view) return
+    const el = dialogRef.current
+    if (!el) return
+
+    const focusable = () =>
+      el.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      )
+
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      const nodes = focusable()
+      if (!nodes.length) return
+      const first = nodes[0]
+      const last = nodes[nodes.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [view])
+
   if (!view) return null
 
+  // Shared button style — equal prominence for GDPR compliance
   const btnBase =
     'px-5 py-2.5 text-sm font-medium rounded-lg border border-border transition-colors cursor-pointer'
   const btnHover = 'hover:bg-white/10'
 
   return (
-    <div className="fixed inset-0 z-[100001] flex items-end justify-center p-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
+    <div className="fixed inset-0 z-50 flex items-end justify-center p-4 animate-fade-in-up">
+      {/* Backdrop for settings panel */}
       {view === 'settings' && (
         <div
           className="fixed inset-0 bg-black/30"
-          onClick={saveSettings}
+          onClick={() => {
+            if (openedFrom === 'banner') {
+              setView('banner')
+            } else {
+              setView(null)
+            }
+          }}
           aria-hidden="true"
         />
       )}
 
-      <div className="relative max-w-xl w-full bg-black/95 text-white/90 p-6 border border-white/10 rounded-xl shadow-lg">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        className="relative max-w-xl rounded-xl w-full bg-black/95 text-white/90 p-6 border border-border shadow-lg"
+      >
         {view === 'banner' && (
           <>
             <p className="text-sm text-white/70 mb-4">
               {tBanner('message')}{' '}
               <Link
-                href="/privacy"
-                className="underline hover:text-white transition-colors"
+                href="/privacy#cookies"
+                className="underline hover:text-foreground transition-colors"
               >
                 {tBanner('privacyLink')}
               </Link>{' '}
-              <Link
-                href="/terms"
-                className="underline hover:text-white transition-colors"
-              >
+              <Link href="/terms" className="underline hover:text-foreground transition-colors">
                 {tBanner('termsLink')}
               </Link>
             </p>
@@ -144,7 +185,7 @@ export function CookieConsent() {
               </div>
               <button
                 onClick={openSettings}
-                className="text-xs text-white/50 underline hover:text-white transition-colors self-center sm:self-auto"
+                className="text-xs text-muted underline hover:text-foreground transition-colors self-center sm:self-auto"
               >
                 {tBanner('settings')}
               </button>
@@ -156,22 +197,20 @@ export function CookieConsent() {
           <>
             <h2 className="text-base font-semibold mb-4">{tSettings('title')}</h2>
 
-            <div className="flex items-center justify-between py-3 border-b border-white/10">
+            {/* Essential cookies — always on */}
+            <div className="flex items-center justify-between py-3 border-b border-border/50">
               <div className="pr-4">
                 <p className="text-sm font-medium">{tSettings('necessary.name')}</p>
-                <p className="text-xs text-white/50 mt-0.5">
-                  {tSettings('necessary.description')}
-                </p>
+                <p className="text-xs text-muted mt-0.5">{tSettings('necessary.description')}</p>
               </div>
               <Toggle checked disabled />
             </div>
 
+            {/* Analytics cookies — togglable */}
             <div className="flex items-center justify-between py-3 mb-4">
               <div className="pr-4">
                 <p className="text-sm font-medium">{tSettings('analytics.name')}</p>
-                <p className="text-xs text-white/50 mt-0.5">
-                  {tSettings('analytics.description')}
-                </p>
+                <p className="text-xs text-muted mt-0.5">{tSettings('analytics.description')}</p>
               </div>
               <Toggle checked={analyticsOn} onChange={() => setAnalyticsOn((v) => !v)} />
             </div>
@@ -191,6 +230,7 @@ export function CookieConsent() {
   )
 }
 
+/* Minimal toggle switch */
 function Toggle({
   checked,
   disabled,
