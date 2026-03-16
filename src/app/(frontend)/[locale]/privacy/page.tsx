@@ -4,9 +4,10 @@ import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/container'
 import { generateSimplePageJsonLd } from '@/utilities/buildSchema'
 import { routing } from '@/i18n/routing'
+import type { Locale } from '@/i18n/localization'
 
 type Props = {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: Locale }>
 }
 
 const OG_IMAGE =
@@ -15,7 +16,7 @@ const OG_IMAGE =
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: Locale }>
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'privacy.metadata' })
