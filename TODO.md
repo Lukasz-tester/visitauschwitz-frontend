@@ -5,6 +5,7 @@
 - dodaj ponownie sitemap w GSC
 - usun z tej listy rzeczy zrobione
 - testuj ten false back button / exit intent
+- Auschwitz Exit - tlumacz na pl!
 - remove the bar with usage as not working?
 
 ## CONTENT

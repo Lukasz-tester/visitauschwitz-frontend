@@ -1,6 +1,8 @@
+'use client'
+
 import type { StaticImageData } from 'next/image'
 import NextImage from 'next/image'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import { cn } from 'src/utilities/cn'
 import type { Props as MediaProps } from '../types'
 
@@ -14,6 +16,9 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     size: sizeFromProps,
     src: srcFromProps,
   } = props
+
+  const [isLoaded, setIsLoaded] = useState(false)
+  const handleLoad = useCallback(() => setIsLoaded(true), [])
 
   let width: number | undefined
   let height: number | undefined
@@ -46,7 +51,11 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   return (
     <NextImage
       alt={alt || 'Image'}
-      className={cn(imgClassName)}
+      className={cn(
+        'transition-opacity duration-300',
+        isLoaded ? 'opacity-100' : 'opacity-0',
+        imgClassName,
+      )}
       fill={fill}
       height={!fill ? height : undefined}
       width={!fill ? width : undefined}
@@ -55,6 +64,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       src={src}
       loading={priority ? 'eager' : 'lazy'}
       unoptimized={true}
+      onLoad={handleLoad}
     />
   )
 }

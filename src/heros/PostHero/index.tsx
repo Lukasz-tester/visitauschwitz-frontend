@@ -13,7 +13,14 @@ export const PostHero: React.FC<{
   const t = useTranslations()
 
   return (
-    <div className="relative -mt-[10.4rem] flex items-end">
+    <div
+      className="relative -mt-[10.4rem] flex items-end"
+      style={{
+        backgroundImage: 'url(/images/default-hero.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="container z-10 relative lg:grid text-white/80 pb-4">
         <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
           <h1 className="pt-48 font-semibold text-5xl lg:text-6xl">{title}</h1>
@@ -77,7 +84,7 @@ export const PostHero: React.FC<{
       </div>
       <div className="absolute inset-0 min-h-[75vh] select-none">
         {metaImage && typeof metaImage !== 'string' && (
-          <Media fill imgClassName="-z-10 object-cover" resource={metaImage} priority />
+          <Media fill imgClassName="object-cover" resource={metaImage} priority />
         )}
         <div
           className="absolute pointer-events-none left-0 bottom-0 w-full h-full
