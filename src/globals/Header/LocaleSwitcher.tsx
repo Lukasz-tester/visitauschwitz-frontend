@@ -49,7 +49,7 @@ function LocaleSwitcher() {
   return (
     <Select onValueChange={onSelectChange} value={locale}>
       <SelectTrigger
-        className="bg-transparent border-none uppercase w-auto opacity-85"
+        className="bg-transparent border-none uppercase w-auto opacity-85 hover:opacity-100 transition-opacity"
         title={localization.locales.find((l) => l.code === locale)?.label}
       >
         <Globe size={24} /> {/* Globe Icon */}

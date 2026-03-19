@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { cn } from '@/utilities/cn'
 import { List, X } from 'lucide-react'
 import { useScrolledFromTop } from '@/utilities/helpers'
+import { useTranslations } from 'next-intl'
 
 export type TocItem = {
   id: string
@@ -13,6 +14,7 @@ export type TocItem = {
 }
 
 export function TableOfContents({ items }: { items: TocItem[] }) {
+  const t = useTranslations()
   const [activeId, setActiveId] = useState<string>('')
   const [isOpen, setIsOpen] = useState(false)
   const scrolled = useScrolledFromTop()
@@ -95,7 +97,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
             'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden [[data-newsletter-open]_&]:!hidden fixed bottom-1 right-[5.5rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
           )}
         >
-          LIST
+          {t('sections')}
         </span>
       )}
 

@@ -49,7 +49,7 @@ export function NewsletterCaller() {
             'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] [[data-toc-present]_&]:right-[10rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
           )}
         >
-          CONTACT
+          {t('contact')}
         </span>
       )}
 

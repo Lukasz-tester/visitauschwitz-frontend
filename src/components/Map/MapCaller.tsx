@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { useScrolledFromTop, useLockBodyScroll } from '@/utilities/helpers'
+import { useTranslations } from 'next-intl'
 import { MapPlaceholder } from '../ui/Icons'
 import { X } from 'lucide-react'
 import { useMapModal } from '@/providers/MapModalContext'
@@ -17,6 +18,7 @@ type MapCallerProps = {
 }
 
 function MapCaller({ setMobileNavOpen }: MapCallerProps) {
+  const t = useTranslations()
   const [modalOpen, setModalOpen] = useState(false)
   const [hasOpened, setHasOpened] = useState(false)
   const { currentUrl, setCurrentUrl } = useMapModal()
@@ -90,7 +92,7 @@ function MapCaller({ setMobileNavOpen }: MapCallerProps) {
       {/* MAP label - only visible when mobile nav is open */}
       {!modalOpen && (
         <span className="hidden [[data-mobile-nav=open]_&]:block fixed bottom-1 right-4 w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-50">
-          MAP
+          {t('map')}
         </span>
       )}
 

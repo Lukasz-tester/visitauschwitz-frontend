@@ -98,7 +98,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                 <div key={index} className="pb-2">
                   <details
                     className={cn(
-                      'overflow-hidden rounded-xl border border-slate-500/40 hover:border-amber-600 dark:hover:border-amber-700/70 open:border-amber-600 dark:open:border-amber-700/70',
+                      'details-animate overflow-hidden rounded-xl border border-slate-500/40 hover:border-amber-600 dark:hover:border-amber-700/70 open:border-amber-600 dark:open:border-amber-700/70',
                       changeBackground ? 'bg-background' : 'bg-card',
                     )}
                   >

@@ -34,7 +34,7 @@ export const MobileNavCaller: React.FC<{
   return (
     <div>
       <button
-        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 pb-1 rounded-bl-3xl w-14 h-14'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
+        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16 opacity-85 hover:opacity-100 transition-opacity' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 pb-1 rounded-bl-3xl w-14 h-14'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
         onClick={() => setModalOpen(!modalOpen)}
         aria-label="Open Navigation"
       >

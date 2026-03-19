@@ -60,6 +60,7 @@ export default {
       fontFamily: {
         sans: ['system-ui', 'sans-serif'],
         mono: ['ui-monospace', 'monospace'],
+        heading: ['var(--font-heading)', 'serif'],
       },
       // fontFamily: {
       //   mono: ['var(--font-geist-mono)'],

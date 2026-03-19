@@ -1,8 +1,7 @@
 import React from 'react'
 
 import type { Page } from '@/payload-types'
-
-import RichText from '@/components/RichText'
+import { serializeLexical, type NodeTypes } from '@/components/RichText/serialize'
 
 type LowImpactHeroType =
   | {
@@ -15,11 +14,32 @@ type LowImpactHeroType =
     })
 
 export const LowImpactHero: React.FC<LowImpactHeroType> = ({ children, richText }) => {
+  const nodes = (richText?.root?.children ?? []) as NodeTypes[]
+  const headingNode = nodes.find((n) => n.type === 'heading') as
+    | (NodeTypes & { type: 'heading' })
+    | undefined
+  const subtitleNodes = nodes.filter((n) => n.type === 'paragraph') as (NodeTypes & {
+    type: 'paragraph'
+  })[]
+
   return (
     <div className="md:px-[17.3%] mt-16">
       <div className="container">
         {children ||
-          (richText && <RichText content={richText} enableGutter={false} styleH1={true} />)}
+          (richText && (
+            <h1 className="font-heading md:text-5xl lg:text-[4.1rem] opacity-85">
+              {headingNode && serializeLexical({ nodes: headingNode.children as NodeTypes[] })}
+              {subtitleNodes.length > 0 && <span className="sr-only">{' - '}</span>}
+              {subtitleNodes.map((pNode, i) => (
+                <span
+                  key={i}
+                  className="block font-sans text-base md:text-2xl font-normal pt-1 opacity-90"
+                >
+                  {serializeLexical({ nodes: pNode.children as NodeTypes[] })}
+                </span>
+              ))}
+            </h1>
+          ))}
       </div>
     </div>
   )

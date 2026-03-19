@@ -3,6 +3,14 @@ import type { Metadata } from 'next'
 export const revalidate = false
 export const dynamic = 'force-static'
 import React from 'react'
+import { DM_Serif_Display } from 'next/font/google'
+
+const dmSerifDisplay = DM_Serif_Display({
+  weight: '400',
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  variable: '--font-heading',
+})
 
 import { Footer } from '@/globals/Footer/Component'
 import { Header } from '@/globals/Header/Component'
@@ -37,7 +45,7 @@ export default async function RootLayout({ children, params }: Args) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={dmSerifDisplay.variable} suppressHydrationWarning>
       <head>
         {/* Inline theme init — runs synchronously before paint to prevent flash */}
         <script

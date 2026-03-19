@@ -64,17 +64,17 @@ export default async function Page({ params: paramsPromise }: Args) {
       <article className="pt-16 pb-24">
         {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
         <PageClient />
-      <PayloadRedirects disableNotFound url={url} />
+        <PayloadRedirects disableNotFound url={url} />
 
-      <RenderHero {...hero} />
-      {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
-      <RenderBlocks
-        blocks={layout}
-        locale={locale}
-        url={fullUrl}
-        insertAtIndex={4}
-        insertNode={<HomepageNewsletter />}
-      />
+        <RenderHero {...hero} />
+        {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
+        <RenderBlocks
+          blocks={layout}
+          locale={locale}
+          url={fullUrl}
+          insertAtIndex={5}
+          insertNode={<HomepageNewsletter />}
+        />
       </article>
     </>
   )
