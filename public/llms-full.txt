@@ -7,53 +7,20 @@ Website: https://www.visitauschwitz.info
 Languages: en, pl
 Default language: en
 
-## Auschwitz Directions: Find the Best Way to Get There (EN)
-
-URL: https://www.visitauschwitz.info/en/arrival
-Description: Get to Auschwitz easily with complete transportation info, including parking and routes from Kraków.
-
-### FAQ
-
-**Q: How to Get to Auschwitz From Kraków?**
-A: Reach Oświęcim in just 1 hour for 15 PLN by train. Reach the Memorial directly in 1.5 hours by car or bus. Get around Kraków using jakdojade.pl
-
-**Q: How to Get Around the Memorial and the City?**
-A: The train station is well connected to the Memorial and city center. Use local taxis and public transport to get around the area.
-
-**Q: What Private Transport Options Are Available?**
-A: Cab drivers and private transport companies can take you to Auschwitz from almost anywhere. Determine the exact price before your trip and let the service provider know that they can leave contact information here.
-
-**Q: What Should I Know When Planning My Visit?**
-A: Don't travel right before a tour that is physically demanding in itself. Find accommodations nearby and visit Auschwitz after a good night's sleep. Remember that you are visiting two parts of the former camp in different locations shown below.
-
-### Sections
-
-- How to Get to Birkenau
-- How to Get to Auschwitz by Car Click the map icon on the right and select “Parking lots” in the upper right corner to see the nearest parking options.
-- Parking Lots near Birkenau
-- Direct Bus Kraków → Auschwitz
-- How to Get to Auschwitz by Train
-- Airports near Auschwitz
-
-## Auschwitz Visit: Key Information and Guidelines (EN)
+## Auschwitz Visit Guide: Tickets, Tours & Expert Tips (EN)
 
 URL: https://www.visitauschwitz.info/en
-Description: Get expert insights on visiting Auschwitz-Birkenau Memorial, including ticket booking, arrival tips, tour types and routes.
+Description: Plan a meaningful Auschwitz visit: book official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
 
 ### Sections
 
 - Auschwitz Then and Now
 - Key Information for Auschwitz Visit
 
-## Auschwitz Entry Guidelines: Rules, Facilities & Tips (EN)
+## Auschwitz Admission: Opening Hours, Entry & Security (EN)
 
 URL: https://www.visitauschwitz.info/en/museum
-Description: Discover what to expect at the Memorial, including Auschwitz map, visitor guidelines, site rules, and tips for a meaningful visit.
-
-### FAQ
-
-**Q: 🕒 What Are the Opening Hours of the Auschwitz Memorial?**
-A: Entrance hours depend on the month and whether you visit with or without a guide. The Memorial is closed on January 1, December 25, Easter Sunday, and occasionally for events.
+Description: Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
 
 ### Sections
 
@@ -65,10 +32,10 @@ A: Entrance hours depend on the month and whether you visit with or without a gu
 - International Youth Meeting Centre
 - Nature Around Auschwitz
 
-## Discover Auschwitz Visiting Guidelines & Extra Info (EN)
+## Auschwitz Rules: Dress Code, Baggage & Preparation (EN)
 
 URL: https://www.visitauschwitz.info/en/supplement
-Description: Up-to-date reliable information on Auschwitz tours, including important regulations, visit conditions, and helpful visitor details.
+Description: Essential regulations for visitors: allowed baggage size, dress code, and weather tips. Prepare properly for your visit with a licensed guide's advice.
 
 ### FAQ
 
@@ -119,10 +86,10 @@ A: The Museum is not fully adapted to maintain the site's historical authenticit
 - Janina Tollik Janina Tollik was born in 1910 in Janów. She studied at the Academy of Fine Arts in Kraków from 1931 to 1935.
 - Sources Attribution Empowered by open-source collaboration—bringing Auschwitz navigation to life with community-driven tools.
 
-## Auschwitz Tickets: Discover Tour Types & Booking Tips (EN)
+## Auschwitz Tickets: Official Booking & Tour Types (EN)
 
 URL: https://www.visitauschwitz.info/en/tickets
-Description: How to get tickets to Auschwitz, including booking options, pricing details and tips for visitors from a licensed guide.
+Description: Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 
 ### FAQ
 
@@ -197,10 +164,10 @@ A: A busy schedule can make you feel rushed. Fixed itinerary only allows you to 
 - Verified Local Suppliers of Auschwitz Tours
 - Disadvantages of Organized Tours Some companies (other than those listed above) cancel bookings at the last minute or change departure times, sometimes picking people up at night so they have to wait 
 
-## Auschwitz Routes: Main Sites & Hidden Spots with Map (EN)
+## Auschwitz Tour Routes: Main Sites & Interactive Map (EN)
 
 URL: https://www.visitauschwitz.info/en/tour
-Description: Navigate Auschwitz Memorial using detailed routes, photos of key sites, and an interactive map designed to guide your visit.
+Description: Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
 
 ### FAQ
 
@@ -224,7 +191,7 @@ A: At Auschwitz, restrooms are in block 18, next to block 7. Some buildings, lik
 - Room 6 – Canada
 - Block 5 – Material Evidence of Crime Luggage confiscated from deportees, including eyeglasses, Jewish prayer shawls, items of people with disabilities, metal pots, as well as shoes and suitcases on th
 - Swimming Pool
-- Block 7 – Living Conditions
+- Block 9 – Prisoner Experiences
 - Block 10 – Experiments
 - Torture Hooks
 - Block 11 – The Death Block On the ground floor, you see the summary court where Poles were sentenced to death in brief trials before being executed at the Death Wall; in the basement, you visit the in
@@ -236,7 +203,7 @@ A: At Auschwitz, restrooms are in block 18, next to block 7. Some buildings, lik
 - Block 17 – Austria
 - Block 16 – Slovakia
 - Block 16 – Czech Republic (upstairs)
-- Block 15 – Poland
+- Block 15 – Poland Opened in 2025, this exhibition presents the fate of Poles in the German Nazi concentration camp Auschwitz.
 - Block 14 – Russia (currently unavailable)
 - Block 13 – Roma
 - Inner Fence
@@ -261,59 +228,26 @@ A: At Auschwitz, restrooms are in block 18, next to block 7. Some buildings, lik
 
 ## Blog Posts (EN)
 
-### Auschwitz Guide Turned Developer to Help Visitors Prepare
+### About Your Auschwitz Guide: 20 Years at the Memorial
 
 URL: https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
-Description: For years, I guided visitors through Auschwitz and answered the same questions. That’s why I created a website to help people prepare for their visit.
+Description: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 Published: 2025-10-12
 
-## Dojazd do muzeum Auschwitz: znajdź najlepszą metodę (PL)
-
-URL: https://www.visitauschwitz.info/pl/arrival
-Description: Zaplanuj przejazd do obozu Auschwitz, korzystając z niezbędnych informacji o transporcie, parkingach oraz wskazówek dojazdu z Krakowa.
-
-### FAQ
-
-**Q: Jak dojechać do Auschwitz z Krakowa?**
-A: Dotrzyj do Oświęcimia w zaledwie godzinę za 15 zł pociągiem. Dotrzyj bezpośrednio do Miejsca Pamięci w 1,5 godziny samochodem lub autobusem. Poruszaj się po Krakowie z jakdojade.pl
-
-**Q: Jak poruszać się po Miejscu Pamięci i mieście?**
-A: Stacja kolejowa jest bardzo dobrze skomunikowana z Miejscem Pamięci i centrum miasta. Skorzystaj z lokalnych taksówek oraz komunikacji miejskiej, aby poruszać się po okolicy.
-
-**Q: Jakie prywatne opcje transportu są dostępne?**
-A: Taksówkarze i firmy transportowe mogą przewieźć Cię do Auschwitz praktycznie z każdego miejsca. Ustal dokładną cenę przed wyjazdem i poinformuj usługodawcę, że może tu zostawić kontakt.
-
-**Q: O czym warto pamiętać, planując wizytę?**
-A: Nie wybieraj się w podróż tuż przed zwiedzaniem, które samo w sobie jest wymagające fizycznie. Znajdź nocleg w pobliżu i odwiedź Auschwitz po dobrze przespanej nocy. Pamiętaj, że zwiedzasz dwie części dawnego obozu w różnych lokalizacjach wskazanych poniżej.
-
-### Sections
-
-- Jak dostać się do Birkenau
-- Jak dojechać do Auschwitz samochodem Kliknij ikonę mapy po prawej stronie i wybierz „Parkingi” w prawym górnym rogu, aby zobaczyć najbliższe miejsca postojowe.
-- Parkingi w pobliżu Birkenau
-- Bezpośredni autobus Kraków → Auschwitz
-- Jak dojechać do Auschwitz pociągiem
-- Lotniska w pobliżu Auschwitz
-
-## Zwiedzanie Auschwitz: rzetelne informacje i wskazówki (PL)
+## Zwiedzanie Auschwitz: bilety, dojazd i porady (PL)
 
 URL: https://www.visitauschwitz.info/pl
-Description: Niezbędne informacje o zwiedzaniu muzeum Auschwitz-Birkenau – rezerwacja biletów, dojazd, rodzaje zwiedzania i dostępne trasy.
+Description: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 
 ### Sections
 
 - Auschwitz dawniej i dziś
 - Najważniejsze informacje o zwiedzaniu Auschwitz
 
-## Wejście do Auschwitz: mapa, infrastruktura, regulamin (PL)
+## Wejście do Auschwitz: godziny otwarcia i informacje (PL)
 
 URL: https://www.visitauschwitz.info/pl/museum
-Description: Odkryj mapę Auschwitz i dowiedz się, jak przebiega wejście do Muzeum oraz poznaj praktyczne porady doświadczonego przewodnika.
-
-### FAQ
-
-**Q: 🕒 Jakie są godziny otwarcia Muzeum Auschwitz?**
-A: Godziny wejścia zależą od miesiąca i tego, czy odwiedzasz miejsce z przewodnikiem, czy bez. Miejsce Pamięci jest zamknięte 1 stycznia, 25 grudnia, w Niedzielę Wielkanocną oraz okazjonalnie w trakcie wydarzeń.
+Description: Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
 
 ### Sections
 
@@ -325,10 +259,10 @@ A: Godziny wejścia zależą od miesiąca i tego, czy odwiedzasz miejsce z przew
 - Międzynarodowy Dom Spotkań Młodzieży
 - Przyroda wokół Auschwitz
 
-## Opis wizyty w Auschwitz i porady jak się przygotować (PL)
+## Zasady w Auschwitz: bagaż, ubiór i przygotowanie (PL)
 
 URL: https://www.visitauschwitz.info/pl/supplement
-Description: Aktualne informacje od licencjonowanego przewodnika po Auschwitz: warunki zwiedzania, regulamin i pomocne szczegóły dla odwiedzających.
+Description: Oficjalny regulamin: dopuszczalny bagaż, dress code i ubiór. Przygotuj się do wizyty okiem licencjonowanego przewodnika. Uniknij typowych błędów.
 
 ### FAQ
 
@@ -379,10 +313,10 @@ A: Aby zachować autentyczność historyczną, Muzeum nie jest w pełni przystos
 - Janina Tollik Janina Tollik urodziła się w 1910 roku w Janowie. Studiowała na Akademii Sztuk Pięknych w Krakowie w latach 1931–1935.
 - Atrybucja źródeł Siła oprogramowania open source — stworzyłem przewodnik po Auschwitz dzięki społeczności!
 
-## Bilety do Auschwitz: jak zamawiać i jakie są opcje (PL)
+## Bilety do Auschwitz: rezerwacja online i ceny (PL)
 
 URL: https://www.visitauschwitz.info/pl/tickets
-Description: Dowiedz się, jak i gdzie zdobyć bilety do Auschwitz – poznaj rodzaje zwiedzania, opcje rezerwacji, ceny i porady dla odwiedzających.
+Description: Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 
 ### FAQ
 
@@ -457,10 +391,10 @@ A: Napięty plan sprawia, że wszystko odbywa się w pośpiechu. Sztywna trasa p
 - Sprawdzeni lokalni organizatorzy wycieczek do Auschwitz
 - Wady wycieczek zorganizowanych Część firm (poza tymi wymienionymi wyżej) w ostatniej chwili odwołuje rezerwacje albo zmienia godziny wyjazdu, przywożąc ludzi w nocy, by przez wiele godzin stali w kole
 
-## Auschwitz: główna trasa i ukryte zakątki ze zdjęciami (PL)
+## Trasy zwiedzania Auschwitz: mapa i ważne miejsca (PL)
 
 URL: https://www.visitauschwitz.info/pl/tour
-Description: Miejsca do odwiedzenia w Auschwitz polecane przez doświadczonego przewodnika – zobacz je na zdjęciach i zlokalizuj na interaktywnej mapie.
+Description: Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
 
 ### FAQ
 
@@ -484,7 +418,7 @@ A: W Auschwitz toalety znajdują się w bloku 18 (wejście od strony bloku 7). W
 - Sala 6 – Kanada
 - Blok 5 – Materialne dowody zbrodni Zagrabione mienie deportowanych — okulary, żydowskie tałesy modlitewne, przedmioty osób z niepełnosprawnościami, metalowe garnki, a także na pierwszym piętrze buty i
 - Basen
-- Blok 7 – Warunki mieszkalne
+- Blok 9 – Doświadczenia więźniów
 - Blok 10 – Eksperymenty
 - Tortury na 'słupku'
 - Blok 11 – Blok Śmierci Na parterze znajduje się sąd doraźny, gdzie Polaków skazywano na śmierć w krótkich procesach przed egzekucją pod Ścianą Śmierci; w piwnicy było więzienie wewnętrzne, gdzie więźn
@@ -496,12 +430,12 @@ A: W Auschwitz toalety znajdują się w bloku 18 (wejście od strony bloku 7). W
 - Blok 17 – Austria
 - Blok 16 – Słowacja
 - Blok 16 – Czechy (na piętrze)
-- Blok 15 – Polska
+- Blok 15 – Polska Otwartą w 2025 roku wystawę poświęcono losom Polaków w niemieckim nazistowskim obozie koncentracyjnym Auschwitz.
 - Blok 14 – Rosja (obecnie niedostępna)
 - Blok 13 – Romowie
 - Wewnętrzne ogrodzenie
 - Plac apelowy
-- Wyjście z Auschwitz
+- Auschwitz Exit
 - Zabudowania SS
 - Mogiła zbiorowa
 - Auschwitz II-Birkenau
@@ -521,10 +455,10 @@ A: W Auschwitz toalety znajdują się w bloku 18 (wejście od strony bloku 7). W
 
 ## Blog Posts (PL)
 
-### Przewodnik w Auschwitz został programistą dla odwiedzających
+### O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci
 
 URL: https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
-Description: Przez lata oprowadzałem ludzi po Auschwitz i odpowiadałem na te same pytania. Dlatego stworzyłem stronę, która pomaga przygotować się do wizyty.
+Description: Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
 Published: 2025-10-12
 
 ---

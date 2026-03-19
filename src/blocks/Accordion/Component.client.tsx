@@ -27,7 +27,7 @@ function readStorage(key: string): StoredState {
         heights: parsed.heights && typeof parsed.heights === 'object' ? parsed.heights : {},
       }
     }
-  } catch {}
+  } catch { }
   return { openIndices: [], heights: {} }
 }
 
@@ -41,6 +41,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   accordionItems = [],
   changeBackground = false,
   addPaddingBottom = false,
+  isFAQ = false,
   blockName,
   fullUrl,
 }) => {
@@ -67,7 +68,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
     try {
       const state: StoredState = { openIndices, heights: storedHeights }
       sessionStorage.setItem(storageKey, JSON.stringify(state))
-    } catch {}
+    } catch { }
   }, [openIndices, storedHeights, storageKey, hasMounted])
 
   const handleHeightMeasured = useCallback((index: number, height: number) => {
@@ -92,6 +93,31 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
       <div className="container" id={blockName || undefined}>
         <div className={cn('md:px-[17.3%]', { 'pb-24': addPaddingBottom })}>
           {accordionItems?.map((item, index) => {
+            if (isFAQ) {
+              return (
+                <div key={index} className="pb-2">
+                  <details
+                    className={cn(
+                      'overflow-hidden rounded-xl border border-slate-500/40 hover:border-amber-600 dark:hover:border-amber-700/70 open:border-amber-600 dark:open:border-amber-700/70',
+                      changeBackground ? 'bg-background' : 'bg-card',
+                    )}
+                  >
+                    <summary
+                      className={cn(
+                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden font-semibold',
+                        changeBackground ? 'bg-card' : 'bg-card-foreground',
+                      )}
+                    ><h3>
+                        {item.question}
+                      </h3></summary>
+                    <div className="px-5 py-2 mb-4">
+                      {item.answer && <RichText content={item.answer} enableGutter={false} />}
+                    </div>
+                  </details>
+                </div>
+              )
+            }
+
             const uniqueId = `accordion-item-${item.id}`
             return (
               <div key={index} className="pb-2">

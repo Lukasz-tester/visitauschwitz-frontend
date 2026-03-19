@@ -56,14 +56,14 @@ export default async function Page({ params: paramsPromise }: Args) {
   })
 
   return (
-    <article className="pt-16 pb-24">
-      {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
+    <>
       <script
         type="application/ld+json"
-        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <PageClient />
+      <article className="pt-16 pb-24">
+        {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
+        <PageClient />
       <PayloadRedirects disableNotFound url={url} />
 
       <RenderHero {...hero} />
@@ -75,7 +75,8 @@ export default async function Page({ params: paramsPromise }: Args) {
         insertAtIndex={4}
         insertNode={<HomepageNewsletter />}
       />
-    </article>
+      </article>
+    </>
   )
 }
 

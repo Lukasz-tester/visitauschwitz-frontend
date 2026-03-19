@@ -1,65 +1,57 @@
 EN
 
 Path: /
-T: Auschwitz Visit: Key Information and Guidelines | 2026
-D: Get expert insights on visiting Auschwitz-Birkenau Memorial, including ticket booking, arrival tips, tour types and routes.
-
-Path: /arrival
-T: Auschwitz Directions: Find the Best Way to Get There | 2026
-D: Get to Auschwitz easily with complete transportation info, including parking and routes from Kraków.
+T: Auschwitz Visit Guide: Tickets, Tours & Expert Tips | 2026
+D: Plan a meaningful Auschwitz visit: book official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
 
 Path: /museum
-T: Auschwitz Entry Guidelines: Rules, Facilities & Tips | 2026
-D: Discover what to expect at the Memorial, including Auschwitz map, visitor guidelines, site rules, and tips for a meaningful visit.
+T: Auschwitz Admission: Opening Hours, Entry & Security | 2026
+D: Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
 
 Path: /supplement
-T: Discover Auschwitz Visiting Guidelines & Extra Info | 2026
-D: Up-to-date reliable information on Auschwitz tours, including important regulations, visit conditions, and helpful visitor details.
+T: Auschwitz Rules: Dress Code, Baggage & Preparation | 2026
+D: Essential regulations for visitors: allowed baggage size, dress code, and weather tips. Prepare properly for your visit with a licensed guide's advice.
 
 Path: /tickets
-T: Auschwitz Tickets: Discover Tour Types & Booking Tips | 2026
-D: How to get tickets to Auschwitz, including booking options, pricing details and tips for visitors from a licensed guide.
+T: Auschwitz Tickets: Official Booking & Tour Types | 2026
+D: Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 
 Path: /tour
-T: Auschwitz Routes: Main Sites & Hidden Spots with Map | 2026
-D: Navigate Auschwitz Memorial using detailed routes, photos of key sites, and an interactive map designed to guide your visit.
+T: Auschwitz Tour Routes: Main Sites & Interactive Map | 2026
+D: Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
 
 PL
 
 Path: /
-T: Zwiedzanie Auschwitz: rzetelne informacje i wskazówki | 2026
-D: Niezbędne informacje o zwiedzaniu muzeum Auschwitz-Birkenau – rezerwacja biletów, dojazd, rodzaje zwiedzania i dostępne trasy.
-
-Path: /arrival
-T: Dojazd do muzeum Auschwitz: znajdź najlepszą metodę | 2026
-D: Zaplanuj przejazd do obozu Auschwitz, korzystając z niezbędnych informacji o transporcie, parkingach oraz wskazówek dojazdu z Krakowa.
+T: Zwiedzanie Auschwitz: bilety, dojazd i porady | 2026
+D: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 
 Path: /museum
-T: Wejście do Auschwitz: mapa, infrastruktura, regulamin | 2026
-D: Odkryj mapę Auschwitz i dowiedz się, jak przebiega wejście do Muzeum oraz poznaj praktyczne porady doświadczonego przewodnika.
+T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
+D: Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
 
 Path: /supplement
-T: Opis wizyty w Auschwitz i porady jak się przygotować | 2026
-D: Aktualne informacje od licencjonowanego przewodnika po Auschwitz: warunki zwiedzania, regulamin i pomocne szczegóły dla odwiedzających.
+T: Zasady w Auschwitz: bagaż, ubiór i przygotowanie | 2026
+D: Oficjalny regulamin: dopuszczalny bagaż, dress code i ubiór. Przygotuj się do wizyty okiem licencjonowanego przewodnika. Uniknij typowych błędów.
 
 Path: /tickets
-T: Bilety do Auschwitz: jak zamawiać i jakie są opcje | 2026
-D: Dowiedz się, jak i gdzie zdobyć bilety do Auschwitz – poznaj rodzaje zwiedzania, opcje rezerwacji, ceny i porady dla odwiedzających.
+T: Bilety do Auschwitz: rezerwacja online i ceny | 2026
+D: Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 
 Path: /tour
-T: Auschwitz: główna trasa i ukryte zakątki ze zdjęciami | 2026
-D: Miejsca do odwiedzenia w Auschwitz polecane przez doświadczonego przewodnika – zobacz je na zdjęciach i zlokalizuj na interaktywnej mapie.
+T: Trasy zwiedzania Auschwitz: mapa i ważne miejsca | 2026
+D: Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
 
 POSTS
 
 EN
 
 Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
-T: Auschwitz Guide Turned Developer to Help Visitors Prepare | 2026
-D: For years, I guided visitors through Auschwitz and answered the same questions. That’s why I created a website to help people prepare for their visit.
+T: About Your Auschwitz Guide: 20 Years at the Memorial | 2026
+D: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 
 PL
 
 Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
-T: Przewodnik w Auschwitz został programistą dla odwiedzających | 2026
-D: Przez lata oprowadzałem ludzi po Auschwitz i odpowiadałem na te same pytania. Dlatego stworzyłem stronę, która pomaga przygotować się do wizyty.
+T: O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci | 2026
+D: Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.

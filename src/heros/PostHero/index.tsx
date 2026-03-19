@@ -14,7 +14,7 @@ export const PostHero: React.FC<{
 
   return (
     <div
-      className="relative -mt-[10.4rem] flex items-end"
+      className="relative -mt-[10.4rem] flex items-end min-h-[75vh]"
       style={{
         backgroundImage: 'url(/images/default-hero.webp)',
         backgroundSize: 'cover',

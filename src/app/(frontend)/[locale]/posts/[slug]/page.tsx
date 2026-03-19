@@ -62,30 +62,29 @@ export default async function PostPage({ params }: Args) {
   })
 
   return (
-    <article className="pt-16 pb-16">
-      {heroImageUrl && (
-        <link rel="preload" as="image" href={heroImageUrl} />
-      )}
+    <>
       <script
         type="application/ld+json"
-        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <PageClient />
-      <PayloadRedirects disableNotFound url={url} />
-      <PostHero post={post as Post} />
+      <article className="pt-16 pb-16">
+        {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
+        <PageClient />
+        <PayloadRedirects disableNotFound url={url} />
+        <PostHero post={post as Post} />
 
-      <div className="container max-w-[50rem] pt-8">
-        <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
-      </div>
+        <div className="container max-w-[50rem] pt-8">
+          <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
+        </div>
 
-      {((post as Post).relatedPosts ?? []).length > 0 && (
-        <RelatedPosts
-          className="mt-12"
-          docs={((post as Post).relatedPosts ?? []).filter((p) => typeof p === 'object')}
-        />
-      )}
-    </article>
+        {((post as Post).relatedPosts ?? []).length > 0 && (
+          <RelatedPosts
+            className="mt-12"
+            docs={((post as Post).relatedPosts ?? []).filter((p) => typeof p === 'object')}
+          />
+        )}
+      </article>
+    </>
   )
 }
 
