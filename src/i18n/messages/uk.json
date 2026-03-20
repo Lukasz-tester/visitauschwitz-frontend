@@ -9,6 +9,8 @@
   "showing": "Показано",
   "of": "з",
   "search": "Пошук",
+  "searchPlaceholder": "Пошук...",
+  "noResults": "Нічого не знайдено",
   "dashboard": "Панель керування",
   "previous": "Попередній",
   "next": "Наступний",

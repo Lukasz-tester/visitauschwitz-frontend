@@ -9,6 +9,8 @@
   "showing": "Показано",
   "of": "из",
   "search": "Поиск",
+  "searchPlaceholder": "Поиск...",
+  "noResults": "Ничего не найдено",
   "dashboard": "Панель управления",
   "previous": "Предыдущая",
   "next": "Следующая",

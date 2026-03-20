@@ -7,17 +7,45 @@ Website: https://www.visitauschwitz.info
 Languages: en, pl
 Default language: en
 
+## How to Get to Auschwitz: Transport & Parking Guide (EN)
+
+URL: https://www.visitauschwitz.info/en/arrival
+Description: All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
+
+### FAQ
+
+**Q: How to Get to Auschwitz From Kraków?**
+A: Reach Oświęcim in just 1 hour for 15 PLN by train. Reach the Memorial directly in 1.5 hours by car or bus. Get around Kraków using jakdojade.pl
+
+**Q: How to Get Around the Memorial and the City?**
+A: The train station is well connected to the Memorial and city center. Use local taxis and public transport to get around the area.
+
+**Q: What Private Transport Options Are Available?**
+A: Cab drivers and private transport companies can take you to Auschwitz from almost anywhere. Determine the exact price before your trip and let the service provider know that they can leave contact information here.
+
+**Q: What Should I Know When Planning My Visit?**
+A: Don't travel right before a tour that is physically demanding in itself. Find accommodations nearby and visit Auschwitz after a good night's sleep. Remember that you are visiting two parts of the former camp in different locations shown below.
+
+### Sections
+
+- How to Get to Birkenau
+- How to Get to Auschwitz by Car Click the map icon on the right and select “Parking lots” in the upper right corner to see the nearest parking options.
+- Parking Lots near Birkenau
+- Direct Bus Kraków → Auschwitz
+- How to Get to Auschwitz by Train
+- Airports near Auschwitz
+
 ## Auschwitz Visit Guide: Tickets, Tours & Expert Tips (EN)
 
 URL: https://www.visitauschwitz.info/en
-Description: Plan a meaningful Auschwitz visit: book official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
+Description: Plan your Auschwitz visit: book free official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
 
 ### Sections
 
 - Auschwitz Then and Now
 - Key Information for Auschwitz Visit
 
-## Auschwitz Admission: Opening Hours, Entry & Security (EN)
+## Auschwitz Entry: Opening Hours, Tickets & Security (EN)
 
 URL: https://www.visitauschwitz.info/en/museum
 Description: Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
@@ -32,10 +60,10 @@ Description: Official entry guide: opening times, security checks, reception inf
 - International Youth Meeting Centre
 - Nature Around Auschwitz
 
-## Auschwitz Rules: Dress Code, Baggage & Preparation (EN)
+## Auschwitz: What Most Visitors Wish They Knew (EN)
 
 URL: https://www.visitauschwitz.info/en/supplement
-Description: Essential regulations for visitors: allowed baggage size, dress code, and weather tips. Prepare properly for your visit with a licensed guide's advice.
+Description: Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
 
 ### FAQ
 
@@ -234,6 +262,34 @@ URL: https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-t
 Description: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 Published: 2025-10-12
 
+## Dojazd do Auschwitz: pociąg, autobus i parking (PL)
+
+URL: https://www.visitauschwitz.info/pl/arrival
+Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
+
+### FAQ
+
+**Q: Jak dojechać do Auschwitz z Krakowa?**
+A: Dotrzyj do Oświęcimia w zaledwie godzinę za 15 zł pociągiem. Dotrzyj bezpośrednio do Miejsca Pamięci w 1,5 godziny samochodem lub autobusem. Poruszaj się po Krakowie z jakdojade.pl
+
+**Q: Jak poruszać się po Miejscu Pamięci i mieście?**
+A: Stacja kolejowa jest bardzo dobrze skomunikowana z Miejscem Pamięci i centrum miasta. Skorzystaj z lokalnych taksówek oraz komunikacji miejskiej, aby poruszać się po okolicy.
+
+**Q: Jakie prywatne opcje transportu są dostępne?**
+A: Taksówkarze i firmy transportowe mogą przewieźć Cię do Auschwitz praktycznie z każdego miejsca. Ustal dokładną cenę przed wyjazdem i poinformuj usługodawcę, że może tu zostawić kontakt.
+
+**Q: O czym warto pamiętać, planując wizytę?**
+A: Nie wybieraj się w podróż tuż przed zwiedzaniem, które samo w sobie jest wymagające fizycznie. Znajdź nocleg w pobliżu i odwiedź Auschwitz po dobrze przespanej nocy. Pamiętaj, że zwiedzasz dwie części dawnego obozu w różnych lokalizacjach wskazanych poniżej.
+
+### Sections
+
+- Jak dostać się do Birkenau
+- Jak dojechać do Auschwitz samochodem Kliknij ikonę mapy po prawej stronie i wybierz „Parkingi” w prawym górnym rogu, aby zobaczyć najbliższe miejsca postojowe.
+- Parkingi w pobliżu Birkenau
+- Bezpośredni autobus Kraków → Auschwitz
+- Jak dojechać do Auschwitz pociągiem
+- Lotniska w pobliżu Auschwitz
+
 ## Zwiedzanie Auschwitz: bilety, dojazd i porady (PL)
 
 URL: https://www.visitauschwitz.info/pl
@@ -259,10 +315,10 @@ Description: Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa,
 - Międzynarodowy Dom Spotkań Młodzieży
 - Przyroda wokół Auschwitz
 
-## Zasady w Auschwitz: bagaż, ubiór i przygotowanie (PL)
+## Auschwitz: co musisz wiedzieć przed wizytą (PL)
 
 URL: https://www.visitauschwitz.info/pl/supplement
-Description: Oficjalny regulamin: dopuszczalny bagaż, dress code i ubiór. Przygotuj się do wizyty okiem licencjonowanego przewodnika. Uniknij typowych błędów.
+Description: Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
 
 ### FAQ
 

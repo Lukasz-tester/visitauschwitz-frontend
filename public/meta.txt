@@ -2,15 +2,19 @@ EN
 
 Path: /
 T: Auschwitz Visit Guide: Tickets, Tours & Expert Tips | 2026
-D: Plan a meaningful Auschwitz visit: book official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
+D: Plan your Auschwitz visit: book free official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
+
+Path: /arrival
+T: How to Get to Auschwitz: Transport & Parking Guide | 2026
+D: All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
 
 Path: /museum
-T: Auschwitz Admission: Opening Hours, Entry & Security | 2026
+T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
 D: Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
 
 Path: /supplement
-T: Auschwitz Rules: Dress Code, Baggage & Preparation | 2026
-D: Essential regulations for visitors: allowed baggage size, dress code, and weather tips. Prepare properly for your visit with a licensed guide's advice.
+T: Auschwitz: What Most Visitors Wish They Knew | 2026
+D: Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
 
 Path: /tickets
 T: Auschwitz Tickets: Official Booking & Tour Types | 2026
@@ -26,13 +30,17 @@ Path: /
 T: Zwiedzanie Auschwitz: bilety, dojazd i porady | 2026
 D: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 
+Path: /arrival
+T: Dojazd do Auschwitz: pociąg, autobus i parking | 2026
+D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
+
 Path: /museum
 T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
 D: Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
 
 Path: /supplement
-T: Zasady w Auschwitz: bagaż, ubiór i przygotowanie | 2026
-D: Oficjalny regulamin: dopuszczalny bagaż, dress code i ubiór. Przygotuj się do wizyty okiem licencjonowanego przewodnika. Uniknij typowych błędów.
+T: Auschwitz: co musisz wiedzieć przed wizytą | 2026
+D: Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
 
 Path: /tickets
 T: Bilety do Auschwitz: rezerwacja online i ceny | 2026

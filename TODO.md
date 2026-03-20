@@ -1,6 +1,7 @@
 # TO DO list
 
 - Metadata > poprawic titles + desc... (meta.txt) - some pages slightly exceed 60 char limit
+- dodaj do kazdego postu bio autora + fotka
 - tour page: dodaj info o liscie i standardowej trasie na nie zaznaczonej!
 - dodaj ponownie sitemap w GSC
 - usun z tej listy rzeczy zrobione

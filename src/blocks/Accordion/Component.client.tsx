@@ -101,12 +101,17 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                       'details-animate overflow-hidden rounded-xl border border-slate-500/40 hover:border-amber-600 dark:hover:border-amber-700/70 open:border-amber-600 dark:open:border-amber-700/70',
                       changeBackground ? 'bg-background' : 'bg-card',
                     )}
+                    open={openIndices.includes(index)}
                   >
                     <summary
                       className={cn(
                         'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden font-semibold',
                         changeBackground ? 'bg-card' : 'bg-card-foreground',
                       )}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleItemClick(index)
+                      }}
                     ><h3>
                         {item.question}
                       </h3></summary>

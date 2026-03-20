@@ -10,9 +10,10 @@ Default language: en
 
 ## Pages (EN)
 
-- [Auschwitz Visit Guide: Tickets, Tours & Expert Tips](https://www.visitauschwitz.info/en): Plan a meaningful Auschwitz visit: book official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
-- [Auschwitz Admission: Opening Hours, Entry & Security](https://www.visitauschwitz.info/en/museum): Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
-- [Auschwitz Rules: Dress Code, Baggage & Preparation](https://www.visitauschwitz.info/en/supplement): Essential regulations for visitors: allowed baggage size, dress code, and weather tips. Prepare properly for your visit with a licensed guide's advice.
+- [How to Get to Auschwitz: Transport & Parking Guide](https://www.visitauschwitz.info/en/arrival): All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
+- [Auschwitz Visit Guide: Tickets, Tours & Expert Tips](https://www.visitauschwitz.info/en): Plan your Auschwitz visit: book free official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
+- [Auschwitz Entry: Opening Hours, Tickets & Security](https://www.visitauschwitz.info/en/museum): Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
+- [Auschwitz: What Most Visitors Wish They Knew](https://www.visitauschwitz.info/en/supplement): Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
 - [Auschwitz Tickets: Official Booking & Tour Types](https://www.visitauschwitz.info/en/tickets): Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 - [Auschwitz Tour Routes: Main Sites & Interactive Map](https://www.visitauschwitz.info/en/tour): Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
 
@@ -22,9 +23,10 @@ Default language: en
 
 ## Pages (PL)
 
+- [Dojazd do Auschwitz: pociąg, autobus i parking](https://www.visitauschwitz.info/pl/arrival): Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
 - [Zwiedzanie Auschwitz: bilety, dojazd i porady](https://www.visitauschwitz.info/pl): Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 - [Wejście do Auschwitz: godziny otwarcia i informacje](https://www.visitauschwitz.info/pl/museum): Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
-- [Zasady w Auschwitz: bagaż, ubiór i przygotowanie](https://www.visitauschwitz.info/pl/supplement): Oficjalny regulamin: dopuszczalny bagaż, dress code i ubiór. Przygotuj się do wizyty okiem licencjonowanego przewodnika. Uniknij typowych błędów.
+- [Auschwitz: co musisz wiedzieć przed wizytą](https://www.visitauschwitz.info/pl/supplement): Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
 - [Bilety do Auschwitz: rezerwacja online i ceny](https://www.visitauschwitz.info/pl/tickets): Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 - [Trasy zwiedzania Auschwitz: mapa i ważne miejsca](https://www.visitauschwitz.info/pl/tour): Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
 

@@ -9,6 +9,8 @@
   "showing": "Mostrando",
   "of": "di",
   "search": "Ricerca",
+  "searchPlaceholder": "Cerca...",
+  "noResults": "Nessun risultato trovato",
   "dashboard": "Dashboard",
   "previous": "Precedente",
   "next": "Successivo",

@@ -9,6 +9,8 @@
   "showing": "Mostrando",
   "of": "de",
   "search": "Buscar",
+  "searchPlaceholder": "Buscar...",
+  "noResults": "No se encontraron resultados",
   "dashboard": "Panel de control",
   "previous": "Anterior",
   "next": "Siguiente",

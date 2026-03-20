@@ -9,6 +9,8 @@
   "showing": "Wyświetlanie",
   "of": "z",
   "search": "Szukaj",
+  "searchPlaceholder": "Szukaj...",
+  "noResults": "Nie znaleziono wyników",
   "dashboard": "Panel",
   "previous": "Poprzednia",
   "next": "Następna",

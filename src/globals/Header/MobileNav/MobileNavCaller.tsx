@@ -2,9 +2,10 @@ import LocaleSwitcher from '../LocaleSwitcher'
 import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+import { Search } from 'lucide-react'
 
 import { useEffect } from 'react'
-import { usePathname } from '@/i18n/routing'
+import { Link, usePathname } from '@/i18n/routing'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
 
@@ -34,7 +35,7 @@ export const MobileNavCaller: React.FC<{
   return (
     <div>
       <button
-        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16 opacity-85 hover:opacity-100 transition-opacity' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 pb-1 rounded-bl-3xl w-14 h-14'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
+        className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16 opacity-85 hover:opacity-100 transition-opacity' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 rounded-bl-3xl w-16 h-16'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
         onClick={() => setModalOpen(!modalOpen)}
         aria-label="Open Navigation"
       >
@@ -63,6 +64,14 @@ export const MobileNavCaller: React.FC<{
             <div aria-label="Select Language">
               <LocaleSwitcher />
             </div>
+            <Link
+              href="/search"
+              aria-label="Search"
+              className="p-3 opacity-85 hover:opacity-100 transition-opacity"
+              onClick={() => setModalOpen(false)}
+            >
+              <Search size={22} />
+            </Link>
             <div aria-label="Change Theme">
               <ThemeSelector />
             </div>

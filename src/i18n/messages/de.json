@@ -9,6 +9,8 @@
   "showing": "Anzeigen",
   "of": "von",
   "search": "Suche",
+  "searchPlaceholder": "Suche...",
+  "noResults": "Keine Ergebnisse gefunden",
   "dashboard": "Dashboard",
   "previous": "Vorherige",
   "next": "Nächste",

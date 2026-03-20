@@ -9,6 +9,8 @@
   "showing": "Weergeven",
   "of": "van",
   "search": "Zoeken",
+  "searchPlaceholder": "Zoeken...",
+  "noResults": "Geen resultaten gevonden",
   "dashboard": "Dashboard",
   "previous": "Vorige",
   "next": "Volgende",
