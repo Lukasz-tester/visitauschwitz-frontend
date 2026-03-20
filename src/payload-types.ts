@@ -466,6 +466,8 @@ export interface Post {
     | {
         id?: string | null;
         name?: string | null;
+        bio?: string | null;
+        photo?: (string | null) | Media;
       }[]
     | null;
   slug?: string | null;

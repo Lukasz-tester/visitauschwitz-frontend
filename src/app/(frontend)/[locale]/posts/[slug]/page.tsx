@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import React from 'react'
 import { RelatedPosts } from '@/blocks/RelatedPosts/Component'
 import { PayloadRedirects } from '@/components/PayloadRedirects'
+import { AuthorBio } from '@/components/AuthorBio'
 import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
@@ -76,6 +77,10 @@ export default async function PostPage({ params }: Args) {
         <div className="container max-w-[50rem] pt-8">
           <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
         </div>
+
+        {post.populatedAuthors && post.populatedAuthors.length > 0 && (
+          <AuthorBio authors={post.populatedAuthors} />
+        )}
 
         {((post as Post).relatedPosts ?? []).length > 0 && (
           <RelatedPosts
