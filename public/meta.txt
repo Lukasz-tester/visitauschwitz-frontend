@@ -58,8 +58,16 @@ Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
 T: About Your Auschwitz Guide: 20 Years at the Memorial | 2026
 D: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 
+Path: /posts/auschwitz-tickets-online-only-2026
+T: Auschwitz Tickets Online Only in 2026: What Changed and Why | 2026
+D: Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
+
 PL
 
 Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
 T: O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci | 2026
 D: Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
+
+Path: /posts/auschwitz-tickets-online-only-2026
+T: Auschwitz Tickets Online Only in 2026 | 2026
+D: Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.

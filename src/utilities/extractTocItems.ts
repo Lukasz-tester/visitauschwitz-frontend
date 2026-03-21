@@ -13,7 +13,7 @@ function extractText(node: any): string {
 function findFirstHeading(
   rt: { root?: { children?: any[] } } | null | undefined,
 ): { text: string; tag: string } | null {
-  if (!rt?.root?.children) return null
+  if (!Array.isArray(rt?.root?.children)) return null
   for (const node of rt.root.children) {
     if (node.tag === 'h2' || node.tag === 'h3') {
       const text = extractText(node).trim()
@@ -32,7 +32,7 @@ export function extractTocItems(
   const items: TocItem[] = []
 
   // Extract h1 from hero richText
-  if (hero?.richText?.root?.children) {
+  if (Array.isArray(hero?.richText?.root?.children)) {
     for (const node of hero.richText.root.children) {
       if (node.tag === 'h1') {
         const text = extractText(node).trim()

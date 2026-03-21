@@ -20,6 +20,7 @@ Default language: en
 ## Posts (EN)
 
 - [About Your Auschwitz Guide: 20 Years at the Memorial](https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare): I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
+- [Auschwitz Tickets Online Only in 2026: What Changed and Why](https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-2026): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
 
 ## Pages (PL)
 
@@ -33,6 +34,7 @@ Default language: en
 ## Posts (PL)
 
 - [O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci](https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare): Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
+- [Auschwitz Tickets Online Only in 2026](https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-2026): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
 
 ## Key Facts
 

@@ -9,7 +9,7 @@ function hasRichTextContent(rt: { root: { children?: Array<any> } } | null | und
     if (node?.text) return true
     return Array.isArray(node?.children) && node.children.some(hasText)
   }
-  return !!rt?.root?.children?.some(hasText)
+  return Array.isArray(rt?.root?.children) && rt.root.children.some(hasText)
 }
 
 type Props = Extract<Page['layout'][0], { blockType: 'content' }> & {

@@ -40,7 +40,7 @@ async function throttledFetch(url, init) {
 
 export async function fetchPayloadData(collection, slug, locale) {
   const base = process.env.CMS_PUBLIC_SERVER_URL
-  const url = `${base}/api/${collection}?where[slug][equals]=${slug}&locale=${locale}`
+  const url = `${base}/api/${collection}?where[slug][equals]=${slug}&locale=${locale}&depth=2`
 
   for (let attempt = 0; attempt < 3; attempt++) {
     try {

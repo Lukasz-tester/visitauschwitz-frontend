@@ -9,22 +9,19 @@ type Props = {
 }
 
 export const AuthorBio: React.FC<Props> = ({ authors }) => {
-  const authorsWithBio = authors.filter((a) => a.bio || a.photo)
   const t = useTranslations()
-  if (authorsWithBio.length === 0) return null
+  if (authors.length === 0) return null
 
   return (
     <div className="container max-w-[50rem] mt-16 mb-8">
-      {/* Divider */}
       <div className="border-t border-border mb-10" />
-
       <div className="flex flex-col gap-10">
-        {authorsWithBio.map((author) => {
+        {authors.map((author) => {
           const photo =
             author.photo && typeof author.photo === 'object' ? (author.photo as Media) : null
-          const photoUrl =
-            photo?.url ?? 'https://images.visitauschwitz.info/home-guide-birkenau-gate.webp'
-          const photoAlt = photo?.alt ?? author.name ?? 'Author photo'
+          const photoUrl = photo?.filename
+            ? `https://images.visitauschwitz.info/${photo.filename}`
+            : null
 
           return (
             <div
@@ -33,19 +30,19 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
                          rounded-2xl border border-border bg-card/40 p-6 backdrop-blur-sm
                          shadow-sm"
             >
-              {/* Author portrait */}
-              <div className="shrink-0 place-self-center">
-                <img
-                  src={photoUrl}
-                  alt={photoAlt}
-                  className=" sm:w-64 h-44 rounded-xl object-cover ring-1 ring-border shadow-md"
-                />
-              </div>
+              {photoUrl && (
+                <div className="shrink-0 place-self-center">
+                  <img
+                    src={photoUrl}
+                    alt={photo?.alt ?? author.name ?? 'Author photo'}
+                    className="sm:w-64 h-44 rounded-xl object-cover ring-1 ring-border shadow-md"
+                  />
+                </div>
+              )}
 
-              {/* Author text */}
-              <div className="flex flex-col gap-2 ">
+              <div className="flex flex-col gap-2">
                 <p className="text-xs uppercase tracking-widest text-foreground/50 font-medium">
-                  t('about-author')
+                  {t('about-author')}
                 </p>
                 {author.name && (
                   <h2 className="text-lg font-semibold leading-tight">{author.name}</h2>

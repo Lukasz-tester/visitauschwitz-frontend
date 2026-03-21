@@ -533,6 +533,9 @@ export interface CodeBlock {
 export interface User {
   id: string;
   name?: string | null;
+  role?: ('admin' | 'editor') | null;
+  bio?: string | null;
+  photo?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
   email: string;

@@ -123,7 +123,7 @@ type Props = {
 export function serializeLexical({ nodes }: Props): JSX.Element {
   return (
     <Fragment>
-      {nodes?.map((node, index): JSX.Element | null => {
+      {(Array.isArray(nodes) ? nodes : []).map((node, index): JSX.Element | null => {
         if (node == null) {
           return null
         }
