@@ -27,7 +27,7 @@ export const LowImpactHero: React.FC<LowImpactHeroType> = ({ children, richText 
       <div className="container">
         {children ||
           (richText && (
-            <h1 className="font-heading md:text-5xl lg:text-[4.1rem] opacity-85">
+            <h1 className="font-heading text-2xl sm:text-5xl lg:text-[4.1rem] opacity-85">
               {headingNode && serializeLexical({ nodes: headingNode.children as NodeTypes[] })}
               {subtitleNodes.length > 0 && <span className="sr-only">{' - '}</span>}
               {subtitleNodes.map((pNode, i) => (

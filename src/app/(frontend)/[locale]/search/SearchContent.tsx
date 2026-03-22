@@ -29,7 +29,7 @@ type SearchResponse = {
   totalDocs: number
 }
 
-export const SearchContent: React.FC = () => {
+export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
   const searchParams = useSearchParams()
   const q = searchParams.get('q') || ''
   const t = useTranslations()
@@ -52,7 +52,6 @@ export const SearchContent: React.FC = () => {
       setLoading(true)
       try {
         const encoded = encodeURIComponent(searchQuery)
-        const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL
         const res = await fetch(
           `${cmsUrl}/api/search?locale=${locale}&depth=1&where[or][0][title][like]=${encoded}&where[or][1][meta.title][like]=${encoded}&where[or][2][meta.description][like]=${encoded}`,
         )
@@ -62,14 +61,15 @@ export const SearchContent: React.FC = () => {
         } else {
           setResults([])
         }
-      } catch {
+      } catch (err) {
+        console.error('Search fetch failed:', err)
         setResults([])
       } finally {
         setLoading(false)
         setSearched(true)
       }
     },
-    [locale],
+    [locale, cmsUrl],
   )
 
   useEffect(() => {

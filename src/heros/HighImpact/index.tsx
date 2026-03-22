@@ -31,7 +31,7 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
               className="mb-4 mt-28 p-5 rounded-xl bg-gradient-to-tr
               from-slate-500 from-5% via-slate-800 via-40% to-75%"
             >
-              <h1 className="font-heading md:text-5xl lg:text-[4.1rem] opacity-85">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl opacity-85">
                 {headingNode && serializeLexical({ nodes: headingNode.children as NodeTypes[] })}
                 {subtitleNodes.length > 0 && <span className="sr-only">{' - '}</span>}
                 {subtitleNodes.map((pNode, i) => (
