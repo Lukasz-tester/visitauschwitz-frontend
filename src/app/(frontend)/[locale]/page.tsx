@@ -72,7 +72,7 @@ export default async function Page({ params: paramsPromise }: Args) {
           blocks={layout}
           locale={locale}
           url={fullUrl}
-          insertAtIndex={5}
+          insertAtIndex={4}
           insertNode={<HomepageNewsletter />}
         />
       </article>
