@@ -23,7 +23,7 @@ export const PostHero: React.FC<{
     >
       <div className="container z-10 relative lg:grid text-white/80 pb-4">
         <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
-          <h1 className="pt-48 font-heading text-5xl lg:text-6xl">{title}</h1>
+          <h1 className="pt-48 font-heading text-4xl sm:text-5xl">{title}</h1>
           <div className="flex flex-row gap-4 md:gap-16 mt-5">
             <div className="flex flex-col gap-4">
               {populatedAuthors && (

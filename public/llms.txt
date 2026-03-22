@@ -12,29 +12,31 @@ Default language: en
 
 - [How to Get to Auschwitz: Transport & Parking Guide](https://www.visitauschwitz.info/en/arrival): All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
 - [Auschwitz Visit Guide: Tickets, Tours & Expert Tips](https://www.visitauschwitz.info/en): Plan your Auschwitz visit: book free official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
-- [Auschwitz Entry: Opening Hours, Tickets & Security](https://www.visitauschwitz.info/en/museum): Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
+- [Auschwitz Entry: Opening Hours, Tickets & Security](https://www.visitauschwitz.info/en/museum): Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
 - [Auschwitz: What Most Visitors Wish They Knew](https://www.visitauschwitz.info/en/supplement): Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
+- [testing](https://www.visitauschwitz.info/en/testing)
 - [Auschwitz Tickets: Official Booking & Tour Types](https://www.visitauschwitz.info/en/tickets): Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 - [Auschwitz Tour Routes: Main Sites & Interactive Map](https://www.visitauschwitz.info/en/tour): Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
 
 ## Posts (EN)
 
-- [About Your Auschwitz Guide: 20 Years at the Memorial](https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare): I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
-- [Auschwitz Tickets Online Only in 2026: What Changed and Why](https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-2026): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
+- [About Your Auschwitz Guide: 20 Years at the Memorial](https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors): I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
+- [Auschwitz Tickets Online Only in 2026: What Changed and Why](https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
 
 ## Pages (PL)
 
 - [Dojazd do Auschwitz: pociąg, autobus i parking](https://www.visitauschwitz.info/pl/arrival): Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
 - [Zwiedzanie Auschwitz: bilety, dojazd i porady](https://www.visitauschwitz.info/pl): Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
-- [Wejście do Auschwitz: godziny otwarcia i informacje](https://www.visitauschwitz.info/pl/museum): Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
+- [Wejście do Auschwitz: godziny otwarcia i informacje](https://www.visitauschwitz.info/pl/museum): Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
 - [Auschwitz: co musisz wiedzieć przed wizytą](https://www.visitauschwitz.info/pl/supplement): Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
+- [testowanie](https://www.visitauschwitz.info/pl/testing)
 - [Bilety do Auschwitz: rezerwacja online i ceny](https://www.visitauschwitz.info/pl/tickets): Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 - [Trasy zwiedzania Auschwitz: mapa i ważne miejsca](https://www.visitauschwitz.info/pl/tour): Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
 
 ## Posts (PL)
 
-- [O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci](https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors-prepare): Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
-- [Auschwitz Tickets Online Only in 2026](https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-2026): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
+- [O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci](https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors): Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
+- [Bilety do Auschwitz tylko online od 2026: Co się zmieniło](https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed): Od marca 2026 r. bilety do Auschwitz dostępne są wyłącznie online. Dowiedz się, dlaczego sprzedaż została zakończona i jak zarezerwować wizytę.
 
 ## Key Facts
 

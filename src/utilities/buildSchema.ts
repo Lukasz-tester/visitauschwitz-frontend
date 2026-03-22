@@ -342,7 +342,7 @@ function buildTouristTripNode(url: string, locale: Locale) {
   }
 }
 
-function buildEventNode(url: string, locale: Locale) {
+function buildEventNode(url: string, locale: Locale, image?: string) {
   const isPolish = locale === 'pl'
   const today = new Date()
   const startDate = today.toISOString().slice(0, 10)
@@ -359,6 +359,8 @@ function buildEventNode(url: string, locale: Locale) {
       ? 'Zwiedzanie z licencjonowanym przewodnikiem po Miejscu Pamięci i Muzeum Auschwitz-Birkenau. Dostępne codziennie.'
       : 'Guided tour with a licensed educator at the Auschwitz-Birkenau Memorial and Museum. Available daily.',
     startDate,
+    endDate,
+    ...(image ? { image } : {}),
     inLanguage: locale,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
@@ -510,7 +512,7 @@ export function buildPageGraph({
   const slug = page.slug
   if (slug === 'tour') nodes.push(buildTouristTripNode(url, locale))
   if (slug === 'tickets') {
-    nodes.push(buildEventNode(url, locale))
+    nodes.push(buildEventNode(url, locale, pageImage))
     nodes.push(buildHowToNode(url, locale))
   }
 

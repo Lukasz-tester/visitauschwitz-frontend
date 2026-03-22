@@ -10,11 +10,15 @@ D: All transport options to the Auschwitz Memorial: trains, buses, driving route
 
 Path: /museum
 T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
-D: Official entry guide: opening times, security checks, reception info and facility maps. Explore related sites and museums around the Memorial camp.
+D: Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
 
 Path: /supplement
 T: Auschwitz: What Most Visitors Wish They Knew | 2026
 D: Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
+
+Path: /testing
+T: testing | 2026
+D: 
 
 Path: /tickets
 T: Auschwitz Tickets: Official Booking & Tour Types | 2026
@@ -36,11 +40,15 @@ D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla
 
 Path: /museum
 T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
-D: Przewodnik po wstępie: godziny otwarcia, kontrole bezpieczeństwa, punkty obsługi i mapy. Poznaj miejsca pamięci i muzea w sąsiedztwie obozu Auschwitz.
+D: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
 
 Path: /supplement
 T: Auschwitz: co musisz wiedzieć przed wizytą | 2026
 D: Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
+
+Path: /testing
+T: testowanie | 2026
+D: 
 
 Path: /tickets
 T: Bilety do Auschwitz: rezerwacja online i ceny | 2026
@@ -54,20 +62,20 @@ POSTS
 
 EN
 
-Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
+Path: /posts/auschwitz-guide-turned-developer-to-help-visitors
 T: About Your Auschwitz Guide: 20 Years at the Memorial | 2026
 D: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 
-Path: /posts/auschwitz-tickets-online-only-2026
+Path: /posts/auschwitz-tickets-online-only-in-2026-what-changed
 T: Auschwitz Tickets Online Only in 2026: What Changed and Why | 2026
 D: Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
 
 PL
 
-Path: /posts/auschwitz-guide-turned-developer-to-help-visitors-prepare
+Path: /posts/auschwitz-guide-turned-developer-to-help-visitors
 T: O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci | 2026
 D: Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
 
-Path: /posts/auschwitz-tickets-online-only-2026
-T: Auschwitz Tickets Online Only in 2026 | 2026
-D: Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
+Path: /posts/auschwitz-tickets-online-only-in-2026-what-changed
+T: Bilety do Auschwitz tylko online od 2026: Co się zmieniło | 2026
+D: Od marca 2026 r. bilety do Auschwitz dostępne są wyłącznie online. Dowiedz się, dlaczego sprzedaż została zakończona i jak zarezerwować wizytę.
