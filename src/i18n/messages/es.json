@@ -1,5 +1,5 @@
 {
-  "date-published": "Fecha de publicación",
+  "date-published": "Publicado",
   "author": "Autor",
   "about-author": "Acerca del autor",
   "page-not-found": "No se ha encontrado esta página.",
@@ -12,6 +12,8 @@
   "search": "Buscar",
   "searchPlaceholder": "Buscar...",
   "noResults": "No se encontraron resultados",
+  "allCategories": "Todas las categorías",
+  "noResultsForCategory": "No hay resultados para las categorías seleccionadas",
   "dashboard": "Panel de control",
   "previous": "Anterior",
   "next": "Siguiente",
@@ -203,6 +205,7 @@
       "content": "Esta Política de Privacidad podrá actualizarse para reflejar cambios legales, técnicos o empresariales. La versión vigente estará siempre disponible en esta página con la fecha de actualización."
     }
   },
+  "terms-link": "Condiciones de uso",
   "terms": {
     "metadata": {
       "title": "Condiciones de uso — Proyecto Auschwitz Book",

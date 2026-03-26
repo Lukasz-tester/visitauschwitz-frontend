@@ -6,7 +6,6 @@ import type { StaticImageData } from 'next/image'
 import { ImageMedia } from '@/components/Media/ImageMedia'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { CMSLink } from '@/components/Link'
-// import Link from 'next/link'
 
 type Props = Extract<Page['layout'][0], { blockType: 'mediaBlock' }> & {
   breakout?: boolean

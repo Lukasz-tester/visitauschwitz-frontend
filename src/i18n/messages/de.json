@@ -1,5 +1,5 @@
 {
-  "date-published": "Veröffentlichungsdatum",
+  "date-published": "Veröffentlicht",
   "author": "Autor",
   "about-author": "Über den Autor",
   "page-not-found": "Diese Seite konnte nicht gefunden werden.",
@@ -12,6 +12,8 @@
   "search": "Suche",
   "searchPlaceholder": "Suche...",
   "noResults": "Keine Ergebnisse gefunden",
+  "allCategories": "Alle Kategorien",
+  "noResultsForCategory": "Keine Ergebnisse für die ausgewählten Kategorien",
   "dashboard": "Dashboard",
   "previous": "Vorherige",
   "next": "Nächste",
@@ -203,6 +205,7 @@
       "content": "Diese Datenschutzerklärung kann aktualisiert werden, um rechtliche, technische oder geschäftliche Änderungen widerzuspiegeln. Die jeweils aktuelle Fassung ist stets auf dieser Seite mit dem aktualisierten Datum verfügbar."
     }
   },
+  "terms-link": "Nutzungsbedingungen",
   "terms": {
     "metadata": {
       "title": "Nutzungsbedingungen — Visit Auschwitz Book Project",

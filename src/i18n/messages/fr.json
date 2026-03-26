@@ -1,5 +1,5 @@
 {
-  "date-published": "Date de publication",
+  "date-published": "Publié",
   "author": "Auteur",
   "about-author": "À propos de l'auteur",
   "page-not-found": "Cette page n'a pas pu être trouvée.",
@@ -12,6 +12,8 @@
   "search": "Recherche",
   "searchPlaceholder": "Rechercher...",
   "noResults": "Aucun résultat trouvé",
+  "allCategories": "Toutes les catégories",
+  "noResultsForCategory": "Aucun résultat pour les catégories sélectionnées",
   "dashboard": "Tableau de bord",
   "previous": "Précédent",
   "next": "Suivant",
@@ -203,6 +205,7 @@
       "content": "La présente Politique de confidentialité peut être mise à jour pour refléter des changements légaux, techniques ou commerciaux. La version actuelle sera toujours disponible sur cette page avec la date de mise à jour."
     }
   },
+  "terms-link": "Conditions d’utilisation",
   "terms": {
     "metadata": {
       "title": "Conditions d’utilisation — Projet Livres Auschwitz",

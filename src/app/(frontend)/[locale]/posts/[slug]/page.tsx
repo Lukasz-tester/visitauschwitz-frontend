@@ -68,7 +68,7 @@ export default async function PostPage({ params }: Args) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <article className="pt-16 pb-16">
+      <article className="pt-3 md:pt-1 pb-16">
         {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
         <PageClient />
         <PayloadRedirects disableNotFound url={url} />

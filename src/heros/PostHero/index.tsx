@@ -13,22 +13,33 @@ export const PostHero: React.FC<{
   const t = useTranslations()
 
   return (
-    <div
-      className="relative -mt-[10.4rem] flex items-end min-h-[75vh]"
-      style={{
-        backgroundImage: 'url(/images/default-hero.webp)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="container z-10 relative lg:grid text-white/80 pb-4">
-        <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
-          <h1 className="pt-48 font-heading text-4xl sm:text-5xl">{title}</h1>
-          <div className="flex flex-row gap-4 md:gap-16 mt-5">
-            <div className="flex flex-col gap-4">
+    <div className="container lg:flex lg:flex-row lg:gap-16">
+      {metaImage && typeof metaImage !== 'string' && (
+        <div className=" max-w-[50rem] pb-7 sm:pb-10 lg:pb-0 lg:pt-8">
+          <Media imgClassName="w-full h-auto rounded-md" resource={metaImage} priority />
+        </div>
+      )}
+      <div
+        className="-mt-[10.4rem] pt-40"
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className=" max-w-[50rem] text-foreground/80">
+          <h1 className="font-heading text-4xl sm:text-5xl lg:pt-8 xl:pt-24">{title}</h1>
+          <div className="flex flex-row lg:flex-col gap-6 md:gap-16 lg:gap-2 mt-5 opacity-70">
+            {publishedAt && (
+              <div className="flex flex-col lg:flex-row gap-1">
+                <p className="text-sm lg:text-base">{t('date-published')}:</p>
+
+                <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
+              </div>
+            )}
+            <div className="flex flex-col  gap-4">
               {populatedAuthors && (
-                <div className="flex flex-col gap-1">
-                  <p className="text-sm">{t('author')}</p>
+                <div className="flex flex-col lg:flex-row gap-1">
+                  <p className="text-sm lg:text-base">{t('author')}:</p>
                   {populatedAuthors.map((author, index) => {
                     const { name } = author
 
@@ -53,14 +64,8 @@ export const PostHero: React.FC<{
                 </div>
               )}
             </div>
-            {publishedAt && (
-              <div className="flex flex-col gap-1">
-                <p className="text-sm">{t('date-published')}</p>
 
-                <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
-              </div>
-            )}
-            <div className="uppercase text-sm text-amber-700">
+            <div className="uppercase text-sm text-amber-700 flex flex-row lg:pt-1">
               {categories?.map((category, index) => {
                 if (typeof category === 'object' && category !== null) {
                   const { title: categoryTitle } = category
@@ -72,7 +77,7 @@ export const PostHero: React.FC<{
                   return (
                     <React.Fragment key={index}>
                       {titleToUse}
-                      {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
+                      {!isLast && <React.Fragment>, </React.Fragment>}
                     </React.Fragment>
                   )
                 }
@@ -81,15 +86,6 @@ export const PostHero: React.FC<{
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute inset-0 min-h-[75vh] select-none">
-        {metaImage && typeof metaImage !== 'string' && (
-          <Media fill imgClassName="object-cover" resource={metaImage} priority />
-        )}
-        <div
-          className="absolute pointer-events-none left-0 bottom-0 w-full h-full
-          bg-gradient-to-b from-10% from-background via-30% via-transparent to-70% to-black opacity-90"
-        />
       </div>
     </div>
   )

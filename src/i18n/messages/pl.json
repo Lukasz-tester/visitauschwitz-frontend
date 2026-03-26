@@ -1,5 +1,5 @@
 {
-  "date-published": "Data publikacji",
+  "date-published": "Opublikowano",
   "author": "Autor",
   "about-author": "O autorze",
   "page-not-found": "Nie znaleziono tej strony.",
@@ -12,6 +12,8 @@
   "search": "Szukaj",
   "searchPlaceholder": "Szukaj...",
   "noResults": "Nie znaleziono wyników",
+  "allCategories": "Wszystkie kategorie",
+  "noResultsForCategory": "Brak wyników dla wybranych kategorii",
   "dashboard": "Panel",
   "previous": "Poprzednia",
   "next": "Następna",
@@ -203,6 +205,7 @@
       "content": "Niniejsza Polityka prywatności może być aktualizowana w celu odzwierciedlenia zmian prawnych, technicznych lub biznesowych. Aktualna wersja będzie zawsze dostępna na tej stronie wraz z datą aktualizacji."
     }
   },
+  "terms-link": "Regulamin",
   "terms": {
     "metadata": {
       "title": "Regulamin — projekt książkowy Visit Auschwitz",

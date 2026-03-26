@@ -1,5 +1,5 @@
 {
-  "date-published": "Datum gepubliceerd",
+  "date-published": "Gepubliceerd",
   "author": "Auteur",
   "about-author": "Over de auteur",
   "page-not-found": "Deze pagina kon niet worden gevonden.",
@@ -12,6 +12,8 @@
   "search": "Zoeken",
   "searchPlaceholder": "Zoeken...",
   "noResults": "Geen resultaten gevonden",
+  "allCategories": "Alle categorieën",
+  "noResultsForCategory": "Geen resultaten voor de geselecteerde categorieën",
   "dashboard": "Dashboard",
   "previous": "Vorige",
   "next": "Volgende",
@@ -203,6 +205,7 @@
       "content": "Dit privacybeleid kan worden bijgewerkt om wijzigingen in wetgeving, techniek of bedrijfsvoering te weerspiegelen. De actuele versie is altijd op deze pagina beschikbaar met de bijgewerkte datum."
     }
   },
+  "terms-link": "Gebruiksvoorwaarden",
   "terms": {
     "metadata": {
       "title": "Gebruiksvoorwaarden — Auschwitz Boekenproject",

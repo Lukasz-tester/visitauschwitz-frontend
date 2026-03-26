@@ -1,6 +1,10 @@
 import React from 'react'
+
 import type { Post, Media } from '@/payload-types'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
+
+const LUKASZ_ID = '675f51ab4d074485ad8b59af'
 
 type PopulatedAuthor = NonNullable<Post['populatedAuthors']>[number]
 
@@ -23,13 +27,13 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
             ? `https://images.visitauschwitz.info/${photo.filename}`
             : null
 
-          return (
-            <div
-              key={author.id}
-              className="flex flex-col sm:flex-row gap-8 items-start
+          const isLukasz = author.id === LUKASZ_ID
+          const cardClassName = `flex flex-col sm:flex-row gap-8 items-start
                          rounded-2xl border border-border bg-card/40 p-6 backdrop-blur-sm
-                         shadow-sm"
-            >
+                         shadow-sm${isLukasz ? ' no-underline text-inherit transition-colors hover:border-primary/50' : ''}`
+
+          const cardContent = (
+            <>
               {photoUrl && (
                 <div className="shrink-0 place-self-center">
                   <img
@@ -51,6 +55,16 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
                   <p className="text-sm leading-relaxed text-foreground/70">{author.bio}</p>
                 )}
               </div>
+            </>
+          )
+
+          return isLukasz ? (
+            <Link key={author.id} href="/#about-me" className={cardClassName}>
+              {cardContent}
+            </Link>
+          ) : (
+            <div key={author.id} className={cardClassName}>
+              {cardContent}
             </div>
           )
         })}

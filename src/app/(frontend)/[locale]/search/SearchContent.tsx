@@ -5,9 +5,11 @@ import { useTranslations } from 'next-intl'
 import { useLocale } from 'next-intl'
 import { useRouter } from '@/i18n/routing'
 import { Search } from 'lucide-react'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { Card } from '@/components/Card'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Label } from '@/components/ui/label'
 
 import type { Post, Media } from '@/payload-types'
 
@@ -29,6 +31,15 @@ type SearchResponse = {
   totalDocs: number
 }
 
+const PAGE_CATEGORY_MAP: Record<string, string[]> = {
+  tickets: ['Visiting', 'Preparation'],
+  arrival: ['Preparation'],
+  museum: ['Museum'],
+  tour: ['Exhibition', 'Visiting'],
+  faq: ['Visiting', 'History'],
+  supplement: ['Preparation', 'Museum'],
+}
+
 export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
   const searchParams = useSearchParams()
   const q = searchParams.get('q') || ''
@@ -40,6 +51,24 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
   const [results, setResults] = useState<SearchResult[]>([])
   const [searched, setSearched] = useState(false)
   const [loading, setLoading] = useState(false)
+
+  const [categories, setCategories] = useState<{ id: string; title: string }[]>([])
+  const [allChecked, setAllChecked] = useState(true)
+  const [selectedCategoryIds, setSelectedCategoryIds] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    fetch(`${cmsUrl}/api/categories?locale=${locale}&depth=0&limit=100`)
+      .then((res) => (res.ok ? res.json() : { docs: [] }))
+      .then((data) =>
+        setCategories(
+          (data.docs || []).map((c: { id: string; title: string }) => ({
+            id: c.id,
+            title: c.title,
+          })),
+        ),
+      )
+      .catch(() => {})
+  }, [locale, cmsUrl])
 
   const fetchResults = useCallback(
     async (searchQuery: string) => {
@@ -85,6 +114,26 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
     }
   }
 
+  const filteredResults = useMemo(() => {
+    if (allChecked || selectedCategoryIds.size === 0) return results
+
+    const titleToId = new Map(categories.map((c) => [c.title, c.id]))
+
+    return results.filter((r) => {
+      if (r.doc.relationTo === 'pages') {
+        const mappedTitles = PAGE_CATEGORY_MAP[r.slug] || []
+        if (mappedTitles.length === 0) return true
+        const mappedIds = mappedTitles
+          .map((t) => titleToId.get(t))
+          .filter(Boolean) as string[]
+        return mappedIds.some((id) => selectedCategoryIds.has(id))
+      }
+
+      if (!r.categories?.length) return true
+      return r.categories.some((c) => selectedCategoryIds.has(c.categoryID))
+    })
+  }, [results, allChecked, selectedCategoryIds, categories])
+
   return (
     <>
       <form onSubmit={handleSubmit} className="relative max-w-xl mx-auto mb-12">
@@ -105,15 +154,62 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
         </button>
       </form>
 
+      {categories.length > 0 && results.length > 0 && (
+        <div className="max-w-xl mx-auto mb-8">
+          <div className="flex items-center gap-2 mb-3">
+            <Checkbox
+              id="category-all"
+              checked={allChecked}
+              onCheckedChange={(checked) => {
+                setAllChecked(!!checked)
+                if (checked) {
+                  setSelectedCategoryIds(new Set())
+                }
+              }}
+            />
+            <Label htmlFor="category-all">{t('allCategories')}</Label>
+          </div>
+
+          {!allChecked && (
+            <div className="flex flex-wrap gap-x-6 gap-y-2 pl-6">
+              {categories.map((cat) => (
+                <div key={cat.id} className="flex items-center gap-2">
+                  <Checkbox
+                    id={`category-${cat.id}`}
+                    checked={selectedCategoryIds.has(cat.id)}
+                    onCheckedChange={(checked) => {
+                      setSelectedCategoryIds((prev) => {
+                        const next = new Set(prev)
+                        if (checked) {
+                          next.add(cat.id)
+                        } else {
+                          next.delete(cat.id)
+                        }
+                        return next
+                      })
+                    }}
+                  />
+                  <Label htmlFor={`category-${cat.id}`}>{cat.title}</Label>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
       {loading && <p className="text-center opacity-70">...</p>}
 
       {!loading && searched && q && results.length === 0 && (
         <p className="text-center opacity-70">{t('noResults')}</p>
       )}
 
-      {results.length > 0 && (
+      {!loading && results.length > 0 && filteredResults.length === 0 && (
+        <p className="text-center opacity-70">{t('noResultsForCategory')}</p>
+      )}
+
+      {filteredResults.length > 0 && (
         <div className="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-y-7 gap-x-7 lg:gap-y-8 lg:gap-x-8 xl:gap-x-8">
-          {results.map((result) => {
+          {filteredResults.map((result) => {
             const doc: Partial<Post> = {
               slug: result.slug,
               meta: {

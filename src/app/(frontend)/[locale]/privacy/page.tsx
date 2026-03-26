@@ -28,6 +28,7 @@ export async function generateMetadata({
   for (const loc of routing.locales) {
     languages[loc] = `/${loc}/privacy`
   }
+  languages['x-default'] = '/en/privacy'
 
   return {
     title,

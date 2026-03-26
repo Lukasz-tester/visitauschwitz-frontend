@@ -42,9 +42,12 @@ function buildUrlEntry(slug: string, pathPrefix: string, lastmod: string): strin
   const displaySlug = slug === '' ? '' : `/${slug}`
   const urlPath = pathPrefix ? `/${pathPrefix}${displaySlug}` : displaySlug
 
-  const alternates = LOCALES.map(
-    (l) => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}/${l}${urlPath}" />`,
-  ).join('\n')
+  const alternates = [
+    ...LOCALES.map(
+      (l) => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}/${l}${urlPath}" />`,
+    ),
+    `  <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/en${urlPath}" />`,
+  ].join('\n')
 
   return LOCALES.map(
     (locale) =>

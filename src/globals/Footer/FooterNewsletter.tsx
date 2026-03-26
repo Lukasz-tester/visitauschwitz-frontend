@@ -8,7 +8,7 @@ export function FooterNewsletter() {
 
   return (
     <div className="pt-5 pb-4">
-      <h3 className="text-white/60 text-xl font-semibold mb-4">{t('newsletter-heading')}</h3>
+      <h3 className="text-white/80 text-xl font-semibold mb-4">{t('newsletter-heading')}</h3>
       <NewsletterSignup variant="footer" />
     </div>
   )
