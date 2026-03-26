@@ -61,7 +61,7 @@ export const HighImpactHero: React.FC<Page['hero']> = React.memo(({ links, media
   )
 })
 
-// HighImpactHero.displayName = 'HighImpactHero'
+HighImpactHero.displayName = 'HighImpactHero'
 
 // import React from 'react'
 
