@@ -62,10 +62,6 @@ export default {
         mono: ['ui-monospace', 'monospace'],
         heading: ['var(--font-heading)', 'serif'],
       },
-      // fontFamily: {
-      //   mono: ['var(--font-geist-mono)'],
-      //   sans: ['var(--font-geist-sans)'],
-      // },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -82,6 +78,7 @@ export default {
               marginBottom: '0rem',
               paddingTop: '1.2rem',
               paddingBottom: '0rem',
+              fontWeight: '600',
             },
             h3: {
               fontSize: '1.7rem',
@@ -89,12 +86,13 @@ export default {
               marginBottom: '0rem',
               paddingTop: '0rem',
               paddingBottom: '0rem',
+              fontWeight: '500',
             },
             h4: {
               fontSize: '1.4rem',
               marginTop: '0rem',
               marginBottom: '0rem',
-              fontWeight: 'medium',
+              fontWeight: '400',
             },
             p: {
               fontSize: '1.2rem',

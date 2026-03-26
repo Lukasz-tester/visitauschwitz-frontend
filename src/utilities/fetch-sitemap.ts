@@ -7,18 +7,21 @@ const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
 const SITE_URL = 'https://www.visitauschwitz.info'
 const LOCALES = ['en', 'pl']
 const STATIC_PAGES = ['privacy', 'terms']
+const STATIC_LASTMOD = '2026-01-01'
+const TODAY = new Date().toISOString().slice(0, 10)
+// const YESTERDAY = new Date(Date.now() - 86400000).toISOString().slice(0, 10)
 
-console.log('Fetching sitemap from CMS at:', `${CMS_URL}/sitemap.xml`)
+// Slugs that use deploy date instead of updatedAt
+const DEPLOY_DATE_SLUGS = ['home', 'faq']
 
-function getSlug(loc: string): string {
-  // Extract the path segment after the locale, e.g. "/en/tickets" → "tickets", "/en/" → ""
-  const match = loc.match(/\/(?:en|pl)\/(.*)$/)
-  return match ? match[1].replace(/\/$/, '') : ''
+interface Doc {
+  slug?: string
+  updatedAt: string
 }
 
 function getPriority(slug: string): string {
   if (slug === '') return '1.0'
-  if (['tickets', 'arrival', 'museum', 'tour'].includes(slug)) return '0.8'
+  if (['tickets', 'arrival', 'museum', 'tour', 'faq'].includes(slug)) return '0.8'
   if (['supplement', 'contact'].includes(slug)) return '0.6'
   if (['privacy', 'terms'].includes(slug)) return '0.3'
   return '0.5'
@@ -30,44 +33,67 @@ function getChangefreq(slug: string): string {
   return 'monthly'
 }
 
-function buildStaticPageEntries(): string {
-  const today = new Date().toISOString().slice(0, 10)
-  return STATIC_PAGES.flatMap((slug) =>
-    LOCALES.map(
-      (locale) =>
-        `  <url>\n    <loc>${SITE_URL}/${locale}/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${getChangefreq(slug)}</changefreq>\n    <priority>${getPriority(slug)}</priority>\n  </url>`,
-    ),
+function getLastmod(doc: Doc): string {
+  if (doc.slug && DEPLOY_DATE_SLUGS.includes(doc.slug)) return TODAY
+  return doc.updatedAt.slice(0, 10)
+}
+
+function buildUrlEntry(slug: string, pathPrefix: string, lastmod: string): string {
+  const displaySlug = slug === '' ? '' : `/${slug}`
+  const urlPath = pathPrefix ? `/${pathPrefix}${displaySlug}` : displaySlug
+
+  const alternates = LOCALES.map(
+    (l) => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}/${l}${urlPath}" />`,
+  ).join('\n')
+
+  return LOCALES.map(
+    (locale) =>
+      `<url>\n` +
+      `  <loc>${SITE_URL}/${locale}${urlPath}</loc>\n` +
+      `${alternates}\n` +
+      `  <lastmod>${lastmod}</lastmod>\n` +
+      `  <changefreq>${getChangefreq(slug)}</changefreq>\n` +
+      `  <priority>${getPriority(slug)}</priority>\n` +
+      `</url>`,
   ).join('\n')
 }
 
-function adjustSitemap(xml: string): string {
-  const today = new Date().toISOString().slice(0, 10)
-  let adjusted = xml.replace(/<url>([\s\S]*?)<\/url>/g, (urlBlock) => {
-    const locMatch = urlBlock.match(/<loc>([^<]+)<\/loc>/)
-    if (!locMatch) return urlBlock
-
-    const slug = getSlug(locMatch[1])
-    const priority = getPriority(slug)
-    const changefreq = getChangefreq(slug)
-
-    return urlBlock
-      .replace(/<lastmod>[^<]+<\/lastmod>/, `<lastmod>${today}</lastmod>`)
-      .replace(/<priority>[^<]+<\/priority>/, `<priority>${priority}</priority>`)
-      .replace(/<changefreq>[^<]+<\/changefreq>/, `<changefreq>${changefreq}</changefreq>`)
-  })
-
-  // Append static frontend-only pages
-  const staticEntries = buildStaticPageEntries()
-  adjusted = adjusted.replace('</urlset>', `${staticEntries}\n</urlset>`)
-
-  return adjusted
+async function fetchDocs(collection: string): Promise<Doc[]> {
+  const url = `${CMS_URL}/api/${collection}?limit=1000&where[_status][equals]=published`
+  console.log(`Fetching ${collection} from: ${url}`)
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Failed to fetch ${collection}: ${res.status}`)
+  const data = (await res.json()) as { docs?: Doc[] }
+  return data.docs ?? []
 }
 
 async function main() {
   try {
-    const res = await fetch(`${CMS_URL}/sitemap.xml`)
-    if (!res.ok) throw new Error(`Failed to fetch sitemap: ${res.status}`)
-    const sitemap = adjustSitemap(await res.text())
+    const [pages, posts] = await Promise.all([fetchDocs('pages'), fetchDocs('posts')])
+    console.log(`Found ${pages.length} pages, ${posts.length} posts`)
+
+    const entries: string[] = []
+
+    for (const page of pages) {
+      if (!page.slug) continue
+      const slug = page.slug === 'home' ? '' : page.slug
+      entries.push(buildUrlEntry(slug, '', getLastmod(page)))
+    }
+
+    for (const post of posts) {
+      if (!post.slug) continue
+      entries.push(buildUrlEntry(post.slug, 'posts', getLastmod(post)))
+    }
+
+    for (const slug of STATIC_PAGES) {
+      entries.push(buildUrlEntry(slug, '', STATIC_LASTMOD))
+    }
+
+    const sitemap =
+      `<?xml version="1.0" encoding="UTF-8"?>\n` +
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
+      entries.join('\n') +
+      `\n</urlset>\n`
 
     const publicDir = path.resolve('./public')
     if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir)

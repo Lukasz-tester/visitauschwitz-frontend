@@ -1,171 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-<loc>https://www.visitauschwitz.info/en/testing</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/testing" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/testing" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/en/faq</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/faq" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/faq" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/testing</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/testing" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/testing" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/pl/faq</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/faq" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/faq" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/supplement</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/supplement" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
+  <loc>https://www.visitauschwitz.info/en/testing</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/testing" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/testing" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/supplement</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/supplement" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
+  <loc>https://www.visitauschwitz.info/pl/testing</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/testing" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/testing" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/tour</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tour" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/en/supplement</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/supplement" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/tour</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tour" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/pl/supplement</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/supplement" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/supplement" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/museum</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/en/tour</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tour" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/museum</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/pl/tour</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tour" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tour" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/arrival</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/arrival" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/en/museum</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/arrival</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/arrival" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/pl/museum</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/museum" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/museum" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/tickets</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/en/arrival</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/arrival" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
+  <lastmod>2026-03-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/tickets</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
+  <loc>https://www.visitauschwitz.info/pl/arrival</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/arrival" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/arrival" />
+  <lastmod>2026-03-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
+  <loc>https://www.visitauschwitz.info/en/tickets</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
+  <loc>https://www.visitauschwitz.info/pl/tickets</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/tickets" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/tickets" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/en</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/pl</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl" />
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/en/posts/auschwitz-vs-birkenau-difference</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-vs-birkenau-difference" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-vs-birkenau-difference" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors" />
-<xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors" />
-<lastmod>2026-03-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
+  <loc>https://www.visitauschwitz.info/pl/posts/auschwitz-vs-birkenau-difference</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-vs-birkenau-difference" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-vs-birkenau-difference" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
-  <url>
-    <loc>https://www.visitauschwitz.info/en/privacy</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.visitauschwitz.info/pl/privacy</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.visitauschwitz.info/en/terms</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.visitauschwitz.info/pl/terms</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/krakow-to-auschwitz-day-trip" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/posts/krakow-to-auschwitz-day-trip</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/krakow-to-auschwitz-day-trip" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/can-you-visit-auschwitz-without-a-guide-honest-comparison-older" />
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-in-2026-what-changed" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors" />
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/privacy</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy" />
+  <lastmod>2025-01-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/privacy</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/privacy" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/privacy" />
+  <lastmod>2025-01-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/en/terms</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/terms" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/terms" />
+  <lastmod>2025-01-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.visitauschwitz.info/pl/terms</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.visitauschwitz.info/en/terms" />
+  <xhtml:link rel="alternate" hreflang="pl" href="https://www.visitauschwitz.info/pl/terms" />
+  <lastmod>2025-01-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
 </urlset>

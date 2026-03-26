@@ -71,6 +71,11 @@ import { Moon, Sun } from 'lucide-react'
 
 export const ThemeSelector: React.FC = () => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
@@ -79,7 +84,7 @@ export const ThemeSelector: React.FC = () => {
 
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme" className="p-3 opacity-85 hover:opacity-100 transition-opacity">
-      {theme === 'light' ? <Moon /> : <Sun />}
+      {mounted ? (theme === 'light' ? <Moon /> : <Sun />) : <Sun />}
     </button>
   )
 }

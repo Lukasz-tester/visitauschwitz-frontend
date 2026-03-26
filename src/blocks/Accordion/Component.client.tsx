@@ -27,7 +27,7 @@ function readStorage(key: string): StoredState {
         heights: parsed.heights && typeof parsed.heights === 'object' ? parsed.heights : {},
       }
     }
-  } catch { }
+  } catch {}
   return { openIndices: [], heights: {} }
 }
 
@@ -68,7 +68,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
     try {
       const state: StoredState = { openIndices, heights: storedHeights }
       sessionStorage.setItem(storageKey, JSON.stringify(state))
-    } catch { }
+    } catch {}
   }, [openIndices, storedHeights, storageKey, hasMounted])
 
   const handleHeightMeasured = useCallback((index: number, height: number) => {
@@ -105,16 +105,16 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                   >
                     <summary
                       className={cn(
-                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden font-semibold',
+                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden tracking-wide font-semibold',
                         changeBackground ? 'bg-card' : 'bg-card-foreground',
                       )}
                       onClick={(e) => {
                         e.preventDefault()
                         handleItemClick(index)
                       }}
-                    ><h3>
-                        {item.question}
-                      </h3></summary>
+                    >
+                      <h3>{item.question}</h3>
+                    </summary>
                     <div className="px-5 py-2 mb-4">
                       {item.answer && <RichText content={item.answer} enableGutter={false} />}
                     </div>

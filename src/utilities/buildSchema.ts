@@ -220,11 +220,14 @@ function buildFAQNode(
   items: { name: string; text: string }[],
   pageUrl: string,
   locale: Locale = 'en',
+  description?: string | null,
 ) {
   return {
     '@type': 'FAQPage',
     '@id': `${pageUrl}#faq`,
     inLanguage: locale,
+    ...(description ? { description } : {}),
+    author: { '@id': `${SITE_URL}/#author` },
     mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
     mainEntity: items.map((item) => ({
       '@type': 'Question',
@@ -506,7 +509,7 @@ export function buildPageGraph({
   ]
 
   if (pageImage) nodes.push(buildImageNode(pageImage, url))
-  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale))
+  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale, page.meta?.description))
   if (navItems?.length) nodes.push(buildSiteNavigationNode(navItems, locale))
 
   const slug = page.slug
@@ -546,7 +549,7 @@ export function buildPostGraph({
     buildBreadcrumbNode(url, breadcrumbItems),
   ]
 
-  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale))
+  if (faqItems.length > 0) nodes.push(buildFAQNode(faqItems, url, locale, post.meta?.description))
   if (navItems?.length) nodes.push(buildSiteNavigationNode(navItems, locale))
 
   return { '@context': 'https://schema.org', '@graph': nodes }

@@ -124,13 +124,18 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
               categories: result.categories?.map((cat) => cat.categoryID) ?? [],
             }
 
+            const cardTitle =
+              result.doc.relationTo === 'pages'
+                ? (result.meta?.title || result.title)
+                : result.title
+
             return (
               <div className="col-span-4" key={result.id}>
                 <Card
                   className="h-full"
                   doc={doc as Post}
                   relationTo={result.doc.relationTo}
-                  title={result.title}
+                  title={cardTitle}
                 />
               </div>
             )

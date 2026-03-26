@@ -39,7 +39,11 @@ export function NewsletterCaller() {
         )}
         aria-label={isOpen ? 'Close contact form' : 'Open contact form'}
       >
-        {isOpen ? <X strokeWidth={1} size={28} /> : <Mail strokeWidth={1.5} size={26} />}
+        {isOpen ? (
+          <X strokeWidth={1} size={28} />
+        ) : (
+          <Mail strokeWidth={1.5} size={26} color="#b45309" />
+        )}
       </button>
 
       {/* MAIL label - only visible when mobile nav is open */}
