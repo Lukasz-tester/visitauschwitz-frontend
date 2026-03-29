@@ -7,5 +7,7 @@
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-/sitemap.xml
+/sitemap-v2.xml
   Content-Type: application/xml; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  X-Robots-Tag: noindex

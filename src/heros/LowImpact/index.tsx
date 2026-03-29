@@ -23,7 +23,7 @@ export const LowImpactHero: React.FC<LowImpactHeroType> = ({ children, richText 
             <RichText
               content={richText}
               enableGutter={false}
-              className="font-heading prose-h1:text-4xl sm:prose-h1:text-5xl prose-headings:font-normal prose-p:font-sans  prose-p:pt-3 opacity-85"
+              className="font-heading prose-h1:opacity-85 prose-h1:text-4xl sm:prose-h1:text-5xl prose-headings:font-normal prose-p:font-sans  prose-p:pt-3"
             />
           ))}
       </div>

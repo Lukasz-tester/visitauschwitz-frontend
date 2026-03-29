@@ -101,15 +101,15 @@ async function main() {
     const publicDir = path.resolve('./public')
     if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir)
 
-    fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
-    console.log('✅ Sitemap saved to public/sitemap.xml')
+    fs.writeFileSync(path.join(publicDir, 'sitemap-v2.xml'), sitemap)
+    console.log('✅ Sitemap saved to public/sitemap-v2.xml')
   } catch (err) {
     console.error(err)
-    const existing = path.resolve('./public/sitemap.xml')
+    const existing = path.resolve('./public/sitemap-v2.xml')
     if (fs.existsSync(existing)) {
-      console.log('⚠️  Using existing sitemap.xml')
+      console.log('⚠️  Using existing sitemap-v2.xml')
     } else {
-      console.log('⚠️  No existing sitemap.xml found, skipping')
+      console.log('⚠️  No existing sitemap-v2.xml found, skipping')
     }
   }
 }

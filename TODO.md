@@ -1,12 +1,11 @@
 # TO DO list
 
-- Metadata > poprawic titles + desc... (meta.txt) - some pages slightly exceed 60 char limit
-- dodaj do kazdego postu bio autora + fotka
+- w cms popraw email resend, dodaj teksty, z checklist info wrzuc do cmsa do tlumaczenia
+
 - tour page: dodaj info o liscie i standardowej trasie na nie zaznaczonej!
 - dodaj ponownie sitemap w GSC
 - usun z tej listy rzeczy zrobione
 - testuj ten false back button / exit intent
-- Auschwitz Exit - tlumacz na pl!
 - remove the bar with usage as not working?
 
 ## CONTENT

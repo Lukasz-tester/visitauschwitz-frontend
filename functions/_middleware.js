@@ -44,6 +44,7 @@ export async function onRequest(context) {
     pathname.startsWith('/_next/') ||
     hasLocalePrefix ||
     pathname === '/sitemap.xml' ||
+    pathname === '/sitemap-v2.xml' ||
     pathname === '/robots.txt' ||
     pathname === '/icon.ico' ||
     pathname === '/apple-touch-icon.png' ||
