@@ -22,7 +22,7 @@ export default async function SearchPage({ params }: Args) {
   return (
     <div className="container py-12">
       <h1 className="text-3xl font-semibold mb-8 text-center">{t('search')}</h1>
-      <SearchContent cmsUrl={process.env.CMS_PUBLIC_SERVER_URL!} />
+      <SearchContent cmsUrl="/api/cms" />
     </div>
   )
 }

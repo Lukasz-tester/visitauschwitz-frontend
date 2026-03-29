@@ -5,10 +5,6 @@ import { MediaBlock } from '@/blocks/MediaBlock/Component.client'
 import React, { Fragment, JSX } from 'react'
 import { CMSLink } from '@/components/Link'
 import type { BannerBlock as BannerBlockProps } from '@/payload-types'
-// import {
-//   OpeningHoursBlock,
-//   type Props as OpeningHoursProps,
-// } from '@/blocks/OpeningHours/Component.client'
 
 import {
   IS_BOLD,

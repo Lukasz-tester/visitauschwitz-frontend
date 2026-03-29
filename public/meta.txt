@@ -8,6 +8,10 @@ Path: /arrival
 T: How to Get to Auschwitz: Transport & Parking Guide | 2026
 D: All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
 
+Path: /faq
+T: Auschwitz FAQ: Tickets, Tours & Transport Explained | 2026
+D: Expert answers on Auschwitz online booking, transport from Kraków, tour types, dress code, opening hours & what to expect — by a licensed guide since 2006.
+
 Path: /museum
 T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
 D: Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
@@ -15,10 +19,6 @@ D: Entry guidelines: opening times, security checks, reception desk and facility
 Path: /supplement
 T: Auschwitz: What Most Visitors Wish They Knew | 2026
 D: Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
-
-Path: /testing
-T: testing | 2026
-D: 
 
 Path: /tickets
 T: Auschwitz Tickets: Official Booking & Tour Types | 2026
@@ -38,6 +38,10 @@ Path: /arrival
 T: Dojazd do Auschwitz: pociąg, autobus i parking | 2026
 D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
 
+Path: /faq
+T: FAQ Auschwitz: rezerwacje, zwiedzanie i transport | 2026
+D: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania, zasadach wstępu i godzinach otwarcia Auschwitz — od licencjonowanego przewodnika od 2006 roku.
+
 Path: /museum
 T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
 D: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
@@ -45,10 +49,6 @@ D: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpiecze�
 Path: /supplement
 T: Auschwitz: co musisz wiedzieć przed wizytą | 2026
 D: Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
-
-Path: /testing
-T: testowanie | 2026
-D: 
 
 Path: /tickets
 T: Bilety do Auschwitz: rezerwacja online i ceny | 2026
@@ -66,9 +66,21 @@ Path: /posts/auschwitz-guide-turned-developer-to-help-visitors
 T: About Your Auschwitz Guide: 20 Years at the Memorial | 2026
 D: I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
 
-Path: /posts/auschwitz-tickets-online-only-in-2026-what-changed
+Path: /posts/auschwitz-ticket-scams-how-to-spot-fake-sites
+T: Auschwitz Ticket Scams: 5 Red Flags to Spot Before Booking | 2026
+D: Fake Auschwitz ticket sites charge up to 10x the real price. Learn 5 warning signs of a scam and the only safe way to reserve your entry cards.
+
+Path: /posts/auschwitz-tickets-online-only-2026
 T: Auschwitz Tickets Online Only in 2026: What Changed and Why | 2026
 D: Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
+
+Path: /posts/how-to-get-from-krakow-to-auschwitz
+T: How to Get from Krakow to Auschwitz by Bus, Train or Car | 2026
+D: Compare bus, train, and driving routes from Krakow to Auschwitz. Real timetables, travel times, and parking — by a licensed guide since 2006.
+
+Path: /posts/krakow-to-auschwitz-day-trip
+T: Kraków to Auschwitz Day Trip — Plan It With Expert | 2026
+D: Plan your Auschwitz day trip from Krakow step by step. Bus, train, car options, booking tips, timeline, costs — by a licensed Auschwitz guide since 2006.
 
 PL
 
@@ -76,6 +88,18 @@ Path: /posts/auschwitz-guide-turned-developer-to-help-visitors
 T: O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci | 2026
 D: Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
 
-Path: /posts/auschwitz-tickets-online-only-in-2026-what-changed
+Path: /posts/auschwitz-ticket-scams-how-to-spot-fake-sites
+T: Auschwitz Ticket Scams: 5 Red Flags to Spot Before Booking | 2026
+D: Fake Auschwitz ticket sites charge up to 10x the real price. Learn 5 warning signs of a scam and the only safe way to reserve your entry cards.
+
+Path: /posts/auschwitz-tickets-online-only-2026
 T: Bilety do Auschwitz tylko online od 2026: Co się zmieniło | 2026
 D: Od marca 2026 r. bilety do Auschwitz dostępne są wyłącznie online. Dowiedz się, dlaczego sprzedaż została zakończona i jak zarezerwować wizytę.
+
+Path: /posts/how-to-get-from-krakow-to-auschwitz
+T: Jak dojechać z Krakowa do Auschwitz autobusem, pociągiem lub samochodem | 2026
+D: Porównaj trasy autobusem, pociągiem i samochodem Kraków–Auschwitz. Aktualne rozkłady, czasy przejazdu i parking — od licencjonowanego przewodnika od 2006 roku.
+
+Path: /posts/krakow-to-auschwitz-day-trip
+T: Kraków — Auschwitz w 1 dzień: wskazówki eksperta | 2026
+D: Zaplanuj zwiedzanie Auschwitz z Krakowa krok po kroku. Autobus, pociąg, samochód, rezerwacje, ceny — od licencjonowanego edukatora Auschwitz od 2006 roku.

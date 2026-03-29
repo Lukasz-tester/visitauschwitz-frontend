@@ -115,7 +115,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                     >
                       <h3>{item.question}</h3>
                     </summary>
-                    <div className="px-5 py-2 mb-4">
+                    <div className="px-5 pt-2 pb-3">
                       {item.answer && <RichText content={item.answer} enableGutter={false} />}
                     </div>
                   </details>

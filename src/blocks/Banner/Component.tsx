@@ -6,11 +6,11 @@ type Props = {
   className?: string
 } & BannerBlockProps
 
-export const TextBlock: React.FC<Props> = ({ className, content, style }) => {
+export const TextBlock: React.FC<Props> = ({ className, blockName, content, style }) => {
   return (
     <>
       {style === 'text' && (
-        <div>
+        <div id={blockName || undefined}>
           <RichText className="my-6" content={content} enableGutter={false} />
         </div>
       )}

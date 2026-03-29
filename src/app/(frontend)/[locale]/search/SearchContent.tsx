@@ -57,7 +57,7 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
   const [selectedCategoryIds, setSelectedCategoryIds] = useState<Set<string>>(new Set())
 
   useEffect(() => {
-    fetch(`${cmsUrl}/api/categories?locale=${locale}&depth=0&limit=100`)
+    fetch(`${cmsUrl}/categories?locale=${locale}&depth=0&limit=100`)
       .then((res) => (res.ok ? res.json() : { docs: [] }))
       .then((data) =>
         setCategories(
@@ -82,11 +82,11 @@ export const SearchContent: React.FC<{ cmsUrl: string }> = ({ cmsUrl }) => {
       try {
         const encoded = encodeURIComponent(searchQuery)
         const res = await fetch(
-          `${cmsUrl}/api/search?locale=${locale}&depth=1&where[or][0][title][like]=${encoded}&where[or][1][meta.title][like]=${encoded}&where[or][2][meta.description][like]=${encoded}`,
+          `${cmsUrl}/search?locale=${locale}&depth=1&where[or][0][title][like]=${encoded}&where[or][1][meta.title][like]=${encoded}&where[or][2][meta.description][like]=${encoded}`,
         )
         if (res.ok) {
           const data: SearchResponse = await res.json()
-          setResults(data.docs || [])
+          setResults((data.docs || []).filter((doc) => !(doc.doc.relationTo === 'pages' && doc.slug === 'home')))
         } else {
           setResults([])
         }
