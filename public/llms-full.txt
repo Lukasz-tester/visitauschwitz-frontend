@@ -23,6 +23,11 @@ Description: All transport options to the Auschwitz Memorial: trains, buses, dri
 - Can You Get to Auschwitz by Train from Krakow?
 - Which Airports Are Closest to Auschwitz?
 
+## Auschwitz Tour: What to Pack & Know Before Visiting (EN)
+
+URL: https://www.visitauschwitz.info/en/checklist
+Description: Full preparation checklist for visiting Auschwitz-Birkenau. Covers booking, transport from Krakow, what to pack, rules, and essential visitor tips.
+
 ## Auschwitz FAQ: Tickets, Tours & Transport Explained (EN)
 
 URL: https://www.visitauschwitz.info/en/faq
@@ -168,16 +173,6 @@ A: Both. The original camp site is preserved as the Auschwitz-Birkenau State Mus
 **Q: What is the difference between Auschwitz I and Auschwitz II?**
 A: Auschwitz I (the "main camp") opened in 1940 in converted Polish army barracks. It served as the administrative centre and houses today's main exhibitions. Auschwitz II-Birkenau construction started in 1941 and was never concluded, was vastly larger — designed specifically as an extermination centre with biggest gas chambers and crematoria. Most of the killing took place at Birkenau. Detailed comparison of both sites
 
-### Sections
-
-- Tickets & Booking
-- Getting to Auschwitz
-- Tour Duration & Types
-- Rules & What to Bring
-- What to Expect
-- Facilities & Practical Information
-- History Basics for Visitors
-
 ## Auschwitz Visit Guide: Tickets, Tours & Expert Tips (EN)
 
 URL: https://www.visitauschwitz.info/en
@@ -210,7 +205,7 @@ Description: Entry guidelines: opening times, security checks, reception desk an
 ## Auschwitz: What Most Visitors Wish They Knew (EN)
 
 URL: https://www.visitauschwitz.info/en/supplement
-Description: Guide vs self-guided, best times to skip crowds, what to bring, rules, hidden spots beyond the regular route & more. Insider preparation from a licensed guide.
+Description: Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
 
 ### FAQ
 
@@ -249,8 +244,6 @@ A: The Museum is not fully adapted to maintain the site's historical authenticit
 
 ### Sections
 
-- Whether you choose a guided tour or explore independently, preparation makes all the difference at Auschwitz.
-- How to Arrange Your Auschwitz Visit? Discover essential visitor preparation tips, answers to common questions, and practical advice to help you make the most of your time at the Auschwitz Memorial.
 - What Are the Auschwitz Memorial Rules? How to Behave on an Auschwitz Tour
 - How to Make the Most of Your Auschwitz Visit? Read the tips below to make the most of your visit to the Auschwitz Memorial.
 - Your Feedback Is Invaluable Let me know what you think of this site by answering the questions below or simply sharing your thoughts—just click ||| on the right to find the contact form.
@@ -452,6 +445,11 @@ Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wska
 - Czy można dojechać do Auschwitz pociągiem?
 - Które lotnisko jest najbliżej Auschwitz?
 
+## Auschwitz — co zabrać i wiedzieć przed wizytą (PL)
+
+URL: https://www.visitauschwitz.info/pl/checklist
+Description: Kompleksowa lista przed wizytą w Auschwitz-Birkenau: rezerwacja, transport z Krakowa, czego nie zabrać, zasady i najważniejsze praktyczne wskazówki.
+
 ## FAQ Auschwitz: rezerwacje, zwiedzanie i transport (PL)
 
 URL: https://www.visitauschwitz.info/pl/faq
@@ -597,16 +595,6 @@ A: Oba. Dawny obóz stanowi dziś Państwowe Muzeum Auschwitz-Birkenau, utworzon
 **Q: Czym różni się Auschwitz I od Auschwitz II?**
 A: Auschwitz I („obóz macierzysty”) powstał w 1940 roku w dawnych koszarach Wojska Polskiego. Był centrum administracyjnym i mieści dzisiejsze główne wystawy. Auschwitz II-Birkenau budowano od 1941 roku, był o wiele większy — zaprojektowany jako centrum zagłady z największymi komorami gazowymi i krematoriami. Większość mordów miała miejsce właśnie w Birkenau. Szczegółowe porównanie obu miejsc
 
-### Sections
-
-- Bilety i rezerwacja
-- Dojazd do Auschwitz
-- Czas zwiedzania i rodzaje tras
-- Zasady i co zabrać
-- Czego się spodziewać
-- Udogodnienia i informacje praktyczne
-- Podstawowe informacje historyczne dla zwiedzających
-
 ## Zwiedzanie Auschwitz: bilety, dojazd i porady (PL)
 
 URL: https://www.visitauschwitz.info/pl
@@ -635,10 +623,10 @@ Description: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole 
 - Międzynarodowy Dom Spotkań Młodzieży
 - Przyroda i szlaki spacerowe w pobliżu Miejsca Pamięci
 
-## Auschwitz: co musisz wiedzieć przed wizytą (PL)
+## Auschwitz: co musisz wiedzieć przed wizytą w Muzeum (PL)
 
 URL: https://www.visitauschwitz.info/pl/supplement
-Description: Z przewodnikiem czy samodzielnie, jak ominąć tłumy, co zabrać, regulamin, ukryte miejsca poza standardową trasą i więcej. Porady od licencjonowanego przewodnika.
+Description: Z przewodnikiem czy samodzielnie, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej. Porady od licencjonowanego przewodnika.
 
 ### FAQ
 
@@ -677,8 +665,6 @@ A: Aby zachować autentyczność historyczną, Muzeum nie jest w pełni przystos
 
 ### Sections
 
-- Niezależnie od tego, czy wybierzesz zwiedzanie z przewodnikiem, czy samodzielnie, przygotowanie do wizyty w Auschwitz ma kluczowe znaczenie.
-- Jak zaplanować wizytę w Auschwitz-Birkenau krok po kroku?
 - Jakie są oficjalne zasady zwiedzania Auschwitz? Jak zachowywać się podczas zwiedzania
 - Porady, jak w pełni docenić wizytę w Auschwitz Przeczytaj poniższe porady, by jak najlepiej spędzić czas na terenie Miejsca Pamięci Auschwitz.
 - Twoja opinia jest bezcenna Daj mi znać, co sądzisz o tej stronie, odpowiadając na poniższe pytania lub po prostu dzieląc się swoimi wrażeniami – wystarczy kliknąć ||| po prawej aby znaleźć formularz k

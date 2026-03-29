@@ -38,6 +38,8 @@ async function throttledFetch(url, init) {
   })
 }
 
+import { stripUsedIn } from './stripUsedIn'
+
 export async function fetchPayloadData(collection, slug, locale) {
   const base = process.env.CMS_PUBLIC_SERVER_URL
   const url = `${base}/api/${collection}?where[slug][equals]=${slug}&locale=${locale}&depth=2`
@@ -47,7 +49,9 @@ export async function fetchPayloadData(collection, slug, locale) {
       const res = await throttledFetch(url, { cache: 'no-store' })
       if (res.ok) {
         const data = await res.json()
-        return data?.docs?.[0] || null
+        const doc = data?.docs?.[0] || null
+        if (doc) stripUsedIn(doc)
+        return doc
       }
       console.error(`Failed to fetch ${collection}/${slug}: ${res.status} ${res.statusText}`)
     } catch (err) {

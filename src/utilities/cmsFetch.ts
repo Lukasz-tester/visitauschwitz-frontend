@@ -58,11 +58,15 @@ export async function cmsFetch(path: string, retries = 3): Promise<Response | nu
   return null
 }
 
+import { stripUsedIn } from './stripUsedIn'
+
 export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null> {
   const res = await cmsFetch(path)
   if (!res) return null
   try {
-    return await res.json() as T
+    const data = await res.json()
+    stripUsedIn(data)
+    return data as T
   } catch {
     return null
   }
