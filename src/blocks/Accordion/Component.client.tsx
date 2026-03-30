@@ -105,7 +105,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                   >
                     <summary
                       className={cn(
-                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden tracking-wide font-semibold',
+                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden tracking-wide font-medium',
                         changeBackground ? 'bg-card' : 'bg-card-foreground',
                       )}
                       onClick={(e) => {

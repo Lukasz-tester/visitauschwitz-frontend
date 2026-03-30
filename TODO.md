@@ -1,9 +1,13 @@
 # TO DO list
 
+nowe posty:
+
+- Auschwitz Museum warns of ‘dangerous’ AI-fabricated Holocaust stories: https://tvpworld.com/87198634/auschwitz-museum-warns-of-ai-fabricated-holocaust-stories
+- post z aktualnymi cenami i w tickets linki do niego (latwiej utrzymac aktualny)
+
+- na koncu posta info zeby podzielic sie na mediach, dodac ikonki, oraz ‘more posts’
 - w cms popraw email resend, dodaj teksty, z checklist info wrzuc do cmsa do tlumaczenia
 
-- tour page: dodaj info o liscie i standardowej trasie na nie zaznaczonej!
-- dodaj ponownie sitemap w GSC
 - usun z tej listy rzeczy zrobione
 - testuj ten false back button / exit intent
 - remove the bar with usage as not working?
