@@ -14,7 +14,7 @@ const joinUrl = (base: string, path: string) =>
 const getSafeSlug = (doc: Page | Post): string => {
   const rawSlug = Array.isArray(doc?.slug) ? doc.slug.join('/') : doc?.slug
   if (!rawSlug || rawSlug === 'home') return ''
-  const isPost = 'layout' in doc === false
+  const isPost = !('hero' in doc)
   return isPost ? `posts/${rawSlug}` : rawSlug
 }
 

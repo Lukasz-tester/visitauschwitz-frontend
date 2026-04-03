@@ -35,22 +35,6 @@ export async function onRequestPost(context) {
 
     const promises = []
 
-    // 1. Add contact to Resend segment (for both types)
-    promises.push(
-      fetch('https://api.resend.com/contacts', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          unsubscribed: false,
-          segments: [{ id: env.RESEND_SEGMENT_ID }],
-        }),
-      }),
-    )
-
     if (isContact) {
       // --- Contact form flow ---
 
@@ -105,68 +89,36 @@ export async function onRequestPost(context) {
                 <p>Talk soon,</p>
                 <p style="margin: 0;"><strong>Łukasz, the guide</strong></p>
                 <p style="margin: 4px 0 0; color: #888; font-size: 13px;">visitauschwitz.info</p>
+                <hr style="margin: 24px 0; border: none; border-top: 1px solid #e5e5e5;">
+                <p style="margin: 0 0 8px;"><strong>Want tips before your visit?</strong></p>
+                <a href="https://www.visitauschwitz.info/newsletter" style="display: inline-block; padding: 10px 20px; background: #b45309; color: white; text-decoration: none; border-radius: 4px;">Join our newsletter &rarr;</a>
               </div>
             `,
           }),
         }),
       )
     } else {
-      // --- Checklist/newsletter subscription flow ---
+      // --- Newsletter subscription flow — proxy to CMS ---
+      const cmsUrl = env.CMS_PUBLIC_SERVER_URL
+      if (!cmsUrl) throw new Error('CMS_PUBLIC_SERVER_URL not configured')
 
-      // 2. Notification to owner
-      promises.push(
-        fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${env.RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            from: fromEmail,
-            to: toEmail,
-            subject: `New Checklist Subscriber: ${email}`,
-            html: `
-              <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; color: #1a1a1a;">
-                <h2 style="margin: 0 0 16px;">New Checklist Subscriber</h2>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Locale:</strong> ${locale}</p>
-              </div>
-            `,
-          }),
-        }),
-      )
+      const cmsRes = await fetch(`${cmsUrl}/api/subscribe`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, locale }),
+      })
 
-      // 3. Auto-reply to user
-      promises.push(
-        fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${env.RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            from: fromEmail,
-            to: email,
-            subject: 'Thanks for signing up!',
-            html: `
-              <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; color: #1a1a1a; line-height: 1.6;">
-                <p>Hi there,</p>
-                <p>Thank you for signing up for the Auschwitz visit checklist! I'm glad you're preparing — it makes a real difference.</p>
-                <p>I'll be in touch with useful tips and information to help you get the most out of your visit.</p>
-                <p>All the best,</p>
-                <p style="margin: 0;"><strong>Łukasz, the guide</strong></p>
-                <p style="margin: 4px 0 0; color: #888; font-size: 13px;">visitauschwitz.info</p>
-              </div>
-            `,
-          }),
-        }),
-      )
+      const cmsResult = await cmsRes.json()
+
+      return new Response(JSON.stringify(cmsResult), {
+        status: cmsRes.status,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
+      })
     }
 
     const results = await Promise.all(promises)
 
-    // Check if email sends succeeded (skip index 0 which is the contact add)
-    for (let i = 1; i < results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
       if (!results[i].ok) {
         const error = await results[i].text()
         console.error(`Resend API error (step ${i}):`, error)

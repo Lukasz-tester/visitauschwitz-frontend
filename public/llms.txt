@@ -22,7 +22,7 @@ Default language: en
 ## Posts (EN)
 
 - [About Your Auschwitz Guide: 20 Years at the Memorial](https://www.visitauschwitz.info/en/posts/auschwitz-guide-turned-developer-to-help-visitors): I've been guiding visitors through Auschwitz since 2006. I built this site to answer the questions I hear every day — so you can prepare with confidence.
-- [Auschwitz Ticket Scams: 5 Red Flags to Spot Before Booking](https://www.visitauschwitz.info/en/posts/auschwitz-ticket-scams-how-to-spot-fake-sites): Fake Auschwitz ticket sites charge up to 10x the real price. Learn 5 warning signs of a scam and the only safe way to reserve your entry cards.
+- [Auschwitz Ticket Scams: 5 Red Flags to Spot Before Booking](https://www.visitauschwitz.info/en/posts/auschwitz-ticket-scams-5-red-flags): Fake Auschwitz ticket sites charge up to 10x the real price. Learn 5 warning signs of a scam and the only safe way to reserve your entry cards.
 - [Auschwitz Tickets Online Only in 2026: What Changed and Why](https://www.visitauschwitz.info/en/posts/auschwitz-tickets-online-only-2026): Since March 2026, Auschwitz entry cards are available only online at visit.auschwitz.org. Learn why on-site sales ended and how to book your visit.
 - [How to Get from Krakow to Auschwitz by Bus, Train or Car](https://www.visitauschwitz.info/en/posts/how-to-get-from-krakow-to-auschwitz): Compare bus, train, and driving routes from Krakow to Auschwitz. Real timetables, travel times, and parking — by a licensed guide since 2006.
 - [Kraków to Auschwitz Day Trip — Plan It With Expert](https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip): Plan your Auschwitz day trip from Krakow step by step. Bus, train, car options, booking tips, timeline, costs — by a licensed Auschwitz guide since 2006.
@@ -41,10 +41,10 @@ Default language: en
 ## Posts (PL)
 
 - [O przewodniku po Auschwitz: 20 lat w Miejscu Pamięci](https://www.visitauschwitz.info/pl/posts/auschwitz-guide-turned-developer-to-help-visitors): Od 2006 roku oprowadzam po Miejscu Pamięci. Ten portal odpowiada na pytania, które słyszę codziennie — pomoże Ci przygotować się do świadomej wizyty.
-- [Auschwitz Ticket Scams: 5 Red Flags to Spot Before Booking](https://www.visitauschwitz.info/pl/posts/auschwitz-ticket-scams-how-to-spot-fake-sites): Fake Auschwitz ticket sites charge up to 10x the real price. Learn 5 warning signs of a scam and the only safe way to reserve your entry cards.
-- [Bilety do Auschwitz tylko online od 2026: Co się zmieniło](https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-2026): Od marca 2026 r. bilety do Auschwitz dostępne są wyłącznie online. Dowiedz się, dlaczego sprzedaż została zakończona i jak zarezerwować wizytę.
-- [Jak dojechać z Krakowa do Auschwitz autobusem, pociągiem lub samochodem](https://www.visitauschwitz.info/pl/posts/how-to-get-from-krakow-to-auschwitz): Porównaj trasy autobusem, pociągiem i samochodem Kraków–Auschwitz. Aktualne rozkłady, czasy przejazdu i parking — od licencjonowanego przewodnika od 2006 roku.
-- [Kraków — Auschwitz w 1 dzień: wskazówki eksperta](https://www.visitauschwitz.info/pl/posts/krakow-to-auschwitz-day-trip): Zaplanuj zwiedzanie Auschwitz z Krakowa krok po kroku. Autobus, pociąg, samochód, rezerwacje, ceny — od licencjonowanego edukatora Auschwitz od 2006 roku.
+- [Auschwitz: oszustwa biletowe – 5 sygnałów ostrzegawczych](https://www.visitauschwitz.info/pl/posts/auschwitz-ticket-scams-5-red-flags): Fałszywe strony z biletami do Auschwitz windują ceny nawet 10-krotnie. Poznaj 5 typowych oznak oszustwa i jedyny pewny sposób rezerwacji karty wstępu.
+- [Bilety do Auschwitz tylko online w 2026: co i dlaczego się zmieniło](https://www.visitauschwitz.info/pl/posts/auschwitz-tickets-online-only-2026): Od marca 2026 karty wstępu do Auschwitz dostępne są wyłącznie online na visit.auschwitz.org. Sprawdź, dlaczego zakończono sprzedaż na miejscu i jak zarezerwować wizytę.
+- [Jak dojechać z Krakowa do Auschwitz — autobus, pociąg, auto](https://www.visitauschwitz.info/pl/posts/how-to-get-from-krakow-to-auschwitz): Dojazd autobusem, pociągiem i samochodem z Krakowa do Auschwitz. Rozkłady, czas podróży i porady oficjalnego przewodnika po Auschwitz od 2006 roku.
+- [Kraków – Auschwitz: jednodniowy wyjazd krok po kroku](https://www.visitauschwitz.info/pl/posts/krakow-to-auschwitz-day-trip): Zaplanować wyjazd do Auschwitz z Krakowa: autobus, pociąg, auto, rezerwacje i wskazówki — od licencjonowanego przewodnika po Muzeum od 2006 roku.
 
 ## Key Facts
 

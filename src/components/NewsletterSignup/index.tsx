@@ -9,7 +9,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Link } from '@/i18n/routing'
 import { useNewsletterSubmit } from './useNewsletterSubmit'
 
-type Variant = 'footer' | 'homepage' | 'popup' | 'mobilenav'
+type Variant = 'footer' | 'homepage' | 'popup' | 'mobilenav' | 'page'
 
 interface FormValues {
   email: string
@@ -47,6 +47,12 @@ export function NewsletterSignup({ variant }: { variant: Variant }) {
       onSubmit={handleSubmit(onSubmit)}
       className={isCompact ? 'flex flex-wrap gap-3 items-start' : 'flex flex-col gap-4'}
     >
+      {variant === 'footer' && (
+        <h3 className="text-white/80 text-xl font-semibold mb-4">{t('newsletter-heading')}</h3>
+      )}
+      {variant === 'page' && (
+        <h3 className="text-2xl md:text-3xl font-bold mb-4">{t('newsletter-heading')}</h3>
+      )}
       {/* Honeypot */}
       <div
         aria-hidden="true"
