@@ -69,7 +69,7 @@ export function ContactForm({ variant }: { variant: Variant }) {
         </p>
         <p className="text-sm text-muted-foreground">
           {t('contact-success-newsletter')}{' '}
-          <Link href="/newsletter" className="underline hover:text-primary">
+          <Link href="/newsletter/" className="underline hover:text-primary">
             {t('newsletter-learn-more')}
           </Link>
         </p>

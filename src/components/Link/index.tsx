@@ -2,6 +2,7 @@
 
 import { Button, type ButtonProps } from '@/components/ui/button'
 import { cn } from 'src/utilities/cn'
+import { withTrailingSlash } from '@/utilities/withTrailingSlash'
 import { useLocale } from 'next-intl'
 import React from 'react'
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
@@ -89,6 +90,9 @@ export const CMSLink: React.FC<CMSLinkType> = ({
   if (isInternal) {
     href = `/${locale}${href}`
   }
+
+  // 5️⃣ Ensure trailing slash
+  href = withTrailingSlash(href)
 
   const linkProps: LinkProps = {
     href,

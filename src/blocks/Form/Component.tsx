@@ -4,6 +4,7 @@ import type { Form as FormType } from './types'
 import { Link } from '@/i18n/routing'
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useRef, useState } from 'react'
+import { withTrailingSlash } from '@/utilities/withTrailingSlash'
 import { useForm, FormProvider } from 'react-hook-form'
 import RichText from '@/components/RichText'
 import { Button } from '@/components/ui/button'
@@ -145,7 +146,7 @@ export const FormBlock: React.FC<
 
             const redirectUrl = url
 
-            if (redirectUrl) router.push(redirectUrl)
+            if (redirectUrl) router.push(withTrailingSlash(redirectUrl))
           }
         } catch (err) {
           console.warn(err)
@@ -237,7 +238,7 @@ export const FormBlock: React.FC<
                 />
                 <label htmlFor="newsletter-optin" className="text-sm cursor-pointer select-none">
                   {t('consent-commercial')}
-                  <Link href="/privacy" className="underline hover:text-primary">
+                  <Link href="/privacy/" className="underline hover:text-primary">
                     {t('privacy-policy')}
                   </Link>
                 </label>

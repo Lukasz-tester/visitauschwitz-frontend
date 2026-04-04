@@ -27,7 +27,7 @@ export const Card: React.FC<{
   const titleToUse = titleFromProps || title
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   const locale = useLocale()
-  const href = relationTo === 'posts' ? `/${locale}/posts/${slug}` : `/${locale}/${slug}`
+  const href = relationTo === 'posts' ? `/${locale}/posts/${slug}/` : `/${locale}/${slug}/`
   // const href = `/${relationTo}/${slug}`
 
   return (

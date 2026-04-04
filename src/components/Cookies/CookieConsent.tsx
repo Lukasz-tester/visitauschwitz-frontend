@@ -160,12 +160,12 @@ export function CookieConsent() {
             <p className="text-sm text-white/70 mb-4">
               {tBanner('message')}{' '}
               <Link
-                href="/privacy#cookies"
+                href="/privacy/#cookies"
                 className="underline hover:text-foreground transition-colors"
               >
                 {tBanner('privacyLink')}
               </Link>{' '}
-              <Link href="/terms" className="underline hover:text-foreground transition-colors">
+              <Link href="/terms/" className="underline hover:text-foreground transition-colors">
                 {tBanner('termsLink')}
               </Link>
             </p>

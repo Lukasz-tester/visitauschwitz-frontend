@@ -97,7 +97,7 @@ export function NewsletterSignup({ variant }: { variant: Variant }) {
           className={`text-xs cursor-pointer select-none ${variant === 'footer' ? 'text-white/40' : 'text-foreground/80'}`}
         >
           {t('consent-commercial')}
-          <Link href="/privacy" className="underline hover:text-primary">
+          <Link href="/privacy/" className="underline hover:text-primary">
             {t('privacy-policy')}
           </Link>
         </label>

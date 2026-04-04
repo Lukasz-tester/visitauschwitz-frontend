@@ -4,6 +4,7 @@ import type { RefObject } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
+import { withTrailingSlash } from '@/utilities/withTrailingSlash'
 
 type UseClickableCardType<T extends HTMLElement> = {
   card: { ref: RefObject<T | null> }
@@ -108,13 +109,13 @@ function useClickableCard<T extends HTMLElement>({
 
         // If path already has locale prefix, use it as-is
         if (path.startsWith(`/${locale}/`) || path === `/${locale}`) {
-          router.push(path, { scroll })
+          router.push(withTrailingSlash(path), { scroll })
           return
         }
 
         // Otherwise prefix locale
         const normalizedPath = `/${locale}${path}`
-        router.push(normalizedPath, { scroll })
+        router.push(withTrailingSlash(normalizedPath), { scroll })
         return
       } catch (err) {
         // fallback to original behavior if anything unexpected happens

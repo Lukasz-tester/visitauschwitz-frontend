@@ -65,7 +65,7 @@ export const MobileNavCaller: React.FC<{
               <LocaleSwitcher />
             </div>
             <Link
-              href="/search"
+              href="/search/"
               aria-label="Search"
               className="p-3 opacity-85 hover:opacity-100 transition-opacity"
               onClick={() => setModalOpen(false)}

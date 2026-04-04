@@ -11,7 +11,7 @@ export function FooterNewsletter() {
     <div className="pt-5 pb-4">
       <NewsletterSignup variant="footer" />
       <Link
-        href="/newsletter"
+        href="/newsletter/"
         className="inline-block mt-3 ml-5 text-sm text-white/50 hover:text-white/80 underline"
       >
         {t('newsletter-learn-more')}

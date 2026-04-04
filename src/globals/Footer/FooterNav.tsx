@@ -25,13 +25,13 @@ export function FooterNav({ navItems }: { navItems: NavItems }) {
       <div className="flex flex-col items-start gap-3">
         <FooterContactButton />
 
-        <Link href={`/${locale}/posts`} className={linkClass}>
+        <Link href={`/${locale}/posts/`} className={linkClass}>
           {t('posts')}
         </Link>
-        <Link href={`/${locale}/supplement`} className={linkClass}>
+        <Link href={`/${locale}/supplement/`} className={linkClass}>
           {t('tips')}
         </Link>
-        <Link href={`/${locale}/faq`} className={linkClass}>
+        <Link href={`/${locale}/faq/`} className={linkClass}>
           FAQ
         </Link>
         {/* {navItems[0] && renderLink(navItems[0], 0)} */}
@@ -40,10 +40,10 @@ export function FooterNav({ navItems }: { navItems: NavItems }) {
       {/* Column 2: remaining CMS items, Cookie settings */}
       <div className="flex flex-col items-start gap-3">
         {/* {navItems.slice(0).map(renderLink)} */}
-        <Link href={`/${locale}/privacy`} className={linkClass}>
+        <Link href={`/${locale}/privacy/`} className={linkClass}>
           {t('privacy-policy')}
         </Link>
-        <Link href={`/${locale}/terms`} className={linkClass}>
+        <Link href={`/${locale}/terms/`} className={linkClass}>
           {t('terms-link')}
         </Link>
 

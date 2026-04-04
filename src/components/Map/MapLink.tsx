@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useMapModal } from '@/providers/MapModalContext'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
+import { withTrailingSlash } from '@/utilities/withTrailingSlash'
 
 interface MapLinkProps {
   url: string
@@ -17,7 +18,7 @@ const MapLink: React.FC<MapLinkProps> = ({ url, children }) => {
   const { setCurrentUrl } = useMapModal() // Get the setCurrentUrl from context
 
   const locale = useLocale()
-  const localizedUrl = `/${locale}/${url}`
+  const localizedUrl = withTrailingSlash(`/${locale}/${url}`)
 
   // Ensure useRouter is only used once the component is mounted
   useEffect(() => {

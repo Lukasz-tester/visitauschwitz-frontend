@@ -44,15 +44,15 @@ function buildUrlEntry(slug: string, pathPrefix: string, lastmod: string): strin
 
   const alternates = [
     ...LOCALES.map(
-      (l) => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}/${l}${urlPath}" />`,
+      (l) => `  <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}/${l}${urlPath}/" />`,
     ),
-    `  <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/en${urlPath}" />`,
+    `  <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/en${urlPath}/" />`,
   ].join('\n')
 
   return LOCALES.map(
     (locale) =>
       `<url>\n` +
-      `  <loc>${SITE_URL}/${locale}${urlPath}</loc>\n` +
+      `  <loc>${SITE_URL}/${locale}${urlPath}/</loc>\n` +
       `${alternates}\n` +
       `  <lastmod>${lastmod}</lastmod>\n` +
       `  <changefreq>${getChangefreq(slug)}</changefreq>\n` +
