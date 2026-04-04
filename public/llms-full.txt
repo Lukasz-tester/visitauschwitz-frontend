@@ -203,6 +203,11 @@ Description: Entry guidelines: opening times, security checks, reception desk an
 - International Youth Meeting Centre
 - Nature Near Auschwitz Memorial
 
+## Free Auschwitz Checklist to Prepare for Your Visit in 2026 (EN)
+
+URL: https://www.visitauschwitz.info/en/newsletter
+Description: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
+
 ## Auschwitz: What Most Visitors Wish They Knew (EN)
 
 URL: https://www.visitauschwitz.info/en/supplement
@@ -624,6 +629,11 @@ Description: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole 
 - Muzeum Ratusz
 - Międzynarodowy Dom Spotkań Młodzieży
 - Przyroda i szlaki spacerowe w pobliżu Miejsca Pamięci
+
+## Free Auschwitz Checklist to Prepare for Your Visit in 2026 (PL)
+
+URL: https://www.visitauschwitz.info/pl/newsletter
+Description: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 
 ## Auschwitz: co musisz wiedzieć przed wizytą w Muzeum (PL)
 

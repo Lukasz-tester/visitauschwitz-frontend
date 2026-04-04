@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 
   return locales.flatMap((locale) =>
     (data.docs || [])
-      .filter((doc) => doc.slug !== 'home')
+      .filter((doc) => doc.slug !== 'home' && doc.slug !== 'newsletter')
       .map((doc) => ({
         slug: doc.slug,
         locale,

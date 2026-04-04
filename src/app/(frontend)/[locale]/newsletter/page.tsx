@@ -1,7 +1,7 @@
 export const revalidate = false
 export const dynamic = 'force-static'
 
-import React, { Suspense } from 'react'
+import React from 'react'
 import type { Metadata } from 'next'
 import { PayloadRedirects } from '@/components/PayloadRedirects'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
@@ -61,7 +61,7 @@ export default async function NewsletterPage({ params }: Args) {
 
   const signupSection = (
     <section className="py-16 px-4 bg-amber-700/10 dark:bg-amber-900/20">
-      <div className="max-w-md mx-auto">
+      <div className="max-w-xl mx-auto">
         <NewsletterSignup variant="page" />
       </div>
     </section>
@@ -74,9 +74,7 @@ export default async function NewsletterPage({ params }: Args) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <article className="pt-16 pb-24">
-        <Suspense>
-          <ConfirmationBanner />
-        </Suspense>
+        <ConfirmationBanner />
         <PageClient />
         <PayloadRedirects disableNotFound url={`/${SLUG}`} />
         <RenderHero {...hero} />
@@ -84,7 +82,7 @@ export default async function NewsletterPage({ params }: Args) {
           blocks={layout}
           locale={locale}
           url={fullUrl}
-          insertAtIndex={3}
+          insertAtIndex={2}
           insertNode={signupSection}
         />
       </article>

@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form'
 import { useLocale, useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
 import { Link } from '@/i18n/routing'
 import { cn } from '@/utilities/cn'
 
@@ -24,8 +23,6 @@ export function ContactForm({ variant }: { variant: Variant }) {
   const honeypotRef = useRef<HTMLInputElement>(null)
   const lastSubmitRef = useRef(0)
   const [status, setStatus] = useState<Status>('idle')
-  const [consent, setConsent] = useState(false)
-
   const {
     register,
     handleSubmit,
@@ -61,14 +58,22 @@ export function ContactForm({ variant }: { variant: Variant }) {
 
   if (status === 'success') {
     return (
-      <p
-        className={cn(
-          'font-medium',
-          variant === 'nav' ? 'text-green-600 dark:text-green-400' : 'text-green-600',
-        )}
-      >
-        {t('contact-success')}
-      </p>
+      <div className="flex flex-col gap-2">
+        <p
+          className={cn(
+            'font-medium',
+            variant === 'nav' ? 'text-green-600 dark:text-green-400' : 'text-green-600',
+          )}
+        >
+          {t('contact-success')}
+        </p>
+        <p className="text-sm text-muted-foreground">
+          {t('contact-success-newsletter')}{' '}
+          <Link href="/newsletter" className="underline hover:text-primary">
+            {t('newsletter-learn-more')}
+          </Link>
+        </p>
+      </div>
     )
   }
 
@@ -89,12 +94,10 @@ export function ContactForm({ variant }: { variant: Variant }) {
           className={variant === 'nav' ? 'bg-background' : 'bg-card'}
           {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
         />
-        {errors.email && (
-          <p className="text-red-500 text-sm mt-1">{t('contact-email-error')}</p>
-        )}
+        {errors.email && <p className="text-red-500 text-sm mt-1">{t('contact-email-error')}</p>}
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 pb-3">
         <textarea
           placeholder={t('contact-message-placeholder')}
           rows={variant === 'nav' ? 3 : 4}
@@ -111,27 +114,9 @@ export function ContactForm({ variant }: { variant: Variant }) {
 
       {status === 'error' && <p className="text-red-500 text-sm">{t('contact-error')}</p>}
 
-      <div className="flex items-center gap-2">
-        <Checkbox
-          id={`contact-consent-${variant}`}
-          checked={consent}
-          onCheckedChange={(checked) => setConsent(checked === true)}
-          className="h-4 w-4 shrink-0 rounded border border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
-        />
-        <label
-          htmlFor={`contact-consent-${variant}`}
-          className="text-xs cursor-pointer select-none text-muted-foreground"
-        >
-          {t('consent-commercial')}
-          <Link href="/privacy" className="underline hover:text-primary">
-            {t('privacy-policy')}
-          </Link>
-        </label>
-      </div>
-
       <Button
         type="submit"
-        disabled={status === 'loading' || !consent}
+        disabled={status === 'loading'}
         variant="default"
         className="shrink-0 w-fit"
       >

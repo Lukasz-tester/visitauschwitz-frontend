@@ -1,16 +1,21 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
+import { useState, useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/routing'
 
 export function ConfirmationBanner() {
-  const searchParams = useSearchParams()
   const locale = useLocale()
   const t = useTranslations()
+  const [confirmed, setConfirmed] = useState(false)
 
-  if (searchParams.get('confirmed') !== 'true') return null
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    setConfirmed(params.get('confirmed') === 'true')
+  }, [])
+
+  if (!confirmed) return null
 
   const pdfUrl = `/api/cms/checklist-print?locale=${locale}`
 

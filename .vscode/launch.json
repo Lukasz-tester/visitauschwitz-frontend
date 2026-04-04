@@ -10,5 +10,8 @@
       "request": "launch",
       "type": "node-terminal"
     }
+  ],
+  "git.ignoredRepositories": [
+    "/Users/lucky/dev/book-site"
   ]
 }

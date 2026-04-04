@@ -20,7 +20,7 @@ export function FooterNav({ navItems }: { navItems: NavItems }) {
   }
 
   return (
-    <nav className="py-5 md:pl-8 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 text-xl">
+    <nav className="py-5 md:pl-20 grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-12 text-xl">
       {/* Column 1: Contact, first CMS item (Posts), Tips */}
       <div className="flex flex-col items-start gap-3">
         <FooterContactButton />

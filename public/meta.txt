@@ -20,6 +20,10 @@ Path: /museum
 T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
 D: Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
 
+Path: /newsletter
+T: Free Auschwitz Checklist to Prepare for Your Visit in 2026 | 2026
+D: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
+
 Path: /supplement
 T: Auschwitz: What Most Visitors Wish They Knew | 2026
 D: Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
@@ -53,6 +57,10 @@ D: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania,
 Path: /museum
 T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
 D: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
+
+Path: /newsletter
+T: Free Auschwitz Checklist to Prepare for Your Visit in 2026 | 2026
+D: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 
 Path: /supplement
 T: Auschwitz: co musisz wiedzieć przed wizytą w Muzeum | 2026

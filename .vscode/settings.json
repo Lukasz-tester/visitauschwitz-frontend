@@ -1,0 +1,4 @@
+{
+  "git.ignoredRepositories": ["/Users/lucky/dev/book-site"],
+  "git.autoRepositoryDetection": "subFolders"
+}

@@ -48,10 +48,12 @@ export function NewsletterSignup({ variant }: { variant: Variant }) {
       className={isCompact ? 'flex flex-wrap gap-3 items-start' : 'flex flex-col gap-4'}
     >
       {variant === 'footer' && (
-        <h3 className="text-white/80 text-xl font-semibold mb-4">{t('newsletter-heading')}</h3>
+        <h3 className="text-white/80 text-2xl font-semibold mb-4">{t('newsletter-heading')}</h3>
       )}
       {variant === 'page' && (
-        <h3 className="text-2xl md:text-3xl font-bold mb-4">{t('newsletter-heading')}</h3>
+        <h3 className="text-foreground/80 text-2xl md:text-3xl font-bold mb-4">
+          {t('newsletter-heading')}
+        </h3>
       )}
       {/* Honeypot */}
       <div
@@ -92,7 +94,7 @@ export function NewsletterSignup({ variant }: { variant: Variant }) {
         />
         <label
           htmlFor={`newsletter-consent-${variant}`}
-          className={`text-xs cursor-pointer select-none ${variant === 'footer' ? 'text-white/40' : 'text-muted-foreground'}`}
+          className={`text-xs cursor-pointer select-none ${variant === 'footer' ? 'text-white/40' : 'text-foreground/80'}`}
         >
           {t('consent-commercial')}
           <Link href="/privacy" className="underline hover:text-primary">
