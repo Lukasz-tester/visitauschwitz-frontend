@@ -3,6 +3,7 @@ import React from 'react'
 import type { Post, Media } from '@/payload-types'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
+import { ArrowRight } from 'lucide-react'
 
 const LUKASZ_ID = '675f51ab4d074485ad8b59af'
 
@@ -17,9 +18,17 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
   if (authors.length === 0) return null
 
   return (
-    <div className="container max-w-[50rem] mt-16 mb-8">
-      <div className="border-t border-border mb-10" />
-      <div className="flex flex-col gap-10">
+    <div className="container max-w-[50rem]">
+      <Link
+        href="/posts"
+        className="flex pt-9 text-sm uppercase tracking-widest text-foreground/70 font-medium hover:text-foreground transition-colors"
+      >
+        {t('read-more-articles')}
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+
+      {/* <div className="border-t border-border mb-10" /> */}
+      <div className="flex flex-col gap-10 my-8">
         {authors.map((author) => {
           const photo =
             author.photo && typeof author.photo === 'object' ? (author.photo as Media) : null

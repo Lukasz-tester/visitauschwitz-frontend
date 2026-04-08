@@ -34,4 +34,4 @@ User-agent: FacebookBot
 Allow: /
 
 # Sitemap
-Sitemap: https://www.visitauschwitz.info/sitemap-v2.xml
+Sitemap: https://www.visitauschwitz.info/sitemap-index.xml

@@ -14,6 +14,7 @@ import type { Post } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import PageClient from '../../[slug]/page.client'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
+import { ShareButtons } from '@/components/ShareButtons'
 import { locales } from '@/i18n/localization'
 import { buildPostGraph, type SchemaNavItem } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
@@ -77,6 +78,12 @@ export default async function PostPage({ params }: Args) {
         <div className="container max-w-[50rem] pt-8">
           <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
         </div>
+
+        <ShareButtons
+          url={fullUrl}
+          title={(post as Post).title}
+          className="container max-w-[50rem] pt-9 text-sm"
+        />
 
         {post.populatedAuthors && post.populatedAuthors.length > 0 && (
           <AuthorBio authors={post.populatedAuthors} />

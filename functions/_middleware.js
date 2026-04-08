@@ -36,15 +36,13 @@ export async function onRequest(context) {
   const { pathname } = url
 
   // Skip static files, API routes, and already-prefixed paths
-  const hasLocalePrefix = LOCALES.some(
-    (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`),
-  )
+  const hasLocalePrefix = LOCALES.some((l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`))
   if (
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next/') ||
     hasLocalePrefix ||
     pathname === '/sitemap.xml' ||
-    pathname === '/sitemap-v2.xml' ||
+    pathname === '/sitemap-index.xml' ||
     pathname === '/robots.txt' ||
     pathname === '/icon.ico' ||
     pathname === '/apple-touch-icon.png' ||

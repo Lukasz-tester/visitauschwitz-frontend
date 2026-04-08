@@ -2,6 +2,8 @@
   "date-published": "Veröffentlicht",
   "author": "Autor",
   "about-author": "Über den Autor",
+  "share-this-article": "Helfen Sie anderen, das Beste aus ihrem Besuch zu machen – teilen",
+  "read-more-articles": "Weitere Artikel lesen",
   "page-not-found": "Diese Seite konnte nicht gefunden werden.",
   "go-home": "Zur Startseite",
   "loading": "Laden, bitte warten...",
@@ -111,7 +113,7 @@
   "contact-success-newsletter": "In der Zwischenzeit holen Sie sich Ihre kostenlose Checkliste zur Vorbereitung auf den Auschwitz-Besuch.",
   "contact-error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
   "privacy-policy": "Datenschutzerklärung",
-  "consent-commercial": "Ich stimme zu, Projekt-Updates und Werbe-E-Mails zu erhalten. Ich kann mich jederzeit abmelden.",
+  "consent-commercial": "Ich stimme zu, Projekt-Updates und Werbe-E-Mails zu erhalten. Ich kann mich jederzeit abmelden. ",
   "privacy": {
     "metadata": {
       "title": "Datenschutzerklärung — Visit Auschwitz Book Project",

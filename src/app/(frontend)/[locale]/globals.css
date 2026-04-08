@@ -40,6 +40,10 @@
   }
 }
 
+.list li::marker {
+  color: inherit;
+}
+
 .leaflet-popup-content {
   font-size: 0.875rem !important;
   line-height: 1rem !important;
@@ -70,7 +74,9 @@
 .details-animate::details-content {
   block-size: 0;
   overflow-y: clip;
-  transition: block-size 500ms ease, content-visibility 500ms allow-discrete;
+  transition:
+    block-size 500ms ease,
+    content-visibility 500ms allow-discrete;
 }
 .details-animate[open]::details-content {
   block-size: auto;

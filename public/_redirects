@@ -1,2 +1,3 @@
-/sitemap-v2.xml   /sitemap-v2.xml   200
-/sitemap.xml   /sitemap-v2.xml   301
+/sitemap-index.xml   /sitemap-index.xml   200
+/sitemap-v2.xml   /sitemap-index.xml   301
+/sitemap.xml   /sitemap-index.xml   301

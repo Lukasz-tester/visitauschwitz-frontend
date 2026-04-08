@@ -2,6 +2,8 @@
   "date-published": "Gepubliceerd",
   "author": "Auteur",
   "about-author": "Over de auteur",
+  "share-this-article": "Help anderen het maximale uit hun bezoek te halen – deel",
+  "read-more-articles": "Meer artikelen lezen",
   "page-not-found": "Deze pagina kon niet worden gevonden.",
   "go-home": "Ga naar home",
   "loading": "Laden, een moment geduld...",
@@ -111,7 +113,7 @@
   "contact-success-newsletter": "Ontvang in de tussentijd uw gratis checklist ter voorbereiding op uw bezoek aan Auschwitz.",
   "contact-error": "Er is iets misgegaan. Probeer het opnieuw.",
   "privacy-policy": "Privacybeleid",
-  "consent-commercial": "Ik ga ermee akkoord om projectupdates en promotionele e-mails te ontvangen. Ik kan mij op elk moment uitschrijven.",
+  "consent-commercial": "Ik ga ermee akkoord om projectupdates en promotionele e-mails te ontvangen. Ik kan mij op elk moment uitschrijven. ",
   "privacy": {
     "metadata": {
       "title": "Privacybeleid — Auschwitz Boekenproject",

@@ -2,6 +2,8 @@
   "date-published": "Publicado",
   "author": "Autor",
   "about-author": "Acerca del autor",
+  "share-this-article": "Ayuda a otros a sacar el máximo de su visita – comparte",
+  "read-more-articles": "Leer más artículos",
   "page-not-found": "No se ha encontrado esta página.",
   "go-home": "Ir a la página de inicio",
   "loading": "Cargando, por favor espere...",
@@ -111,7 +113,7 @@
   "contact-success-newsletter": "Mientras tanto, obtenga su lista de verificación gratuita de preparación para la visita a Auschwitz.",
   "contact-error": "Algo salió mal. Por favor, inténtelo de nuevo.",
   "privacy-policy": "Política de privacidad",
-  "consent-commercial": "Acepto recibir actualizaciones del proyecto y correos electrónicos promocionales. Puedo cancelar mi suscripción en cualquier momento.",
+  "consent-commercial": "Acepto recibir actualizaciones del proyecto y correos electrónicos promocionales. Puedo cancelar mi suscripción en cualquier momento. ",
   "privacy": {
     "metadata": {
       "title": "Política de privacidad del proyecto Auschwitz Book",

@@ -19,6 +19,7 @@ import { getCachedGlobal } from '@/utilities/getGlobals'
 import type { Header } from '@/payload-types'
 import { TableOfContents } from '@/components/TableOfContents'
 import { extractTocItems } from '@/utilities/extractTocItems'
+import { ShareButtons } from '@/components/ShareButtons'
 
 const MIN_TOC_ITEMS = 3
 
@@ -83,13 +84,18 @@ export default async function Page({ params: paramsPromise }: Args) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <article className="pt-16 pb-24">
+      <article className="pt-16 pb-7">
         {heroImageUrl && <link rel="preload" as="image" href={heroImageUrl} />}
         <PageClient />
-      <PayloadRedirects disableNotFound url={url} />
-      <RenderHero {...hero} />
-      {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
-      <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
+        <PayloadRedirects disableNotFound url={url} />
+        <RenderHero {...hero} />
+        {tocItems.length >= MIN_TOC_ITEMS && <TableOfContents items={tocItems} />}
+        <RenderBlocks blocks={layout} locale={locale} url={fullUrl} />
+        <ShareButtons
+          className="container pt-6 mt-24 border-t border-border text-sm"
+          url={fullUrl}
+          title={(page as PageType).meta?.title || (page as PageType).title}
+        />
       </article>
     </>
   )

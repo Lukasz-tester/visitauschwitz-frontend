@@ -2,6 +2,8 @@
   "date-published": "Publié",
   "author": "Auteur",
   "about-author": "À propos de l'auteur",
+  "share-this-article": "Aidez les autres à profiter pleinement de leur visite – partagez",
+  "read-more-articles": "Lire d'autres articles",
   "page-not-found": "Cette page n'a pas pu être trouvée.",
   "go-home": "Aller à la page d'accueil",
   "loading": "Chargement, veuillez patienter...",
@@ -111,7 +113,7 @@
   "contact-success-newsletter": "En attendant, obtenez votre checklist gratuite de préparation à la visite d'Auschwitz.",
   "contact-error": "Une erreur s'est produite. Veuillez réessayer.",
   "privacy-policy": "Politique de confidentialité",
-  "consent-commercial": "J'accepte de recevoir les mises à jour du projet et des e-mails promotionnels. Je peux me désabonner à tout moment.",
+  "consent-commercial": "J'accepte de recevoir les mises à jour du projet et des e-mails promotionnels. Je peux me désabonner à tout moment. ",
   "privacy": {
     "metadata": {
       "title": "Politique de confidentialité — Projet Livres Auschwitz",
