@@ -9,7 +9,10 @@ import { PayloadRedirects } from '@/components/PayloadRedirects'
 import { AuthorBio } from '@/components/AuthorBio'
 import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
+import { cache } from 'react'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+
+const getCachedPayload = cache(fetchPayloadData)
 import type { Post } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import PageClient from '../../[slug]/page.client'
@@ -37,7 +40,7 @@ export default async function PostPage({ params }: Args) {
   const fullUrl = `${siteUrl}/${locale}/posts/${slug}`
 
   // Use the helper (static-generation friendly)
-  const post = await fetchPayloadData('posts', slug, locale)
+  const post = await getCachedPayload('posts', slug, locale)
 
   if (!post) {
     return <PayloadRedirects url={url} />
@@ -102,7 +105,7 @@ export default async function PostPage({ params }: Args) {
 
 export async function generateMetadata({ params }: Args): Promise<Metadata> {
   const { slug, locale = 'en' } = await params
-  const post = await fetchPayloadData('posts', slug, locale)
+  const post = await getCachedPayload('posts', slug, locale)
   if (!post) return {}
   return generateMeta({ doc: post, locale })
 }

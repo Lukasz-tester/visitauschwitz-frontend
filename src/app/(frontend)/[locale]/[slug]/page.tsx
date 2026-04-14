@@ -9,7 +9,10 @@ import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { RenderHero } from '@/heros/RenderHero'
 import PageClient from './page.client'
 import { generateMeta } from '@/utilities/generateMeta'
+import { cache } from 'react'
 import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+
+const getCachedPayload = cache(fetchPayloadData)
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'
@@ -52,7 +55,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
   const fullUrl = `${siteUrl}/${locale}/${slug}`
 
-  const page: PageType | null = await fetchPayloadData('pages', slug, locale)
+  const page: PageType | null = await getCachedPayload('pages', slug, locale)
 
   if (!page) {
     return <PayloadRedirects url={url} />
@@ -103,6 +106,6 @@ export default async function Page({ params: paramsPromise }: Args) {
 
 export async function generateMetadata({ params }: Args): Promise<Metadata> {
   const { slug = 'home', locale = 'en' } = await params
-  const page = await fetchPayloadData('pages', slug, locale)
+  const page = await getCachedPayload('pages', slug, locale)
   return generateMeta({ doc: page, locale })
 }
