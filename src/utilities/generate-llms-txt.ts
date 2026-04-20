@@ -16,13 +16,13 @@ async function fetchJSON(endpoint: string) {
 }
 
 async function getCachedData() {
-  const cacheFile = path.resolve('./.cache/cms-data.json')
+  const cacheFile = path.resolve('./cms-data.json')
   if (fs.existsSync(cacheFile)) {
-    console.log('Reading from cache...')
+    console.log('Reading from cms-data.json...')
     const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
     return data
   }
-  console.log('Cache not found, fetching from CMS...')
+  console.log('cms-data.json not found, fetching from CMS...')
   return null
 }
 
@@ -77,8 +77,8 @@ async function main() {
     dataByLocale = {}
     for (const locale of locales) {
       const [pagesData, postsData] = await Promise.all([
-        fetchJSON(`/api/pages?limit=100&depth=2&locale=${locale}`),
-        fetchJSON(`/api/posts?limit=100&depth=2&locale=${locale}`),
+        fetchJSON(`/api/pages?limit=100&depth=1&locale=${locale}`),
+        fetchJSON(`/api/posts?limit=100&depth=1&locale=${locale}`),
       ])
       const pages = (pagesData.docs || [])
         .filter((p: any) => !EXCLUDED_SLUGS.includes(p.slug))

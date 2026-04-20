@@ -43,13 +43,13 @@ async function throttledFetch(url, init) {
 
 function getCachedData() {
   try {
-    const cacheFile = path.resolve('./.cache/cms-data.json')
+    const cacheFile = path.resolve('./cms-data.json')
     if (fs.existsSync(cacheFile)) {
       const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
       return data
     }
   } catch (err) {
-    console.error('Error reading cache:', err)
+    console.error('Error reading cms-data.json:', err)
   }
   return null
 }

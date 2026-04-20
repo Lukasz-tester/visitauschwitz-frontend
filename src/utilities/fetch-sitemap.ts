@@ -20,13 +20,13 @@ interface Doc {
 }
 
 async function getCachedData() {
-  const cacheFile = path.resolve('./.cache/cms-data.json')
+  const cacheFile = path.resolve('./cms-data.json')
   if (fs.existsSync(cacheFile)) {
-    console.log('Reading from cache...')
+    console.log('Reading from cms-data.json...')
     const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
     return data
   }
-  console.log('Cache not found, fetching from CMS...')
+  console.log('cms-data.json not found, fetching from CMS...')
   return null
 }
 

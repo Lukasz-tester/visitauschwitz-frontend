@@ -16,12 +16,7 @@ Description: All transport options to the Auschwitz Memorial: trains, buses, dri
 
 - The Auschwitz-Birkenau Memorial is located in Oświęcim and can be reached from many Polish cities by bus, train, car, or private transfer.
 - How to Get from Auschwitz I to Birkenau?
-- Free Shuttle Bus Auschwitz ↔ Birkenau The 8-minute ride departs every 12 minutes. Check timetables at bus stops.
-- Private Transfer to Auschwitz: What Options Are Available?
-- Driving to Auschwitz: Best Routes, Parking & Tips Click the map icon on the right and select “Parking lots” in the upper right corner to see the nearest parking options.
-- Parking Lots near Birkenau
-- Kraków to Auschwitz Bus: Schedule, Prices & Stops
-- Can You Get to Auschwitz by Train from Krakow?
+- Driving to Auschwitz: Parking & Tips Click the map icon on the right and select “Parking lots” in the upper right corner to see the nearest parking options. Best routes from Kraków are here .
 - Which Airports Are Closest to Auschwitz?
 
 ## Auschwitz Tour: What to Pack & Know Before Visiting (EN)
@@ -181,7 +176,7 @@ Description: Plan your Auschwitz visit: book free official tickets, choose the r
 
 ### Sections
 
-- A visit to Auschwitz-Birkenau requires booking a personalized entry pass online, as well as careful logistical and emotional preparation.
+- A visit to Auschwitz-Birkenau requires booking your entry ticket online in advance, along with careful logistical and emotional preparation.
 - Auschwitz-Birkenau Then vs Now – What Has Changed?
 - 6 Essential Things to Know Before Visiting Auschwitz
 
@@ -193,17 +188,15 @@ Description: Entry guidelines: opening times, security checks, reception desk an
 ### Sections
 
 - The Auschwitz-Birkenau Memorial comprises two sites 3.5 km apart—Auschwitz I and Auschwitz II-Birkenau—linked by a free shuttle bus.
-- What to Expect at the Auschwitz Visitor Center? I took this photo at the entrance to Auschwitz. It's the first thing you'll see when you arrive.
 - How to Enter Auschwitz Memorial Site?
 - What to See Near Auschwitz-Birkenau Memorial in One Day? Stay longer to discover the area or relax in nature.
-- 5 Important Memorial Sites Near Auschwitz Worth Visiting
 - Is Oświęcim Town Worth Visiting After Auschwitz?
 - Castle Museum
 - Town Hall Museum
 - International Youth Meeting Centre
 - Nature Near Auschwitz Memorial
 
-## Free Auschwitz Checklist to Prepare for Your Visit in 2026 (EN)
+## Free Auschwitz Checklist to Prepare Before You Visit (EN)
 
 URL: https://www.visitauschwitz.info/en/newsletter
 Description: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
@@ -284,7 +277,7 @@ A: To visit Auschwitz on your own, you must reserve an individual entry pass onl
 A: For directions check the Arrival page and once there you follow these steps: You can enter 30 minutes early ( skipping the long line ) Present your ID and scan the entry pass Walk through security gates (metal detection) Scan your ticket again to go downstairs Get outside of the tunnel and to Auschwitz I exhibition (allow 2 hours) Exit and go to Auschwitz II-Birkenau, 3 km away Show your pass and go inside Visit Auschwitz II-Birkenau (allow 1 hour)
 
 **Q: How to Visit Auschwitz on Your Own?**
-A: Outdoors, use our map to find your location. Indoors, follow a guidebook and move in the same direction as the guided groups. Auschwitz self-guided tour tips: Be sure to review the preparation guide. Without a historical background, the place may not give you much, so consider a guided tour first.
+A: Outdoors, use our map to find your location. Indoors, follow a guidebook and move in the same direction as the guided groups. Without a historical background, the place may not give you much, so consider a guided tour first.
 
 **Q: How to Book a Guided Tour for Individual Visitors?**
 A: Go to visit.auschwitz.org and choose these options: Visit for individuals -> select a date -> select language -> select the visiting hour -> add to basket In March 2026, on-site ticket sales were stopped.
@@ -293,7 +286,7 @@ A: Go to visit.auschwitz.org and choose these options: Visit for individuals -> 
 A: Guided tours for individual visitors are available in English, French, German, Italian, Polish, Russian, and Spanish. There is no audioguide system at Auschwitz Museum, but you will use a headset to hear your guide clearly during the tour.
 
 **Q: What Are the Ticket Prices for Joining an Auschwitz Guided Tour?**
-A: 150 PLN (140* PLN) 3.5-h regular tour (for groups over 6 people a private tour is cheaper: 7*150>970) 190 PLN (170* PLN) 6-h study tour 60 PLN 2.5-h online tour *The discount is available to students under 26, people over 75 or with a disability card. In Polish the sightseeing is 10-20 PLN cheaper apart from the online tours. Open the detailed price list pdf file valid from 01.02.2026
+A: 150 PLN (140* PLN) 3.5-h regular tour (for groups over 6 people it is cheaper to hire a guide : 7*150>970) 190 PLN (170* PLN) 6-h study tour 60 PLN 2.5-h online tour *The discount is available to students under 26, people over 75 or with a disability card. In Polish the sightseeing is 10-20 PLN cheaper apart from the online tours. Open the detailed price list pdf file valid from 01.02.2026
 
 **Q: When to Arrive and What to Do on the Day of Your Visit?**
 A: Get there at least half an hour before your tour.
@@ -435,29 +428,24 @@ URL: https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip
 Description: Plan your Auschwitz day trip from Krakow step by step. Bus, train, car options, booking tips, timeline, costs — by a licensed Auschwitz guide since 2006.
 Published: 2026-03-25
 
-## Dojazd do Auschwitz: pociąg, autobus i parking (PL)
+## Dojazd do Auschwitz: bus, pociąg, parking i wskazówki (PL)
 
 URL: https://www.visitauschwitz.info/pl/arrival
-Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
+Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia i koszty, wskazówki dla kierowców oraz oficjalne parkingi. Wszystko w jednym miejscu.
 
 ### Sections
 
-- Muzeum Auschwitz-Birkenau znajduje się w Oświęcimiu, ok. 70 km na zachód od Krakowa. Najpopularniejsze opcje to autobus bezpośredni i pociąg — oba jadą ok. godziny.
+- Miejsce Pamięci Auschwitz-Birkenau znajduje się w Oświęcimiu i można dojechać z wielu polskich miast autobusem, pociągiem, samochodem lub transferem prywatnym.
 - Jak dostać się z Auschwitz I do Birkenau?
-- Bezpłatny autobus wahadłowy Auschwitz ↔ Birkenau Przejazd trwa 8 minut i odjeżdża co 12 minut. Rozkłady jazdy znajdziesz na przystankach.
-- Transfer do Auschwitz
-- Dojazd do Auschwitz samochodem: trasy i parkingi Kliknij ikonę mapy po prawej stronie i wybierz „Parkingi” w prawym górnym rogu, aby zobaczyć najbliższe miejsca postojowe.
-- Parkingi w pobliżu Birkenau
-- Kraków – Auschwitz autobusem: rozkład i ceny
-- Czy można dojechać do Auschwitz pociągiem?
-- Które lotnisko jest najbliżej Auschwitz?
+- Dojazd do Auschwitz: parkingi i wskazówki Kliknij ikonę mapy po prawej, wybierz „Parkingi” w prawym górnym rogu, aby zobaczyć najbliższe miejsca. Najlepsze trasy z Krakowa znajdziesz tutaj .
+- Które lotniska są najbliżej Auschwitz?
 
-## Auschwitz — co zabrać i wiedzieć przed wizytą (PL)
+## Auschwitz: co przygotować i wiedzieć przed wizytą (PL)
 
 URL: https://www.visitauschwitz.info/pl/checklist
-Description: Kompleksowa lista przed wizytą w Auschwitz-Birkenau: rezerwacja, transport z Krakowa, czego nie zabrać, zasady i najważniejsze praktyczne wskazówki.
+Description: Checklist do pełnego przygotowania wizyty w Auschwitz-Birkenau: rezerwacja, dojazd z Krakowa, co zabrać, zasady i ważne wskazówki dla zwiedzających.
 
-## FAQ Auschwitz: rezerwacje, zwiedzanie i transport (PL)
+## Auschwitz FAQ: rezerwacje, zwiedzanie i transport (PL)
 
 URL: https://www.visitauschwitz.info/pl/faq
 Description: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania, zasadach wstępu i godzinach otwarcia Auschwitz — od licencjonowanego przewodnika od 2006 roku.
@@ -609,7 +597,7 @@ Description: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bi
 
 ### Sections
 
-- Wizyta w Auschwitz-Birkenau wymaga rezerwacji spersonalizowanej karty wstępu przez Internet, a także starannego przygotowania logistycznego i emocjonalnego.
+- Zwiedzanie Auschwitz-Birkenau wymaga wcześniejszej rezerwacji biletu online oraz odpowiedniego przygotowania logistycznego i emocjonalnego.
 - Auschwitz-Birkenau dawniej i dziś – co się zmieniło?
 - 6 najważniejszych rzeczy, które warto wiedzieć przed wizytą w Auschwitz
 
@@ -621,7 +609,6 @@ Description: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole 
 ### Sections
 
 - Muzeum Auschwitz-Birkenau składa się z dwóch terenów oddalonych o ok. 3,5 km – Auschwitz I i Auschwitz II-Birkenau – połączonych darmowym autobusem wahadłowym.
-- Czego się spodziewać w Centrum Obsługi Odwiedzających? To zdjęcie zrobiłem przy wejściu do Auschwitz. Dokładnie to zobaczysz po przyjeździe. Otwórz mapę Auschwitz przyciskiem w prawym dolnym rogu.
 - Jak wejść na teren Miejsca Pamięci Auschwitz?
 - Co warto zobaczyć w okolicy Miejsca Pamięci Auschwitz-Birkenau w ciągu jednego dnia? Zostań dłużej, by odkryć okolicę lub odpocząć na łonie natury.
 - Czy warto odwiedzić miasto Oświęcim po zwiedzeniu Auschwitz?
@@ -630,10 +617,10 @@ Description: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole 
 - Międzynarodowy Dom Spotkań Młodzieży
 - Przyroda i szlaki spacerowe w pobliżu Miejsca Pamięci
 
-## Free Auschwitz Checklist to Prepare for Your Visit in 2026 (PL)
+## Bezpłatny poradnik co zrobić przed wizytą w Auschwitz (PL)
 
 URL: https://www.visitauschwitz.info/pl/newsletter
-Description: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
+Description: Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewodnika po Auschwitz. Praktyczne wskazówki dotyczące biletów, transportu, czasu i przebiegu wizyty.
 
 ## Auschwitz: co musisz wiedzieć przed wizytą w Muzeum (PL)
 
@@ -711,7 +698,7 @@ A: Aby zwiedzić Auschwitz indywidualnie, musisz zarezerwować bilet przez inter
 A: Po przyjeździe (sprawdź stronę Dojazd ) postępuj według poniższych kroków: Możesz wejść 30 minut wcześniej ( omijając długą kolejkę ) Pokaż dokument tożsamości i zeskanuj bilet Przejdź przez bramki bezpieczeństwa (wykrywacz metalu) Zeskanuj ponownie bilet, aby zejść na dół Wyjdź z tunelu i kieruj się do wystawy Auschwitz I (zarezerwuj 2 godziny) Wyjdź i dostań się do Auschwitz II-Birkenau, w odległości 3 km Zwiedzaj Auschwitz II-Birkenau (zarezerwuj godzinę)
 
 **Q: Jak samodzielnie zwiedzić Auschwitz?**
-A: Na zewnątrz korzystaj z mapy aby się zlokalizować, a w pomieszczeniach korzystaj z papierowego przewodnika (szczegóły poniżej) i idź w tym samym kierunku co grupy, aby nie utrudniać innym przechodzenia przez drzwi. Przeczytaj też te informacje, aby dobrze się dobrze przygotować. Bez tła historycznego pobyt w Muzeum może niewiele Ci dać, dlatego rozważ najpierw wycieczkę z licencjonowanym przewodnikiem.
+A: Na zewnątrz korzystaj z mapy aby się zlokalizować, a w pomieszczeniach korzystaj z papierowego przewodnika (szczegóły poniżej) i idź w tym samym kierunku co grupy, aby nie utrudniać innym przechodzenia przez drzwi. Bez tła historycznego pobyt w Muzeum może niewiele Ci dać, dlatego rozważ najpierw wycieczkę z licencjonowanym przewodnikiem.
 
 **Q: Jak zarezerwować zwiedzanie indywidualne z przewodnikiem?**
 A: Przejdź na visit.auschwitz.org i wybierz następujące opcje: Zwiedzanie indywidualne -> wybierz datę -> wybierz język -> wybierz godzinę zwiedzania -> dodaj do koszyka W marcu 2026 sprzedaż biletów na miejscu została wstrzymana.
@@ -720,7 +707,7 @@ A: Przejdź na visit.auschwitz.org i wybierz następujące opcje: Zwiedzanie ind
 A: Zwiedzanie z przewodnikiem dla osób indywidualnych odbywa się po angielsku, francusku, niemiecku, włosku, polsku, rosyjsku i hiszpańsku. W Muzeum Auschwitz nie ma audioprzewodnika. Zestawu słuchawkowego , używa się aby podczas zwiedzania słyszeć przewodnika z odległości, a więc nie da się zmienić języka.
 
 **Q: Ile kosztuje łączone zwiedzanie Auschwitz z przewodnikiem?**
-A: 150 zł (140* zł) 3,5-godz. zwiedzanie ogólne (dla grup powyżej 6 osób taniej wychodzi zwiedzanie grupowe: 7*150>970) 190 zł (170* zł) 6-godz. zwiedzanie studyjne 60 zł 2,5-godz. zwiedzanie online *Zniżka przysługuje studentom do 26. roku życia, osobom powyżej 75 roku życia oraz z orzeczeniem o niepełnosprawności. W języku polskim zwiedzanie jest o 10-20 zł tańsze (nie dotyczy wycieczek online). Otwórz oficjalny dokument pdf ze szczegółowym cennikiem obowiązującym od 2.01.2026 r.
+A: 150 zł (140* zł) 3,5-godz. zwiedzanie ogólne (dla grup powyżej 6 osób taniej wychodzi wynajęcie przewodnika : 7*150>970) 190 zł (170* zł) 6-godz. zwiedzanie studyjne 60 zł 2,5-godz. zwiedzanie online *Zniżka przysługuje studentom do 26. roku życia, osobom powyżej 75 roku życia oraz z orzeczeniem o niepełnosprawności. W języku polskim zwiedzanie jest o 10-20 zł tańsze (nie dotyczy wycieczek online). Otwórz oficjalny dokument pdf ze szczegółowym cennikiem obowiązującym od 2.01.2026 r.
 
 **Q: Co mam zrobić i o czym pamiętać w dniu wizyty?**
 A: Bądź minimum 30 minut przed rozpoczęciem zwiedzania.

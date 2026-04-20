@@ -45,13 +45,13 @@ async function throttledFetch(url: string, init?: RequestInit): Promise<Response
 
 function getCachedData() {
   try {
-    const cacheFile = path.resolve('./.cache/cms-data.json')
+    const cacheFile = path.resolve('./cms-data.json')
     if (fs.existsSync(cacheFile)) {
       const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
       return data
     }
   } catch (err) {
-    console.error('Error reading cache:', err)
+    console.error('Error reading cms-data.json:', err)
   }
   return null
 }
@@ -83,9 +83,28 @@ export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null>
   const collectionMatch = path.match(/\/api\/(pages|posts)\?/)
   if (collectionMatch && cachedData) {
     const collection = collectionMatch[1]
-    // Combine all locales for collection queries
-    const allDocs = Object.values(cachedData).flatMap((d: any) => d[collection] || [])
-    const result = { docs: allDocs }
+    // Extract locale from query string
+    const localeMatch = path.match(/locale=(\w+)/)
+    const locale = localeMatch ? localeMatch[1] : null
+    // Extract limit from query string
+    const limitMatch = path.match(/limit=(\d+)/)
+    const limit = limitMatch ? parseInt(limitMatch[1], 10) : null
+
+    let docs: any[] = []
+
+    if (locale && cachedData[locale]) {
+      docs = cachedData[locale][collection] || []
+    } else {
+      // Fallback: combine all locales if no locale specified
+      docs = Object.values(cachedData).flatMap((d: any) => d[collection] || [])
+    }
+
+    // Apply limit if specified
+    if (limit && limit > 0) {
+      docs = docs.slice(0, limit)
+    }
+
+    const result = { docs }
     stripUsedIn(result)
     return result as T
   }

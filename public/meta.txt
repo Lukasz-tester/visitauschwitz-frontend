@@ -21,7 +21,7 @@ T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
 D: Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
 
 Path: /newsletter
-T: Free Auschwitz Checklist to Prepare for Your Visit in 2026 | 2026
+T: Free Auschwitz Checklist to Prepare Before You Visit | 2026
 D: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 
 Path: /supplement
@@ -43,15 +43,15 @@ T: Zwiedzanie Auschwitz: bilety, dojazd i porady | 2026
 D: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 
 Path: /arrival
-T: Dojazd do Auschwitz: pociąg, autobus i parking | 2026
-D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia, wskazówki dla kierowców oraz oficjalne parkingi. Wszystkie opcje transportu w jednym miejscu.
+T: Dojazd do Auschwitz: bus, pociąg, parking i wskazówki | 2026
+D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia i koszty, wskazówki dla kierowców oraz oficjalne parkingi. Wszystko w jednym miejscu.
 
 Path: /checklist
-T: Auschwitz — co zabrać i wiedzieć przed wizytą | 2026
-D: Kompleksowa lista przed wizytą w Auschwitz-Birkenau: rezerwacja, transport z Krakowa, czego nie zabrać, zasady i najważniejsze praktyczne wskazówki.
+T: Auschwitz: co przygotować i wiedzieć przed wizytą | 2026
+D: Checklist do pełnego przygotowania wizyty w Auschwitz-Birkenau: rezerwacja, dojazd z Krakowa, co zabrać, zasady i ważne wskazówki dla zwiedzających.
 
 Path: /faq
-T: FAQ Auschwitz: rezerwacje, zwiedzanie i transport | 2026
+T: Auschwitz FAQ: rezerwacje, zwiedzanie i transport | 2026
 D: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania, zasadach wstępu i godzinach otwarcia Auschwitz — od licencjonowanego przewodnika od 2006 roku.
 
 Path: /museum
@@ -59,8 +59,8 @@ T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
 D: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
 
 Path: /newsletter
-T: Free Auschwitz Checklist to Prepare for Your Visit in 2026 | 2026
-D: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
+T: Bezpłatny poradnik co zrobić przed wizytą w Auschwitz | 2026
+D: Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewodnika po Auschwitz. Praktyczne wskazówki dotyczące biletów, transportu, czasu i przebiegu wizyty.
 
 Path: /supplement
 T: Auschwitz: co musisz wiedzieć przed wizytą w Muzeum | 2026

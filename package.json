@@ -7,8 +7,8 @@
     "generate:sitemap": "tsx src/utilities/fetch-sitemap.ts",
     "generate:llms": "tsx src/utilities/generate-llms-txt.ts",
     "generate:meta": "tsx src/utilities/generate-meta-txt.ts",
-    "fetch-cms-data": "tsx src/utilities/fetch-cms-data.ts",
-    "build": "pnpm run fetch-cms-data && pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
+    "update-cms-data": "tsx src/utilities/update-cms-data.ts",
+    "build": "pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",
@@ -57,7 +57,8 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.21.0",
-    "typescript": "5.7.2"
+    "typescript": "5.7.2",
+    "wrangler": "^4.84.0"
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0"
