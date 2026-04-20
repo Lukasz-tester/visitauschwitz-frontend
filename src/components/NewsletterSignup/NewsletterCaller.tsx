@@ -42,7 +42,7 @@ export function NewsletterCaller() {
         {isOpen ? (
           <X strokeWidth={1} size={28} />
         ) : (
-          <Mail strokeWidth={1.5} size={26} color="#b45309" />
+          <Mail strokeWidth={1.5} size={26} />
         )}
       </button>
 

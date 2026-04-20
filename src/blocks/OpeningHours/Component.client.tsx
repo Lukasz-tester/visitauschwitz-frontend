@@ -32,7 +32,7 @@ export const OpeningHoursBlock: React.FC<
   }
   return (
     <div className="container">
-      <div className="md:px-[17.3%] pt-14 grid xl:grid-cols-2">
+      <div className="md:px-[17.3%] grid xl:grid-cols-2">
         <div className="text-xl rounded border border-slate-500/40 bg-card xl:mr-7">
           <div className="justify-items-end">
             <Select onValueChange={onMonthChange} value={value}>

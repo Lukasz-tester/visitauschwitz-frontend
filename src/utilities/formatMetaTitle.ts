@@ -1,6 +1,8 @@
-export const formatMetaTitle = (rawTitle: string | undefined): string => {
+export const formatMetaTitle = (rawTitle: string | undefined, isPost: boolean = false): string => {
   const year = new Date().getFullYear()
-  return rawTitle
-    ? `${rawTitle} | ${year}`
-    : `Auschwitz Visitor Information | ${year}`
+  if (!rawTitle) {
+    return `Auschwitz Visitor Information | ${year}`
+  }
+  // Only append year for pages, not posts
+  return isPost ? rawTitle : `${rawTitle} | ${year}`
 }

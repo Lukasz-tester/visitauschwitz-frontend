@@ -25,7 +25,8 @@ export const generateMeta = async ({
   doc: Page | Post
   locale: string
 }): Promise<Metadata> => {
-  const title = formatMetaTitle(doc?.meta?.title || doc?.title || '')
+  const isPost = !('hero' in doc)
+  const title = formatMetaTitle(doc?.meta?.title || doc?.title || '', isPost)
 
   const safeSlug = getSafeSlug(doc)
   const formatUrl = (lng: string) =>
