@@ -1,6 +1,9 @@
 // Throttled fetch for CMS API to avoid overwhelming the Vercel serverless backend
 // during static generation (which fires many concurrent requests)
 
+import fs from 'fs'
+import path from 'path'
+
 let pending = 0
 const MAX_CONCURRENT = 2
 const queue: (() => void)[] = []
@@ -40,6 +43,19 @@ async function throttledFetch(url: string, init?: RequestInit): Promise<Response
   })
 }
 
+function getCachedData() {
+  try {
+    const cacheFile = path.resolve('./.cache/cms-data.json')
+    if (fs.existsSync(cacheFile)) {
+      const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
+      return data
+    }
+  } catch (err) {
+    console.error('Error reading cache:', err)
+  }
+  return null
+}
+
 export async function cmsFetch(path: string, retries = 3): Promise<Response | null> {
   const url = `${process.env.CMS_PUBLIC_SERVER_URL}${path}`
   for (let i = 0; i < retries; i++) {
@@ -61,6 +77,29 @@ export async function cmsFetch(path: string, retries = 3): Promise<Response | nu
 import { stripUsedIn } from './stripUsedIn'
 
 export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null> {
+  const cachedData = getCachedData()
+
+  // Try to serve from cache for collection queries
+  const collectionMatch = path.match(/\/api\/(pages|posts)\?/)
+  if (collectionMatch && cachedData) {
+    const collection = collectionMatch[1]
+    // Combine all locales for collection queries
+    const allDocs = Object.values(cachedData).flatMap((d: any) => d[collection] || [])
+    const result = { docs: allDocs }
+    stripUsedIn(result)
+    return result as T
+  }
+
+  // Try to serve from cache for globals
+  const globalMatch = path.match(/\/api\/globals\/(\w+)\?locale=(\w+)/)
+  if (globalMatch && cachedData) {
+    const globalSlug = globalMatch[1]
+    const locale = globalMatch[2]
+    if (cachedData[locale]?.globals?.[globalSlug]) {
+      return cachedData[locale].globals[globalSlug] as T
+    }
+  }
+
   const res = await cmsFetch(path)
   if (!res) return null
   try {

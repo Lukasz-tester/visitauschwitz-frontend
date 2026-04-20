@@ -15,6 +15,17 @@ async function fetchJSON(endpoint: string) {
   return res.json()
 }
 
+async function getCachedData() {
+  const cacheFile = path.resolve('./.cache/cms-data.json')
+  if (fs.existsSync(cacheFile)) {
+    console.log('Reading from cache...')
+    const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
+    return data
+  }
+  console.log('Cache not found, fetching from CMS...')
+  return null
+}
+
 function extractText(richText: any, maxLength = 600): string {
   if (!richText?.root?.children) return ''
   const traverse = (nodes: any[]) =>
@@ -55,22 +66,28 @@ function pageUrl(locale: string, slug: string) {
 }
 
 async function main() {
-  console.log('Generating llms.txt from CMS at:', CMS_URL)
+  console.log('Generating llms.txt...')
 
-  // Fetch pages and posts for all locales
-  const dataByLocale: Record<string, { pages: any[]; posts: any[] }> = {}
-  for (const locale of locales) {
-    const [pagesData, postsData] = await Promise.all([
-      fetchJSON(`/api/pages?limit=100&depth=1&locale=${locale}`),
-      fetchJSON(`/api/posts?limit=100&depth=1&locale=${locale}`),
-    ])
-    const pages = (pagesData.docs || [])
-      .filter((p: any) => !EXCLUDED_SLUGS.includes(p.slug))
-      .sort((a: any, b: any) => (a.slug || '').localeCompare(b.slug || ''))
-    const posts = (postsData.docs || []).sort((a: any, b: any) =>
-      (a.slug || '').localeCompare(b.slug || ''),
-    )
-    dataByLocale[locale] = { pages, posts }
+  // Try to use cached data first
+  let dataByLocale = await getCachedData()
+
+  // If no cache, fetch from CMS
+  if (!dataByLocale) {
+    console.log('Fetching from CMS at:', CMS_URL)
+    dataByLocale = {}
+    for (const locale of locales) {
+      const [pagesData, postsData] = await Promise.all([
+        fetchJSON(`/api/pages?limit=100&depth=2&locale=${locale}`),
+        fetchJSON(`/api/posts?limit=100&depth=2&locale=${locale}`),
+      ])
+      const pages = (pagesData.docs || [])
+        .filter((p: any) => !EXCLUDED_SLUGS.includes(p.slug))
+        .sort((a: any, b: any) => (a.slug || '').localeCompare(b.slug || ''))
+      const posts = (postsData.docs || []).sort((a: any, b: any) =>
+        (a.slug || '').localeCompare(b.slug || ''),
+      )
+      dataByLocale[locale] = { pages, posts }
+    }
   }
 
   // --- llms.txt (concise) ---
@@ -121,6 +138,7 @@ async function main() {
   lines.push('- The memorial consists of two sites: Auschwitz I (Main Camp) and Auschwitz II-Birkenau')
   lines.push('- UNESCO World Heritage Site since 1979')
   lines.push('')
+
   lines.push(`## Detailed version`)
   lines.push('')
   lines.push(`For more detail see [llms-full.txt](${SITE_URL}/llms-full.txt)`)

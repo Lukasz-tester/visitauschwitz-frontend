@@ -19,6 +19,17 @@ interface Doc {
   updatedAt: string
 }
 
+async function getCachedData() {
+  const cacheFile = path.resolve('./.cache/cms-data.json')
+  if (fs.existsSync(cacheFile)) {
+    console.log('Reading from cache...')
+    const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
+    return data
+  }
+  console.log('Cache not found, fetching from CMS...')
+  return null
+}
+
 function getPriority(slug: string): string {
   if (slug === '') return '1.0'
   if (['tickets', 'arrival', 'museum', 'tour', 'faq'].includes(slug)) return '0.8'
@@ -72,8 +83,28 @@ async function fetchDocs(collection: string): Promise<Doc[]> {
 
 async function main() {
   try {
-    const [pages, posts] = await Promise.all([fetchDocs('pages'), fetchDocs('posts')])
-    console.log(`Found ${pages.length} pages, ${posts.length} posts`)
+    // Try to use cached data first
+    const cachedData = await getCachedData()
+
+    let pages: Doc[], posts: Doc[]
+
+    if (cachedData) {
+      // Extract pages and posts from cache (combine all locales, deduplicate by slug)
+      const allPages = Object.values(cachedData).flatMap((d: any) => d.pages)
+      const allPosts = Object.values(cachedData).flatMap((d: any) => d.posts)
+      // Deduplicate by slug
+      const pageMap = new Map(allPages.map((p: any) => [p.slug, p]))
+      const postMap = new Map(allPosts.map((p: any) => [p.slug, p]))
+      pages = Array.from(pageMap.values())
+      posts = Array.from(postMap.values())
+      console.log(`Found ${pages.length} pages, ${posts.length} posts from cache`)
+    } else {
+      // Fallback to fetching from CMS
+      const [fetchedPages, fetchedPosts] = await Promise.all([fetchDocs('pages'), fetchDocs('posts')])
+      pages = fetchedPages
+      posts = fetchedPosts
+      console.log(`Found ${pages.length} pages, ${posts.length} posts from CMS`)
+    }
 
     const entries: string[] = []
 

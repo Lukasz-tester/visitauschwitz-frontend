@@ -12,6 +12,17 @@ async function fetchJSON(endpoint: string) {
   return res.json()
 }
 
+async function getCachedData() {
+  const cacheFile = path.resolve('./.cache/cms-data.json')
+  if (fs.existsSync(cacheFile)) {
+    console.log('Reading from cache...')
+    const data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
+    return data
+  }
+  console.log('Cache not found, fetching from CMS...')
+  return null
+}
+
 const EXCLUDED_SLUGS = ['contact', 'privacy', 'terms']
 
 function pagePath(slug: string): string {
@@ -20,14 +31,24 @@ function pagePath(slug: string): string {
 }
 
 async function main() {
-  console.log('Generating meta.txt from CMS at:', CMS_URL)
+  console.log('Generating meta.txt...')
+
+  // Try to use cached data first
+  const cachedData = await getCachedData()
 
   const lines: string[] = []
 
   // --- PAGES per locale ---
   for (const locale of locales) {
-    const pagesData = await fetchJSON(`/api/pages?limit=100&depth=0&locale=${locale}`)
-    const pages = (pagesData.docs || []) as any[]
+    let pages: any[]
+    if (cachedData && cachedData[locale]) {
+      pages = cachedData[locale].pages
+      console.log(`  ${locale}: using cached pages`)
+    } else {
+      const pagesData = await fetchJSON(`/api/pages?limit=100&depth=0&locale=${locale}`)
+      pages = (pagesData.docs || []) as any[]
+      console.log(`  ${locale}: fetched from CMS`)
+    }
 
     const entries: { path: string; title: string; description: string }[] = []
 
@@ -58,8 +79,15 @@ async function main() {
   lines.push('')
 
   for (const locale of locales) {
-    const postsData = await fetchJSON(`/api/posts?limit=100&depth=0&locale=${locale}`)
-    const posts = (postsData.docs || []) as any[]
+    let posts: any[]
+    if (cachedData && cachedData[locale]) {
+      posts = cachedData[locale].posts
+      console.log(`  ${locale}: using cached posts`)
+    } else {
+      const postsData = await fetchJSON(`/api/posts?limit=100&depth=0&locale=${locale}`)
+      posts = (postsData.docs || []) as any[]
+      console.log(`  ${locale}: fetched from CMS`)
+    }
 
     if (posts.length === 0) continue
 
