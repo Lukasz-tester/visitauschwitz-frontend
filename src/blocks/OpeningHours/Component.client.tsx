@@ -38,7 +38,7 @@ export const OpeningHoursBlock: React.FC<
             <Select onValueChange={onMonthChange} value={value}>
               <SelectTrigger
                 aria-label="Select month"
-                className="w-auto bg-card-foreground pl-3 pr-1 border-spacing border-slate-500/40 hover:bg-amber-700/80 hover:text-white/90"
+                className="w-auto bg-card-foreground pl-3 pr-1 border-spacing border-slate-500/40 hover:opacity-80"
               >
                 <SelectValue />
               </SelectTrigger>

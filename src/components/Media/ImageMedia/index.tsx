@@ -18,6 +18,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   } = props
 
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isCached, setIsCached] = useState(false)
   const handleLoad = useCallback(() => setIsLoaded(true), [])
 
   let width: number | undefined
@@ -37,13 +38,33 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     src = `${process.env.NEXT_PUBLIC_CF_R2_URL}${webpFilename}`
   }
 
-  // Check if this image has been loaded before using sessionStorage
+  // Check if this image has been loaded before using sessionStorage or browser cache
   useEffect(() => {
     if (src && typeof src === 'string') {
+      // First check sessionStorage
       const hasLoadedBefore = sessionStorage.getItem(`img-loaded-${src}`)
       if (hasLoadedBefore) {
         setIsLoaded(true)
+        return
       }
+
+      // Check if image is in browser cache using Image API
+      const img = new Image()
+      img.src = src
+      
+      const checkCache = () => {
+        if (img.complete) {
+          setIsLoaded(true)
+          setIsCached(true)
+          sessionStorage.setItem(`img-loaded-${src}`, 'true')
+        }
+      }
+      
+      // Check immediately in case it's already loaded
+      checkCache()
+      
+      // Also check on load in case it's loading from cache
+      img.onload = checkCache
     }
   }, [src])
 
@@ -69,7 +90,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     <NextImage
       alt={alt || 'Image'}
       className={cn(
-        'transition-opacity duration-300',
+        isCached ? '' : 'transition-opacity duration-300',
         isLoaded ? 'opacity-100' : 'opacity-0',
         imgClassName,
       )}

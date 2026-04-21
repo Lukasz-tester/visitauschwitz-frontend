@@ -1,6 +1,6 @@
 # TO DO list
 
-## SUPPORT PAGE - Complete Structure & Content Plan
+## SUPPORT PAGE - Refined Version (AI-Optimized)
 
 ### Page Details
 - **URL:** `/en/support` (also create `/en/donate` as redirect for SEO)
@@ -21,101 +21,111 @@
 - **Alt text:** "Łukasz – licensed Auschwitz-Birkenau guide since 2006"
 
 ### Headline (Large, bold)
-> Your Support Keeps This Free Auschwitz Guide Alive for Everyone
+> Help Keep This Independent Auschwitz Guide Free for Everyone
 
-### Subheadline (Personal, from your bio)
-> Hi, I'm Łukasz. For over 20 years I've guided thousands of visitors through Auschwitz-Birkenau – just like my parents taught me. I built this website from scratch (even learning to code after 16-hour days during the pandemic) so anyone planning a visit can get honest, practical, up-to-date information – completely free, no ads, no paywalls. Your donation helps me keep it independent, accurate, and available in more languages.
+### Subheadline (Clean, grounded)
+> I'm Łukasz, a licensed Auschwitz guide since 2006.
+> I created this website to help visitors prepare with clear, practical, and respectful information — based on real experience from guiding thousands of people.
+>
+> It's completely free and independent. Your support helps me keep it that way.
 
 ### CTA Buttons (Two large, side-by-side)
 - **Primary:** "Support the Project" (scrolls to donation section)
 - **Secondary:** "See How You Can Help" (scrolls to impact section)
 
 ### Trust Line Below Buttons
-> 100% of your gift goes directly to the project • Secure & private • Thank-you video from me
+> Voluntary support • No ads • Independent project
 
 ---
 
 ## SECTION 2: MY STORY (Two-column, image left / text right)
 
 ### Section Title
-> From Licensed Guide to Independent Developer – Why I Built This Site
+> A Mission Born on the Ramp, Built in the Code
 
 ### Left Column (Images - Stacked)
-- **Top image:** "Auschwitz-II-Birkenau in 1944, Jews on the platform just before the selection" (from your post)
+- **Top image:** "Auschwitz-II-Birkenau in 1944, Jews on the platform just before the selection"
   - **Alt text:** "Auschwitz-II-Birkenau ramp where Jews were selected, 1944"
-- **Bottom image:** "Visitors in Block 4, Auschwitz I Main Camp" (from your post)
+- **Bottom image:** "Visitors in Block 4, Auschwitz I Main Camp"
   - **Alt text:** "Visitors in Block 4, Main Exhibition"
 
-### Right Column (Text - Adapted from your post)
-> Over the years of guiding visitors through the former German Nazi concentration and extermination camp Auschwitz-Birkenau, I've heard the same questions and seen the same challenges come up time and again. That's why I decided to create this website – simple, yet helpful. It's designed to provide clear answers and practical advice, so that anyone planning a visit to Auschwitz can be better prepared.
+### Right Column (Text - Refined)
+> For 20 years, I stood at the gates of Birkenau helping people understand the unthinkable. But I realized the journey starts long before you arrive in Poland — it starts with a Google search.
 >
-> In 2017 I received permission from the Auschwitz-Birkenau Press Office to create an independent website about Auschwitz Museum. I wanted visitors to have easy access to reliable information. At the start, I only knew the basics – I could publish posts on WordPress.
+> Over the years of guiding visitors, I kept hearing the same questions — about tickets, preparation, and what to expect. Many people arrive without enough preparation — not only logistically, but also emotionally.
 >
-> During the COVID-19 pandemic, I started working as a software tester, so I could only work on the website in the evenings. Some days, I worked 16–17 hours in total – and kept that routine for several years. In 2024, the system I had been using stopped working – and I had to start from scratch. It became an opportunity to build something more independent, faster, and better suited to the needs of visitors.
+> I created this website to change that. It started as a simple idea: to provide clear, practical guidance that helps people approach this place with understanding and respect.
 >
-> Today the site runs as a static site on Cloudflare Pages and already helps tens of thousands of visitors prepare respectfully and safely. But there's still so much more I want to do: more languages, interactive maps, updated 2026 ticket rules, and scam protection.
+> When my website failed in 2024, I didn't just hire a firm; I learned to code. Between guiding tours and working as a tester, I spent 16-hour days rebuilding this from scratch. Why? Because the history of this place is too important to be buried under ads, tech bugs, or ticket scams.
+>
+> Over time, I developed the site independently — often in the evenings after work — gradually turning it into a reliable resource used by visitors from around the world.
 
-### Quote Block (Overlay or separate)
-> "Łukasz's extensive knowledge and ability to set the tone of reverence allowed us to internalize the gravity of the experience."
-> — Jeff J., Chicago, USA
+### Optional Link
+> [Read the full story of how I learned to code to build this]
+
+### Quote Block
+> "Łukasz's ability to set the tone of reverence allowed us to truly understand the experience."
+> — Jeff J., USA
 
 ---
 
 ## SECTION 3: IMPACT SECTION (Full-width, light background)
 
 ### Section Title
-> What Your Support Makes Possible in 2026 and Beyond
+> What Your Support Makes Possible
 
-### Three-Column Cards with Icons
-**Card 1: Content & Updates (40%)**
-- New 2026 ticket changes
-- Scam alerts
-- Emotional preparation guides
-- Expanded "Then vs Now" comparisons
+### Three-Column Cards (No percentages)
 
-**Card 2: Technical Independence (35%)**
-- Hosting costs
-- Faster loading
-- Bot protection
-- Multilingual support (ready for Dutch, German, Italian, French, Russian, Spanish, Ukrainian)
+**Keeping Information Accurate**
+- Updating rules and ticket changes
+- Adding new guides and practical tips
+- Helping visitors avoid scams
 
-**Card 3: My Time & Research (25%)**
-- Occasional guiding
-- Full-time maintenance
-- Keeping information accurate
-- Responding to visitor questions
+**Maintaining the Website**
+- Hosting and performance
+- Protection against bots
+- Keeping the site fast and accessible
 
-### Progress Bar (Optional but powerful)
-> "2026 Sustainability Goal: $12,000 – $X raised so far" (update manually or via simple JS)
+**Time and Ongoing Work**
+- Research and updates
+- Answering visitor questions
+- Developing new features and content
+
+### Note Below Cards
+> This project is maintained independently and supported by visitors.
 
 ---
 
 ## SECTION 4: TESTIMONIALS SECTION (Carousel or grid)
 
 ### Section Title
-> Real Voices from Visitors I've Guided and Helped
+> Real Voices from Visitors I've Guided
 
-### Testimonial Card 1
+### Testimonial Card 1 (Featured - Longer)
 > "This note is to express deepest appreciation and respect to the Auschwitz-Birkenau State Museum and the Tour Guide Łukasz. His extensive knowledge and ability to set the correct tone of reverence and self-reflection allowed each of us to internalize the gravity of the experience. Remarkably, Łukasz at the same time provided a sense of optimism, hopefulness, and goodness of spirit that could overcome, outlast, and defeat even the darkest opposition."
 >
 > — Jeff J., Chicago, Illinois, USA
 
-### Testimonial Card 2
-> "With my wife, I visited Auschwitz-Birkenau in June. We were very lucky to have Lukasz as our guide. That day was unforgettable in many ways. Lukasz challenged our thinking. Everybody respected Lukasz's guiding very high. The sad place and the tour with Lukasz left a strong mark in our minds."
->
-> — Couple, June 2025 visit
+### Testimonial Card 2 (Short)
+> "Unforgettable. Thought-provoking. Deeply respectful."
+
+### Testimonial Card 3 (Short)
+> "With my wife, I visited Auschwitz-Birkenau in June. Lukasz challenged our thinking. Everybody respected Lukasz's guiding very high. The sad place and the tour with Lukasz left a strong mark in our minds."
 
 ### CTA at Bottom
 > Have you visited using this guide? Share your story → [Contact form link]
 
 ---
 
-## SECTION 5: DONATION OPTIONS (The heart - clear grid)
+## SECTION 5: DONATION OPTIONS (Clear grid)
 
 ### Section Title
-> How You Can Help – Choose What Feels Right for You
+> How You Can Help
 
-### Subsection A: One-Time Gift (Most Popular)
+### Note Above Buttons
+> Choose the simplest option for you — all forms of support are equally appreciated.
+
+### One-Time Gift (Grid layout)
 
 #### Option 1: Credit Card / Apple Pay / Google Pay (Stripe)
 - **Button text:** "Donate with Card – Starts at €5"
@@ -127,12 +137,7 @@
 - **Description:** Essential for US/UK visitors
 - **Platform:** PayPal.Me or direct button
 
-#### Option 3: Zrzutka.pl (0% fees - Best for Poland & EU)
-- **Button text:** "Support on Zrzutka.pl"
-- **Description:** 100% goes to the project
-- **Platform:** Link to permanent campaign titled "Support VisitAuschwitz.info – Free Guides for 2026"
-
-#### Option 4: Direct Bank Transfer (Poland)
+#### Option 3: Direct Bank Transfer (EU/Poland)
 - **Button text:** "Copy IBAN"
 - **Description:** Fully legal for individuals
 - **Fields to display:**
@@ -140,50 +145,44 @@
   - **Recipient:** Łukasz [Last Name]
   - **Title of Transfer:** Support VisitAuschwitz Project 2026
   - **Note:** (Voluntary support / darowizna)
+- **Polish legal text:** "Zgodnie z polskim prawem, wpłaty te są darowiznami na wsparcie niezależnego projektu edukacyjnego visitauschwitz.info. Środki przeznaczane są wyłącznie na utrzymanie infrastruktury technicznej oraz rozwój treści merytorycznych."
 
-### Subsection B: Monthly Support (Builds loyal community)
-- **Patronite.pl** (Recommended #1 for Poland – zero hassle, very popular)
-  - Link to your Patronite page
-  - Perks listed below
-- Alternative: Patreon or Ko-fi/BuyMeACoffee for global audience
+#### Option 4: Zrzutka.pl (0% fees - Best for Poland & EU)
+- **Button text:** "Support on Zrzutka.pl"
+- **Description:** 100% goes to the project
+- **Platform:** Link to permanent campaign titled "Support VisitAuschwitz.info – Free Guides for 2026"
 
 ---
 
-## SECTION 6: MONTHLY SUPPORTER PERKS (Tier cards)
+## SECTION 6: ONGOING SUPPORT (Optional, toned down)
 
 ### Section Title
-> Join the Supporters Club – Monthly Gifts Get Extra Thanks
+> Ongoing Support (Optional)
 
-### Tier 1: Supporter – €5/month
-- Early access to new guides
-- Name on annual "Thank You" wall
-- Monthly project updates
+### Text
+> If you prefer, you can support the project regularly. This helps maintain and improve the website over time.
 
-### Tier 2: Guide Friend – €12/month
-- All Tier 1 benefits
-- Private Q&A with me
-- Exclusive map previews
-- Behind-the-scenes updates
+### Platform
+- **Patronite.pl** (Polish platform for recurring supporters)
+  - Link to your Patronite page
 
-### Tier 3: Legacy Guardian – €25/month
-- All Tier 2 benefits
-- Personal video thank-you
-- Invite to future book launch
-- Name in permanent supporters section
+### Perks (Minimal)
+- Updates on project progress
+- Occasional insights
 
 ---
 
-## SECTION 7: SUGGESTED AMOUNTS (Boosts conversions)
+## SECTION 7: SUGGESTED AMOUNTS (Emotional branding)
 
 ### Section Title
 > Suggested Support
 
 ### Selectable Cards
-- **€5** – "Thank you for supporting the project"
-- **€15** – "Helps maintain and update key guides"
-- **€30** – "Supports development and improvements"
-- **€50+** – "Helps expand the project to new languages"
-- **Custom amount** – "Every bit helps"
+- **€5 (Friend)** — "Thank you for the coffee that fuels my late-night coding"
+- **€15 (Educator)** — "Helps maintain and update guides"
+- **€30 (Supporter)** — "Supports development and improvements"
+- **€50+ (Guardian)** — "Helps expand the project to more languages"
+- **Custom amount** — "Every bit helps"
 
 ---
 
@@ -193,12 +192,9 @@
 > Transparency & Independence
 
 ### Text
-> This is an independent project and is not affiliated with the Auschwitz-Birkenau State Museum. All support is voluntary and helps maintain and develop this website. The goal is to keep access to reliable information free for everyone.
+> This is an independent project and is not affiliated with the Auschwitz-Birkenau State Museum.
 >
-> I promise full transparency. Funds are used only for the website, new content, and my time maintaining it. No middlemen, no fancy overhead.
-
-### Optional
-- Simple pie chart image showing fund allocation (40% content, 35% technical, 25% time)
+> All support is voluntary and helps maintain and develop this website. The goal is to keep reliable information freely accessible.
 
 ---
 
@@ -219,10 +215,13 @@
 
 ---
 
-## SECTION 10: FINAL CTA (Emotional close)
+## SECTION 10: FINAL CTA (Quiet, not dramatic)
 
 ### Text
-> Visiting Auschwitz is a profound and often difficult experience. Preparing properly matters. If this website has helped you in that process, you can support its continued development.
+> Visiting Auschwitz is a profound experience.
+> Preparing properly matters.
+>
+> If this website has helped you, you can support its continued development.
 
 ### Button
 > Support This Project
@@ -232,7 +231,7 @@
 ## SECTION 11: FOOTER (Same as site + extra)
 
 ### Newsletter Signup
-> Get the free 2026 Auschwitz Checklist + occasional respectful donation updates
+> Get the free 2026 Auschwitz Checklist + occasional respectful updates
 
 ### Social Links
 - Facebook group (emphasize): "Auschwitz Visit Advice"
@@ -258,6 +257,7 @@
 - Gamify donations
 - Use urgency tactics ("limited time" etc.)
 - Use emotional manipulation
+- Use "campaign-like" language
 
 ### Micro-copy to use
 - "support" (not "donate")
@@ -267,13 +267,36 @@
 
 ---
 
-## PRIVACY POLICY UPDATE (Do this first)
+## KEY IMPROVEMENTS FROM AI FEEDBACK
+
+**Tone shifts:**
+- Removed "keeps alive" (awkward with Auschwitz context)
+- Removed "Thank-you video" (transactional)
+- Reduced technical details (WordPress, Cloudflare)
+- Removed percentages (feels artificial/startup-like)
+- Removed $12,000 goal (creates pressure)
+
+**Structural changes:**
+- Shortened testimonials (1 long + 2 short)
+- Improved donation option order (Card → PayPal → Bank → Zrzutka)
+- Toned down monthly support (removed "Club", "Legacy Guardian")
+- Simplified transparency statement
+- Added Polish legal text for bank transfers
+
+**Emotional branding:**
+- Tier names: Friend, Educator, Guardian
+- Positioned as "Guardian" against commercial interests
+- Focus on outcomes not costs
+
+---
+
+## PRIVACY POLICY UPDATE
 
 ### Add to Privacy Policy
-> We may occasionally inform subscribers about opportunities to support the development of this project. You can opt-out of these specific communications at any time.
+> We may occasionally inform subscribers about ways to support this project. You can unsubscribe at any time.
 
-### Send notification to existing subscribers
-> "We updated our privacy policy to include optional donation updates – you can unsubscribe anytime."
+### Send notification to existing subscribers (Soft opt-in)
+> "I've added a new way to support this free mission. If you'd like to hear about how we're growing (and how you can help), keep reading. If not, you'll still get your free prep-guides as always."
 
 ---
 

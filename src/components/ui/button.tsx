@@ -18,11 +18,16 @@ const buttonVariants = cva(
       },
       variant: {
         default:
-          'bg-slate-800/90 text-white/90 border border-white/80 hover:bg-amber-700/80 dark:hover:text-white/90',
+          'bg-slate-800/90 text-white/90 border border-white/80 hover:bg-slate-700 hover:opacity-90',
         link: 'text-primary items-start justify-start underline-offset-4 hover:underline decoration-amber-700',
 
         outline:
-          'bg-background/90 dark:bg-white/90 text-slate-800 dark:text-black/90 hover:text-white/90 border border-white/80 hover:bg-amber-700/70',
+          'bg-background/90 dark:bg-white/90 text-slate-800 dark:text-black/90 border border-white/80 hover:bg-slate-200 dark:hover:bg-slate-300 hover:opacity-90',
+
+        medium:
+          'bg-white/90 text-slate-800 border border-slate-800 hover:bg-slate-100 hover:opacity-90 dark:bg-slate-800/90 dark:text-white/90 dark:border-white/80 dark:hover:bg-slate-700 dark:hover:opacity-90',
+        mediumOutline:
+          'bg-slate-800/90 text-white/90 border border-white/80 hover:bg-slate-700 hover:opacity-90 dark:bg-white/90 dark:text-slate-800 dark:border-slate-800 dark:hover:bg-slate-100 dark:hover:opacity-90',
       },
     },
   },
