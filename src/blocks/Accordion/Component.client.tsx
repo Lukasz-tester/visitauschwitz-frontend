@@ -209,7 +209,7 @@ const AccordionItem: React.FC<ItemProps> = ({
         aria-expanded={isOpen}
         aria-controls={`content-${uniqueId}`}
       >
-        <h3 className="pr-2 text-left font-semibold">{question}</h3>
+        <h3 className="pr-2 text-left font-medium tracking-wide">{question}</h3>
         {isOpen ? <ChevronUp aria-hidden="true" /> : <ChevronDown aria-hidden="true" />}
       </button>
 

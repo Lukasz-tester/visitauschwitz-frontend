@@ -9,10 +9,9 @@ import { PayloadRedirects } from '@/components/PayloadRedirects'
 import { AuthorBio } from '@/components/AuthorBio'
 import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
-import { cache } from 'react'
-import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+import { fetchPayloadData, conditionalCache } from '@/utilities/fetchPayloadData'
 
-const getCachedPayload = cache(fetchPayloadData)
+const getCachedPayload = conditionalCache(fetchPayloadData)
 import type { Post } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import PageClient from '../../[slug]/page.client'

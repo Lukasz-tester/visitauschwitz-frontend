@@ -79,6 +79,20 @@ import { stripUsedIn } from './stripUsedIn'
 export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null> {
   const cachedData = getCachedData()
 
+  // Skip cache if USE_LOCAL_CMS is set (for local development with fresh data)
+  if (process.env.USE_LOCAL_CMS === 'true') {
+    console.log(`[USE_LOCAL_CMS] Fetching fresh data from CMS: ${path}`)
+    const res = await cmsFetch(path)
+    if (!res) return null
+    try {
+      const data = await res.json()
+      stripUsedIn(data)
+      return data as T
+    } catch {
+      return null
+    }
+  }
+
   // Try to serve from cache for collection queries
   const collectionMatch = path.match(/\/api\/(pages|posts)\?/)
   if (collectionMatch && cachedData) {

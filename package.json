@@ -9,7 +9,7 @@
     "generate:meta": "tsx src/utilities/generate-meta-txt.ts",
     "update-cms-data": "tsx src/utilities/update-cms-data.ts",
     "build": "pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
+    "dev": "cross-env USE_LOCAL_CMS=true NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",

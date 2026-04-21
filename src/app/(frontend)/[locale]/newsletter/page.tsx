@@ -10,10 +10,9 @@ import PageClient from '../[slug]/page.client'
 import { generateMeta } from '@/utilities/generateMeta'
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
-import { cache } from 'react'
-import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+import { fetchPayloadData, conditionalCache } from '@/utilities/fetchPayloadData'
 
-const getCachedPayload = cache(fetchPayloadData)
+const getCachedPayload = conditionalCache(fetchPayloadData)
 import { buildPageGraph, type SchemaNavItem } from '@/utilities/buildSchema'
 import { getHeroImageUrl } from '@/utilities/getHeroImageUrl'
 import { getCachedGlobal } from '@/utilities/getGlobals'

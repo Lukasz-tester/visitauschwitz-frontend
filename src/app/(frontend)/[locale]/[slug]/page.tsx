@@ -9,10 +9,9 @@ import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { RenderHero } from '@/heros/RenderHero'
 import PageClient from './page.client'
 import { generateMeta } from '@/utilities/generateMeta'
-import { cache } from 'react'
-import { fetchPayloadData } from '@/utilities/fetchPayloadData'
+import { fetchPayloadData, conditionalCache } from '@/utilities/fetchPayloadData'
 
-const getCachedPayload = cache(fetchPayloadData)
+const getCachedPayload = conditionalCache(fetchPayloadData)
 import type { Page as PageType } from '@/payload-types'
 import type { TypedLocale } from '@/payload-types'
 import { locales } from '@/i18n/localization'

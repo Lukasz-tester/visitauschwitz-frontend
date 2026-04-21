@@ -2,7 +2,7 @@
 
 import type { StaticImageData } from 'next/image'
 import NextImage from 'next/image'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { cn } from 'src/utilities/cn'
 import type { Props as MediaProps } from '../types'
 
@@ -36,6 +36,23 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     const webpFilename = filename?.replace(/\.(jpg|jpeg)$/i, '.webp')
     src = `${process.env.NEXT_PUBLIC_CF_R2_URL}${webpFilename}`
   }
+
+  // Check if this image has been loaded before using sessionStorage
+  useEffect(() => {
+    if (src && typeof src === 'string') {
+      const hasLoadedBefore = sessionStorage.getItem(`img-loaded-${src}`)
+      if (hasLoadedBefore) {
+        setIsLoaded(true)
+      }
+    }
+  }, [src])
+
+  // Store in sessionStorage when image loads
+  useEffect(() => {
+    if (isLoaded && src && typeof src === 'string') {
+      sessionStorage.setItem(`img-loaded-${src}`, 'true')
+    }
+  }, [isLoaded, src])
 
   if (!alt) console.warn('ImageMedia rendered without alt text:', src)
 

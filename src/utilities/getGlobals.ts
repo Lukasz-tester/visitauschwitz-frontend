@@ -11,9 +11,12 @@ const buildCache = new Map<string, unknown>()
 export const getCachedGlobal = <T = unknown>(slug: string, depth = 0, locale: TypedLocale) => {
   return async (): Promise<T> => {
     const key = `${slug}_${locale}_${depth}`
-    if (buildCache.has(key)) return buildCache.get(key) as T
+    // Skip cache if USE_LOCAL_CMS is set (for local development with fresh data)
+    if (process.env.USE_LOCAL_CMS !== 'true' && buildCache.has(key)) {
+      return buildCache.get(key) as T
+    }
     const data = await getGlobal<T>(slug, depth, locale)
-    if (data !== null) {
+    if (data !== null && process.env.USE_LOCAL_CMS !== 'true') {
       buildCache.set(key, data)
     }
     return data as T

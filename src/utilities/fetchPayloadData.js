@@ -56,7 +56,43 @@ function getCachedData() {
 
 import { stripUsedIn } from './stripUsedIn'
 
+// Conditional cache: bypass React cache when USE_LOCAL_CMS is true
+export function conditionalCache(fn) {
+  if (process.env.USE_LOCAL_CMS === 'true') {
+    return fn
+  }
+  // Import cache dynamically to avoid issues in environments where it might not be available
+  const { cache } = require('react')
+  return cache(fn)
+}
+
 export async function fetchPayloadData(collection, slug, locale) {
+  // Skip cache if USE_LOCAL_CMS is set (for local development with fresh data)
+  if (process.env.USE_LOCAL_CMS === 'true') {
+    console.log(`[USE_LOCAL_CMS] Fetching fresh data from CMS: ${collection}/${slug}/${locale}`)
+    const base = process.env.CMS_PUBLIC_SERVER_URL
+    const url = `${base}/api/${collection}?where[slug][equals]=${slug}&locale=${locale}&depth=2`
+
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const res = await throttledFetch(url, { cache: 'no-store' })
+        if (res.ok) {
+          const data = await res.json()
+          const doc = data?.docs?.[0] || null
+          if (doc) stripUsedIn(doc)
+          return doc
+        }
+        console.error(`Failed to fetch ${collection}/${slug}: ${res.status} ${res.statusText}`)
+      } catch (err) {
+        console.error(`Error fetching ${collection}/${slug} (attempt ${attempt + 1}):`, err)
+      }
+      if (attempt < 2) {
+        await new Promise((r) => setTimeout(r, 1000 * Math.pow(2, attempt)))
+      }
+    }
+    return null
+  }
+
   // Try cache first
   const cachedData = getCachedData()
   if (cachedData && cachedData[locale]) {
