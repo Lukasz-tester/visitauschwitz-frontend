@@ -9,24 +9,9 @@ import { Button } from '@/components/ui/button'
 
 export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richText }) => {
   return (
-    <div className="container lg:flex lg:flex-row lg:gap-16">
-      {/* Left Column - Image */}
-      <div className="lg:w-1/2 pb-8 lg:pb-0">
-        <div className="relative rounded-xl overflow-hidden">
-          {media && typeof media === 'object' && (
-            <ImageMedia
-              imgClassName="w-full h-auto object-cover"
-              resource={media}
-              priority
-            />
-          )}
-          {/* Optional gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent pointer-events-none" />
-        </div>
-      </div>
-
-      {/* Right Column - Content */}
-      <div className="lg:w-1/2 flex flex-col justify-center">
+    <div className="container lg:flex lg:flex-row lg:gap-16 lg:pb-8">
+      {/* Column - Content */}
+      <div className="lg:w-1/2 flex flex-col justify-center mb-12">
         {richText && (
           <RichText
             className="mb-6 prose-headings:font-normal prose-p:font-sans
@@ -54,6 +39,22 @@ export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richTex
           </ul>
         )}
       </div>
+      {/* Left - Image */}
+      <div className="lg:w-1/2 pb-8 lg:pb-0">
+        <div className="relative rounded-xl overflow-hidden">
+          {media && typeof media === 'object' && (
+            <ImageMedia
+              imgClassName="w-full h-auto object-cover"
+              resource={media}
+              priority
+            />
+          )}
+          {/* Optional gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent pointer-events-none" />
+        </div>
+      </div>
+
+      
     </div>
   )
 }

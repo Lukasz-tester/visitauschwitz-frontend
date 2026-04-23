@@ -140,7 +140,7 @@ export const CallToActionBlock: React.FC<Props> = ({
                   {richText && tiles.length !== 5 && (
                     <RichText
                       className={cn(
-                        richText.root.direction === null ? 'hidden' : 'prose-h3:text-3xl my-5',
+                        richText.root.children?.length === 0 ? 'hidden' : 'prose-h3:text-3xl my-5',
                       )}
                       content={richText}
                       enableGutter={false}
