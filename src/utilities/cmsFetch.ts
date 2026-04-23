@@ -103,6 +103,9 @@ export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null>
     // Extract limit from query string
     const limitMatch = path.match(/limit=(\d+)/)
     const limit = limitMatch ? parseInt(limitMatch[1], 10) : null
+    // Extract page from query string
+    const pageMatch = path.match(/page=(\d+)/)
+    const page = pageMatch ? parseInt(pageMatch[1], 10) : 1
 
     let docs: any[] = []
 
@@ -113,12 +116,23 @@ export async function cmsFetchJSON<T = unknown>(path: string): Promise<T | null>
       docs = Object.values(cachedData).flatMap((d: any) => d[collection] || [])
     }
 
-    // Apply limit if specified
-    if (limit && limit > 0) {
+    const totalDocs = docs.length
+    const defaultLimit = limit || 12
+    const totalPages = Math.ceil(totalDocs / defaultLimit)
+
+    // Apply pagination if page is specified
+    if (page > 1 && limit) {
+      const startIndex = (page - 1) * limit
+      const endIndex = startIndex + limit
+      docs = docs.slice(startIndex, endIndex)
+    }
+
+    // Apply limit if specified (for first page or when no pagination)
+    if (limit && limit > 0 && page === 1) {
       docs = docs.slice(0, limit)
     }
 
-    const result = { docs }
+    const result = { docs, totalDocs, page, totalPages }
     stripUsedIn(result)
     return result as T
   }
