@@ -53,7 +53,11 @@ export function CookieConsent() {
   const [view, setView] = useState<View>(null)
 
   useEffect(() => {
-    if (!getConsentPreferences()) setView('banner')
+    // Defer banner appearance to improve initial page load performance
+    const timer = setTimeout(() => {
+      if (!getConsentPreferences()) setView('banner')
+    }, 2000)
+    return () => clearTimeout(timer)
   }, [])
   const [analyticsOn, setAnalyticsOn] = useState(false)
   const [openedFrom, setOpenedFrom] = useState<'banner' | 'footer'>('banner')

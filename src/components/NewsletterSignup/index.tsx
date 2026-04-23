@@ -114,3 +114,5 @@ export function NewsletterSignup({ variant }: { variant: Variant }) {
     </form>
   )
 }
+
+export const NewsletterSignupMemo = React.memo(NewsletterSignup)

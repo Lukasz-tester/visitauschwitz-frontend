@@ -125,3 +125,5 @@ export function ContactForm({ variant }: { variant: Variant }) {
     </form>
   )
 }
+
+export const ContactFormMemo = React.memo(ContactForm)

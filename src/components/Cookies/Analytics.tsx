@@ -65,17 +65,24 @@ export function Analytics() {
   useEffect(() => {
     if (!GA_ID) return
 
-    // Pre-emptively block GA before anything else runs. This ensures
-    // that even if a third-party script somehow triggers gtag before
-    // sync() completes, no hits are sent without explicit consent.
-    if (!getConsentPreferences()?.analytics) {
-      ;(window as unknown as Record<string, unknown>)[GA_DISABLE_KEY] = true
+    // Defer GA loading to improve initial page load performance
+    const timer = setTimeout(() => {
+      // Pre-emptively block GA before anything else runs. This ensures
+      // that even if a third-party script somehow triggers gtag before
+      // sync() completes, no hits are sent without explicit consent.
+      if (!getConsentPreferences()?.analytics) {
+        ;(window as unknown as Record<string, unknown>)[GA_DISABLE_KEY] = true
+      }
+
+      sync()
+
+      window.addEventListener('cookie-consent-changed', sync)
+    }, 2000)
+
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('cookie-consent-changed', sync)
     }
-
-    sync()
-
-    window.addEventListener('cookie-consent-changed', sync)
-    return () => window.removeEventListener('cookie-consent-changed', sync)
   }, [])
 
   return null

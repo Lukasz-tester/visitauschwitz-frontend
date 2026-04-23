@@ -2,7 +2,7 @@
 
 import type { StaticImageData } from 'next/image'
 import NextImage from 'next/image'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { cn } from 'src/utilities/cn'
 import type { Props as MediaProps } from '../types'
 
@@ -39,12 +39,15 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   }
 
   // Check if this image has been loaded before using sessionStorage or browser cache
+  const cacheCheckKey = useMemo(() => `img-loaded-${src}`, [src])
+  
   useEffect(() => {
     if (src && typeof src === 'string') {
       // First check sessionStorage
-      const hasLoadedBefore = sessionStorage.getItem(`img-loaded-${src}`)
+      const hasLoadedBefore = sessionStorage.getItem(cacheCheckKey)
       if (hasLoadedBefore) {
         setIsLoaded(true)
+        setIsCached(true)
         return
       }
 
@@ -56,7 +59,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
         if (img.complete) {
           setIsLoaded(true)
           setIsCached(true)
-          sessionStorage.setItem(`img-loaded-${src}`, 'true')
+          sessionStorage.setItem(cacheCheckKey, 'true')
         }
       }
       
@@ -66,14 +69,14 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       // Also check on load in case it's loading from cache
       img.onload = checkCache
     }
-  }, [src])
+  }, [src, cacheCheckKey])
 
   // Store in sessionStorage when image loads
   useEffect(() => {
     if (isLoaded && src && typeof src === 'string') {
-      sessionStorage.setItem(`img-loaded-${src}`, 'true')
+      sessionStorage.setItem(cacheCheckKey, 'true')
     }
-  }, [isLoaded, src])
+  }, [isLoaded, src, cacheCheckKey])
 
   if (!alt) console.warn('ImageMedia rendered without alt text:', src)
 
@@ -106,3 +109,5 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     />
   )
 }
+
+export const ImageMediaMemo = React.memo(ImageMedia)

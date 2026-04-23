@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 import { ChevronDown, ChevronUp } from 'lucide-react'
@@ -231,3 +231,5 @@ const AccordionItem: React.FC<ItemProps> = ({
     </article>
   )
 }
+
+export const AccordionBlockMemo = React.memo(AccordionBlock)

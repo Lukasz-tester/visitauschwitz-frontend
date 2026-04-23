@@ -54,6 +54,8 @@ export default async function RootLayout({ children, params }: Args) {
           }}
         />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
+        {/* Preload default hero image for better LCP */}
+        <link href="/images/default-hero.webp" rel="preload" as="image" />
       </head>
       <body>
         <Providers>
