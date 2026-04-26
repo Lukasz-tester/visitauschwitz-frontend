@@ -28,7 +28,7 @@ export const TextBlock: React.FC<Props> = ({ className, blockName, content, styl
         <div className="rounded border p-4 pb-5 my-5 bg-card">
           <div>
             <RichText
-              className="text-[21px] opacity-90 place-self-center prose-a:underline font-normal prose-a:font-semibold prose-a:decoration-amber-700/80 dark:hover:prose-a:bg-slate-700/80 hover:prose-a:bg-slate-700/10"
+              className="text-[21px] opacity-90 max-w-5xl place-self-center prose-a:underline font-normal prose-a:font-semibold prose-a:decoration-amber-700/80 dark:hover:prose-a:bg-slate-700/80 hover:prose-a:bg-slate-700/10"
               enableProse={false}
               enableGutter={false}
               content={content}

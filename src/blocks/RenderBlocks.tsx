@@ -9,6 +9,7 @@ import { OpeningHoursBlock } from './OpeningHours/Component.client'
 import { AccordionBlock } from './Accordion/Component.client'
 import { ImageBlock } from './Code/Component'
 import { TextBlock } from './Banner/Component'
+import { BankTransferBlock } from './BankTransfer/Component'
 import { BlockErrorBoundary } from './BlockErrorBoundary'
 
 const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> = {
@@ -21,6 +22,7 @@ const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> =
   mediaBlock: MediaBlock,
   oh: OpeningHoursBlock,
   accordion: AccordionBlock,
+  bankTransfer: BankTransferBlock,
 }
 
 export const RenderBlocks: React.FC<{

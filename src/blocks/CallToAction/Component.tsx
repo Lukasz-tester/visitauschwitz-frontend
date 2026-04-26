@@ -126,16 +126,24 @@ export const CallToActionBlock: React.FC<Props> = ({
                     </div>
                   )}
                   {title && (
-                    <h3
-                      className={cn(
-                        'text-2xl opacity-85 font-semibold',
-                        gridSize === '3' && tiles.length !== 5 && 'text-center py-3',
-                        tiles.length === 1 && 'text-3xl md:text-4xl mt-5',
-                        tiles.length === 5 && 'text-3xl p-3 px-5',
+                    <>
+                      {tiles.length === 1 && gridSize === '6' ? (
+                        <p className="text-2xl md:text-3xl mt-5 italic opacity-85 font-medium">
+                          {title}
+                        </p>
+                      ) : (
+                        <h3
+                          className={cn(
+                            'text-2xl opacity-85 font-semibold',
+                            gridSize === '3' && tiles.length !== 5 && 'text-center py-3',
+                            tiles.length === 1 && 'text-3xl md:text-4xl mt-5',
+                            tiles.length === 5 && 'text-3xl p-3 px-5',
+                          )}
+                        >
+                          {title}
+                        </h3>
                       )}
-                    >
-                      {title}
-                    </h3>
+                    </>
                   )}
                   {richText && tiles.length !== 5 && (
                     <RichText
