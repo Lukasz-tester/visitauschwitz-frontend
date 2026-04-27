@@ -61,7 +61,7 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
                   <h2 className="text-lg font-semibold leading-tight">{author.name}</h2>
                 )}
                 {author.bio && (
-                  <p className="text-sm leading-relaxed text-foreground/70">{author.bio}</p>
+                  <p className="text-sm leading-relaxed text-foreground/70">{author.bio} →</p>
                 )}
               </div>
             </>

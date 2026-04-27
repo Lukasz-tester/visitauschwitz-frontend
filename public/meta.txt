@@ -28,6 +28,10 @@ Path: /supplement
 T: Auschwitz: What Most Visitors Wish They Knew | 2026
 D: Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
 
+Path: /support
+T: Support Independent Auschwitz Education—Keep It Free | 2026
+D: Join me, a licensed Auschwitz guide since 2006, in keeping visitor information independent, free, and accessible worldwide—help fund maintenance.
+
 Path: /tickets
 T: Auschwitz Tickets: Official Booking & Tour Types | 2026
 D: Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
@@ -65,6 +69,10 @@ D: Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewo
 Path: /supplement
 T: Auschwitz: co musisz wiedzieć przed wizytą w Muzeum | 2026
 D: Z przewodnikiem czy samodzielnie, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej. Porady od licencjonowanego przewodnika.
+
+Path: /support
+T: Wesprzyj niezależną edukację o Auschwitz—utrzymaj ją bezpłatnie | 2026
+D: Dołącz do mnie, licencjonowanego przewodnika po Auschwitz od 2006 roku. Wspólnie zadbajmy o niezależność informacji dla odwiedzających i wsparcie utrzymania strony.
 
 Path: /tickets
 T: Bilety do Auschwitz: rezerwacja online i ceny | 2026

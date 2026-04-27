@@ -17,6 +17,7 @@ Default language: en
 - [Auschwitz Entry: Opening Hours, Tickets & Security](https://www.visitauschwitz.info/en/museum): Entry guidelines: opening times, security checks, reception desk and facility maps. Explore related sites and museums around the Memorial camp.
 - [Free Auschwitz Checklist to Prepare Before You Visit](https://www.visitauschwitz.info/en/newsletter): Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 - [Auschwitz: What Most Visitors Wish They Knew](https://www.visitauschwitz.info/en/supplement): Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
+- [Support Independent Auschwitz Education—Keep It Free](https://www.visitauschwitz.info/en/support): Join me, a licensed Auschwitz guide since 2006, in keeping visitor information independent, free, and accessible worldwide—help fund maintenance.
 - [Auschwitz Tickets: Official Booking & Tour Types](https://www.visitauschwitz.info/en/tickets): Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 - [Auschwitz Tour Routes: Main Sites & Interactive Map](https://www.visitauschwitz.info/en/tour): Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
 
@@ -37,6 +38,7 @@ Default language: en
 - [Wejście do Auschwitz: godziny otwarcia i informacje](https://www.visitauschwitz.info/pl/museum): Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole bezpieczeństwa, punkty obsługi i mapa. Dodatkowo - miejsca pamięci i muzea w pobliżu.
 - [Bezpłatny poradnik co zrobić przed wizytą w Auschwitz](https://www.visitauschwitz.info/pl/newsletter): Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewodnika po Auschwitz. Praktyczne wskazówki dotyczące biletów, transportu, czasu i przebiegu wizyty.
 - [Auschwitz: co musisz wiedzieć przed wizytą w Muzeum](https://www.visitauschwitz.info/pl/supplement): Z przewodnikiem czy samodzielnie, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej. Porady od licencjonowanego przewodnika.
+- [Wesprzyj niezależną edukację o Auschwitz—utrzymaj ją bezpłatnie](https://www.visitauschwitz.info/pl/support): Dołącz do mnie, licencjonowanego przewodnika po Auschwitz od 2006 roku. Wspólnie zadbajmy o niezależność informacji dla odwiedzających i wsparcie utrzymania strony.
 - [Bilety do Auschwitz: rezerwacja online i ceny](https://www.visitauschwitz.info/pl/tickets): Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 - [Trasy zwiedzania Auschwitz: mapa i ważne miejsca](https://www.visitauschwitz.info/pl/tour): Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
 

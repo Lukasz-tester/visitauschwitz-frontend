@@ -45,7 +45,7 @@ export const RenderBlocks: React.FC<{
             <Fragment key={index}>
               {index === insertAtIndex && insertNode}
               <BlockErrorBoundary blockType={blockType}>
-                <div>
+                <div id={(block as any).blockName || undefined}>
                   <Block {...block} locale={locale} fullUrl={url} />
                 </div>
               </BlockErrorBoundary>

@@ -243,7 +243,7 @@ A: The Museum is not fully adapted to maintain the site's historical authenticit
 
 ### Sections
 
-- What Are the Auschwitz Memorial Rules? How to Behave on an Auschwitz Tour
+- What Are the Auschwitz Memorial Rules?
 - How to Make the Most of Your Auschwitz Visit? Read the tips below to make the most of your visit to the Auschwitz Memorial.
 - Your Feedback Is Invaluable Let me know what you think of this site by answering the questions below or simply sharing your thoughts—just click ||| on the right to find the contact form.
 - Works of Auschwitz Survivors
@@ -253,6 +253,30 @@ A: The Museum is not fully adapted to maintain the site's historical authenticit
 - Władysław Siwek Born in 1907 in Niepołomice, Władysław Siwek worked for the State Railways while studying at the Academy of Fine Arts in Kraków.
 - Janina Tollik Janina Tollik was born in 1910 in Janów. She studied at the Academy of Fine Arts in Kraków from 1931 to 1935.
 - Sources Attribution Empowered by open-source collaboration—bringing Auschwitz navigation to life with community-driven tools.
+
+## Support Independent Auschwitz Education—Keep It Free (EN)
+
+URL: https://www.visitauschwitz.info/en/support
+Description: Join me, a licensed Auschwitz guide since 2006, in keeping visitor information independent, free, and accessible worldwide—help fund maintenance.
+
+### FAQ
+
+**Q: Is my support secure?**
+A: Yes. All payments are processed through world-class trusted providers including Stripe, PayPal, and Wise.
+
+**Q: Is this a donation?**
+A: Yes. All support is voluntary and received as a private gift (darowizna) to sustain this independent educational project.
+
+**Q: Is this connected to the Museum?**
+A: No. This is a 100% independent project. I am a licensed guide, but this resource is not affiliated with the Auschwitz-Birkenau State Museum.
+
+**Q: Will I receive anything in return?**
+A: No physical products or services are exchanged. Your contribution ensures this guide remains free, ad-free, and accessible to everyone worldwide.
+
+### Sections
+
+- What Your Support Protects
+- Frequently Asked Questions
 
 ## Auschwitz Tickets: Official Booking & Tour Types (EN)
 
@@ -664,7 +688,7 @@ A: Aby zachować autentyczność historyczną, Muzeum nie jest w pełni przystos
 
 ### Sections
 
-- Jakie są oficjalne zasady zwiedzania Auschwitz? Jak zachowywać się podczas zwiedzania
+- Jakie są oficjalne zasady zwiedzania Auschwitz?
 - Porady, jak w pełni docenić wizytę w Auschwitz Przeczytaj poniższe porady, by jak najlepiej spędzić czas na terenie Miejsca Pamięci Auschwitz.
 - Twoja opinia jest bezcenna Daj mi znać, co sądzisz o tej stronie, odpowiadając na poniższe pytania lub po prostu dzieląc się swoimi wrażeniami – wystarczy kliknąć ||| po prawej aby znaleźć formularz k
 - Dzieła ocalałych z Auschwitz-Birkenau
@@ -674,6 +698,30 @@ A: Aby zachować autentyczność historyczną, Muzeum nie jest w pełni przystos
 - Władysław Siwek Urodzony w 1907 roku w Niepołomicach, Władysław Siwek pracował na Kolei Państwowej, studiując jednocześnie w Akademii Sztuk Pięknych w Krakowie.
 - Janina Tollik Janina Tollik urodziła się w 1910 roku w Janowie. Studiowała na Akademii Sztuk Pięknych w Krakowie w latach 1931–1935.
 - Źródła i atrybucje Siła oprogramowania open source — stworzyłem przewodnik po Auschwitz dzięki społeczności!
+
+## Wesprzyj niezależną edukację o Auschwitz—utrzymaj ją bezpłatnie (PL)
+
+URL: https://www.visitauschwitz.info/pl/support
+Description: Dołącz do mnie, licencjonowanego przewodnika po Auschwitz od 2006 roku. Wspólnie zadbajmy o niezależność informacji dla odwiedzających i wsparcie utrzymania strony.
+
+### FAQ
+
+**Q: Czy moje wsparcie jest bezpieczne?**
+A: Tak. Wszystkie płatności obsługiwane są przez uznanych operatorów, w tym Stripe, PayPal i Wise.
+
+**Q: Czy to jest darowizna?**
+A: Tak. Wsparcie jest dobrowolne i przyjmowane jako prywatna darowizna, by utrzymać ten niezależny projekt edukacyjny.
+
+**Q: Czy projekt jest połączony z Muzeum?**
+A: Nie. To w 100% niezależny projekt. Jestem licencjonowanym przewodnikiem, ale ta strona nie jest powiązana z Państwowym Muzeum Auschwitz-Birkenau.
+
+**Q: Czy otrzymam coś w zamian?**
+A: Nie ma żadnych produktów ani usług w zamian. Twoje wsparcie zapewnia, że przewodnik pozostaje bezpłatny, bez reklam i dostępny dla każdego.
+
+### Sections
+
+- Co chroni twoje wsparcie
+- Najczęstsze pytania
 
 ## Bilety do Auschwitz: rezerwacja online i ceny (PL)
 
