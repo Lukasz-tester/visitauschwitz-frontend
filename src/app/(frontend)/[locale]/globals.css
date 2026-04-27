@@ -68,16 +68,3 @@
   height: 100%;
 }
 
-.details-animate {
-  interpolate-size: allow-keywords;
-}
-.details-animate::details-content {
-  block-size: 0;
-  overflow-y: clip;
-  transition:
-    block-size 500ms ease,
-    content-visibility 500ms allow-discrete;
-}
-.details-animate[open]::details-content {
-  block-size: auto;
-}

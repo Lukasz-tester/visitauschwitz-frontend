@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 import { ChevronDown, ChevronUp } from 'lucide-react'
@@ -14,7 +14,6 @@ type Props = Extract<Page['layout'][0], { blockType: 'accordion' }> & {
 
 type StoredState = {
   openIndices: number[]
-  heights: Record<number, number>
 }
 
 function readStorage(key: string): StoredState {
@@ -24,11 +23,10 @@ function readStorage(key: string): StoredState {
       const parsed = JSON.parse(stored)
       return {
         openIndices: Array.isArray(parsed.openIndices) ? parsed.openIndices : [],
-        heights: parsed.heights && typeof parsed.heights === 'object' ? parsed.heights : {},
       }
     }
   } catch {}
-  return { openIndices: [], heights: {} }
+  return { openIndices: [] }
 }
 
 // After initial hydration this becomes true, so client-side navigations
@@ -51,9 +49,6 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   const [openIndices, setOpenIndices] = useState<number[]>(() =>
     hasHydrated ? readStorage(storageKey).openIndices : [],
   )
-  const [storedHeights, setStoredHeights] = useState<Record<number, number>>(() =>
-    hasHydrated ? readStorage(storageKey).heights : {},
-  )
 
   useIsomorphicLayoutEffect(() => {
     setHasMounted(true)
@@ -66,17 +61,10 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
   useEffect(() => {
     if (!hasMounted) return
     try {
-      const state: StoredState = { openIndices, heights: storedHeights }
+      const state: StoredState = { openIndices }
       sessionStorage.setItem(storageKey, JSON.stringify(state))
     } catch {}
-  }, [openIndices, storedHeights, storageKey, hasMounted])
-
-  const handleHeightMeasured = useCallback((index: number, height: number) => {
-    setStoredHeights((prev) => {
-      if (prev[index] === height) return prev
-      return { ...prev, [index]: height }
-    })
-  }, [])
+  }, [openIndices, storageKey, hasMounted])
 
   const handleItemClick = (index: number) => {
     setOpenIndices((prev) =>
@@ -98,10 +86,13 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                 <div key={index} className="pb-2">
                   <details
                     className={cn(
-                      'details-animate overflow-hidden rounded-xl border border-slate-500/40 hover:border-amber-600 dark:hover:border-amber-700/70 open:border-amber-600 dark:open:border-amber-700/70',
+                      'overflow-hidden rounded-xl border hover:border-amber-600 dark:hover:border-amber-700/70',
+                      openIndices.includes(index)
+                        ? 'border-amber-600 dark:border-amber-700/70'
+                        : 'border-slate-500/40',
                       changeBackground ? 'bg-background' : 'bg-card',
                     )}
-                    open={openIndices.includes(index)}
+                    open
                   >
                     <summary
                       className={cn(
@@ -116,8 +107,18 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                       <h3>{item.question}</h3>
                       {openIndices.includes(index) ? <ChevronUp aria-hidden="true" /> : <ChevronDown aria-hidden="true" />}
                     </summary>
-                    <div className="px-5 pt-2 pb-3">
-                      {item.answer && <RichText content={item.answer} enableGutter={false} />}
+                    <div
+                      className={cn(
+                        'grid',
+                        hasMounted && 'transition-[grid-template-rows] duration-500 ease-in-out',
+                        openIndices.includes(index) ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+                      )}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="px-5 pt-2 pb-3">
+                          {item.answer && <RichText content={item.answer} enableGutter={false} />}
+                        </div>
+                      </div>
                     </div>
                   </details>
                 </div>
@@ -128,14 +129,11 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
             return (
               <div key={index} className="pb-2">
                 <AccordionItem
-                  index={index}
                   uniqueId={uniqueId}
                   answer={item.answer}
                   question={item.question ?? ''}
                   isOpen={openIndices.includes(index)}
-                  initialHeight={storedHeights[index] ?? 0}
                   onClick={() => handleItemClick(index)}
-                  onHeightMeasured={handleHeightMeasured}
                   changedBackground={!!changeBackground}
                   hasMounted={hasMounted}
                 />
@@ -149,51 +147,28 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
 }
 
 type ItemProps = {
-  index: number
   uniqueId: string
   question: string
   answer: any
   isOpen: boolean
-  initialHeight: number
   onClick: () => void
-  onHeightMeasured: (index: number, height: number) => void
   changedBackground: boolean
   hasMounted: boolean
 }
 
 const AccordionItem: React.FC<ItemProps> = ({
-  index,
   question,
   answer,
   isOpen,
-  initialHeight,
   onClick,
-  onHeightMeasured,
   changedBackground,
   uniqueId,
   hasMounted,
 }) => {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [measuredHeight, setMeasuredHeight] = useState(initialHeight)
-
-  useIsomorphicLayoutEffect(() => {
-    if (contentRef.current && isOpen) {
-      const h = contentRef.current.scrollHeight
-      onHeightMeasured(index, h)
-      if (measuredHeight === 0) {
-        // First open — defer so browser sees maxHeight: 0 first, then animates to h
-        requestAnimationFrame(() => setMeasuredHeight(h))
-      } else {
-        setMeasuredHeight(h)
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen, index, onHeightMeasured])
-
   return (
     <article
       className={cn(
-        '[&_*]:ease-in-out [&_*]:duration-700 overflow-hidden rounded-xl border hover:border-amber-600 dark:hover:border-amber-700/70',
+        'overflow-hidden rounded-xl border hover:border-amber-600 dark:hover:border-amber-700/70',
         isOpen ? 'border-amber-600 dark:border-amber-700/70' : 'border-slate-500/40',
         changedBackground ? 'bg-background' : 'bg-card',
       )}
@@ -201,9 +176,7 @@ const AccordionItem: React.FC<ItemProps> = ({
       <button
         className={cn(
           'bg-card-foreground w-full p-3 text-start text-xl opacity-85 flex place-content-between',
-          {
-            'bg-card': changedBackground,
-          },
+          { 'bg-card': changedBackground },
         )}
         onClick={onClick}
         id={uniqueId}
@@ -216,17 +189,18 @@ const AccordionItem: React.FC<ItemProps> = ({
 
       <div
         id={`content-${uniqueId}`}
-        ref={contentRef}
         className={cn(
-          'px-5 overflow-hidden',
-          hasMounted && 'transition-[max-height] duration-500 ease-in-out',
+          'grid',
+          hasMounted && 'transition-[grid-template-rows] duration-500 ease-in-out',
+          isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
         )}
         role="region"
         aria-labelledby={uniqueId}
-        style={hasMounted ? { maxHeight: isOpen ? measuredHeight : 0 } : undefined}
       >
-        <div className="py-2 mb-4">
-          <RichText content={answer} enableGutter={false} />
+        <div className="overflow-hidden px-5">
+          <div className="py-2 mb-4">
+            <RichText content={answer} enableGutter={false} />
+          </div>
         </div>
       </div>
     </article>
