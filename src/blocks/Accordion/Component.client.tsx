@@ -105,7 +105,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                   >
                     <summary
                       className={cn(
-                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden tracking-wide font-medium',
+                        'w-full cursor-pointer p-3 text-start text-xl opacity-85 list-none [&::-webkit-details-marker]:hidden tracking-wide font-medium flex place-content-between',
                         changeBackground ? 'bg-card' : 'bg-card-foreground',
                       )}
                       onClick={(e) => {
@@ -114,6 +114,7 @@ export const AccordionBlock: React.FC<{ id?: string } & Props> = ({
                       }}
                     >
                       <h3>{item.question}</h3>
+                      {openIndices.includes(index) ? <ChevronUp aria-hidden="true" /> : <ChevronDown aria-hidden="true" />}
                     </summary>
                     <div className="px-5 pt-2 pb-3">
                       {item.answer && <RichText content={item.answer} enableGutter={false} />}

@@ -3,9 +3,11 @@ import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { Search } from 'lucide-react'
+import { DonationCard } from '@/components/DonationCard'
 
 import { useEffect } from 'react'
 import { Link, usePathname } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import { useLockBodyScroll } from '@/utilities/helpers'
 import { LogoLink } from '@/components/ui/logoLink'
 
@@ -15,6 +17,7 @@ export const MobileNavCaller: React.FC<{
   setModalOpen: (open: boolean) => void
 }> = ({ header, modalOpen, setModalOpen }) => {
   const pathname = usePathname()
+  const t = useTranslations()
   useLockBodyScroll(modalOpen)
 
   // Close mobile nav on route change
@@ -37,7 +40,7 @@ export const MobileNavCaller: React.FC<{
       <button
         className={`z-30 top-0 right-0 ease-in-out duration-1000 ${modalOpen ? 'w-16 h-16 opacity-85 hover:opacity-100 transition-opacity' : 'bg-background/70 md:hover:bg-card-foreground lg:bottom-0 right-0 rounded-bl-3xl w-16 h-16'} flex items-center justify-center fixed dark:text-white/80 text-3xl`}
         onClick={() => setModalOpen(!modalOpen)}
-        aria-label="Open Navigation"
+        aria-label={t('open-navigation')}
       >
         <div
           className={`ease-in-out duration-1000 ${modalOpen ? 'rotate-45 translate-x-2' : 'pb-1'}`}
@@ -61,18 +64,18 @@ export const MobileNavCaller: React.FC<{
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-end gap-1 text-xl pr-16 pt-1">
-            <div aria-label="Select Language">
+            <div aria-label={t('select-language')}>
               <LocaleSwitcher />
             </div>
             <Link
               href="/search/"
-              aria-label="Search"
+              aria-label={t('search')}
               className="p-3 opacity-85 hover:opacity-100 transition-opacity"
               onClick={() => setModalOpen(false)}
             >
               <Search size={22} />
             </Link>
-            <div aria-label="Change Theme">
+            <div aria-label={t('change-theme')}>
               <ThemeSelector />
             </div>
           </div>
@@ -86,8 +89,11 @@ export const MobileNavCaller: React.FC<{
             <NavItems
               header={header}
               onClick={() => setModalOpen(false)}
-              aria-label="Main Navigation"
+              aria-label={t('main-navigation')}
             />
+          </div>
+          <div className="absolute bottom-24 px-4">
+            <DonationCard onClick={() => setModalOpen(false)} />
           </div>
         </div>
       </div>
