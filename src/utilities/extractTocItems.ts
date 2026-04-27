@@ -53,7 +53,7 @@ export function extractTocItems(
 
       // Fall back to columns richText and richTextEnd
       if (!found && 'columns' in block && Array.isArray(block.columns)) {
-        for (const col of block.columns) {
+        for (const col of block.columns.slice(0, 2)) {
           found = findFirstHeading(col.richText)
           if (found) break
           found = findFirstHeading((col as any).richTextEnd)
