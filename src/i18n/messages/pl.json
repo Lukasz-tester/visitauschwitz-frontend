@@ -138,20 +138,21 @@
     "lastUpdated": "Ostatnia aktualizacja: marzec 2026",
     "intro": {
       "title": "Wstęp",
-      "content": "Niniejsza strona internetowa jest prowadzona przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod nazwą ŁUKASZ TARNOWSKI, wpisanego do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polska („Administrator”). Niniejsza strona internetowa stanowi osobisty i zawodowy projekt i nie jest powiązana, nie jest rekomendowana ani oficjalnie związana z Państwowym Muzeum Auschwitz-Birkenau ani żadną inną instytucją. Niniejsza Polityka prywatności wyjaśnia, w jaki sposób dane osobowe są zbierane, wykorzystywane i chronione zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej: „RODO”), ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych oraz innymi obowiązującymi przepisami prawa."
+      "content": "Ta strona internetowa jest prowadzona przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod firmą ŁUKASZ TARNOWSKI, wpisaną do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polska („Administrator”). Strona stanowi niezależny projekt edukacyjny prowadzony przez Administratora i nie jest powiązana, wspierana ani oficjalnie związana z Państwowym Muzeum Auschwitz-Birkenau ani żadną inną instytucją. Dobrowolne darowizny przekazywane za pośrednictwem tej strony są traktowane jako dobrowolne wsparcie tego projektu i są zarządzane oddzielnie od usług komercyjnych oferowanych przez Administratora. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób dane osobowe są gromadzone, wykorzystywane i chronione zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO), polską ustawą o ochronie danych osobowych oraz innymi obowiązującymi przepisami prawa."
     },
     "dataCollection": {
       "title": "Informacje, które zbieram",
-      "intro": "Zbieram następujące dane osobowe dobrowolnie podane za pośrednictwem formularza kontaktowego oraz zapisu do newslettera:",
+      "intro": "Gromadzę następujące dane osobowe dobrowolnie przekazywane za pośrednictwem formularza kontaktowego, zapisu do newslettera oraz procesu dobrowolnego wsparcia:",
       "item1": "Twój adres e-mail",
       "item2": "Wybrane przez Ciebie tematy zainteresowań",
       "item3": "Wszystkie pomysły na książki, informacje historyczne lub sugestie, które zdecydujesz się przekazać",
       "item4": "Dane techniczne przetwarzane automatycznie przez dostawców infrastruktury, w tym dzienniki adresów IP przetwarzane przez Cloudflare w celach bezpieczeństwa oraz przybliżone dane geolokalizacyjne (kraj/region) uzyskane na podstawie Twojego adresu IP",
-      "item5": "Dane geolokalizacyjne — wyłącznie gdy wyraźnie skorzystasz z funkcji \"Zlokalizuj mnie\" na interaktywnej mapie. Twoja lokalizacja jest przetwarzana lokalnie w przeglądarce w celu wyświetlenia Twojej pozycji na mapie i nie jest przechowywana ani przesyłana na żaden serwer"
+      "item5": "Dane geolokalizacyjne — wyłącznie gdy wyraźnie skorzystasz z funkcji \"Zlokalizuj mnie\" na interaktywnej mapie. Twoja lokalizacja jest przetwarzana lokalnie w przeglądarce w celu wyświetlenia Twojej pozycji na mapie i nie jest przechowywana ani przesyłana na żaden serwer",
+      "item6": "Podstawowe dane transakcyjne (kwota, data i identyfikator płatności) w przypadku udzielenia dobrowolnego wsparcia za pośrednictwem zewnętrznych dostawców płatności."
     },
     "legalBasis": {
-      "title": "Podstawa prawna przetwarzania",
-      "content": "Dane osobowe są przetwarzane na następujących podstawach prawnych określonych w art. 6 RODO: a) Twoja zgoda (art. 6 ust. 1 lit. a RODO) w odniesieniu do komunikacji e-mailowej oraz plików cookie analitycznych; b) prawnie uzasadniony interes Administratora (art. 6 ust. 1 lit. f RODO) w zakresie odpowiadania na zapytania, doskonalenia strony internetowej, zapewnienia bezpieczeństwa oraz ochrony przed nadużyciami; c) w miarę potrzeb w przyszłości – wykonanie umowy (art. 6 ust. 1 lit. b RODO), jeżeli oferowane będą odpłatne produkty lub usługi."
+      "title": "Podstawa Prawna Przetwarzania",
+      "content": "Dane osobowe są przetwarzane na następujących podstawach prawnych zgodnie z art. 6 RODO: (a) Twoja zgoda (art. 6 ust. 1 lit. a) RODO) w zakresie komunikacji e-mailowej i analitycznych plików cookies; (b) prawnie uzasadniony interes Administratora (art. 6 ust. 1 lit. f) RODO) polegający na odpowiadaniu na zapytania, ulepszaniu strony, zapewnieniu bezpieczeństwa oraz ochronie przed nadużyciami; (c) w stosownych przypadkach w przyszłości — wykonanie umowy (art. 6 ust. 1 lit. b) RODO), jeśli oferowane będą płatne produkty lub usługi; oraz (d) wypełnienie obowiązków prawnych (art. 6 ust. 1 lit. c) RODO), jeśli wymagają tego przepisy dotyczące rachunkowości, podatków, zapobiegania oszustwom lub obowiązków ewidencyjnych."
     },
     "dataUse": {
       "title": "W jaki sposób wykorzystuję Twoje informacje",
@@ -184,8 +185,8 @@
       "control": "Możesz zaakceptować lub odrzucić pliki cookie analityczne za pośrednictwem banera cookie wyświetlanego podczas odwiedzania strony. Możesz również dostosować ustawienia swojej przeglądarki w celu kontroli plików cookie."
     },
     "dataStorage": {
-      "title": "Przechowywanie danych",
-      "content": "Dane osobowe przesyłane za pośrednictwem tej strony internetowej są przechowywane w MongoDB Atlas — usłudze bazodanowej w chmurze świadczonej przez MongoDB, Inc. Dane są przechowywane na serwerach zlokalizowanych w Unii Europejskiej (region UE). MongoDB Atlas służy do bezpiecznego przechowywania danych użytkowników, w tym informacji o koncie, subskrypcji newslettera oraz innych danych niezbędnych do świadczenia usług opisanych w niniejszej polityce. Dodatkowo mogą być przechowywane przybliżone dane geolokalizacyjne (kraj/region, uzyskane na podstawie adresu IP) w celu poprawy trafności treści oraz spełnienia regionalnych wymogów prawnych. MongoDB Atlas stosuje szyfrowanie danych w spoczynku i podczas przesyłania, kontrolę dostępu oraz regularne audyty bezpieczeństwa."
+      "title": "Przechowywanie Danych",
+      "content": "Dane osobowe przekazywane za pośrednictwem tej strony są przechowywane w MongoDB Atlas, chmurowej bazie danych dostarczanej przez MongoDB, Inc. Dane przechowywane są na serwerach zlokalizowanych na terenie Unii Europejskiej (region UE). Dane transakcyjne związane z dobrowolnym wsparciem są przetwarzane przez zewnętrznych dostawców płatności oraz usługi bankowe wybrane przez Administratora. Dane te są przechowywane wyłącznie w zakresie niezbędnym do prowadzenia ewidencji, zapobiegania oszustwom lub spełnienia obowiązków prawnych. MongoDB Atlas stosuje szyfrowanie danych w spoczynku i podczas transmisji, kontrolę dostępu oraz regularne audyty bezpieczeństwa."
     },
     "thirdParty": {
       "title": "Dostawcy usług zewnętrznych",
@@ -237,12 +238,20 @@
     "title": "Regulamin korzystania z serwisu",
     "lastUpdated": "Ostatnia aktualizacja: marzec 2026",
     "intro": {
-      "title": "Wstęp",
-      "content": "Niniejszy Regulamin określa zasady dostępu do oraz korzystania z niniejszej strony internetowej prowadzonej przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod nazwą ŁUKASZ TARNOWSKI, wpisanego do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy ul. dr Janusza Korczaka 17, 32-600 Rajsko, Polska („Usługodawca”). Korzystając z niniejszej strony internetowej lub uzyskując do niej dostęp, akceptujesz niniejszy Regulamin i zobowiązujesz się do jego przestrzegania."
+      "title": "Wprowadzenie",
+      "content": "Niniejszy Regulamin określa zasady dostępu do oraz korzystania z tej strony internetowej prowadzonej przez ŁUKASZA TARNOWSKIEGO, prowadzącego działalność gospodarczą pod firmą ŁUKASZ TARNOWSKI, wpisaną do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG), NIP: 5492257321, REGON: 12022820400000, z siedzibą przy UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polska („Usługodawca”). Dobrowolne darowizny przekazywane za pośrednictwem tej strony są traktowane jako dobrowolne wsparcie niezależnego projektu edukacyjnego i są zarządzane oddzielnie od usług komercyjnych oferowanych przez Usługodawcę. Korzystając z tej strony internetowej, akceptujesz postanowienia niniejszego Regulaminu."
     },
     "eligibility": {
       "title": "Uprawnienie",
       "content": "Niniejsza strona internetowa oraz jej usługi przeznaczone są dla osób w wieku 16 lat lub starszych. Korzystając z tej strony internetowej i przekazując dane osobowe, potwierdzasz, że masz co najmniej 16 lat. Jeżeli masz mniej niż 16 lat, możesz korzystać z tej strony internetowej wyłącznie przy udziale i za zgodą rodzica lub opiekuna prawnego."
+    },
+    "noAffiliation": {
+      "title": "Brak Powiązania",
+      "content": "Ta strona internetowa stanowi niezależny projekt informacyjny i edukacyjny i nie jest powiązana, wspierana ani oficjalnie związana z Państwowym Muzeum Auschwitz-Birkenau ani żadną instytucją rządową."
+    },
+    "supportDisclaimer": {
+      "title": "Dobrowolne Wsparcie",
+      "content": "Wszystkie dobrowolne darowizny są całkowicie opcjonalnymi formami wsparcia i nie wiążą się z oczekiwaniem otrzymania towarów, usług, korzyści ani ekskluzywnych treści w zamian. Dobrowolne wsparcie przekazywane za pośrednictwem tej strony nie tworzy relacji klienta, subskrypcji, członkostwa, udziału własnościowego ani prawa do przyszłych produktów, usług, aktualizacji lub innych korzyści. Wsparcie projektu nie powoduje powstania obowiązku zapewnienia przyszłych aktualizacji, usług ani ciągłej dostępności strony internetowej. Dobrowolne wsparcie zasadniczo nie podlega zwrotowi, chyba że wymagają tego obowiązujące przepisy prawa lub doszło do błędu technicznego podczas płatności."
     },
     "natureOfWebsite": {
       "title": "Charakter serwisu",

@@ -138,20 +138,21 @@
     "lastUpdated": "Ultimo aggiornamento: marzo 2026",
     "intro": {
       "title": "Introduzione",
-      "content": "Questo sito è gestito da ŁUKASZ TARNOWSKI, che esercita attività sotto la denominazione ŁUKASZ TARNOWSKI, iscritto nel Registro Centrale e Informazioni sull’Attività Economica (CEIDG), NIP: 5492257321, REGON: 12022820400000, con sede in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polonia (\"Titolare del trattamento\"). Si tratta di un progetto personale e professionale, non affiliato, non avallato né ufficialmente collegato al Museo Statale di Auschwitz-Birkenau né ad altre istituzioni. La presente Informativa sulla privacy spiega come i dati personali vengono raccolti, utilizzati e protetti in conformità al Regolamento (UE) 2016/679 (GDPR), alla legge polacca sulla protezione dei dati personali e alle altre norme applicabili."
+      "content": "Questo sito è gestito da ŁUKASZ TARNOWSKI, che esercita attività sotto la denominazione ŁUKASZ TARNOWSKI, iscritto nel Registro Centrale e Informazioni sull'Attività Economica (CEIDG), NIP: 5492257321, REGON: 12022820400000, con sede in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polonia («Titolare del trattamento»). Si tratta di un progetto educativo indipendente gestito dal Titolare del trattamento e non è affiliato, avallato né ufficialmente collegato al Museo Statale di Auschwitz-Birkenau né ad altre istituzioni. Le donazioni volontarie ricevute tramite questo sito sono trattate come supporto personale volontario per questo progetto e gestite separatamente dai servizi commerciali offerti dal Titolare del trattamento. La presente Informativa sulla privacy spiega come i dati personali vengono raccolti, utilizzati e protetti in conformità al Regolamento (UE) 2016/679 (GDPR), alla legge polacca sulla protezione dei dati personali e alle altre norme applicabili."
     },
     "dataCollection": {
       "title": "Dati personali raccolti",
-      "intro": "Raccolgo i seguenti dati personali forniti volontariamente tramite il modulo di contatto e l’iscrizione alla newsletter:",
+      "intro": "Raccolgo i seguenti dati personali forniti volontariamente tramite il modulo di contatto, l'iscrizione alla newsletter e il processo di supporto volontario:",
       "item1": "Il tuo indirizzo email",
       "item2": "Gli argomenti di interesse che selezioni",
       "item3": "Eventuali idee per libri, informazioni storiche o suggerimenti che decidi di condividere",
-      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell’indirizzo IP trattati da Cloudflare per motivi di sicurezza e dati approssimativi di geolocalizzazione (paese/regione) derivati dal tuo indirizzo IP",
-      "item5": "Dati di geolocalizzazione — solo quando utilizzi espressamente la funzione \"Localizzami\" sulla mappa interattiva. La tua posizione viene elaborata localmente nel browser per mostrare la tua posizione sulla mappa e non viene memorizzata né trasmessa ad alcun server"
+      "item4": "Dati tecnici elaborati automaticamente dai fornitori di infrastruttura, inclusi i log dell'indirizzo IP trattati da Cloudflare per motivi di sicurezza e dati approssimativi di geolocalizzazione (paese/regione) derivati dal tuo indirizzo IP",
+      "item5": "Dati di geolocalizzazione — solo quando utilizzi espressamente la funzione «Localizzami» sulla mappa interattiva. La tua posizione viene elaborata localmente nel browser per mostrare la tua posizione sulla mappa e non viene memorizzata né trasmessa ad alcun server",
+      "item6": "Dati transazionali di base (importo, data e riferimento pagamento) quando fornisci supporto volontario tramite fornitori di pagamento terzi."
     },
     "legalBasis": {
       "title": "Base giuridica del trattamento",
-      "content": "I dati personali sono trattati sulla base delle seguenti condizioni ai sensi dell’art. 6 GDPR: a) il tuo consenso (art. 6, par. 1, lett. a)) per le comunicazioni via email e i cookie di analisi; b) l’interesse legittimo del Titolare (art. 6, par. 1, lett. f)) per rispondere alle richieste, migliorare il sito, garantire la sicurezza e prevenire abusi; c) ove applicabile in futuro, l’esecuzione di un contratto (art. 6, par. 1, lett. b)) in caso di offerta di prodotti o servizi a pagamento."
+      "content": "I dati personali sono trattati sulla base delle seguenti condizioni ai sensi dell'art. 6 GDPR: a) il tuo consenso (art. 6, par. 1, lett. a)) per le comunicazioni via email e i cookie di analisi; b) l'interesse legittimo del Titolare (art. 6, par. 1, lett. f)) per rispondere alle richieste, migliorare il sito, garantire la sicurezza e prevenire abusi; c) ove applicabile in futuro, l'esecuzione di un contratto (art. 6, par. 1, lett. b)) in caso di offerta di prodotti o servizi a pagamento; e d) adempimento degli obblighi legali (art. 6, par. 1, lett. c)) ove richiesto da obblighi contabili, fiscali, di prevenzione frodi o di conservazione applicabili."
     },
     "dataUse": {
       "title": "Finalità del trattamento",
@@ -164,7 +165,7 @@
     },
     "emailMarketing": {
       "title": "Comunicazioni via email",
-      "content": "Fornendo il tuo indirizzo email acconsenti a ricevere occasionalmente comunicazioni informative e promozionali relative alle mie attività storiche, educative ed editoriali, inclusi aggiornamenti su libri, prodotti digitali, consulenze e iniziative correlate. Il consenso può essere revocato in qualsiasi momento senza pregiudicare la liceità del trattamento effettuato prima della revoca. Ogni email contiene un’opzione di disiscrizione. Lei ha inoltre il diritto di opporsi in qualsiasi momento al trattamento dei Suoi dati personali a fini di marketing diretto ai sensi dell’articolo 21, paragrafo 2, del RGPD. A seguito di tale opposizione, i Suoi dati non saranno più trattati a fini di marketing diretto."
+      "content": "Fornendo il tuo indirizzo email acconsenti a ricevere occasionalmente comunicazioni informative e promozionali relative alle mie attività storiche, educative ed editoriali, inclusi aggiornamenti su libri, prodotti digitali, consulenze e iniziative correlate. Il consenso può essere revocato in qualsiasi momento senza pregiudicare la liceità del trattamento effettuato prima della revoca. Ogni email contiene un'opzione di disiscrizione. Lei ha inoltre il diritto di opporsi in qualsiasi momento al trattamento dei Suoi dati personali a fini di marketing diretto ai sensi dell'articolo 21, paragrafo 2, del RGPD. A seguito di tale opposizione, i Suoi dati non saranno più trattati a fini di marketing diretto."
     },
     "dataRetention": {
       "title": "Periodo di conservazione",
@@ -175,17 +176,17 @@
       "intro": "Questo sito utilizza cookie e tecnologie similari.",
       "essential": {
         "title": "Cookie essenziali e funzionali",
-        "content": "Questi cookie sono necessari per il corretto funzionamento del sito, inclusa la memorizzazione delle preferenze sui cookie e delle impostazioni dell’interfaccia (es. modalità scura). Non richiedono consenso."
+        "content": "Questi cookie sono necessari per il corretto funzionamento del sito, inclusa la memorizzazione delle preferenze sui cookie e delle impostazioni dell'interfaccia (es. modalità scura). Non richiedono consenso."
       },
       "analytics": {
         "title": "Cookie di analisi",
-        "content": "Con il tuo consenso, Google Analytics 4 viene utilizzato per analizzare il traffico e migliorare l’esperienza utente. Il periodo di conservazione in Google Analytics è impostato al massimo disponibile. I cookie di analisi vengono attivati solo dopo il tuo consenso esplicito."
+        "content": "Con il tuo consenso, Google Analytics 4 viene utilizzato per analizzare il traffico e migliorare l'esperienza utente. Il periodo di conservazione in Google Analytics è impostato al massimo disponibile. I cookie di analisi vengono attivati solo dopo il tuo consenso esplicito."
       },
       "control": "Puoi accettare o rifiutare i cookie di analisi tramite il banner dei cookie al primo accesso. Puoi anche configurare il browser per controllare i cookie."
     },
     "dataStorage": {
       "title": "Conservazione dei dati",
-      "content": "I dati personali inviati tramite questo sito web sono conservati in MongoDB Atlas, un servizio di database cloud fornito da MongoDB, Inc. I dati sono conservati su server situati nell'Unione Europea (regione UE). MongoDB Atlas viene utilizzato per conservare in modo sicuro i dati degli utenti, comprese le informazioni sull'account, le iscrizioni alla newsletter e gli altri dati necessari per la fornitura dei servizi descritti nella presente informativa. Inoltre, possono essere conservati dati approssimativi di geolocalizzazione (paese/regione, derivati dal tuo indirizzo IP) per migliorare la pertinenza dei contenuti e rispettare i requisiti legali regionali. MongoDB Atlas utilizza la crittografia a riposo e in transito, controlli di accesso e audit di sicurezza periodici."
+      "content": "I dati personali inviati tramite questo sito web sono conservati in MongoDB Atlas, un servizio di database cloud fornito da MongoDB, Inc. I dati sono conservati su server situati nell'Unione Europea (regione UE). I dati transazionali relativi al supporto volontario sono elaborati tramite fornitori di pagamento esterni e servizi bancari selezionati dal Titolare del trattamento. Tali dati sono conservati solo nella misura necessaria per la tenuta dei registri, la prevenzione frodi o l'adempimento legale. MongoDB Atlas utilizza la crittografia a riposo e in transito, controlli di accesso e audit di sicurezza periodici."
     },
     "thirdParty": {
       "title": "Fornitori di servizi terzi",
@@ -212,11 +213,11 @@
       "intro": "Ai sensi del GDPR hai i seguenti diritti:",
       "item1": "Diritto di accesso ai dati personali",
       "item2": "Diritto di rettifica dei dati inesatti",
-      "item3": "Diritto alla cancellazione (\"diritto all’oblio\")",
+      "item3": "Diritto alla cancellazione («diritto all'oblio»)",
       "item4": "Diritto di limitazione del trattamento",
       "item5": "Diritto alla portabilità dei dati",
       "item6": "Diritto di revocare il consenso in qualsiasi momento",
-      "item7": "Diritto di proporre reclamo al Presidente dell’Ufficio per la Protezione dei Dati Personali (UODO) in Polonia",
+      "item7": "Diritto di proporre reclamo al Presidente dell'Ufficio per la Protezione dei Dati Personali (UODO) in Polonia",
       "item8": "Diritto di opporsi in qualsiasi momento al trattamento dei Suoi dati personali a fini di marketing diretto (articolo 21, paragrafo 2, del RGPD) — si tratta di un diritto assoluto che non richiede alcuna giustificazione"
     },
     "contact": {
@@ -228,21 +229,29 @@
       "content": "La presente Informativa sulla privacy può essere aggiornata per riflettere cambiamenti normativi, tecnici o aziendali. La versione vigente sarà sempre disponibile su questa pagina con la data di aggiornamento."
     }
   },
-  "terms-link": "Condizioni d’uso",
+  "terms-link": "Condizioni d'uso",
   "terms": {
     "metadata": {
-      "title": "Condizioni d’uso — Progetto Libri su Auschwitz",
-      "description": "Consulta le condizioni che regolano l’uso del sito del progetto libri su Auschwitz, inclusi proprietà intellettuale e obblighi dell’utente."
+      "title": "Condizioni d'uso — Progetto Libri su Auschwitz",
+      "description": "Consulta le condizioni che regolano l'uso del sito del progetto libri su Auschwitz, inclusi proprietà intellettuale e obblighi dell'utente."
     },
-    "title": "Condizioni d’uso",
+    "title": "Condizioni d'uso",
     "lastUpdated": "Ultimo aggiornamento: marzo 2026",
     "intro": {
       "title": "Introduzione",
-      "content": "Le presenti Condizioni d’uso regolano l’accesso e l’utilizzo di questo sito gestito da ŁUKASZ TARNOWSKI, che esercita attività sotto la denominazione ŁUKASZ TARNOWSKI, iscritto nel Registro Centrale e Informazioni sull’Attività Economica (CEIDG), NIP: 5492257321, REGON: 12022820400000, con sede in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polonia (\"Fornitore del servizio\"). Accedendo o utilizzando il sito, accetti di rispettare queste Condizioni."
+      "content": "Le presenti Condizioni d'uso regolano l'accesso e l'utilizzo di questo sito gestito da ŁUKASZ TARNOWSKI, che esercita attività sotto la denominazione ŁUKASZ TARNOWSKI, iscritto nel Registro Centrale e Informazioni sull'Attività Economica (CEIDG), NIP: 5492257321, REGON: 12022820400000, con sede in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polonia («Fornitore del servizio»). Le donazioni volontarie ricevute tramite questo sito sono trattate come supporto personale volontario per un progetto educativo indipendente e gestite separatamente dai servizi commerciali offerti dal Fornitore del servizio. Accedendo o utilizzando il sito, accetti di rispettare queste Condizioni."
     },
     "eligibility": {
       "title": "Idoneità",
       "content": "Questo sito web e i relativi servizi sono destinati a persone di età pari o superiore a 16 anni. Utilizzando questo sito web e conferendo dati personali, Lei conferma di avere almeno 16 anni di età. Se ha meno di 16 anni, può utilizzare questo sito web solo con il coinvolgimento e il consenso dei Suoi genitori o del Suo rappresentante legale."
+    },
+    "noAffiliation": {
+      "title": "Nessuna affiliazione",
+      "content": "Questo sito è un progetto informativo ed educativo indipendente e non è affiliato, avallato né ufficialmente collegato al Museo Statale di Auschwitz-Birkenau né ad alcuna istituzione governativa."
+    },
+    "supportDisclaimer": {
+      "title": "Supporto volontario",
+      "content": "Tutte le donazioni volontarie sono regali puramente opzionali senza aspettativa di beni, servizi, vantaggi o contenuti esclusivi in cambio. Il supporto volontario fornito tramite questo sito non crea alcuna relazione cliente, abbonamento, membership, interesse di proprietà né diritto a prodotti, servizi, aggiornamenti o vantaggi futuri. Supportare il progetto non crea un obbligo continuo di fornire aggiornamenti, servizi o disponibilità continua del sito in futuro. Il supporto volontario è generalmente non rimborsabile, salvo quanto richiesto dalla legge applicabile o in caso di errore tecnico nel pagamento."
     },
     "natureOfWebsite": {
       "title": "Natura del sito",

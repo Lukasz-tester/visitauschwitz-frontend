@@ -138,20 +138,21 @@
     "lastUpdated": "Laatst bijgewerkt: maart 2026",
     "intro": {
       "title": "Inleiding",
-      "content": "Deze website wordt beheerd door ŁUKASZ TARNOWSKI, handelend onder de naam ŁUKASZ TARNOWSKI, ingeschreven in het Centraal Register en Informatie over Economische Activiteit (CEIDG), NIP: 5492257321, REGON: 12022820400000, met statutaire zetel te UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen (\"Verwerkingsverantwoordelijke\"). Deze website is een persoonlijk en professioneel project en is niet verbonden met, goedgekeurd door of officieel gelieerd aan het Staatsmuseum Auschwitz-Birkenau of enige andere instelling. Dit privacybeleid legt uit hoe persoonsgegevens worden verzameld, gebruikt en beschermd in overeenstemming met de Algemene Verordening Gegevensbescherming (EU) 2016/679 (AVG), de Poolse wet op de bescherming van persoonsgegevens en andere toepasselijke wetgeving."
+      "content": "Deze website wordt beheerd door ŁUKASZ TARNOWSKI, handelend onder de naam ŁUKASZ TARNOWSKI, ingeschreven in het Centraal Register en Informatie over Economische Activiteit (CEIDG), NIP: 5492257321, REGON: 12022820400000, met statutaire zetel te UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Verwerkingsverantwoordelijke\"). Deze website is een onafhankelijk educatief project dat wordt beheerd door de Verwerkingsverantwoordelijke en is niet verbonden met, goedgekeurd door of officieel gelieerd aan het Staatsmuseum Auschwitz-Birkenau of enige andere instelling. Vrijwillige donaties die via deze website worden ontvangen, worden behandeld als vrijwillige persoonlijke steun voor dit project en worden afzonderlijk beheerd van de commerciële diensten die door de Verwerkingsverantwoordelijke worden aangeboden."
     },
     "dataCollection": {
       "title": "Welke informatie ik verzamel",
-      "intro": "Ik verzamel de volgende persoonsgegevens die vrijwillig via het contactformulier en de nieuwsbriefinschrijving worden verstrekt:",
+      "intro": "Ik verzamel de volgende persoonsgegevens die vrijwillig via het contactformulier, de nieuwsbriefinschrijving en het proces van vrijwillige steun worden verstrekt:",
       "item1": "Uw e-mailadres",
       "item2": "Geselecteerde onderwerpen van interesse",
       "item3": "Eventuele ideeën voor boeken, historische informatie of suggesties die u kiest te delen",
       "item4": "Technische gegevens die automatisch door infrastructuuraanbieders worden verwerkt, waaronder IP-adreslogs die door Cloudflare worden verwerkt voor beveiligingsdoeleinden en geschatte geolocatiegegevens (land/regio) afgeleid van uw IP-adres",
-      "item5": "Geolocatiegegevens — alleen wanneer u uitdrukkelijk de functie \"Lokaliseer mij\" op de interactieve kaart gebruikt. Uw locatie wordt lokaal in de browser verwerkt om uw positie op de kaart weer te geven en wordt niet opgeslagen of naar een server verzonden"
+      "item5": "Geolocatiegegevens — alleen wanneer u uitdrukkelijk de functie \"Lokaliseer mij\" op de interactieve kaart gebruikt. Uw locatie wordt lokaal in de browser verwerkt om uw positie op de kaart weer te geven en wordt niet opgeslagen of naar een server verzonden",
+      "item6": "Basis transactiegegevens (bedrag, datum en betalingsreferentie) wanneer u vrijwillige steun biedt via externe betaalproviders."
     },
     "legalBasis": {
       "title": "Rechtsgrond voor verwerking",
-      "content": "Persoonsgegevens worden verwerkt op basis van de volgende rechtsgronden uit artikel 6 AVG: (a) uw toestemming (artikel 6, lid 1, onder a)) voor e-mailcommunicatie en analytische cookies; (b) het gerechtvaardigd belang van de verwerkingsverantwoordelijke (artikel 6, lid 1, onder f)) voor het beantwoorden van vragen, het verbeteren van de website, het waarborgen van beveiliging en het beschermen tegen misbruik; (c) indien in de toekomst van toepassing, de uitvoering van een overeenkomst (artikel 6, lid 1, onder b)) indien betaalde producten of diensten worden aangeboden."
+      "content": "Persoonsgegevens worden verwerkt op basis van de volgende rechtsgronden uit artikel 6 AVG: (a) uw toestemming (artikel 6, lid 1, onder a)) voor e-mailcommunicatie en analytische cookies; (b) het gerechtvaardigd belang van de verwerkingsverantwoordelijke (artikel 6, lid 1, onder f)) voor het beantwoorden van vragen, het verbeteren van de website, het waarborgen van beveiliging en het beschermen tegen misbruik; (c) indien in de toekomst van toepassing, de uitvoering van een overeenkomst (artikel 6, lid 1, onder b)) indien betaalde producten of diensten worden aangeboden; en (d) naleving van wettelijke verplichtingen (artikel 6, lid 1, onder c)) waar vereist door toepasselijke boekhoudkundige, fiscale, fraudepreventie- of administratieve verplichtingen."
     },
     "dataUse": {
       "title": "Hoe ik uw informatie gebruik",
@@ -185,7 +186,7 @@
     },
     "dataStorage": {
       "title": "Gegevensopslag",
-      "content": "Persoonsgegevens die via deze website worden ingediend, worden opgeslagen in MongoDB Atlas, een clouddatabasedienst van MongoDB, Inc. De gegevens worden opgeslagen op servers binnen de Europese Unie (EU-regio). MongoDB Atlas wordt gebruikt om gebruikersgegevens veilig op te slaan, waaronder accountinformatie, nieuwsbriefabonnementen en andere gegevens die noodzakelijk zijn voor de levering van de in dit beleid beschreven diensten. Daarnaast kunnen geschatte geolocatiegegevens (land/regio, afgeleid van uw IP-adres) worden opgeslagen om de relevantie van inhoud te verbeteren en te voldoen aan regionale wettelijke vereisten. MongoDB Atlas maakt gebruik van versleuteling in rust en tijdens overdracht, toegangscontroles en regelmatige beveiligingsaudits."
+      "content": "Persoonsgegevens die via deze website worden ingediend, worden opgeslagen in MongoDB Atlas, een clouddatabasedienst van MongoDB, Inc. De gegevens worden opgeslagen op servers binnen de Europese Unie (EU-regio). Transactiegegevens met betrekking tot vrijwillige steun worden verwerkt via externe betaalproviders en bankdiensten die door de Verwerkingsverantwoordelijke zijn geselecteerd. Dergelijke gegevens worden alleen bewaard waar noodzakelijk voor administratie, fraudepreventie of wettelijke naleving. MongoDB Atlas maakt gebruik van versleuteling in rust en tijdens overdracht, toegangscontroles en regelmatige beveiligingsaudits."
     },
     "thirdParty": {
       "title": "Derden-dienstverleners",
@@ -212,7 +213,7 @@
       "intro": "Op grond van de AVG heeft u de volgende rechten:",
       "item1": "Recht op inzage in uw persoonsgegevens",
       "item2": "Recht op rectificatie van onjuiste gegevens",
-      "item3": "Recht op wissen („recht om vergeten te worden”)",
+      "item3": "Recht op wissen („recht om vergeten te worden\")",
       "item4": "Recht op beperking van de verwerking",
       "item5": "Recht op gegevensoverdraagbaarheid",
       "item6": "Recht om toestemming te allen tijde in te trekken",
@@ -238,11 +239,19 @@
     "lastUpdated": "Laatst bijgewerkt: maart 2026",
     "intro": {
       "title": "Inleiding",
-      "content": "Deze gebruiksvoorwaarden regelen uw toegang tot en gebruik van deze website die wordt beheerd door ŁUKASZ TARNOWSKI, handelend onder de naam ŁUKASZ TARNOWSKI, ingeschreven in het Centraal Register en Informatie over Economische Activiteit (CEIDG), NIP: 5492257321, REGON: 12022820400000, met statutaire zetel te UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen (\"Dienstverlener\"). Door toegang te krijgen tot of gebruik te maken van deze website, stemt u in met naleving van deze voorwaarden."
+      "content": "Deze gebruiksvoorwaarden regelen uw toegang tot en gebruik van deze website die wordt beheerd door ŁUKASZ TARNOWSKI, handelend onder de naam ŁUKASZ TARNOWSKI, ingeschreven in het Centraal Register en Informatie over Economische Activiteit (CEIDG), NIP: 5492257321, REGON: 12022820400000, met statutaire zetel te UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Dienstverlener\"). Vrijwillige donaties die via deze website worden ontvangen, worden behandeld als vrijwillige persoonlijke steun voor een onafhankelijk educatief project en worden afzonderlijk beheerd van de commerciële diensten die door de „Dienstverlener\" worden aangeboden. Door toegang te krijgen tot of gebruik te maken van deze website, stemt u in met naleving van deze voorwaarden."
     },
     "eligibility": {
       "title": "Geschiktheid",
       "content": "Deze website en de bijbehorende diensten zijn bedoeld voor personen van 16 jaar of ouder. Door deze website te gebruiken en persoonsgegevens in te dienen, bevestigt u dat u ten minste 16 jaar oud bent. Indien u jonger bent dan 16 jaar, mag u deze website uitsluitend gebruiken met betrokkenheid en toestemming van uw ouder of wettelijke vertegenwoordiger."
+    },
+    "noAffiliation": {
+      "title": "Geen affiliatie",
+      "content": "Deze website is een onafhankelijk informatief en educatief project en is niet verbonden met, goedgekeurd door of officieel gelieerd aan het Staatsmuseum Auschwitz-Birkenau of enige overheidsinstelling."
+    },
+    "supportDisclaimer": {
+      "title": "Vrijwillige steun",
+      "content": "Alle vrijwillige donaties zijn puur optionele geschenken zonder verwachting van enige goederen, diensten, voordelen of exclusieve inhoud als tegenprestatie. Vrijwillige steun die via deze website wordt geboden, creëert geen klantrelatie, abonnement, lidmaatschap, eigendomsbelang of recht op toekomstige producten, diensten, updates of voordelen. Het ondersteunen van het project creëert geen doorlopende verplichting om toekomstige updates, diensten of voortzetting van de websitebeschikbaarheid te bieden. Vrijwillige steun is doorgaans niet restitueerbaar, tenzij vereist door toepasselijke wetgeving of in gevallen van technische betalingsfouten."
     },
     "natureOfWebsite": {
       "title": "Aard van de website",

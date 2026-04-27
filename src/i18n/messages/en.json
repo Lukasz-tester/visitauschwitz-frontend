@@ -138,20 +138,21 @@
     "lastUpdated": "Last updated: March 2026",
     "intro": {
       "title": "Introduction",
-      "content": "This website is operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Administrator\"). This website is a personal and professional project and is not affiliated with, endorsed by, or officially connected to the Auschwitz-Birkenau State Museum or any other institution. This Privacy Policy explains how personal data is collected, used, and protected in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR), the Polish Personal Data Protection Act, and other applicable laws."
+      "content": "This website is operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Administrator\"). This website is an independent educational project operated by the Administrator and is not affiliated with, endorsed by, or officially connected to the Auschwitz-Birkenau State Museum or any other institution. Voluntary donations received through this website are treated as voluntary personal support for this project and are managed separately from commercial services offered by the Administrator. This Privacy Policy explains how personal data is collected, used, and protected in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR), the Polish Personal Data Protection Act, and other applicable laws."
     },
     "dataCollection": {
       "title": "Information I Collect",
-      "intro": "I collect the following personal data voluntarily provided through the contact form and newsletter signup:",
+      "intro": "I collect the following personal data voluntarily provided through the contact form, newsletter signup, and voluntary support process:",
       "item1": "Your email address",
       "item2": "Topics of interest you select",
       "item3": "Any book ideas, historical information, or suggestions you choose to share",
       "item4": "Technical data processed automatically by infrastructure providers, including IP address logs processed by Cloudflare for security purposes and approximate geolocation data (country/region) derived from your IP address",
-      "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server"
+      "item5": "Geolocation data — only when you explicitly use the \"Locate Me\" feature on the interactive map. Your location is processed locally in the browser to display your position on the map and is not stored or transmitted to any server",
+      "item6": "Basic transaction data (amount, date and payment reference) when you provide voluntary support through third-party payment providers."
     },
     "legalBasis": {
       "title": "Legal Basis for Processing",
-      "content": "Personal data is processed on the following legal bases under Article 6 GDPR: (a) your consent (Article 6(1)(a)) for email communications and analytics cookies; (b) the legitimate interest of the Administrator (Article 6(1)(f)) for responding to inquiries, improving the website, ensuring security, and protecting against abuse; (c) where applicable in the future, performance of a contract (Article 6(1)(b)) if paid products or services are offered."
+      "content": "Personal data is processed on the following legal bases under Article 6 GDPR: (a) your consent (Article 6(1)(a)) for email communications and analytics cookies; (b) the legitimate interest of the Administrator (Article 6(1)(f)) for responding to inquiries, improving the website, ensuring security, and protecting against abuse; (c) where applicable in the future, performance of a contract (Article 6(1)(b)) if paid products or services are offered; and (d) compliance with legal obligations (Article 6(1)(c)) where required by applicable accounting, tax, fraud-prevention, or record-keeping obligations."
     },
     "dataUse": {
       "title": "How I Use Your Information",
@@ -185,7 +186,7 @@
     },
     "dataStorage": {
       "title": "Data Storage",
-      "content": "Personal data submitted through this website is stored in MongoDB Atlas, a cloud-hosted database service provided by MongoDB, Inc. Data is stored on servers located within the European Union (EU region). MongoDB Atlas is used to securely store user data, including account information, newsletter subscriptions, and other data necessary for the provision of services described in this policy. Additionally, approximate geolocation data (country/region level, derived from your IP address) may be stored to improve content relevance and comply with regional legal requirements. MongoDB Atlas employs encryption at rest and in transit, access controls, and regular security audits."
+      "content": "Personal data submitted through this website is stored in MongoDB Atlas, a cloud-hosted database service provided by MongoDB, Inc. Data is stored on servers located within the European Union (EU region). Transaction data related to voluntary support is processed through external payment providers and banking services selected by the Administrator. Such data is retained only where necessary for record-keeping, fraud prevention, or legal compliance. MongoDB Atlas employs encryption at rest and in transit, access controls, and regular security audits."
     },
     "thirdParty": {
       "title": "Third-Party Service Providers",
@@ -238,11 +239,19 @@
     "lastUpdated": "Last updated: March 2026",
     "intro": {
       "title": "Introduction",
-      "content": "These Terms of Use govern your access to and use of this website operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Service Provider\"). By accessing or using this website, you agree to comply with these Terms."
+      "content": "These Terms of Use govern your access to and use of this website operated by ŁUKASZ TARNOWSKI, conducting business under the name ŁUKASZ TARNOWSKI, registered in the Central Register and Information on Economic Activity (CEIDG), NIP: 5492257321, REGON: 12022820400000, with its registered office at UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Poland (\"Service Provider\"). Voluntary donations received through this website are treated as voluntary personal support for an independent educational project and are managed separately from commercial services offered by the Service Provider. By accessing or using this website, you agree to comply with these Terms."
     },
     "eligibility": {
       "title": "Eligibility",
       "content": "This website and its services are intended for individuals aged 16 years or older. By using this website and submitting personal data, you confirm that you are at least 16 years of age. If you are under 16, you may use this website only with the involvement and consent of your parent or legal guardian."
+    },
+    "noAffiliation": {
+      "title": "No Affiliation",
+      "content": "This website is an independent informational and educational project and is not affiliated with, endorsed by, or officially connected to the Auschwitz-Birkenau State Museum or any governmental institution."
+    },
+    "supportDisclaimer": {
+      "title": "Voluntary Support",
+      "content": "All voluntary donations (darowizny) are purely optional gifts with no expectation of any goods, services, benefits or exclusive content in return. Voluntary support provided through this website does not create any customer relationship, subscription, membership, ownership interest, or entitlement to future products, services, updates, or benefits. Supporting the project does not create an ongoing obligation to provide future updates, services, or continued website availability. Voluntary support is generally non-refundable unless required by applicable law or in cases of technical payment error."
     },
     "natureOfWebsite": {
       "title": "Nature of the Website",

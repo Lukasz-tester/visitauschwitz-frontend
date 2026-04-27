@@ -138,20 +138,21 @@
     "lastUpdated": "Dernière mise à jour : mars 2026",
     "intro": {
       "title": "Introduction",
-      "content": "Ce site web est exploité par ŁUKASZ TARNOWSKI, exerçant sous le nom ŁUKASZ TARNOWSKI, inscrit au Registre central et informations sur l’activité économique (CEIDG), NIP : 5492257321, REGON : 12022820400000, dont le siège est situé UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Pologne (« Responsable du traitement »). Ce site est un projet personnel et professionnel et n’est pas affilié, approuvé ou officiellement lié au Musée d’État d’Auschwitz-Birkenau ni à toute autre institution. La présente Politique de confidentialité explique comment les données à caractère personnel sont collectées, utilisées et protégées conformément au Règlement général sur la protection des données (UE) 2016/679 (RGPD), à la loi polonaise sur la protection des données personnelles et aux autres dispositions légales applicables."
+      "content": "Ce site est un projet éducatif indépendant exploité par le Responsable du traitement et n'est pas affilié, approuvé ou officiellement lié au Musée d'État d'Auschwitz-Birkenau ni à toute autre institution. Les dons volontaires reçus via ce site sont traités comme un soutien personnel volontaire à ce projet et sont gérés séparément des services commerciaux proposés par le Responsable du traitement."
     },
     "dataCollection": {
       "title": "Informations collectées",
-      "intro": "Je collecte les données personnelles suivantes fournies volontairement via le formulaire de contact et l’inscription à la newsletter :",
+      "intro": "Je collecte les données personnelles suivantes fournies volontairement via le formulaire de contact, l’inscription à la newsletter et le processus de soutien volontaire :",
       "item1": "Votre adresse e-mail",
       "item2": "Les sujets d’intérêt que vous sélectionnez",
       "item3": "Toute idée de livre, information historique ou suggestion que vous choisissez de partager",
       "item4": "Les données techniques traitées automatiquement par les fournisseurs d’infrastructure, y compris les journaux d’adresses IP traités par Cloudflare à des fins de sécurité et les données approximatives de géolocalisation (pays/région) dérivées de votre adresse IP",
-      "item5": "Les données de géolocalisation — uniquement lorsque vous utilisez expressément la fonction « Me localiser » sur la carte interactive. Votre position est traitée localement dans le navigateur pour afficher votre emplacement sur la carte et n’est ni stockée ni transmise à aucun serveur"
+      "item5": "Les données de géolocalisation — uniquement lorsque vous utilisez expressément la fonction « Me localiser » sur la carte interactive. Votre position est traitée localement dans le navigateur pour afficher votre emplacement sur la carte et n'est ni stockée ni transmise à aucun serveur",
+      "item6": "Les données de transaction de base (montant, date et référence de paiement) lorsque vous fournissez un soutien volontaire via des tiers de paiement."
     },
     "legalBasis": {
       "title": "Base juridique du traitement",
-      "content": "Les données à caractère personnel sont traitées sur les bases juridiques suivantes au sens de l’article 6 du RGPD : (a) votre consentement (article 6, paragraphe 1, point a)) pour les communications par e-mail et les cookies analytiques ; (b) l’intérêt légitime du Responsable du traitement (article 6, paragraphe 1, point f)) pour répondre aux demandes, améliorer le site web, assurer la sécurité et prévenir les abus ; (c) le cas échéant à l’avenir, l’exécution d’un contrat (article 6, paragraphe 1, point b)) si des produits ou services payants sont proposés."
+      "content": "Les données à caractère personnel sont traitées sur les bases juridiques suivantes au sens de l'article 6 du RGPD : (a) votre consentement (article 6, paragraphe 1, point a)) pour les communications par e-mail et les cookies analytiques ; (b) l'intérêt légitime du Responsable du traitement (article 6, paragraphe 1, point f)) pour répondre aux demandes, améliorer le site web, assurer la sécurité et prévenir les abus ; (c) le cas échéant à l'avenir, l'exécution d'un contrat (article 6, paragraphe 1, point b)) si des produits ou services payants sont proposés ; et (d) le respect des obligations légales (article 6, paragraphe 1, point c)) lorsque requis par les obligations comptables, fiscales, de prévention de la fraude ou de tenue de dossiers applicables."
     },
     "dataUse": {
       "title": "Utilisation de vos informations",
@@ -185,7 +186,7 @@
     },
     "dataStorage": {
       "title": "Stockage des données",
-      "content": "Les données personnelles soumises via ce site web sont stockées dans MongoDB Atlas, un service de base de données cloud fourni par MongoDB, Inc. Les données sont stockées sur des serveurs situés au sein de l'Union européenne (région UE). MongoDB Atlas est utilisé pour stocker de manière sécurisée les données des utilisateurs, y compris les informations de compte, les abonnements à la newsletter et les autres données nécessaires à la fourniture des services décrits dans la présente politique. De plus, des données approximatives de géolocalisation (pays/région, dérivées de votre adresse IP) peuvent être stockées afin d'améliorer la pertinence du contenu et de respecter les exigences légales régionales. MongoDB Atlas utilise le chiffrement au repos et en transit, des contrôles d'accès et des audits de sécurité réguliers."
+      "content": "Les données personnelles soumises via ce site web sont stockées dans MongoDB Atlas, un service de base de données cloud fourni par MongoDB, Inc. Les données sont stockées sur des serveurs situés au sein de l'Union européenne (région UE). Les données de transaction liées au soutien volontaire sont traitées via des prestataires de paiement tiers et des services bancaires sélectionnés par le Responsable du traitement. Ces données ne sont conservées que lorsque nécessaire pour la tenue de dossiers, la prévention de la fraude ou la conformité légale. MongoDB Atlas utilise le chiffrement au repos et en transit, des contrôles d'accès et des audits de sécurité réguliers."
     },
     "thirdParty": {
       "title": "Prestataires de services tiers",
@@ -238,11 +239,19 @@
     "lastUpdated": "Dernière mise à jour : mars 2026",
     "intro": {
       "title": "Introduction",
-      "content": "Les présentes Conditions d’utilisation régissent votre accès et votre utilisation de ce site web exploité par ŁUKASZ TARNOWSKI, exerçant sous le nom ŁUKASZ TARNOWSKI, inscrit au Registre central et informations sur l’activité économique (CEIDG), NIP : 5492257321, REGON : 12022820400000, dont le siège est situé UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Pologne (« Prestataire de services »). En accédant ou en utilisant ce site, vous acceptez de respecter les présentes Conditions."
+      "content": "Les présentes Conditions d'utilisation régissent votre accès et votre utilisation de ce site web exploité par ŁUKASZ TARNOWSKI, exerçant sous le nom ŁUKASZ TARNOWSKI, inscrit au Registre central et informations sur l'activité économique (CEIDG), NIP : 5492257321, REGON : 12022820400000, dont le siège est situé UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Pologne (« Prestataire de services »). Les dons volontaires reçus via ce site sont traités comme un soutien personnel volontaire à un projet éducatif indépendant et sont gérés séparément des services commerciaux proposés par le Prestataire de services. En accédant ou en utilisant ce site, vous acceptez de respecter les présentes Conditions."
     },
     "eligibility": {
       "title": "Conditions d'admissibilité",
       "content": "Ce site web et ses services sont destinés aux personnes âgées de 16 ans ou plus. En utilisant ce site web et en soumettant des données personnelles, vous confirmez que vous avez au moins 16 ans. Si vous avez moins de 16 ans, vous ne pouvez utiliser ce site web qu'avec la participation et le consentement de votre parent ou tuteur légal."
+    },
+    "noAffiliation": {
+      "title": "Aucune affiliation",
+      "content": "Ce site est un projet informatif et éducatif indépendant et n'est pas affilié, approuvé ou officiellement lié au Musée d'État d'Auschwitz-Birkenau ni à aucune institution gouvernementale."
+    },
+    "supportDisclaimer": {
+      "title": "Soutien volontaire",
+      "content": "Tous les dons volontaires sont des cadeaux purement optionnels sans attente de biens, services, avantages ou contenu exclusif en retour. Le soutien volontaire fourni via ce site ne crée aucune relation client, abonnement, adhésion, intérêt de propriété ou droit à des produits, services, mises à jour ou avantages futurs. Soutenir le projet ne crée aucune obligation continue de fournir des mises à jour, des services ou la poursuite de la disponibilité du site. Le soutien volontaire est généralement non remboursable, sauf si requis par la loi applicable ou en cas d'erreur de paiement technique."
     },
     "natureOfWebsite": {
       "title": "Nature du site web",

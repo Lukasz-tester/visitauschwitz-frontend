@@ -138,20 +138,21 @@
     "lastUpdated": "Letzte Aktualisierung: März 2026",
     "intro": {
       "title": "Einleitung",
-      "content": "Diese Website wird betrieben von ŁUKASZ TARNOWSKI, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Verantwortlicher“). Diese Website ist ein persönliches und berufliches Projekt und steht in keiner Verbindung, wird nicht unterstützt oder offiziell vertreten durch das Staatliche Museum Auschwitz-Birkenau oder eine andere Institution. Diese Datenschutzerklärung erläutert, wie personenbezogene Daten gemäß der Datenschutz-Grundverordnung (EU) 2016/679 (DSGVO), dem polnischen Gesetz zum Schutz personenbezogener Daten sowie sonstigem anwendbarem Recht erhoben, verwendet und geschützt werden."
+      "content": "Diese Website wird betrieben von ŁUKASZ TARNOWSKI, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Verantwortlicher“). Diese Website ist ein unabhängiges Bildungsprojekt, das vom Verantwortlichen betrieben wird, und steht in keiner Verbindung, wird nicht unterstützt oder offiziell vertreten durch das Staatliche Museum Auschwitz-Birkenau oder eine andere Institution. Freiwillige Spenden, die über diese Website empfangen werden, werden als freiwillige persönliche Unterstützung für dieses Projekt behandelt und getrennt von den kommerziellen Dienstleistungen verwaltet, die vom Verantwortlichen angeboten werden. Diese Datenschutzerklärung erläutert, wie personenbezogene Daten gemäß der Datenschutz-Grundverordnung (EU) 2016/679 (DSGVO), dem polnischen Gesetz zum Schutz personenbezogener Daten sowie sonstigem anwendbarem Recht erhoben, verwendet und geschützt werden."
     },
     "dataCollection": {
       "title": "Erhobene Informationen",
-      "intro": "Ich erhebe die folgenden personenbezogenen Daten, die freiwillig über das Kontaktformular und die Newsletter-Anmeldung bereitgestellt werden:",
+      "intro": "Ich erhebe die folgenden personenbezogenen Daten, die freiwillig über das Kontaktformular, die Newsletter-Anmeldung und den Prozess der freiwilligen Unterstützung bereitgestellt werden:",
       "item1": "Ihre E-Mail-Adresse",
       "item2": "Von Ihnen ausgewählte Interessensgebiete/Themen",
       "item3": "Von Ihnen mitgeteilte Buchideen, historische Informationen oder sonstige Vorschläge",
       "item4": "Technische Daten, die automatisch durch Infrastrukturanbieter verarbeitet werden, einschließlich IP-Adress-Protokolle, die von Cloudflare zu Sicherheitszwecken verarbeitet werden, sowie ungefähre Geolokalisierungsdaten (Land/Region), die aus Ihrer IP-Adresse abgeleitet werden",
-      "item5": "Geolokalisierungsdaten — nur wenn Sie ausdrücklich die Funktion \"Mich finden\" auf der interaktiven Karte verwenden. Ihr Standort wird lokal im Browser verarbeitet, um Ihre Position auf der Karte anzuzeigen, und wird weder gespeichert noch an einen Server übermittelt"
+      "item5": "Geolokalisierungsdaten — nur wenn Sie ausdrücklich die Funktion \"Mich finden\" auf der interaktiven Karte verwenden. Ihr Standort wird lokal im Browser verarbeitet, um Ihre Position auf der Karte anzuzeigen, und wird weder gespeichert noch an einen Server übermittelt",
+      "item6": "Grundlegende Transaktionsdaten (Betrag, Datum und Zahlungsreferenz), wenn Sie freiwillige Unterstützung über Drittanbieter von Zahlungsdiensten leisten."
     },
     "legalBasis": {
       "title": "Rechtsgrundlagen der Verarbeitung",
-      "content": "Personenbezogene Daten werden auf Grundlage der folgenden Rechtsgrundlagen gemäß Art. 6 DSGVO verarbeitet: (a) Ihre Einwilligung (Art. 6 Abs. 1 lit. a) für E-Mail-Kommunikation und Analyse-Cookies; (b) das berechtigte Interesse des Verantwortlichen (Art. 6 Abs. 1 lit. f) zur Beantwortung von Anfragen, Verbesserung der Website, Gewährleistung der Sicherheit und Schutz vor Missbrauch; (c) soweit künftig anwendbar, Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b), falls entgeltliche Produkte oder Dienstleistungen angeboten werden."
+      "content": "Personenbezogene Daten werden auf Grundlage der folgenden Rechtsgrundlagen gemäß Art. 6 DSGVO verarbeitet: (a) Ihre Einwilligung (Art. 6 Abs. 1 lit. a) für E-Mail-Kommunikation und Analyse-Cookies; (b) das berechtigte Interesse des Verantwortlichen (Art. 6 Abs. 1 lit. f) zur Beantwortung von Anfragen, Verbesserung der Website, Gewährleistung der Sicherheit und Schutz vor Missbrauch; (c) soweit künftig anwendbar, Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b), falls entgeltliche Produkte oder Dienstleistungen angeboten werden; und (d) Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c), soweit dies durch anwendbare buchhalterische, steuerliche, betrugspräventive oder aufbewahrungspflichtige Vorschriften erforderlich ist."
     },
     "dataUse": {
       "title": "Verwendung Ihrer Daten",
@@ -185,7 +186,7 @@
     },
     "dataStorage": {
       "title": "Datenspeicherung",
-      "content": "Personenbezogene Daten, die über diese Website übermittelt werden, werden in MongoDB Atlas gespeichert, einem Cloud-Datenbankdienst von MongoDB, Inc. Die Daten werden auf Servern innerhalb der Europäischen Union (EU-Region) gespeichert. MongoDB Atlas dient der sicheren Speicherung von Nutzerdaten, einschließlich Kontoinformationen, Newsletter-Abonnements und anderer für die Erbringung der in dieser Datenschutzerklärung beschriebenen Dienste erforderlichen Daten. Darüber hinaus können ungefähre Geolokalisierungsdaten (Land/Region, abgeleitet aus Ihrer IP-Adresse) gespeichert werden, um die Relevanz der Inhalte zu verbessern und regionale gesetzliche Anforderungen zu erfüllen. MongoDB Atlas verwendet Verschlüsselung im Ruhezustand und bei der Übertragung, Zugriffskontrollen sowie regelmäßige Sicherheitsaudits."
+      "content": "Personenbezogene Daten, die über diese Website übermittelt werden, werden in MongoDB Atlas gespeichert, einem Cloud-Datenbankdienst von MongoDB, Inc. Die Daten werden auf Servern innerhalb der Europäischen Union (EU-Region) gespeichert. Transaktionsdaten, die mit freiwilliger Unterstützung verbunden sind, werden über externe Zahlungsanbieter und Bankdienstleistungen verarbeitet, die vom Verantwortlichen ausgewählt wurden. Diese Daten werden nur so lange aufbewahrt, wie es für die Aufzeichnung, Betrugsprävention oder die Erfüllung gesetzlicher Pflichten erforderlich ist. MongoDB Atlas verwendet Verschlüsselung im Ruhezustand und bei der Übertragung, Zugriffskontrollen sowie regelmäßige Sicherheitsaudits."
     },
     "thirdParty": {
       "title": "Dienstleister (Auftragsverarbeiter)",
@@ -238,11 +239,19 @@
     "lastUpdated": "Letzte Aktualisierung: März 2026",
     "intro": {
       "title": "Einleitung",
-      "content": "Diese Nutzungsbedingungen regeln Ihren Zugang zu und die Nutzung dieser Website, die von ŁUKASZ TARNOWSKI betrieben wird, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Diensteanbieter”). Durch den Zugriff auf oder die Nutzung dieser Website erklären Sie sich mit diesen Bedingungen einverstanden."
+      "content": "Diese Nutzungsbedingungen regeln Ihren Zugang zu und die Nutzung dieser Website, die von ŁUKASZ TARNOWSKI betrieben wird, der unter dem Namen ŁUKASZ TARNOWSKI tätig ist, eingetragen im Zentralen Register und Informationen über die Wirtschaftstätigkeit (CEIDG), NIP: 5492257321, REGON: 12022820400000, mit Sitz in UL. DR JANUSZA KORCZAKA 17, PL-32-600 RAJSKO, Polen („Diensteanbieter”). Freiwillige Spenden, die über diese Website empfangen werden, werden als freiwillige persönliche Unterstützung für ein unabhängiges Bildungsprojekt behandelt und getrennt von den kommerziellen Dienstleistungen verwaltet, die vom Diensteanbieter angeboten werden. Durch den Zugriff auf oder die Nutzung dieser Website erklären Sie sich mit diesen Bedingungen einverstanden."
     },
     "eligibility": {
       "title": "Berechtigung",
       "content": "Diese Website und ihre Dienste sind für Personen ab 16 Jahren bestimmt. Durch die Nutzung dieser Website und die Übermittlung personenbezogener Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind. Wenn Sie unter 16 Jahre alt sind, dürfen Sie diese Website nur unter Mitwirkung und mit Einwilligung Ihres Elternteils oder gesetzlichen Vertreters nutzen."
+    },
+    "noAffiliation": {
+      "title": "Keine Verbindung",
+      "content": "Diese Website ist ein unabhängiges Informations- und Bildungsprojekt und steht in keiner Verbindung, wird nicht unterstützt oder offiziell vertreten durch das Staatliche Museum Auschwitz-Birkenau oder eine staatliche Institution."
+    },
+    "supportDisclaimer": {
+      "title": "Freiwillige Unterstützung",
+      "content": "Alle freiwilligen Spenden sind rein freiwillige Geschenke ohne Erwartung von Waren, Dienstleistungen, Vorteilen oder exklusiven Inhalten im Gegenzug. Freiwillige Unterstützung, die über diese Website geleistet wird, begründet keine Kundenbeziehung, kein Abonnement, keine Mitgliedschaft, kein Eigentumsinteresse und keinen Anspruch auf zukünftige Produkte, Dienstleistungen, Updates oder Vorteile. Die Unterstützung des Projekts begründet keine fortlaufende Verpflichtung zur Bereitstellung zukünftiger Updates, Dienstleistungen oder der fortgesetzten Verfügbarkeit der Website. Freiwillige Unterstützung ist grundsätzlich nicht erstattungsfähig, es sei denn, dies ist nach geltendem Recht erforderlich oder es liegt ein technischer Zahlungsfehler vor."
     },
     "natureOfWebsite": {
       "title": "Art der Website",
