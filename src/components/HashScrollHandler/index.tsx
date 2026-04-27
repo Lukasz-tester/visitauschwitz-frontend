@@ -42,29 +42,28 @@ export function HashScrollHandler() {
     const id = hash.slice(1) // remove '#'
     if (!id) return
 
-    // Neutralize Safari's premature scroll-to-hash so our animation starts from the top
-    window.scrollTo({ top: 0, behavior: 'instant' })
-
     // Wait for the new page to fully lay out, then animate scroll to the target
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         setTimeout(() => {
           const el = document.getElementById(id)
           if (!el) return
+          // Read target position while Safari is at hash (getBoundingClientRect is viewport-relative)
           const target = el.getBoundingClientRect().top + window.scrollY
-          const start = window.scrollY
-          const distance = target - start
+          if (target <= 0) return
+          // Reset to top NOW — as late as possible so Safari doesn't re-jump between reset and animation
+          window.scrollTo(0, 0)
+          // Animate from 0 → target. Use plain 2-arg scrollTo (always instant, all browsers)
           const duration = 1200
           let startTime: number | null = null
-          const easeInOutCubic = (t: number) =>
-            t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-          const step = (timestamp: number) => {
-            if (!startTime) startTime = timestamp
-            const progress = Math.min((timestamp - startTime) / duration, 1)
-            window.scrollTo(0, start + distance * easeInOutCubic(progress))
-            if (progress < 1) requestAnimationFrame(step)
+          const ease = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+          const tick = (ts: number) => {
+            if (!startTime) startTime = ts
+            const p = Math.min((ts - startTime) / duration, 1)
+            window.scrollTo(0, target * ease(p))
+            if (p < 1) requestAnimationFrame(tick)
           }
-          requestAnimationFrame(step)
+          requestAnimationFrame(tick)
         }, 100)
       })
     })
