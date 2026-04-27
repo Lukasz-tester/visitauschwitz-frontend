@@ -85,8 +85,20 @@ export function extractTocItems(
       } else if (tile.title) {
         items.push({ id: block.blockName, label: tile.title })
       }
+    } else if (block.blockType === 'bankTransfer') {
+      const found = findFirstHeading((block as any).heading)
+      if (!found) continue
+      items.push({ id: block.blockName, label: found.text, indent: found.tag === 'h3' })
+    } else if (block.blockType === 'oh') {
+      const found = findFirstHeading((block as any).richText)
+      if (!found) continue
+      items.push({ id: block.blockName, label: found.text, indent: found.tag === 'h3' })
+    } else if (block.blockType === 'accordion') {
+      const accordionItems = (block as any).accordionItems
+      const label = Array.isArray(accordionItems) && accordionItems[0]?.question
+      if (!label) continue
+      items.push({ id: block.blockName, label })
     }
-    // All other block types are skipped
   }
 
   return items
