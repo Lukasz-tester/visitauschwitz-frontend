@@ -85,7 +85,7 @@ export function extractTocItems(
       } else if (tile.title) {
         items.push({ id: block.blockName, label: tile.title })
       }
-    } else if (block.blockType === 'bankTransfer') {
+    } else if ((block as any).blockType === 'bankTransfer') {
       const found = findFirstHeading((block as any).heading)
       if (!found) continue
       items.push({ id: block.blockName, label: found.text, indent: found.tag === 'h3' })
