@@ -19,16 +19,8 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
 
   return (
     <div className="container max-w-[50rem]">
-      <Link
-        href="/posts"
-        className="flex pt-9 text-sm uppercase tracking-widest text-foreground/70 font-medium hover:text-foreground transition-colors"
-      >
-        {t('read-more-articles')}
-        <ArrowRight className="w-4 h-4" />
-      </Link>
-
       {/* <div className="border-t border-border mb-10" /> */}
-      <div className="flex flex-col gap-10 my-8">
+      <div className="flex flex-col gap-10 mt-10">
         {authors.map((author) => {
           const photo =
             author.photo && typeof author.photo === 'object' ? (author.photo as Media) : null
@@ -78,6 +70,13 @@ export const AuthorBio: React.FC<Props> = ({ authors }) => {
           )
         })}
       </div>
+      <Link
+        href="/posts"
+        className="justify-center flex pt-9 text-sm uppercase tracking-widest text-foreground/70 font-medium hover:text-foreground transition-colors"
+      >
+        {t('read-more-articles')}
+        <ArrowRight className="w-4 h-4" />
+      </Link>
     </div>
   )
 }

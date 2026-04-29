@@ -48,7 +48,8 @@ export const CMSLink: React.FC<CMSLinkType> = ({
       ? `${reference?.relationTo !== 'pages' ? `/${reference?.relationTo}` : ''}/${reference.value.slug}`
       : url || ''
 
-  if (!href) return null
+  if (!href) href = '#'
+//  if (!href) return null
 
   // EXTERNAL LINKING
   if (href.startsWith('http')) {

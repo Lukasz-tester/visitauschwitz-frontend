@@ -54,8 +54,10 @@ export default async function RootLayout({ children, params }: Args) {
           }}
         />
         <link href="/icon.ico" rel="icon" sizes="32x32" />
+        {/* Preconnect to Cloudflare R2 CDN for faster image loading */}
+        <link rel="preconnect" href="https://images.visitauschwitz.info" />
         {/* Preload default hero image for better LCP */}
-        <link href="/images/default-hero.webp" rel="preload" as="image" />
+        <link href="/images/default-hero.webp" rel="preload" as="image" imageSrcSet="/images/default-hero.webp 1920w" imageSizes="100vw" />
       </head>
       <body>
         <Providers>

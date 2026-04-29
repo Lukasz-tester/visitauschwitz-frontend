@@ -18,7 +18,8 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
   return (
     <div
       className={cn(
-        ' rounded-xl bg-white/80 dark:bg-black/80 p-5 border border-amber-600/20',
+        'p-5',
+        // ' rounded-xl bg-white/80 dark:bg-black/80 border border-amber-600/20',
         className,
       )}
     >
@@ -27,15 +28,13 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={onClick}
-        className="w-full mb-3 bg-orange-600/30 dark:bg-amber-800/40 hover:opacity-90 text-base font-medium py-2 px-4 rounded-lg transition-colors text-center block"
+        className="w-full mb-3 bg-orange-500/30 dark:bg-amber-800/40 hover:opacity-90 text-base font-medium py-2 px-4 rounded-lg transition-colors text-center block"
       >
         {t('support-mission')}
       </Link>
-      <Link
-      href="/support" className="opacity-70" onClick={onClick}
-      >
+      <Link href="/support/#support-options" className="opacity-70" onClick={onClick}>
         {t('support-banner-text')}
       </Link>
-          </div>
+    </div>
   )
 }

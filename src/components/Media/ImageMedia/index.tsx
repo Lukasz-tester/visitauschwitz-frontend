@@ -85,8 +85,8 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     `
     (max-width: 768px) 100vw,
     (max-width: 1024px) 100vw,
-    (max-width: 1440px) 90vw,
-    1440px
+    (max-width: 1440px) 100vw,
+    100vw
   `.trim()
 
   return (
@@ -105,6 +105,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       src={src}
       loading={priority ? 'eager' : 'lazy'}
       unoptimized={true}
+      fetchPriority={priority ? 'high' : 'auto'}
       onLoad={handleLoad}
     />
   )

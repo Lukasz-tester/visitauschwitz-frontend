@@ -61,10 +61,10 @@ export const ShareButtons: React.FC<Props> = async ({ url, title, className }) =
   return (
     <div className={className}>
       {/* <div className="border-t border-border "> */}
-      <p className="uppercase tracking-widest text-foreground/70 font-medium mb-5">
+      <p className="text-center mx-auto uppercase tracking-widest text-foreground/70 font-medium mb-5">
         {t('share-this-article')}
       </p>
-      <div className="flex gap-3">
+      <div className="flex gap-3 justify-center">
         {buttons.map(({ label, href, icon }) => (
           <a
             key={label}

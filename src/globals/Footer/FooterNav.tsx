@@ -31,9 +31,6 @@ export function FooterNav({ navItems }: { navItems: NavItems }) {
         <Link href={`/${locale}/supplement/`} className={linkClass}>
           {t('tips')}
         </Link>
-        <Link href={`/${locale}/faq/`} className={linkClass}>
-          FAQ
-        </Link>
         {/* {navItems[0] && renderLink(navItems[0], 0)} */}
       </div>
 

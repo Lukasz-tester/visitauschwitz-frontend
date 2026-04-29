@@ -92,7 +92,7 @@ export const MobileNavCaller: React.FC<{
               aria-label={t('main-navigation')}
             />
           </div>
-          <div className="absolute bottom-24 px-4">
+          <div className="fixed bottom-20">
             <DonationCard onClick={() => setModalOpen(false)} />
           </div>
         </div>
