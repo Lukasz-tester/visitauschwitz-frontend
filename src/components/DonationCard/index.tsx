@@ -28,13 +28,7 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={onClick}
-        className="btn-living w-full mb-3 text-base font-medium py-2 px-4 rounded-lg text-center block "
-        style={{
-          background:
-            'linear-gradient(135deg, hsl(222,47%,14%), rgba(160,85,15,0.55), hsl(215,40%,16%), rgba(180,100,20,0.45), hsl(222,47%,14%))',
-          backgroundSize: '800% 2100%',
-          color: 'hsl(34,60%,90%)',
-        }}
+        className="btn-living w-full mb-3 text-base font-medium py-2 px-4 rounded-lg text-center block"
       >
         {t('support-mission')}
       </Link>
