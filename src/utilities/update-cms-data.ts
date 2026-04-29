@@ -2,10 +2,14 @@ import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
-import { locales } from '@/i18n/localization'
+import { locales, Locale } from '@/i18n/localization'
 import crypto from 'crypto'
 
 const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
+
+function isSupportedLocale(locale: string): locale is Locale {
+  return locales.includes(locale as Locale)
+}
 
 async function fetchJSON(endpoint: string) {
   const res = await fetch(`${CMS_URL}${endpoint}`)
@@ -111,7 +115,7 @@ function extractTextFromLayout(layout: any[]): string {
     if (block.heading) {
       // heading is an object with locale keys: { en: {...}, pl: {...} }
       for (const locale of Object.keys(block.heading)) {
-        if (locale === 'en' || locale === 'pl') {
+        if (isSupportedLocale(locale)) {
           traverseLocaleRichText(block.heading[locale])
         }
       }
@@ -122,7 +126,7 @@ function extractTextFromLayout(layout: any[]): string {
       for (const column of block.columns) {
         if (column.richText) {
           for (const locale of Object.keys(column.richText)) {
-            if (locale === 'en' || locale === 'pl') {
+            if (isSupportedLocale(locale)) {
               traverseLocaleRichText(column.richText[locale])
             }
           }
@@ -133,7 +137,7 @@ function extractTextFromLayout(layout: any[]): string {
     // Handle content blocks
     if (block.blockType === 'content' && block.content) {
       for (const locale of Object.keys(block.content)) {
-        if (locale === 'en' || locale === 'pl') {
+        if (isSupportedLocale(locale)) {
           traverseLocaleRichText(block.content[locale])
         }
       }
@@ -145,7 +149,7 @@ function extractTextFromLayout(layout: any[]): string {
         const value = block[key]
         if (value && typeof value === 'object') {
           for (const locale of Object.keys(value)) {
-            if (locale === 'en' || locale === 'pl') {
+            if (isSupportedLocale(locale)) {
               traverseLocaleRichText(value[locale])
             }
           }

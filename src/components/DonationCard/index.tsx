@@ -28,7 +28,13 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={onClick}
-        className="w-full mb-3 bg-orange-500/30 dark:bg-amber-800/40 hover:opacity-90 text-base font-medium py-2 px-4 rounded-lg transition-colors text-center block"
+        className="btn-living w-full mb-3 text-base font-medium py-2 px-4 rounded-lg text-center block "
+        style={{
+          background:
+            'linear-gradient(135deg, hsl(222,47%,14%), rgba(160,85,15,0.55), hsl(215,40%,16%), rgba(180,100,20,0.45), hsl(222,47%,14%))',
+          backgroundSize: '800% 2100%',
+          color: 'hsl(34,60%,90%)',
+        }}
       >
         {t('support-mission')}
       </Link>
@@ -36,5 +42,6 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         {t('support-banner-text')}
       </Link>
     </div>
+    // from-rose-600 via-orange-500 to-amber-400 dark:from-rose-700 dark:via-orange-600 dark:to-amber-600
   )
 }

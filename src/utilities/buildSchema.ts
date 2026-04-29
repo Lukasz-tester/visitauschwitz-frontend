@@ -1,9 +1,67 @@
 import type { Page, Post } from '@/payload-types'
 import type { Locale } from '@/i18n/localization'
-import { removeSpecialChars, richTextToHtml } from '@/utilities/helpersSsr'
+import { removeSpecialChars, richTextToHtml, extractTextFromRichText } from '@/utilities/helpersSsr'
+import localization from '@/i18n/localization'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://www.visitauschwitz.info'
 const R2_BASE = process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info'
+
+/* ─────────────────────────────────────────────────────────────
+   LOCALE-AWARE TRANSLATIONS
+───────────────────────────────────────────────────────────── */
+
+const touristTripTranslations: Record<string, { name: string; description: string }> = {
+  en: {
+    name: 'Auschwitz-Birkenau Memorial Tour',
+    description:
+      'Tour of the former German Nazi concentration and extermination camp Auschwitz I and Auschwitz II-Birkenau.',
+  },
+  pl: {
+    name: 'Zwiedzanie Auschwitz-Birkenau',
+    description:
+      'Trasa zwiedzania po byłym niemieckim nazistowskim obozie koncentracyjnym i zagłady Auschwitz I oraz Auschwitz II-Birkenau.',
+  },
+  de: {
+    name: 'Führung durch Auschwitz-Birkenau',
+    description:
+      'Führung durch das ehemalige nationalsozialistische Konzentrations- und Vernichtungslager Auschwitz I und Auschwitz II-Birkenau.',
+  },
+  es: {
+    name: 'Visita guiada a Auschwitz-Birkenau',
+    description:
+      'Tour del antiguo campo de concentración y exterminación nazi alemán Auschwitz I y Auschwitz II-Birkenau.',
+  },
+  it: {
+    name: 'Tour memoriale di Auschwitz-Birkenau',
+    description:
+      'Tour del precedente campo di concentramento e sterminio nazista tedesco Auschwitz I e Auschwitz II-Birkenau.',
+  },
+  fr: {
+    name: 'Visite du Mémorial d\'Auschwitz-Birkenau',
+    description:
+      'Visite de l\'ancien camp de concentration et d\'extermination nazi allemand Auschwitz I et Auschwitz II-Birkenau.',
+  },
+  nl: {
+    name: 'Rondleiding Auschwitz-Birkenau',
+    description:
+      'Rondleiding door het voormalige Duitse nazi-concentratie- en vernietigingskamp Auschwitz I en Auschwitz II-Birkenau.',
+  },
+  ru: {
+    name: 'Экскурсия по мемориалу Аушвица-Биркенау',
+    description:
+      'Экскурсия по бывшему немецкому нацистскому концентрационному и лагерю смерти Аушвиц I и Аушвиц II-Биркенау.',
+  },
+  uk: {
+    name: 'Екскурсія по меморіалу Аушвіца-Біркенау',
+    description:
+      'Екскурсія по колишньому німецькому нацистському концентраційному та табору смерті Аушвіц I та Аушвіц II-Біркенау.',
+  },
+}
+
+function getLocaleLabel(locale: string): string {
+  const localeObj = localization.locales.find((l) => l.code === locale)
+  return localeObj?.label || locale
+}
 
 /* ─────────────────────────────────────────────────────────────
    SHARED STATIC ENTITIES (SITE-WIDE KNOWLEDGE GRAPH CORE)
@@ -102,6 +160,12 @@ const guideServiceNode = {
 
 type BreadcrumbItem = { name: string; url: string }
 
+function extractNodeText(node: any): string {
+  if (node.text) return node.text as string
+  if (node.children) return (node.children as any[]).map(extractNodeText).join('')
+  return ''
+}
+
 function buildImageNode(imageUrl: string, pageUrl: string) {
   return {
     '@type': 'ImageObject',
@@ -148,9 +212,7 @@ function buildWebPageNode({
     ...(image ? { primaryImageOfPage: { '@id': `${url}#primaryimage` } } : {}),
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: faqId
-        ? ['h1', 'h2', 'article > button h3', '[role="region"]']
-        : ['h1', 'h2'],
+      cssSelector: faqId ? ['h1', 'h2', 'article > button h3', '[role="region"]'] : ['h1', 'h2'],
     },
     ...(faqId ? { hasPart: { '@id': faqId } } : {}),
   }
@@ -294,14 +356,12 @@ export function extractFAQItems(
 ───────────────────────────────────────────────────────────── */
 
 function buildTouristTripNode(url: string, locale: Locale) {
-  const isPolish = locale === 'pl'
+  const translation = touristTripTranslations[locale] || touristTripTranslations.en
   return {
     '@type': 'TouristTrip',
     '@id': `${url}#touristtrip`,
-    name: isPolish ? 'Zwiedzanie Auschwitz-Birkenau' : 'Auschwitz-Birkenau Memorial Tour',
-    description: isPolish
-      ? 'Trasa zwiedzania po byłym niemieckim nazistowskim obozie koncentracyjnym i zagłady Auschwitz I oraz Auschwitz II-Birkenau.'
-      : 'Tour of the former German Nazi concentration and extermination camp Auschwitz I and Auschwitz II-Birkenau.',
+    name: translation.name,
+    description: translation.description,
     touristType: ['Cultural tourism', 'Heritage tourism'],
     inLanguage: locale,
     itinerary: {
@@ -389,7 +449,7 @@ function buildEventNode(url: string, locale: Locale, image?: string) {
       {
         '@type': 'Offer',
         name: isPolish ? 'Zwiedzanie z przewodnikiem' : 'Guided tour',
-        price: '130',
+        price: '150',
         priceCurrency: 'PLN',
         availability: 'https://schema.org/InStock',
         url: 'https://visit.auschwitz.org',
@@ -399,59 +459,31 @@ function buildEventNode(url: string, locale: Locale, image?: string) {
   }
 }
 
-function buildHowToNode(url: string, locale: Locale) {
-  const isPolish = locale === 'pl'
+function buildHowToNode(url: string, locale: Locale, page: Page) {
+  const heroChildren = page.hero?.richText?.root?.children ?? []
+  const h1Node = heroChildren.find((n: any) => n.type === 'heading' && n.tag === 'h1')
+  const name = h1Node ? extractNodeText(h1Node) : ''
+
+  const pNode = heroChildren.find((n: any) => n.type === 'paragraph')
+  const description = pNode ? extractNodeText(pNode) : undefined
+
+  const steps = (page.layout ?? [])
+    .filter((b: any) => b.blockType === 'accordion')
+    .flatMap((b: any) => b.accordionItems ?? [])
+    .map((item: any, i: number) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: item.question ?? '',
+      text: extractTextFromRichText(item.answer),
+    }))
+
   return {
     '@type': 'HowTo',
     '@id': `${url}#howto`,
-    name: isPolish ? 'Jak zarezerwować bilety do Auschwitz' : 'How to Book Auschwitz Tickets',
-    description: isPolish
-      ? 'Przewodnik krok po kroku jak zarezerwować bilety do Muzeum Auschwitz-Birkenau.'
-      : 'Step-by-step guide to booking tickets for the Auschwitz-Birkenau Memorial and Museum.',
+    name,
+    ...(description ? { description } : {}),
     inLanguage: locale,
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: isPolish ? 'Wybierz rodzaj zwiedzania' : 'Choose your tour type',
-        text: isPolish
-          ? 'Zdecyduj, czy chcesz zwiedzać samodzielnie (bezpłatnie) czy z przewodnikiem (130–170 PLN).'
-          : 'Decide between a self-guided visit (free) or a guided tour (130–170 PLN).',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: isPolish ? 'Wejdź na stronę rezerwacji' : 'Visit the booking website',
-        text: isPolish
-          ? 'Przejdź na visit.auschwitz.org i wybierz datę wizyty.'
-          : 'Go to visit.auschwitz.org and select your visit date.',
-        url: 'https://visit.auschwitz.org',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 3,
-        name: isPolish ? 'Wybierz godzinę wejścia' : 'Select your entry time',
-        text: isPolish
-          ? 'Wybierz dostępny slot czasowy. Rezerwuj z wyprzedzeniem — popularne terminy szybko się wyprzedają.'
-          : 'Pick an available time slot. Book in advance — popular dates sell out quickly.',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 4,
-        name: isPolish ? 'Wypełnij dane i zapłać' : 'Complete your details and pay',
-        text: isPolish
-          ? 'Podaj dane osobowe, dokonaj płatności i pobierz potwierdzenie rezerwacji.'
-          : 'Enter your personal details, complete the payment, and download your booking confirmation.',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 5,
-        name: isPolish ? 'Przyjdź na miejsce z potwierdzeniem' : 'Arrive with your confirmation',
-        text: isPolish
-          ? 'Przyjdź do muzeum z wydrukiem lub wersją elektroniczną potwierdzenia. Zabierz dokument tożsamości.'
-          : 'Arrive at the museum with your printed or digital confirmation. Bring a valid ID.',
-      },
-    ],
+    step: steps,
   }
 }
 
@@ -516,7 +548,10 @@ export function buildPageGraph({
   if (slug === 'tour') nodes.push(buildTouristTripNode(url, locale))
   if (slug === 'tickets') {
     nodes.push(buildEventNode(url, locale, pageImage))
-    nodes.push(buildHowToNode(url, locale))
+    nodes.push(buildHowToNode(url, locale, page))
+  }
+  if (slug === 'faq') {
+    nodes.push(buildHowToNode(url, locale, page))
   }
 
   return { '@context': 'https://schema.org', '@graph': nodes }

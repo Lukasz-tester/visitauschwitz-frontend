@@ -68,3 +68,20 @@
   height: 100%;
 }
 
+@keyframes grad-drift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.btn-living {
+  animation: grad-drift 15s ease infinite;
+}
+
+.btn-living:hover {
+  animation: grad-drift 9s ease infinite;
+}

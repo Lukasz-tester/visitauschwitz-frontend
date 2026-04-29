@@ -2,10 +2,11 @@ import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
 import fetch from 'node-fetch'
+import { locales } from '@/i18n/localization'
 
 const CMS_URL = process.env.CMS_PUBLIC_SERVER_URL
 const SITE_URL = 'https://www.visitauschwitz.info'
-const LOCALES = ['en', 'pl']
+const LOCALES = locales
 const STATIC_PAGES = ['privacy', 'terms']
 const STATIC_LASTMOD = '2026-01-01'
 const TODAY = new Date().toISOString().slice(0, 10)
@@ -100,7 +101,10 @@ async function main() {
       console.log(`Found ${pages.length} pages, ${posts.length} posts from cache`)
     } else {
       // Fallback to fetching from CMS
-      const [fetchedPages, fetchedPosts] = await Promise.all([fetchDocs('pages'), fetchDocs('posts')])
+      const [fetchedPages, fetchedPosts] = await Promise.all([
+        fetchDocs('pages'),
+        fetchDocs('posts'),
+      ])
       pages = fetchedPages
       posts = fetchedPosts
       console.log(`Found ${pages.length} pages, ${posts.length} posts from CMS`)
