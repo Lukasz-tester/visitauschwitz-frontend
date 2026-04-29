@@ -69,36 +69,76 @@
 }
 
 @keyframes grad-drift {
-  0%,100% { background-position: 0% 50%; }
-  50%      { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes border-drift {
-  0%   { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,130,30,0.25), 0 0 22px 4px rgba(180,100,20,0.15); }
-  50%  { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(240,170,60,0.35), 0 0 30px 6px rgba(220,140,30,0.2); }
-  100% { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,130,30,0.25), 0 0 22px 4px rgba(180,100,20,0.15); }
+  0% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(200, 130, 30, 0.25),
+      0 0 22px 4px rgba(180, 100, 20, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(240, 170, 60, 0.35),
+      0 0 30px 6px rgba(220, 140, 30, 0.2);
+  }
+  100% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(200, 130, 30, 0.25),
+      0 0 22px 4px rgba(180, 100, 20, 0.15);
+  }
 }
 
 @keyframes border-drift-hover {
-  0%   { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,130,30,0.7), 0 0 22px 4px rgba(180,100,20,0.3); }
-  50%  { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(240,170,60,0.9), 0 0 30px 6px rgba(220,140,30,0.4); }
-  100% { box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,130,30,0.7), 0 0 22px 4px rgba(180,100,20,0.3); }
+  0% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(200, 130, 30, 0.7),
+      0 0 22px 4px rgba(180, 100, 20, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(240, 170, 60, 0.9),
+      0 0 30px 6px rgba(220, 140, 30, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(200, 130, 30, 0.7),
+      0 0 22px 4px rgba(180, 100, 20, 0.3);
+  }
 }
 
 .btn-living {
   border: none;
   color: hsl(34, 65%, 88%);
-  background: linear-gradient(135deg,
-    hsl(222,47%,14%),
-    rgba(160,85,15,0.55),
-    hsl(215,40%,16%),
-    rgba(180,100,20,0.45),
-    hsl(222,47%,14%)
+  background: linear-gradient(
+    135deg,
+    hsl(222, 47%, 14%),
+    rgba(160, 85, 15, 0.55),
+    hsl(215, 40%, 16%),
+    rgba(180, 100, 20, 0.45),
+    hsl(222, 47%, 14%)
   );
-  background-size: 300% 300%;
-  animation: grad-drift 12s ease infinite, border-drift 9s ease infinite;
+  background-size: 700% 300%;
+  animation:
+    grad-drift 40s ease infinite,
+    border-drift 12s ease infinite;
 }
 
 .btn-living:hover {
-  animation: grad-drift 4s ease infinite, border-drift-hover 3s ease infinite;
+  animation:
+    grad-drift 12s ease infinite,
+    border-drift-hover 7s ease infinite;
 }
