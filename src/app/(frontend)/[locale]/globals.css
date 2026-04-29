@@ -68,77 +68,73 @@
   height: 100%;
 }
 
-@keyframes grad-drift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+@property --bx1 { syntax: '<percentage>'; initial-value: 20%; inherits: false; }
+@property --by1 { syntax: '<percentage>'; initial-value: 40%; inherits: false; }
+@property --bx2 { syntax: '<percentage>'; initial-value: 75%; inherits: false; }
+@property --by2 { syntax: '<percentage>'; initial-value: 25%; inherits: false; }
+@property --bx3 { syntax: '<percentage>'; initial-value: 50%; inherits: false; }
+@property --by3 { syntax: '<percentage>'; initial-value: 70%; inherits: false; }
+
+@keyframes b1 {
+  0%  { --bx1:10%; --by1:30% }
+  15% { --bx1:80%; --by1:10% }
+  35% { --bx1:55%; --by1:75% }
+  55% { --bx1:90%; --by1:40% }
+  75% { --bx1:20%; --by1:90% }
+  100%{ --bx1:10%; --by1:30% }
+}
+@keyframes b2 {
+  0%  { --bx2:80%; --by2:20% }
+  20% { --bx2:10%; --by2:70% }
+  45% { --bx2:70%; --by2:95% }
+  70% { --bx2:30%; --by2:10% }
+  100%{ --bx2:80%; --by2:20% }
+}
+@keyframes b3 {
+  0%  { --bx3:45%; --by3:80% }
+  25% { --bx3:95%; --by3:5%  }
+  50% { --bx3:5%;  --by3:50% }
+  75% { --bx3:70%; --by3:85% }
+  90% { --bx3:30%; --by3:20% }
+  100%{ --bx3:45%; --by3:80% }
 }
 
 @keyframes border-drift {
-  0% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(200, 130, 30, 0.25),
-      0 0 22px 4px rgba(180, 100, 20, 0.15);
-  }
-  50% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(240, 170, 60, 0.35),
-      0 0 30px 6px rgba(220, 140, 30, 0.2);
-  }
-  100% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(200, 130, 30, 0.25),
-      0 0 22px 4px rgba(180, 100, 20, 0.15);
-  }
+  0%   { box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(160,80,10,0.38), 0 0 14px 1px rgba(160,80,10,0.14); }
+  33%  { box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(210,135,30,0.58), 0 0 20px 3px rgba(210,135,30,0.2); }
+  66%  { box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(140,65,10,0.32),  0 0 12px 0px rgba(140,65,10,0.1); }
+  100% { box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(160,80,10,0.38), 0 0 14px 1px rgba(160,80,10,0.14); }
 }
-
 @keyframes border-drift-hover {
-  0% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(200, 130, 30, 0.7),
-      0 0 22px 4px rgba(180, 100, 20, 0.3);
-  }
-  50% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(240, 170, 60, 0.9),
-      0 0 30px 6px rgba(220, 140, 30, 0.4);
-  }
-  100% {
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(200, 130, 30, 0.7),
-      0 0 22px 4px rgba(180, 100, 20, 0.3);
-  }
+  0%   { box-shadow: 0 10px 36px rgba(0,0,0,0.65), 0 0 0 1px rgba(210,135,30,0.75), 0 0 26px 5px rgba(190,105,20,0.35); }
+  50%  { box-shadow: 0 10px 36px rgba(0,0,0,0.65), 0 0 0 1px rgba(250,175,65,0.95), 0 0 36px 8px rgba(230,145,30,0.45); }
+  100% { box-shadow: 0 10px 36px rgba(0,0,0,0.65), 0 0 0 1px rgba(210,135,30,0.75), 0 0 26px 5px rgba(190,105,20,0.35); }
 }
 
 .btn-living {
+  width: 100%;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
   border: none;
   color: hsl(34, 65%, 88%);
-  background: linear-gradient(
-    135deg,
-    hsl(222, 47%, 14%),
-    rgba(160, 85, 15, 0.55),
-    hsl(215, 40%, 16%),
-    rgba(180, 100, 20, 0.45),
-    hsl(222, 47%, 14%)
-  );
-  background-size: 700% 300%;
+  background:
+    radial-gradient(ellipse 90% 160% at var(--bx1) var(--by1), rgba(200,85,8,0.38)  0%, transparent 45%),
+    radial-gradient(ellipse 80% 140% at var(--bx2) var(--by2), rgba(155,58,5,0.32)  0%, transparent 42%),
+    radial-gradient(ellipse 85% 150% at var(--bx3) var(--by3), rgba(225,128,16,0.28) 0%, transparent 40%),
+    hsl(222, 47%, 12%);
   animation:
-    grad-drift 40s ease infinite,
-    border-drift 12s ease infinite;
+    b1 18s ease-in-out infinite,
+    b2 23s ease-in-out infinite,
+    b3 15s ease-in-out infinite,
+    border-drift 9s ease infinite;
 }
-
 .btn-living:hover {
   animation:
-    grad-drift 12s ease infinite,
-    border-drift-hover 7s ease infinite;
+    b1 16s ease-in-out infinite,
+    b2 21s ease-in-out infinite,
+    b3 13s ease-in-out infinite,
+    border-drift-hover 8s ease infinite;
 }
