@@ -188,17 +188,17 @@
   background:
     radial-gradient(
       ellipse 90% 160% at var(--bx1) var(--by1),
-      rgba(240, 158, 103, 0.38) 0%,
+      rgba(176, 101, 61, 0.459) 0%,
       transparent 45%
     ),
     radial-gradient(
       ellipse 80% 140% at var(--bx2) var(--by2),
-      rgba(248, 109, 33, 0.32) 0%,
+      rgba(198, 119, 22, 0.468) 0%,
       transparent 42%
     ),
     radial-gradient(
       ellipse 85% 150% at var(--bx3) var(--by3),
-      rgba(225, 128, 16, 0.28) 0%,
+      rgba(240, 117, 40, 0.39) 0%,
       transparent 40%
     ),
     hsl(221, 27%, 35%);
@@ -238,6 +238,6 @@
 
 [data-theme='dark'] .btn-living:hover {
   box-shadow:
-    0 6px 16px rgba(160, 80, 10, 0.4),
-    0 4px 18px rgba(66, 37, 12, 0.2);
+    0 10px 36px rgba(160, 80, 10, 0.4),
+    0 0 12px rgba(160, 80, 10, 0.2);
 }
