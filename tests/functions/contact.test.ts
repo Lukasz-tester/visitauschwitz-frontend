@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-// @ts-expect-error JS module
+// @ts-ignore JS module
 import { onRequestPost, onRequestOptions } from '../../functions/api/contact.js'
 
 function ctx(body: any, env: Record<string, string> = {}) {

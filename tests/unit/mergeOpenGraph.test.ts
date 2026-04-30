@@ -3,7 +3,7 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 describe('mergeOpenGraph', () => {
   it('returns defaults when no override is provided', () => {
-    const og = mergeOpenGraph()
+    const og = mergeOpenGraph() as any
     expect(og?.type).toBe('website')
     expect(og?.siteName).toBe('Auschwitz Visiting Guide')
     expect(Array.isArray(og?.images)).toBe(true)

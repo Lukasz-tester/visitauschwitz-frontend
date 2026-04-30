@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-// @ts-expect-error — JS module without types
+// @ts-ignore JS module
 import { onRequest } from '../../functions/_middleware.js'
 
 function ctx(url: string, opts: { country?: string; acceptLanguage?: string } = {}) {

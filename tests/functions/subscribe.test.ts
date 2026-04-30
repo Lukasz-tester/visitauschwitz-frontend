@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-// @ts-expect-error JS module
+// @ts-ignore JS module
 import { onRequestPost } from '../../functions/api/subscribe.js'
 
 function ctx(body: any, env: Record<string, string> = { CMS_PUBLIC_SERVER_URL: 'https://cms.test' }) {

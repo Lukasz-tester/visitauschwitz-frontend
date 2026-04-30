@@ -28,7 +28,9 @@
     "test:e2e:ui": "playwright test --ui",
     "test:visual": "playwright test --grep @visual",
     "test:e2e:update": "playwright test --update-snapshots",
-    "test:lhci": "lhci autorun"
+    "test:lhci": "lhci autorun",
+    "qa:fast": "pnpm lint && pnpm typecheck && pnpm test:unit && pnpm test:component && pnpm test:contract && pnpm test:functions",
+    "qa": "pnpm qa:fast && pnpm build && pnpm test:e2e && pnpm test:lhci"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.1",

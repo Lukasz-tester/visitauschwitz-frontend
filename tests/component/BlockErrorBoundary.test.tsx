@@ -1,8 +1,9 @@
+import React from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { BlockErrorBoundary } from '@/blocks/BlockErrorBoundary'
 
-function Boom(): JSX.Element {
+function Boom(): React.ReactElement {
   throw new Error('block crash')
 }
 

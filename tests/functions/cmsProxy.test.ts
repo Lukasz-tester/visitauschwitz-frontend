@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-// @ts-expect-error JS module
+// @ts-ignore JS module
 import { onRequestGet, onRequestOptions } from '../../functions/api/cms/[[path]].js'
 
 function ctx(path: string | string[], env: Record<string, string> = { CMS_PUBLIC_SERVER_URL: 'https://cms.test' }, search = '') {
