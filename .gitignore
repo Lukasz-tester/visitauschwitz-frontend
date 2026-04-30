@@ -11,3 +11,9 @@ node_modules
 
 # Payload default media upload directory
 public/media/
+
+# Test artifacts
+playwright-report/
+test-results/
+.lighthouseci/
+coverage/

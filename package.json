@@ -23,7 +23,11 @@
     "test:component": "vitest run tests/component",
     "test:contract": "vitest run tests/contract",
     "test:functions": "vitest run tests/functions",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:visual": "playwright test --grep @visual",
+    "test:e2e:update": "playwright test --update-snapshots"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.1",
@@ -49,7 +53,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
     "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.59.1",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
