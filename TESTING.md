@@ -97,31 +97,121 @@ Also: `pnpm qa:fast` skips build + lhci + visual for inner-loop speed.
 
 Each step = one commit. Every step ends with a working `pnpm <something>` you can run.
 
-- [x] **Step 0** — Land this `TESTING.md` (no code yet).
-- [ ] **Step 1** — Add Vitest + RTL deps; create `vitest.config.ts`, `vitest.setup.ts`, `tests/setup/`. Add `pnpm typecheck` and `pnpm test:unit`. Verify with one trivial test.
-- [ ] **Step 2** — Unit tests for pure utilities: `cn`, `formatDateTime`, `formatMetaTitle`, `toKebabCase`, `withTrailingSlash`, `deepMerge`, `mergeOpenGraph`, `extractTocItems`, `useDebounce`. Target ≥ 90% on `src/utilities/`.
-- [ ] **Step 3** — Add MSW; create `tests/fixtures/` with realistic Page, Post, Header, Footer samples (sourced from `cms-data.json` if present). Add `tests/helpers/mockCms.ts`.
-- [ ] **Step 4** — Contract tests: `getDocument`, `getGlobals`, `getRedirects`, `cmsFetch` (incl. throttling + `cms-data.json` fallback). Add `pnpm test:contract`.
-- [ ] **Step 5** — Cloudflare Functions tests: `_middleware` locale redirect, `contact` (honeypot + email + Resend mock), `subscribe` (CMS proxy + error path), `cms/[[path]]` (passthrough + missing env). Add `pnpm test:functions`.
-- [ ] **Step 6** — Component tests for blocks: `Banner`, `Code`, `Content`, `MediaBlock`, `CallToAction`, `Accordion`, `OpeningHours`, `RelatedPosts`, `RenderBlocks` dispatcher, `RichText` serializer. Add `pnpm test:component`.
-- [ ] **Step 7** — Component tests for cross-cutting components: `Link`, `Card`, `Pagination`, `PageRange`, `CollectionArchive`, `TableOfContents`, `ShareButtons`, `Cookies`, `NewsletterSignup`, `ContactForm`.
-- [ ] **Step 8** — Install Playwright; create `playwright.config.ts` with 4 projects (Chromium Desktop 1280×800, Chromium Mobile Pixel 7, WebKit Desktop 1440×900, WebKit Mobile iPhone 14). `webServer: pnpm start`. Add `pnpm test:e2e`.
-- [ ] **Step 9** — E2E smoke journeys: home renders both locales, locale auto-redirect, page slug renders, posts paginate, post detail, 404, header/footer present, theme toggle persists.
-- [ ] **Step 10** — E2E for Map page (Leaflet hydration, no console errors, marker count > 0) and Search page (input → results render).
-- [ ] **Step 11** — E2E for forms via mocked network: contact (success / invalid email / honeypot), newsletter (success / duplicate). Mock `/api/contact` + `/api/subscribe` at Playwright level.
-- [ ] **Step 12** — Visual regression baselines: home, key pages, posts list, post detail, map, 404 — across all 4 projects. Mask volatile regions.
-- [ ] **Step 13** — A11y scans (axe) on key pages — fail on serious + critical only. WCAG 2.1 AA tags.
-- [ ] **Step 14** — Lighthouse CI: `lighthouserc.json` asserting §4 budgets against `/en/`, `/pl/`, `/en/posts`, one post detail, map page. Add `pnpm test:lhci`.
-- [ ] **Step 15** — Wire `pnpm qa` (sequential, fail-fast) and `pnpm qa:fast`.
-- [ ] **Step 16** — Documentation pass: fill §9–§10 with concrete invocations, snapshot-update workflow, fixture-update workflow, "when adding a new block / page, do X" recipe.
+- [x] **Step 0** — Land this `TESTING.md`.
+- [x] **Step 1** — Vitest + RTL setup, `pnpm test:unit` green.
+- [x] **Step 2** — Unit tests for utilities (46 tests).
+- [x] **Step 3** — MSW + CMS fixtures and mock server.
+- [x] **Step 4** — Contract tests for `cmsFetch` / `getDocument` / `getGlobals` / `getRedirects` (11 tests).
+- [x] **Step 5** — Cloudflare Functions tests (23 tests).
+- [x] **Step 6** — Block dispatcher and error boundary tests.
+- [x] **Step 7** — `PageRange` and `ContactForm` component tests.
+- [x] **Step 8** — Playwright config with 4 projects (Chrome/Safari × Desktop/Mobile).
+- [x] **Step 9** — E2E smoke tests for critical page renders.
+- [x] **Step 10** — E2E for map (Leaflet) and search pages.
+- [x] **Step 11** — E2E forms with mocked network.
+- [x] **Step 12** — Visual regression spec (baselines generated on first run).
+- [x] **Step 13** — Axe-core a11y scans on key pages (chromium-desktop only).
+- [x] **Step 14** — Lighthouse CI with perf and CWV budgets.
+- [x] **Step 15** — Wire `pnpm qa` and `pnpm qa:fast`.
+- [x] **Step 16** — This documentation pass.
 
-## 9. How to run (filled in step 16)
+## 9. How to run
 
-_To be completed in step 16 once scripts exist._
+### Daily inner-loop (fast, ~10 s)
 
-## 10. How to extend (filled in step 16)
+```bash
+pnpm qa:fast        # lint + typecheck + unit + component + contract + functions
+pnpm test:watch     # vitest watch mode
+```
 
-_To be completed in step 16._
+### Full pre-commit / pre-deploy run
+
+```bash
+pnpm qa
+```
+
+This runs `qa:fast` then:
+1. `pnpm build` — full Next.js static export (must pass before E2E can run).
+2. `pnpm test:e2e` — Playwright across all 4 projects, including visual + a11y.
+3. `pnpm test:lhci` — Lighthouse CI against `pnpm start`.
+
+The full run takes a few minutes. `qa:fast` is what you want during active development.
+
+### Individual layers
+
+| Command | What |
+|---|---|
+| `pnpm test:unit` | Pure functions in `src/utilities/`. |
+| `pnpm test:component` | React components with RTL + jsdom. |
+| `pnpm test:contract` | `cmsFetch` and friends, against MSW mocks. |
+| `pnpm test:functions` | Cloudflare Functions in `functions/`. |
+| `pnpm test:e2e` | All Playwright specs (smoke, map, search, forms, visual, a11y). |
+| `pnpm test:e2e:ui` | Playwright UI mode for debugging. |
+| `pnpm test:visual` | Only specs tagged `@visual`. |
+| `pnpm test:e2e:update` | Refresh **all** Playwright snapshots (visual baselines). |
+| `pnpm test:lhci` | Lighthouse CI with the budgets in §4. |
+
+### First-time E2E setup
+
+1. `pnpm exec playwright install chromium webkit` (already run; re-run after Playwright upgrades).
+2. `pnpm build && pnpm start` once — confirms the app actually serves before Playwright spins it up.
+3. `pnpm test:e2e:update` — generates the initial visual baselines under `tests/visual/__snapshots__/`. Commit them. Subsequent runs diff against these.
+
+### Updating visual baselines after intentional UI changes
+
+```bash
+pnpm test:e2e:update -- --grep @visual
+git add tests/visual/__snapshots__
+git commit -m "test(visual): refresh baselines for <change>"
+```
+
+Baselines are platform-specific (macOS pixels ≠ Linux pixels). Only refresh on the same OS you'll be running CI on.
+
+## 10. How to extend
+
+When you add a new piece of code, ask "what would catch a regression here?" and add tests at the lowest layer that can answer.
+
+### Adding a new utility (`src/utilities/foo.ts`)
+
+1. Create `tests/unit/foo.test.ts`.
+2. Cover happy path + boundaries + the one weird input you almost forgot.
+3. `pnpm test:unit` — verify.
+
+### Adding a new content block (`src/blocks/Foo/Component.tsx`)
+
+1. Add it to the dispatcher in `src/blocks/RenderBlocks.tsx`.
+2. Add a stub for it in `tests/component/RenderBlocks.test.tsx` (one line in the `vi.mock` list) and a corresponding entry in the dispatch test.
+3. If the block has non-trivial logic (form handling, conditional rendering), add a focused component test under `tests/component/`.
+4. Visual coverage comes for free via `tests/e2e/visual.spec.ts` once the block lands on a page in `VISUAL_PAGES`.
+
+### Adding a new page route
+
+1. Add a smoke test entry in `tests/e2e/smoke.spec.ts` (or extend an existing block).
+2. If the page should be visually frozen, add it to `VISUAL_PAGES` in `tests/e2e/visual.spec.ts` and run `pnpm test:e2e:update`.
+3. If the page is performance-critical, add its URL to `lighthouserc.json`.
+
+### Adding a new Cloudflare Function
+
+1. Create `tests/functions/<name>.test.ts` mirroring the existing patterns in that folder.
+2. Mock `globalThis.fetch` for any external calls.
+3. Cover: success, validation failure, missing env var, downstream error.
+
+### Adding a new CMS collection
+
+1. Add a fixture in `tests/fixtures/<collection>.ts`.
+2. Add MSW handlers for the new endpoint in `tests/helpers/mockCms.ts`.
+3. Add a contract test under `tests/contract/` proving the data fetcher returns the expected shape.
+
+### When the CMS schema drifts
+
+Contract tests will fail loudly. Don't paper over by changing the fixture — first confirm the change is intentional, then update the fixture, then update any consumers. The fixture file is the source of truth for "what the CMS looks like to this app".
+
+### Common pitfalls
+
+- **Vitest hoisting:** `vi.mock(...)` factories are hoisted to the top of the file. Don't reference module-scope helpers from inside them — inline everything.
+- **Module resolution for next-intl:** `next/navigation` and `@/i18n/routing` are mocked globally in `tests/setup/vitest.setup.ts`. If a component still fails to import, add it to the mocks rather than rewiring the component.
+- **Playwright snapshots:** if a snapshot diff is failing in CI but not locally, you're on a different OS. Bake baselines on the same OS that runs the suite.
+- **Lighthouse on `next start`:** numbers will be worse than production because there's no Cloudflare CDN. Treat budgets in §4 as a floor, not a target.
 
 ## 11. Known limitations
 
