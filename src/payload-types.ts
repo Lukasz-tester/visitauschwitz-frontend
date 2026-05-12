@@ -191,6 +191,7 @@ export interface Page {
     | CodeBlock
     | BannerBlock
     | AccordionBlock
+    | DonationTriggerBlock
   )[];
   meta?: {
     title?: string | null;
@@ -376,6 +377,54 @@ export interface ContentBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "DonationTriggerBlock".
+ */
+export interface DonationTriggerBlock {
+  heading?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  columns?:
+    | {
+        size?: ('oneThird' | 'oneSixth') | null;
+        richText?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        enableMedia?: boolean | null;
+        enableButtons?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  changeBackground?: boolean | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'donationTrigger';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaBlock".
  */
 export interface MediaBlock {
@@ -449,7 +498,7 @@ export interface Category {
 export interface Post {
   id: string;
   title: string;
-  layout: (BannerBlock | CodeBlock)[];
+  layout: (BannerBlock | CodeBlock | DonationTriggerBlock)[];
   relatedPosts?: (string | Post)[] | null;
   categories?: (string | Category)[] | null;
   meta?: {

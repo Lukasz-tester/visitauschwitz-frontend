@@ -203,9 +203,9 @@
     ),
     hsl(221, 27%, 35%);
   animation:
-    b1 52s ease-in-out infinite,
-    b2 64s ease-in-out infinite,
-    b3 46s ease-in-out infinite;
+    b1 76s ease-in-out infinite,
+    b2 88s ease-in-out infinite,
+    b3 100s ease-in-out infinite;
 }
 .btn-living:hover {
   box-shadow:
