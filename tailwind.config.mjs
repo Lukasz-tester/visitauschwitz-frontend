@@ -76,7 +76,7 @@ export default {
               fontSize: '2rem',
               marginTop: '0rem',
               marginBottom: '0rem',
-              paddingTop: '1.2rem',
+              paddingTop: '0.2rem',
               paddingBottom: '0rem',
               fontWeight: '600',
             },
@@ -97,7 +97,7 @@ export default {
             p: {
               fontSize: '1.2rem',
               marginTop: '0rem',
-              marginBottom: '1rem',
+              marginBottom: '0.7rem',
               paddingTop: '0rem',
               paddingBottom: '0rem',
             },

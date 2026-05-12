@@ -414,11 +414,14 @@ export interface DonationTriggerBlock {
           [k: string]: unknown;
         } | null;
         enableMedia?: boolean | null;
+        mediaCaption?: string | null;
         enableButtons?: boolean | null;
         id?: string | null;
       }[]
     | null;
   changeBackground?: boolean | null;
+  addMarginTop?: boolean | null;
+  addMarginBottom?: boolean | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'donationTrigger';

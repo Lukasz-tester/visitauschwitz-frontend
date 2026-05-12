@@ -23,17 +23,11 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         className,
       )}
     >
-      <Link
-        href={`https://donate.stripe.com/bJefZhe8d04jgclgDL0Fi01?locale=${locale}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={onClick}
-        className="btn-living w-full mb-3 text-base font-medium py-2 px-4 rounded-lg text-center block"
-      >
-        {t('support-mission')}
-      </Link>
-      <Link href="/support/#support-options" className="opacity-70" onClick={onClick}>
-        {t('support-banner-text')}
+      <Link href="/support/" onClick={onClick}>
+        <p className="btn-living w-full mb-4 px-4 rounded-lg text-center block">
+          {t('support-mission')}
+        </p>
+        <p className="text-xs pb-2">{t('support-banner-text')}</p>
       </Link>
     </div>
     // from-rose-600 via-orange-500 to-amber-400 dark:from-rose-700 dark:via-orange-600 dark:to-amber-600

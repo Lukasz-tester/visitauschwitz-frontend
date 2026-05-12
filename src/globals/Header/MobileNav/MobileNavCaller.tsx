@@ -63,14 +63,14 @@ export const MobileNavCaller: React.FC<{
           className={`pt-2 h-screen flex flex-col max-w-[500px] sm:max-w-[350px] absolute right-0 bg-card md:bg-card/95 transition-transform duration-300 ease-in-out ${modalOpen ? 'translate-x-0' : 'translate-x-full'}`}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center justify-end gap-1 text-xl pr-16 pt-1">
+          <div className="flex items-center justify-end gap-4 text-xl pr-20 pt-1">
             <div aria-label={t('select-language')}>
               <LocaleSwitcher />
             </div>
             <Link
               href="/search/"
               aria-label={t('search')}
-              className="p-3 opacity-85 hover:opacity-100 transition-opacity"
+              className="p-3 pr-5 opacity-85 hover:opacity-100 transition-opacity"
               onClick={() => setModalOpen(false)}
             >
               <Search size={22} />
@@ -92,7 +92,7 @@ export const MobileNavCaller: React.FC<{
               aria-label={t('main-navigation')}
             />
           </div>
-          <div className="fixed bottom-20">
+          <div className="fixed bottom-16">
             <DonationCard onClick={() => setModalOpen(false)} />
           </div>
         </div>

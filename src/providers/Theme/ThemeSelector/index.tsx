@@ -83,8 +83,12 @@ export const ThemeSelector: React.FC = () => {
   }
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle theme" className="p-3 opacity-85 hover:opacity-100 transition-opacity">
-      {mounted ? (theme === 'light' ? <Moon /> : <Sun />) : <Sun />}
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      className="p-1 opacity-85 hover:opacity-100 transition-opacity"
+    >
+      {mounted ? theme === 'light' ? <Moon /> : <Sun /> : <Sun />}
     </button>
   )
 }

@@ -11,12 +11,13 @@ const DONATION_IMAGE_URL = 'https://images.visitauschwitz.info/home-guide-birken
 const BLIK_NUMBER = '502983333'
 const STRIPE_URL = 'https://donate.stripe.com/bJefZhe8d04jgclgDL0Fi01'
 const PAYPAL_URL = 'https://www.paypal.com/donate/?hosted_button_id=WE3LXWNR3JLFY'
-const EXTRA_LINK_HREF = '/support/#support-options'
+const EXTRA_LINK_HREF = '/support/'
 
 type Column = {
   size?: 'oneThird' | 'oneSixth' | null
   richText?: any
   enableMedia?: boolean | null
+  mediaCaption?: string | null
   enableButtons?: boolean | null
   id?: string | null
 }
@@ -25,6 +26,8 @@ type Props = {
   heading?: any
   columns?: Column[] | null
   changeBackground?: boolean | null
+  addMarginTop?: boolean | null
+  addMarginBottom?: boolean | null
   blockName?: string | null
 }
 
@@ -36,10 +39,24 @@ function hasRichTextContent(rt: { root: { children?: Array<any> } } | null | und
   return Array.isArray(rt?.root?.children) && rt.root.children.some(hasText)
 }
 
-const buttonClass =
-  'bg-card-foreground text-nowrap px-3 py-0 font-normal no-underline rounded-xl text-xl leading-[2.6] border border-slate-500/40 dark:hover:bg-slate-700/80 hover:bg-slate-400/50 transition-colors flex items-center justify-center gap-2 w-full'
+const baseButtonClass =
+  'text-nowrap px-3 font-normal no-underline rounded-xl text-xl flex items-center justify-center w-full'
 
-const BlikButton: React.FC = () => {
+const neutralButtonClass =
+  'opacity-80 py-0 leading-[2.7] dark:hover:bg-slate-700/80 hover:bg-slate-400/50 transition-colors'
+
+const buttonClassFor = (primary?: boolean, changeBackground?: boolean) =>
+  cn(
+    baseButtonClass,
+    primary
+      ? 'btn-living mb-4'
+      : cn(neutralButtonClass, changeBackground ? 'bg-background' : 'bg-card-foreground'),
+  )
+
+const BlikButton: React.FC<{ primary?: boolean; changeBackground?: boolean }> = ({
+  primary,
+  changeBackground,
+}) => {
   const t = useTranslations()
   const [copied, setCopied] = useState(false)
 
@@ -54,50 +71,75 @@ const BlikButton: React.FC = () => {
   }
 
   return (
-    <button onClick={handleCopy} className={buttonClass} aria-label={t('donation-btn-blik')}>
-      {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+    <button
+      onClick={handleCopy}
+      className={buttonClassFor(primary, changeBackground)}
+      aria-label={t('donation-btn-blik')}
+    >
+      {copied ? (
+        <Check className="w-4 h-4 text-green-500 mr-2" />
+      ) : (
+        <Copy className="w-4 h-4 mr-2" />
+      )}
       {t('donation-btn-blik')}
     </button>
   )
 }
 
-const CardButton: React.FC = () => {
+const CardButton: React.FC<{ primary?: boolean; changeBackground?: boolean }> = ({
+  primary,
+  changeBackground,
+}) => {
   const t = useTranslations()
   const locale = useLocale()
   return (
-    <a
+    <Link
       href={`${STRIPE_URL}?locale=${locale}`}
       target="_blank"
       rel="noopener noreferrer"
-      className={buttonClass}
+      className={buttonClassFor(primary, changeBackground)}
     >
       {t('donation-btn-card')}
-    </a>
+    </Link>
   )
 }
 
-const PayPalButton: React.FC = () => {
+const PayPalButton: React.FC<{ primary?: boolean; changeBackground?: boolean }> = ({
+  primary,
+  changeBackground,
+}) => {
   const t = useTranslations()
   return (
-    <a href={PAYPAL_URL} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+    <Link
+      href={PAYPAL_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={buttonClassFor(primary, changeBackground)}
+    >
       {t('donation-btn-paypal')}
-    </a>
+    </Link>
   )
 }
 
-const DonationButtons: React.FC<{ locale: string }> = ({ locale }) => {
+const DonationButtons: React.FC<{ locale: string; changeBackground?: boolean }> = ({
+  locale,
+  changeBackground,
+}) => {
   const t = useTranslations()
   const order = locale === 'pl' ? (['blik', 'card'] as const) : (['card', 'paypal'] as const)
   return (
-    <div className="flex flex-col gap-2 mt-4">
-      {order.map((kind) => {
-        if (kind === 'blik') return <BlikButton key="blik" />
-        if (kind === 'card') return <CardButton key="card" />
-        return <PayPalButton key="paypal" />
+    <div className="flex flex-col gap-2">
+      {order.map((kind, idx) => {
+        const primary = idx === 0
+        if (kind === 'blik')
+          return <BlikButton key="blik" primary={primary} changeBackground={changeBackground} />
+        if (kind === 'card')
+          return <CardButton key="card" primary={primary} changeBackground={changeBackground} />
+        return <PayPalButton key="paypal" primary={primary} changeBackground={changeBackground} />
       })}
       <Link
         href={`/${locale}${EXTRA_LINK_HREF}`}
-        className="mt-2 text-center text-sm opacity-70 hover:opacity-100 transition-opacity"
+        className="mt-2 text-center text-md opacity-70 hover:opacity-90 transition-opacity"
       >
         {t('donation-extra-link')}
       </Link>
@@ -109,6 +151,8 @@ const DonationTriggerInner: React.FC<Props> = ({
   heading,
   columns,
   changeBackground,
+  addMarginTop,
+  addMarginBottom,
   blockName,
 }) => {
   const t = useTranslations()
@@ -122,15 +166,17 @@ const DonationTriggerInner: React.FC<Props> = ({
   return (
     <section
       id={blockName || undefined}
-      className={cn('pt-14', {
+      className={cn({
         'bg-card-foreground': changeBackground,
-        'pt-24': !hasRichTextContent(heading) && columns && columns.length > 3,
+        'pt-14': addMarginTop,
+        'pb-14': addMarginBottom,
+        // 'pt-24': !hasRichTextContent(heading) && columns && columns.length > 3,
       })}
     >
       <div className="container">
         {heading && (
           <RichText
-            className={cn('md:px-[17.3%] pt-10', {
+            className={cn('md:px-[17.3%] ', {
               'pb-14': hasRichTextContent(heading) && columns && columns.length > 0,
               hidden: !hasRichTextContent(heading),
             })}
@@ -142,12 +188,13 @@ const DonationTriggerInner: React.FC<Props> = ({
         <div
           className={cn(
             'grid grid-cols-4 lg:grid-cols-12 gap-6 md:gap-14',
-            changeBackground ? 'pb-14' : 'mb-14',
+            // changeBackground ? 'pb-14' : 'mb-14',
           )}
         >
           {columns?.map((col, index) => {
-            const { enableMedia, enableButtons, richText, size, id } = col
+            const { enableMedia, mediaCaption, enableButtons, richText, size, id } = col
             const colSpan = colsSpanClasses[size || 'oneThird'] || '4'
+            const caption = mediaCaption
 
             return (
               <article
@@ -160,27 +207,25 @@ const DonationTriggerInner: React.FC<Props> = ({
                 })}
               >
                 {enableMedia && (
-                  <div className="relative w-full h-auto rounded overflow-hidden mb-4">
+                  <div className="relative w-full h-auto rounded overflow-hidden mb-4 max-sm:max-w-52 max-sm:mx-auto">
                     <div
                       className={`absolute inset-0 bg-gradient-to-b animate-pulse z-0 ${changeBackground ? 'from-card' : 'from-card-foreground'}`}
                     />
                     <div className="relative z-10">
                       <img
                         src={DONATION_IMAGE_URL}
-                        alt={t('donation-image-caption')}
-                        className="rounded w-full h-auto"
+                        alt="Auschwitz licensed guide in front of Birkenau gate."
+                        className="rounded w-full h-auto max-sm:aspect-square max-sm:object-cover"
                         loading="lazy"
                       />
                     </div>
-                    <p className="relative z-10 mt-2 text-sm opacity-80">
-                      {t('donation-image-caption')}
-                    </p>
+                    <p className="relative z-10 mt-4 text-md opacity-80">{caption}</p>
                   </div>
                 )}
 
                 {richText && (
                   <RichText
-                    className={cn({
+                    className={cn('mb-6', {
                       'prose-a:bg-card': changeBackground,
                       hidden: !hasRichTextContent(richText),
                     })}
@@ -190,7 +235,9 @@ const DonationTriggerInner: React.FC<Props> = ({
                   />
                 )}
 
-                {enableButtons && <DonationButtons locale={locale} />}
+                {enableButtons && (
+                  <DonationButtons locale={locale} changeBackground={!!changeBackground} />
+                )}
               </article>
             )
           })}
