@@ -38,7 +38,7 @@ const RichText: React.FC<Props> = ({
           'prose dark:prose-invert break-words empty:prose-p:py-0.5 prose-p:opacity-90 prose-strong:opacity-90 prose-h2:opacity-75 prose-h3:opacity-80 prose-h4:opacity-85 prose-a:decoration-amber-700/80 dark:hover:prose-a:bg-slate-700/80 hover:prose-a:bg-slate-700/20 ':
             enableProse,
           'md:prose-h2:text-4xl lg:prose-h2:text-[2.5rem] ': styleH2,
-          'md:prose-h3:text-3xl lg:prose-h3:text-4xl ': styleH3,
+          'md:prose-h3:text-3xl lg:prose-h3:text-[2rem] ': styleH3,
           'lg:prose-h4:text-2xl': styleH4,
           'prose-a:bg-card-foreground prose-a:text-nowrap prose-a:p-2 prose-a:mx-0.5 prose-a:font-normal prose-a:no-underline prose-a:rounded-xl prose-a:text-xl prose-a:leading-[2.6] gap-9 prose-a:border prose-a:border-slate-500/40 dark:hover:prose-a:bg-slate-700/80 hover:prose-a:bg-slate-400/50 ':
             styleLink,

@@ -11,6 +11,7 @@ import { LogoLink } from '../../components/ui/logoLink'
 import MapCaller from '@/components/Map/MapCaller'
 import { NewsletterCaller } from '@/components/NewsletterSignup/NewsletterCaller'
 import { FAQCaller } from '@/components/FAQ/FAQCaller'
+import { DonationCaller } from '@/components/DonationCard/DonationCaller'
 import { MapModalProvider } from '@/providers/MapModalContext'
 
 interface HeaderClientProps {
@@ -52,6 +53,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
           <FAQCaller />
           <NewsletterCaller />
           <MapCaller setMobileNavOpen={setMobileNavOpen} />
+          <DonationCaller setMobileNavOpen={setMobileNavOpen} />
         </>
       </MapModalProvider>
     </header>

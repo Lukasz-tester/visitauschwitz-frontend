@@ -3,7 +3,6 @@ import type { Header as HeaderType } from '@/payload-types'
 import NavItems from '../NavItems'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { Search } from 'lucide-react'
-import { DonationCard } from '@/components/DonationCard'
 
 import { useEffect } from 'react'
 import { Link, usePathname } from '@/i18n/routing'
@@ -91,9 +90,6 @@ export const MobileNavCaller: React.FC<{
               onClick={() => setModalOpen(false)}
               aria-label={t('main-navigation')}
             />
-          </div>
-          <div className="fixed bottom-16">
-            <DonationCard onClick={() => setModalOpen(false)} />
           </div>
         </div>
       </div>
