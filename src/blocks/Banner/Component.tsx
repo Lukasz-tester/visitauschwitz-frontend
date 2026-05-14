@@ -11,7 +11,7 @@ export const TextBlock: React.FC<Props> = ({ className, blockName, content, styl
     <>
       {style === 'text' && (
         <div id={blockName || undefined}>
-          <RichText className="my-6" content={content} enableGutter={false} />
+          <RichText className="my-6 prose-h2:pt-12" content={content} enableGutter={false} />
         </div>
       )}
       {style === 'quote' && (

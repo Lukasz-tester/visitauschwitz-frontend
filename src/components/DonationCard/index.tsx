@@ -27,7 +27,7 @@ export const DonationCard: React.FC<Props> = ({ className, onClick }) => {
         <p className="btn-living w-full mb-4 px-4 rounded-lg text-center block">
           {t('support-mission')}
         </p>
-        <p className="text-xs pb-2">{t('support-banner-text')}</p>
+        <p className="text-xs pb-2 mx-1">{t('support-banner-text')}</p>
       </Link>
     </div>
     // from-rose-600 via-orange-500 to-amber-400 dark:from-rose-700 dark:via-orange-600 dark:to-amber-600

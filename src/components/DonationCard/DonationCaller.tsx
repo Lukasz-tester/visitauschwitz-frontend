@@ -11,8 +11,11 @@ export function DonationCaller({ setMobileNavOpen }: Props) {
   return (
     <div
       className={cn(
-        'hidden [[data-mobile-nav=open]_&]:block',
-        'fixed bottom-16 right-0 w-full max-w-[500px] sm:max-w-[350px] z-30',
+        'fixed bottom-16 right-1 w-full max-w-[325px] z-30',
+        'transition-transform duration-300 ease-in-out',
+        'translate-x-full pointer-events-none',
+        '[[data-mobile-nav=open]_&]:translate-x-0',
+        '[[data-mobile-nav=open]_&]:pointer-events-auto',
       )}
     >
       <DonationCard onClick={() => setMobileNavOpen(false)} />

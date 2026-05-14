@@ -14,7 +14,7 @@ const PAYPAL_URL = 'https://www.paypal.com/donate/?hosted_button_id=WE3LXWNR3JLF
 const EXTRA_LINK_HREF = '/support/'
 
 type Column = {
-  size?: 'oneThird' | 'oneSixth' | null
+  size?: 'oneHalf' | 'oneThird' | 'oneSixth' | null
   richText?: any
   enableMedia?: boolean | null
   mediaCaption?: string | null
@@ -155,13 +155,8 @@ const DonationTriggerInner: React.FC<Props> = ({
   addMarginBottom,
   blockName,
 }) => {
-  const t = useTranslations()
   const locale = useLocale()
-
-  const colsSpanClasses: Record<string, string> = {
-    oneThird: '4',
-    oneSixth: '2',
-  }
+  const hasHalfColumn = columns?.some((col) => col.size === 'oneHalf')
 
   return (
     <section
@@ -173,7 +168,7 @@ const DonationTriggerInner: React.FC<Props> = ({
         // 'pt-24': !hasRichTextContent(heading) && columns && columns.length > 3,
       })}
     >
-      <div className="container">
+      <div className={hasHalfColumn ? undefined : 'container'}>
         {heading && (
           <RichText
             className={cn('md:px-[17.3%] ', {
@@ -193,17 +188,17 @@ const DonationTriggerInner: React.FC<Props> = ({
         >
           {columns?.map((col, index) => {
             const { enableMedia, mediaCaption, enableButtons, richText, size, id } = col
-            const colSpan = colsSpanClasses[size || 'oneThird'] || '4'
+            // const colSpan = colsSpanClasses[size || 'oneThird'] || '4'
             const caption = mediaCaption
 
             return (
               <article
                 id={id || undefined}
                 key={id || index}
-                className={cn(`col-span-4 lg:col-span-${colSpan}`, {
-                  'md:col-span-2': size !== 'oneThird',
-                  'col-span-4 md:col-span-2 lg:col-span-6 xl:col-span-4': size === 'oneThird',
-                  'hidden lg:block': size === 'oneSixth',
+                className={cn('col-span-4', {
+                  'md:col-span-2 lg:col-span-6 xl:col-span-4': size === 'oneThird',
+                  'hidden lg:block lg:col-span-2': size === 'oneSixth',
+                  'lg:col-span-6': size === 'oneHalf',
                 })}
               >
                 {enableMedia && (

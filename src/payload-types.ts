@@ -397,7 +397,7 @@ export interface DonationTriggerBlock {
   } | null;
   columns?:
     | {
-        size?: ('oneThird' | 'oneSixth') | null;
+        size?: ('oneHalf' | 'oneThird' | 'oneSixth') | null;
         richText?: {
           root: {
             type: string;
