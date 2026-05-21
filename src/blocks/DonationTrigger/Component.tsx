@@ -77,11 +77,14 @@ const BlikButton: React.FC<{ primary?: boolean; changeBackground?: boolean }> = 
       aria-label={t('donation-btn-blik')}
     >
       {copied ? (
-        <Check className="w-4 h-4 text-green-500 mr-2" />
+        <Check className="w-5 h-5 text-green-500 mr-2" />
       ) : (
-        <Copy className="w-4 h-4 mr-2" />
+        <Copy className="w-5 h-5 mr-3" />
       )}
-      {t('donation-btn-blik')}
+      <div className="flex flex-col items-start leading-tight">
+        {t('donation-btn-blik')}
+        <span className="text-sm opacity-80">{t('donation-btn-under-blik')}</span>
+      </div>
     </button>
   )
 }
@@ -97,9 +100,15 @@ const CardButton: React.FC<{ primary?: boolean; changeBackground?: boolean }> = 
       href={`${STRIPE_URL}?locale=${locale}`}
       target="_blank"
       rel="noopener noreferrer"
-      className={buttonClassFor(primary, changeBackground)}
+      className={cn(buttonClassFor(primary, changeBackground), !primary && 'py-3')}
     >
-      {t('donation-btn-card')}
+      <div
+        className="flex flex-col items-center leading-tight
+      "
+      >
+        {t('donation-btn-card')}
+        <span className="text-sm opacity-80">{t('donation-btn-under-card')}</span>
+      </div>
     </Link>
   )
 }

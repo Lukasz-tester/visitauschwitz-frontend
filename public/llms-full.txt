@@ -7,10 +7,10 @@ Website: https://www.visitauschwitz.info
 Languages: en, pl
 Default language: en
 
-## How to Get to Auschwitz: Transport & Parking Guide (EN)
+## Getting to Auschwitz: Transport, Parking & Maps (EN)
 
 URL: https://www.visitauschwitz.info/en/arrival
-Description: All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
+Description: Every way to reach the Auschwitz Memorial: bus, train, car and parking — travel times, online booking, costs, and tips on travelling from Kraków.
 
 ### Sections
 
@@ -24,10 +24,10 @@ Description: All transport options to the Auschwitz Memorial: trains, buses, dri
 URL: https://www.visitauschwitz.info/en/checklist
 Description: Full preparation checklist for visiting Auschwitz-Birkenau. Covers booking, transport from Krakow, what to pack, rules, and essential visitor tips.
 
-## Auschwitz FAQ: Tickets, Tours & Transport Explained (EN)
+## Auschwitz FAQ: Tickets, Entry & Transport (EN)
 
 URL: https://www.visitauschwitz.info/en/faq
-Description: Expert answers on Auschwitz online booking, transport from Kraków, tour types, dress code, opening hours & what to expect — by a licensed guide since 2006.
+Description: Expert answers by a licensed guide since 2006 — free entry, opening hours, online booking, Kraków transport, dress code & what to expect on site.
 
 ### FAQ
 
@@ -107,7 +107,7 @@ A: Bags must not exceed 30×20×10 cm (roughly a small handbag). Larger bags, ba
 A: Prohibited items include: large bags and backpacks, alcohol, drugs, weapons (knives, scissors), sharp objects, drones, pets (except certified guide dogs), tripods, loud audio devices, political or religious or nationalistic flags, banners, and symbols. Eating and smoking are not allowed inside the grounds. Complete list of rules
 
 **Q: What should I bring to Auschwitz?**
-A: Required: your entry pass (printed or digital with barcode) and valid photo ID. Recommended: water bottle, umbrella or rain jacket, comfortable walking shoes, warm layers in colder months. Keep belongings minimal due to bag size restrictions (30×20×10 cm). Seasonal packing advice | Preparation tips
+A: Required: your entry pass (printed or digital with barcode) and valid photo ID. Recommended: water bottle, umbrella, comfortable walking shoes, warm clothing and rain jacket in colder months. Keep belongings minimal due to bag size restrictions (30×20×10 cm). Seasonal packing advice | Preparation tips
 
 **Q: Is there luggage storage at Auschwitz?**
 A: Yes — free lockers are available at the visitor centre for oversized bags and luggage. You can store items before entering and collect them after your visit. On-site facilities
@@ -201,10 +201,10 @@ Description: Entry guidelines: opening times, security checks, reception desk an
 URL: https://www.visitauschwitz.info/en/newsletter
 Description: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 
-## Auschwitz: What Most Visitors Wish They Knew (EN)
+## Auschwitz Guide: Rules, Dress Code & Bag Policy (EN)
 
 URL: https://www.visitauschwitz.info/en/supplement
-Description: Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
+Description: Auschwitz preparation tips by a licensed guide since 2006 — booking, luggage rules, what to wear and bring and what to expect on site.
 
 ### FAQ
 
@@ -230,7 +230,7 @@ A: Eating is prohibited inside the Museum grounds, but snacks can be consumed ou
 A: ✅ Required: Entry pass (printed or digital) & valid ID ✅ Recommended: Water bottle, an umbrella in case of rain or sun, and trekking shoes due to uneven terrain. The sightseeing is mostly outdoors, so dress for the season. ❌ Keep personal belongings minimal due to baggage size restrictions, avoiding unnecessary valuables and prohibited items listed below. 🛅 Storage on Site
 
 **Q: Which Items Are Prohibited Inside the Museum?**
-A: To enter the Memorial , you must not carry any of the following: large bags, inappropriate clothing, loud audio devices, tripods, drones, pets, alcohol, drugs, weapons (including knives and scissors), hazardous substances, and any political, religious, or nationalistic flags, banners, or symbols (except during official ceremonies). Check storage options below.
+A: To enter the Memorial , you must not carry any of the following: large bags (max size = 30 x 20 x 10 cm), inappropriate clothing, loud audio devices, tripods, drones, pets, alcohol, drugs, weapons (including knives and scissors), hazardous substances, and any political, religious, or nationalistic flags, banners, or symbols (except during official ceremonies). Check storage options below.
 
 **Q: Can I Take Photos or Record Videos at Auschwitz Camp?**
 A: Personal photography and filming are allowed except: 🚫 Indoors with flash 🚫 Recording guided lectures 🚫 The victims' hair exhibit (block 4) 🚫 Block 11 basements 🚫 Security checkpoints
@@ -278,7 +278,7 @@ A: No physical products or services are exchanged. Your contribution ensures thi
 - What Your Support Protects
 - Frequently Asked Questions
 
-## Auschwitz Tickets: Official Booking & Tour Types (EN)
+## Auschwitz Tickets: Free Entry & Guided Tour Booking (EN)
 
 URL: https://www.visitauschwitz.info/en/tickets
 Description: Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
@@ -299,9 +299,6 @@ A: To visit Auschwitz on your own, you must reserve an individual entry pass onl
 
 **Q: What to Do on the Day of Your Tour?**
 A: For directions check the Arrival page and once there you follow these steps: You can enter 30 minutes early ( skipping the long line ) Present your ID and scan the entry pass Walk through security gates (metal detection) Scan your ticket again to go downstairs Get outside of the tunnel and to Auschwitz I exhibition (allow 2 hours) Exit and go to Auschwitz II-Birkenau, 3 km away Show your pass and go inside Visit Auschwitz II-Birkenau (allow 1 hour)
-
-**Q: How to Visit Auschwitz on Your Own?**
-A: Outdoors, use our map to find your location. Indoors, follow a guidebook and move in the same direction as the guided groups. Without a historical background, the place may not give you much, so consider a guided tour first.
 
 **Q: How to Book a Guided Tour for Individual Visitors?**
 A: Go to visit.auschwitz.org and choose these options: Visit for individuals -> select a date -> select language -> select the visiting hour -> add to basket In March 2026, on-site ticket sales were stopped.
@@ -351,17 +348,17 @@ A: A busy schedule can make you feel rushed. Fixed itinerary only allows you to 
 - How to Book Auschwitz Tickets in 2026?
 - Practical Tips Before Booking Auschwitz Tickets
 - Can You Visit Auschwitz Without a Guide? A maximum of ten people can enter the Auschwitz Museum without a guide, but only in the afternoon. Entrance is free, but a pass is still required.
+- Tips on Visiting Auschwitz on Your Own Outdoors, use my map to find your location. Indoors, follow a guidebook and move in the same direction as the guided groups.
 - What Are Auschwitz Guided Tours Like? Most visitors choose organized tours for their convenience.
 - How to Join a Guided Auschwitz Tour? Join a group of up to 30 people on a 3.5- or 6-hour tour with a fixed itinerary. For a better experience, booking a private tour is recommended.
 - Is a Private Auschwitz Tour Worth It? If you hire a guide you can choose which places to visit and what to explain in detail. You can start 30 min early, but you lose time if late.
 - Are Organized Auschwitz Tours from Krakow Worth It? Auschwitz tours are available through hotel receptions and apps, but intermediaries often add a commission, and bookings can be risky.
-- Verified Local Suppliers of Auschwitz Tours
 - Disadvantages of Organized Auschwitz-Birkenau Tours Some companies (other than those listed above) cancel bookings at the last minute or change departure times.
 
-## Auschwitz Tour Routes: Main Sites & Interactive Map (EN)
+## Auschwitz Route: 50 Locations & Interactive Map (EN)
 
 URL: https://www.visitauschwitz.info/en/tour
-Description: Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
+Description: Detailed walkthrough of 50+ significant locations across Auschwitz I and Birkenau — with interactive map, guide commentary, and hidden spots to see.
 
 ### FAQ
 
@@ -452,10 +449,10 @@ URL: https://www.visitauschwitz.info/en/posts/krakow-to-auschwitz-day-trip
 Description: Plan your Auschwitz day trip from Krakow step by step. Bus, train, car options, booking tips, timeline, costs — by a licensed Auschwitz guide since 2006.
 Published: 2026-03-25
 
-## Dojazd do Auschwitz: bus, pociąg, parking i wskazówki (PL)
+## Dojazd do Auschwitz: bus, pociąg, parking i mapy (PL)
 
 URL: https://www.visitauschwitz.info/pl/arrival
-Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia i koszty, wskazówki dla kierowców oraz oficjalne parkingi. Wszystko w jednym miejscu.
+Description: Wszystkie sposoby dojazdu do Auschwitz: pociągiem, autobusem Lajkonik i samochodem — koszty, czas przejazdu i wskazówki jak dojechać z Krakowa.
 
 ### Sections
 
@@ -469,10 +466,10 @@ Description: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia i kos
 URL: https://www.visitauschwitz.info/pl/checklist
 Description: Checklist do pełnego przygotowania wizyty w Auschwitz-Birkenau: rezerwacja, dojazd z Krakowa, co zabrać, zasady i ważne wskazówki dla zwiedzających.
 
-## Auschwitz FAQ: rezerwacje, zwiedzanie i transport (PL)
+## Auschwitz FAQ: bilety, darmowy wstęp i dojazd (PL)
 
 URL: https://www.visitauschwitz.info/pl/faq
-Description: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania, zasadach wstępu i godzinach otwarcia Auschwitz — od licencjonowanego przewodnika od 2006 roku.
+Description: Odpowiedzi przewodnika od 2006 r. — godziny otwarcia, rezerwacja online, dojazd z Krakowa i zasady zwiedzania. Sprawdź przed wizytą.
 
 ### FAQ
 
@@ -646,10 +643,10 @@ Description: Zasady wstępu na teren byłego obozu: bilety, regulamin, kontrole 
 URL: https://www.visitauschwitz.info/pl/newsletter
 Description: Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewodnika po Auschwitz. Praktyczne wskazówki dotyczące biletów, transportu, czasu i przebiegu wizyty.
 
-## Auschwitz: co musisz wiedzieć przed wizytą w Muzeum (PL)
+## Auschwitz: zasady, warunki zwiedzania i wskazówki (PL)
 
 URL: https://www.visitauschwitz.info/pl/supplement
-Description: Z przewodnikiem czy samodzielnie, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej. Porady od licencjonowanego przewodnika.
+Description: Poradnik od licencjonowanego przewodnika od 2006 r. — rezerwacja, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej.
 
 ### FAQ
 
@@ -675,7 +672,7 @@ A: Jedzenie na terenie muzeum jest zabronione, ale przekąski można spożyć po
 A: ✅ Wymagane: Wejściówka (w wersji papierowej lub cyfrowej) oraz ważny dokument tożsamości ✅ Zalecane: Butelka wody, parasol na wypadek deszczu lub słońca oraz buty trekkingowe ze względu na nierówny teren. Zwiedzanie odbywa się głównie na zewnątrz, więc dostosuj ubiór do pogody. ❌ Ogranicz rzeczy osobiste do minimum ze względu na limity wielkości bagażu – unikaj zbędnych wartościowych przedmiotów i rzeczy z listy zakazanych poniżej. 🛅 Przechowalnia bagażu na miejscu
 
 **Q: Jakie przedmioty są zakazane w Muzeum Auschwitz?**
-A: Na teren Miejsca Pamięci nie wolno wnosić: dużych toreb, niestosownego stroju, głośnych urządzeń audio, statywów, dronów, zwierząt, alkoholu, narkotyków, broni (w tym noży i nożyczek), substancji niebezpiecznych oraz jakichkolwiek flag, transparentów czy symboli politycznych, religijnych lub nacjonalistycznych (z wyjątkiem oficjalnych ceremonii). Sprawdź dostępne opcje przechowywania poniżej.
+A: Na teren Miejsca Pamięci nie wolno wnosić: dużych toreb (maksymalnie 30 x 20 x 10 cm), niestosownego stroju, głośnych urządzeń audio, statywów, dronów, zwierząt, alkoholu, narkotyków, broni (w tym noży i nożyczek), substancji niebezpiecznych oraz jakichkolwiek flag, transparentów czy symboli politycznych, religijnych lub nacjonalistycznych (z wyjątkiem oficjalnych ceremonii). Sprawdź dostępne opcje przechowywania poniżej.
 
 **Q: Czy wolno robić zdjęcia lub nagrywać filmy w Auschwitz?**
 A: Fotografowanie i filmowanie prywatne są dozwolone z wyjątkiem: 🚫 Wnętrz – z użyciem lampy błyskowej 🚫 Nagrywania oprowadzania przewodnika 🚫 Ekspozycji włosów ofiar (blok 4) 🚫 Piwnic bloku 11 🚫 Punktów kontroli bezpieczeństwa
@@ -723,7 +720,7 @@ A: Nie ma żadnych produktów ani usług w zamian. Twoje wsparcie zapewnia, że 
 - Co chroni twoje wsparcie
 - Najczęstsze pytania
 
-## Bilety do Auschwitz: rezerwacja online i ceny (PL)
+## Auschwitz: bilety, ceny, zwiedzanie i darmowy wstęp (PL)
 
 URL: https://www.visitauschwitz.info/pl/tickets
 Description: Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
@@ -744,9 +741,6 @@ A: Aby zwiedzić Auschwitz indywidualnie, musisz zarezerwować bilet przez inter
 
 **Q: Co robić w dniu odwiedzin Muzeum Auschwitz?**
 A: Po przyjeździe (sprawdź stronę Dojazd ) postępuj według poniższych kroków: Możesz wejść 30 minut wcześniej ( omijając długą kolejkę ) Pokaż dokument tożsamości i zeskanuj bilet Przejdź przez bramki bezpieczeństwa (wykrywacz metalu) Zeskanuj ponownie bilet, aby zejść na dół Wyjdź z tunelu i kieruj się do wystawy Auschwitz I (zarezerwuj 2 godziny) Wyjdź i dostań się do Auschwitz II-Birkenau, w odległości 3 km Zwiedzaj Auschwitz II-Birkenau (zarezerwuj godzinę)
-
-**Q: Jak samodzielnie zwiedzić Auschwitz?**
-A: Na zewnątrz korzystaj z mapy aby się zlokalizować, a w pomieszczeniach korzystaj z papierowego przewodnika (szczegóły poniżej) i idź w tym samym kierunku co grupy, aby nie utrudniać innym przechodzenia przez drzwi. Bez tła historycznego pobyt w Muzeum może niewiele Ci dać, dlatego rozważ najpierw wycieczkę z licencjonowanym przewodnikiem.
 
 **Q: Jak zarezerwować zwiedzanie indywidualne z przewodnikiem?**
 A: Przejdź na visit.auschwitz.org i wybierz następujące opcje: Zwiedzanie indywidualne -> wybierz datę -> wybierz język -> wybierz godzinę zwiedzania -> dodaj do koszyka W marcu 2026 sprzedaż biletów na miejscu została wstrzymana.
@@ -793,20 +787,20 @@ A: Napięty plan sprawia, że wszystko odbywa się w pośpiechu. Sztywna trasa p
 ### Sections
 
 - Wstęp na teren Muzeum Auschwitz-Birkenau jest całkowicie bezpłatny po południu, ale obowiązuje imienna karta wstępu z wyznaczoną godziną – rezerwuj ją wyłącznie na oficjalnej stronie visit.auschwitz.o
-- Jak zdobyć bilety do Auschwitz w 2026?
+- Jak rezerwować bilety do Auschwitz w 2026?
 - Praktyczne wskazówki przed rezerwacją biletów do Auschwitz
 - Czy można zwiedzać Auschwitz bez przewodnika? Maksymalnie 10 osób może wejść do Muzeum Auschwitz bez przewodnika, ale tylko popołudniu. Wejście jest bezpłatne, ale musisz posiadać kartę wstępu.
+- Wskazówki jak samodzielnie zwiedzić Auschwitz Na zewnątrz korzystaj z mapy aby się zlokalizować, a w pomieszczeniach korzystaj z papierowego przewodnika (szczegóły poniżej) i idź w tym samym kierunku 
 - Jak wygląda zwiedzanie Auschwitz z przewodnikiem? Większość odwiedzających wybiera wycieczki zorganizowane ze względu na wygodę.
 - Jak dołączyć do zwiedzania Auschwitz z przewodnikiem? Dołącz do grupy do 30 osób na 3,5- lub 6-godzinne zwiedzanie po ustalonej trasie.
 - Czy warto wybrać prywatne zwiedzanie Auschwitz-Birkenau? Jeśli wynajmujesz przewodnika, możesz wybrać, co zobaczyć i co omówić szerzej.
 - Czy zorganizowane wycieczki do Auschwitz z Krakowa się opłacają?
-- Sprawdzeni lokalni organizatorzy wycieczek do Auschwitz
 - Wady zorganizowanych wycieczek do Auschwitz-Birkenau Część firm (poza tymi wymienionymi wyżej) w ostatniej chwili odwołuje rezerwacje albo zmienia godziny wyjazdu.
 
-## Trasy zwiedzania Auschwitz: mapa i ważne miejsca (PL)
+## Trasy Auschwitz: 50 miejsc i interaktywna mapa (PL)
 
 URL: https://www.visitauschwitz.info/pl/tour
-Description: Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
+Description: Szczegółowy opis ponad 50 miejsc w Auschwitz i Birkenau — z mapą, komentarzem przewodnika i punktami poza główną trasą. Zobacz więcej niż inni.
 
 ### FAQ
 

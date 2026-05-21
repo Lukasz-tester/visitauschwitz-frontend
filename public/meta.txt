@@ -5,16 +5,16 @@ T: Auschwitz Visit Guide: Tickets, Tours & Expert Tips | 2026
 D: Plan your Auschwitz visit: book free official tickets, choose the right tour, and avoid common mistakes. Practical advice from a licensed guide since 2006.
 
 Path: /arrival
-T: How to Get to Auschwitz: Transport & Parking Guide | 2026
-D: All transport options to the Auschwitz Memorial: trains, buses, driving routes, and parking. Compare travel times and costs to plan a smooth arrival.
+T: Getting to Auschwitz: Transport, Parking & Maps | 2026
+D: Every way to reach the Auschwitz Memorial: bus, train, car and parking — travel times, online booking, costs, and tips on travelling from Kraków.
 
 Path: /checklist
 T: Auschwitz Tour: What to Pack & Know Before Visiting | 2026
 D: Full preparation checklist for visiting Auschwitz-Birkenau. Covers booking, transport from Krakow, what to pack, rules, and essential visitor tips.
 
 Path: /faq
-T: Auschwitz FAQ: Tickets, Tours & Transport Explained | 2026
-D: Expert answers on Auschwitz online booking, transport from Kraków, tour types, dress code, opening hours & what to expect — by a licensed guide since 2006.
+T: Auschwitz FAQ: Tickets, Entry & Transport | 2026
+D: Expert answers by a licensed guide since 2006 — free entry, opening hours, online booking, Kraków transport, dress code & what to expect on site.
 
 Path: /museum
 T: Auschwitz Entry: Opening Hours, Tickets & Security | 2026
@@ -25,20 +25,20 @@ T: Free Auschwitz Checklist to Prepare Before You Visit | 2026
 D: Get a free printable preparation checklist from a licensed Auschwitz guide. Practical tips on tickets, transport, timing, and what to expect on site.
 
 Path: /supplement
-T: Auschwitz: What Most Visitors Wish They Knew | 2026
-D: Guide vs self-guided, best times to skip crowds, what to bring, rules, and spots beyond the regular route. Insider preparation from a licensed guide.
+T: Auschwitz Guide: Rules, Dress Code & Bag Policy | 2026
+D: Auschwitz preparation tips by a licensed guide since 2006 — booking, luggage rules, what to wear and bring and what to expect on site.
 
 Path: /support
 T: Support Independent Auschwitz Education—Keep It Free | 2026
 D: Join me, a licensed Auschwitz guide since 2006, in keeping visitor information independent, free, and accessible worldwide—help fund maintenance.
 
 Path: /tickets
-T: Auschwitz Tickets: Official Booking & Tour Types | 2026
+T: Auschwitz Tickets: Free Entry & Guided Tour Booking | 2026
 D: Step-by-step instructions for booking official entry passes online. Compare tour types, check current prices, and avoid long queues with a licensed guide.
 
 Path: /tour
-T: Auschwitz Tour Routes: Main Sites & Interactive Map | 2026
-D: Explore detailed routes for Auschwitz I and Birkenau. View interactive maps, essential locations, and insightful recommendations from a licensed guide.
+T: Auschwitz Route: 50 Locations & Interactive Map | 2026
+D: Detailed walkthrough of 50+ significant locations across Auschwitz I and Birkenau — with interactive map, guide commentary, and hidden spots to see.
 
 PL
 
@@ -47,16 +47,16 @@ T: Zwiedzanie Auschwitz: bilety, dojazd i porady | 2026
 D: Kompletne kompendium od licencjonowanego przewodnika: jak kupić bilety online, sprawnie dojechać, wybrać trasę i przygotować się do wizyty w Muzeum.
 
 Path: /arrival
-T: Dojazd do Auschwitz: bus, pociąg, parking i wskazówki | 2026
-D: Sprawdzone sposoby na dojazd do Muzeum: aktualne połączenia i koszty, wskazówki dla kierowców oraz oficjalne parkingi. Wszystko w jednym miejscu.
+T: Dojazd do Auschwitz: bus, pociąg, parking i mapy | 2026
+D: Wszystkie sposoby dojazdu do Auschwitz: pociągiem, autobusem Lajkonik i samochodem — koszty, czas przejazdu i wskazówki jak dojechać z Krakowa.
 
 Path: /checklist
 T: Auschwitz: co przygotować i wiedzieć przed wizytą | 2026
 D: Checklist do pełnego przygotowania wizyty w Auschwitz-Birkenau: rezerwacja, dojazd z Krakowa, co zabrać, zasady i ważne wskazówki dla zwiedzających.
 
 Path: /faq
-T: Auschwitz FAQ: rezerwacje, zwiedzanie i transport | 2026
-D: Eksperckie odpowiedzi o rezerwacji, transporcie z Krakowa, typach zwiedzania, zasadach wstępu i godzinach otwarcia Auschwitz — od licencjonowanego przewodnika od 2006 roku.
+T: Auschwitz FAQ: bilety, darmowy wstęp i dojazd | 2026
+D: Odpowiedzi przewodnika od 2006 r. — godziny otwarcia, rezerwacja online, dojazd z Krakowa i zasady zwiedzania. Sprawdź przed wizytą.
 
 Path: /museum
 T: Wejście do Auschwitz: godziny otwarcia i informacje | 2026
@@ -67,20 +67,20 @@ T: Bezpłatny poradnik co zrobić przed wizytą w Auschwitz | 2026
 D: Odbierz bezpłatną listę rzeczy do przygotowania od licencjonowanego przewodnika po Auschwitz. Praktyczne wskazówki dotyczące biletów, transportu, czasu i przebiegu wizyty.
 
 Path: /supplement
-T: Auschwitz: co musisz wiedzieć przed wizytą w Muzeum | 2026
-D: Z przewodnikiem czy samodzielnie, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej. Porady od licencjonowanego przewodnika.
+T: Auschwitz: zasady, warunki zwiedzania i wskazówki | 2026
+D: Poradnik od licencjonowanego przewodnika od 2006 r. — rezerwacja, jak uniknąć kolejek, co zabrać, regulamin, ukryte miejsca i dużo więcej.
 
 Path: /support
 T: Wesprzyj niezależną edukację o Auschwitz—utrzymaj ją bezpłatnie | 2026
 D: Dołącz do mnie, licencjonowanego przewodnika po Auschwitz od 2006 roku. Wspólnie zadbajmy o niezależność informacji dla odwiedzających i wsparcie utrzymania strony.
 
 Path: /tickets
-T: Bilety do Auschwitz: rezerwacja online i ceny | 2026
+T: Auschwitz: bilety, ceny, zwiedzanie i darmowy wstęp | 2026
 D: Jak zarezerwować wejściówki na oficjalnej stronie. Sprawdź aktualne cenniki, rodzaje zwiedzania i dowiedz się, jak uniknąć pomyłek oraz długich kolejek.
 
 Path: /tour
-T: Trasy zwiedzania Auschwitz: mapa i ważne miejsca | 2026
-D: Zobacz szczegółowe trasy po Auschwitz I i Birkenau. Interaktywna mapa, kluczowe punkty i praktyczne rekomendacje licencjonowanego przewodnika.
+T: Trasy Auschwitz: 50 miejsc i interaktywna mapa | 2026
+D: Szczegółowy opis ponad 50 miejsc w Auschwitz i Birkenau — z mapą, komentarzem przewodnika i punktami poza główną trasą. Zobacz więcej niż inni.
 
 POSTS
 

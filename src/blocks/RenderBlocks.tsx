@@ -11,6 +11,7 @@ import { ImageBlock } from './Code/Component'
 import { TextBlock } from './Banner/Component'
 import { BankTransferBlock } from './BankTransfer/Component'
 import { DonationTriggerBlock } from './DonationTrigger/Component'
+import { TicketPricesBlock } from './TicketPrices/Component'
 import { BlockErrorBoundary } from './BlockErrorBoundary'
 
 const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> = {
@@ -25,6 +26,7 @@ const blockComponents: Record<string, React.FC<{ locale: TypedLocale } & any>> =
   accordion: AccordionBlock,
   bankTransfer: BankTransferBlock,
   donationTrigger: DonationTriggerBlock,
+  ticketPrices: TicketPricesBlock,
 }
 
 export const RenderBlocks: React.FC<{
