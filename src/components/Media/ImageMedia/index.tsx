@@ -20,7 +20,6 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isCached, setIsCached] = useState(false)
   const handleLoad = useCallback(() => setIsLoaded(true), [])
-  const handleError = useCallback(() => setIsLoaded(true), [])
 
   let width: number | undefined
   let height: number | undefined
@@ -36,13 +35,15 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
 
     // Serve WebP from Cloudflare R2
     const webpFilename = filename?.replace(/\.(jpg|jpeg)$/i, '.webp')
-    const base = (process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info/').replace(/\/?$/, '/')
+    const base = (
+      process.env.NEXT_PUBLIC_CF_R2_URL || 'https://images.visitauschwitz.info/'
+    ).replace(/\/?$/, '/')
     src = `${base}${webpFilename}`
   }
 
   // Check if this image has been loaded before using sessionStorage or browser cache
   const cacheCheckKey = useMemo(() => `img-loaded-${src}`, [src])
-  
+
   useEffect(() => {
     if (src && typeof src === 'string') {
       // First check sessionStorage
@@ -56,7 +57,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       // Check if image is in browser cache using Image API
       const img = new Image()
       img.src = src
-      
+
       const checkCache = () => {
         if (img.complete) {
           setIsLoaded(true)
@@ -64,10 +65,10 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
           sessionStorage.setItem(cacheCheckKey, 'true')
         }
       }
-      
+
       // Check immediately in case it's already loaded
       checkCache()
-      
+
       // Also check on load in case it's loading from cache
       img.onload = checkCache
     }
@@ -109,7 +110,6 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
       unoptimized={true}
       fetchPriority={priority ? 'high' : 'auto'}
       onLoad={handleLoad}
-      onError={handleError}
     />
   )
 }
