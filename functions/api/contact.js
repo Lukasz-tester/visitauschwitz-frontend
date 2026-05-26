@@ -30,7 +30,7 @@ export async function onRequestPost(context) {
     const locale = data.locale || 'en'
     const isContact = message.length > 0
 
-    const fromEmail = env.EMAIL_FROM || 'contact@visitauschwitz.info'
+    const fromEmail = env.EMAIL_FROM || 'no-reply@visitauschwitz.info'
     const toEmail = env.EMAIL_TO || 'lukaszcelta@gmail.com'
 
     const promises = []

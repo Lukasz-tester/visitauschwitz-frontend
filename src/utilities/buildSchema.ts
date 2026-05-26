@@ -37,9 +37,9 @@ const touristTripTranslations: Record<string, { name: string; description: strin
       'Tour del precedente campo di concentramento e sterminio nazista tedesco Auschwitz I e Auschwitz II-Birkenau.',
   },
   fr: {
-    name: 'Visite du Mémorial d\'Auschwitz-Birkenau',
+    name: "Visite du Mémorial d'Auschwitz-Birkenau",
     description:
-      'Visite de l\'ancien camp de concentration et d\'extermination nazi allemand Auschwitz I et Auschwitz II-Birkenau.',
+      "Visite de l'ancien camp de concentration et d'extermination nazi allemand Auschwitz I et Auschwitz II-Birkenau.",
   },
   nl: {
     name: 'Rondleiding Auschwitz-Birkenau',
@@ -515,7 +515,7 @@ export function buildPageGraph({
       const webpFilename = metaImage.filename.endsWith('.webp')
         ? metaImage.filename
         : metaImage.filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')
-      pageImage = `${R2_BASE}${webpFilename}`
+      pageImage = `${R2_BASE}/${webpFilename}`
     } else if ('url' in metaImage && typeof metaImage.url === 'string') {
       pageImage = metaImage.url.startsWith('http') ? metaImage.url : `${SITE_URL}${metaImage.url}`
     }

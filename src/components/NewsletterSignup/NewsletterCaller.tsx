@@ -30,27 +30,23 @@ export function NewsletterCaller() {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cn(
-          'fixed bottom-4 right-[5.5rem] [[data-toc-present]_&]:right-[10rem] z-40 items-center justify-center [[data-map-open]_&]:hidden',
+          'fixed bottom-4 right-[5.5rem] [[data-toc-present]_&]:right-[10rem] z-50 items-center justify-center [[data-map-open]_&]:hidden',
           'hidden [[data-mobile-nav=open]_&]:flex',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-background/80 md:hover:bg-card-foreground',
           'transition-colors duration-500 dark:text-white/80 text-black/70',
-          isOpen && 'bg-card !flex',
+          isOpen && 'bg-card !flex !z-[60]',
         )}
         aria-label={isOpen ? 'Close contact form' : 'Open contact form'}
       >
-        {isOpen ? (
-          <X strokeWidth={1} size={28} />
-        ) : (
-          <Mail strokeWidth={1.5} size={26} />
-        )}
+        {isOpen ? <X strokeWidth={1} size={28} /> : <Mail strokeWidth={1.5} size={26} />}
       </button>
 
       {/* MAIL label - only visible when mobile nav is open */}
       {!isOpen && (
         <span
           className={cn(
-            'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] [[data-toc-present]_&]:right-[10rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-40',
+            'hidden [[data-mobile-nav=open]_&]:block [[data-map-open]_&]:!hidden fixed bottom-1 right-[5.5rem] [[data-toc-present]_&]:right-[10rem] w-14 text-center text-[10px] font-semibold dark:text-white/80 text-black/70 z-50',
           )}
         >
           {t('contact')}
@@ -60,7 +56,7 @@ export function NewsletterCaller() {
       {/* Bottom sheet panel */}
       <div
         className={cn(
-          'fixed inset-x-0 bottom-0 z-30 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg',
+          'fixed inset-x-0 bottom-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg',
           'min-h-[70vh] overflow-y-auto',
           'transition-transform duration-300 ease-in-out',
           isOpen ? 'translate-y-0' : 'translate-y-full',
@@ -75,7 +71,7 @@ export function NewsletterCaller() {
 
       {/* Backdrop */}
       {isOpen && (
-        <div className="fixed inset-0 z-20 bg-black/20" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 z-[48] bg-black/20" onClick={() => setIsOpen(false)} />
       )}
     </>
   )

@@ -1,3 +1,7 @@
+# run before deploying
+
+pnpm update-cms-data
+
 # TO DO list
 
 Your Feedback Is Invaluable >>> daj do
