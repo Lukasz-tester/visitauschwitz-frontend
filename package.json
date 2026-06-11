@@ -4,11 +4,12 @@
   "description": "An example of how to use Payload's localization features",
   "type": "module",
   "scripts": {
+    "generate:app-legal": "tsx src/utilities/fetch-app-legal.ts",
     "generate:sitemap": "tsx src/utilities/fetch-sitemap.ts",
     "generate:llms": "tsx src/utilities/generate-llms-txt.ts",
     "generate:meta": "tsx src/utilities/generate-meta-txt.ts",
     "update-cms-data": "tsx src/utilities/update-cms-data.ts",
-    "build": "pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build": "pnpm run generate:app-legal && pnpm run generate:sitemap && pnpm run generate:llms && pnpm run generate:meta && cross-env NODE_OPTIONS=--no-deprecation next build",
     "dev": "cross-env USE_LOCAL_CMS=true NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",

@@ -1,0 +1,34 @@
+{
+  "en": {
+    "privacy": {
+      "version": "1.2",
+      "body": [
+        "This guidebook works offline and is built to collect as little as possible. No account is required. Any usage data is anonymous and aggregated, used only to improve the app, and is never sold.",
+        "Location, if ever used, stays on your device. The full, current policy is published at visitauschwitz.info/privacy."
+      ]
+    },
+    "terms": {
+      "version": "1.2",
+      "body": [
+        "This app is a digital guidebook for visitors to the Auschwitz-Birkenau Memorial, provided as-is for personal, respectful use. Its content is intended for education and remembrance.",
+        "Please follow the Memorial's rules during your visit, and do not redistribute the content. The full, current terms are published at visitauschwitz.info/terms."
+      ]
+    }
+  },
+  "pl": {
+    "privacy": {
+      "version": "1.2",
+      "body": [
+        "Ten przewodnik działa offline i został zaprojektowany tak, by zbierać tyle danych, ile to konieczne. Nie jest wymagane konto. Wszelkie dane o użyciu są anonimowe i zbiorcze, wykorzystywane wyłącznie do ulepszania aplikacji i nigdy nie są sprzedawane.",
+        "Lokalizacja, jeśli zostanie użyta, pozostaje na twoim urządzeniu. Pełna, aktualna polityka jest dostępna na visitauschwitz.info/privacy."
+      ]
+    },
+    "terms": {
+      "version": "1.2",
+      "body": [
+        "Ta aplikacja to cyfrowy przewodnik dla odwiedzających Miejsce Pamięci Auschwitz-Birkenau, udostępniony w obecnej formie do osobistego, pełnego szacunku użytku. Jej treść służy edukacji i pamięci.",
+        "Podczas wizyty prosimy o przestrzeganie zasad Miejsca Pamięci oraz nieudostępnianie treści dalej. Pełny, aktualny regulamin znajduje się na visitauschwitz.info/terms."
+      ]
+    }
+  }
+}
