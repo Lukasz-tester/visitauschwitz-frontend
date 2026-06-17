@@ -1,4 +1,34 @@
 {
+  "app-nav": "My App",
+  "appPromo": {
+    "badge-coming-soon": "Coming soon",
+    "notify": "Get notified at launch",
+    "learn-more": "Learn about the app",
+    "download-ios": "Download on the App Store",
+    "download-android": "Get it on Google Play",
+    "guidebook": {
+      "name": "Auschwitz Guidebook",
+      "tagline": "Your offline companion for a self-guided visit",
+      "description": "A self-guided companion for visiting Auschwitz-Birkenau on your own — clear routes, maps, and context from a licensed guide, fully offline, in your language.",
+      "features": [
+        "Works fully offline inside the Memorial",
+        "Routes for Auschwitz I and Birkenau",
+        "Interactive map with every key location",
+        "Available in several languages"
+      ]
+    },
+    "history": {
+      "name": "Auschwitz History",
+      "tagline": "Understand the history before you go",
+      "description": "An educational companion for learning the history of Auschwitz-Birkenau at your own pace, with verified facts and survivor testimony.",
+      "features": [
+        "Clear, verified historical context",
+        "Made for students and researchers",
+        "Learn at your own pace everywhere",
+        "Available in several languages"
+      ]
+    }
+  },
   "date-published": "Published",
   "author": "Author",
   "about-author": "About the Author",

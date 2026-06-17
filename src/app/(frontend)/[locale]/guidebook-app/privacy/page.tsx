@@ -29,12 +29,12 @@ const pick = (map: Record<string, string>, locale: string) =>
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const languages: Record<string, string> = {}
-  for (const loc of routing.locales) languages[loc] = `/${loc}/app/${KIND}`
-  languages['x-default'] = `/en/app/${KIND}`
+  for (const loc of routing.locales) languages[loc] = `/${loc}/guidebook-app/${KIND}`
+  languages['x-default'] = `/en/guidebook-app/${KIND}`
   return {
     title: pick(TITLE, locale),
     description: pick(DESCRIPTION, locale),
-    alternates: { canonical: `/${locale}/app/${KIND}`, languages },
+    alternates: { canonical: `/${locale}/guidebook-app/${KIND}`, languages },
     robots: { index: true, follow: true },
   }
 }

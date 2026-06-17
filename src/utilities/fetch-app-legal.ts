@@ -9,7 +9,7 @@ import { locales } from '@/i18n/localization'
 // global and are published to Cloudflare R2 at legal/<lang>/<kind>.json (see
 // guide-app ARCHITECTURE §6/§7). This is a separate CMS from this website, so we
 // can't read them from cms-data.json. Instead we mirror the R2 JSON into a local
-// snapshot at build time and render static /app/privacy + /app/terms pages from
+// snapshot at build time and render static /guidebook-app/privacy + /guidebook-app/terms pages from
 // it. Single source of truth stays the guide-cms `legal` global.
 
 const R2_BASE =

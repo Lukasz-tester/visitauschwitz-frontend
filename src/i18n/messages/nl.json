@@ -1,4 +1,34 @@
 {
+  "app-nav": "Mijn app",
+  "appPromo": {
+    "badge-coming-soon": "Binnenkort",
+    "notify": "Houd me op de hoogte van de lancering",
+    "learn-more": "Meer over de app",
+    "download-ios": "Download in de App Store",
+    "download-android": "Ontdek het op Google Play",
+    "guidebook": {
+      "name": "Auschwitz Gids",
+      "tagline": "Je offline metgezel voor een zelfstandig bezoek",
+      "description": "Een metgezel om Auschwitz-Birkenau zelfstandig te bezoeken — duidelijke routes, kaarten en context van een erkende gids, volledig offline en in jouw taal.",
+      "features": [
+        "Werkt volledig offline op het terrein van de gedenkplaats",
+        "Routes voor Auschwitz I en Birkenau",
+        "Interactieve kaart met elke belangrijke plek",
+        "Beschikbaar in meerdere talen"
+      ]
+    },
+    "history": {
+      "name": "Auschwitz Geschiedenis",
+      "tagline": "Begrijp de geschiedenis voordat je gaat",
+      "description": "Een educatieve metgezel om de geschiedenis van Auschwitz-Birkenau in je eigen tempo te leren kennen, met geverifieerde feiten en getuigenissen van overlevenden.",
+      "features": [
+        "Heldere, geverifieerde historische context",
+        "Gemaakt voor leerlingen en onderzoekers",
+        "Leer in je eigen tempo, overal",
+        "Beschikbaar in meerdere talen"
+      ]
+    }
+  },
   "date-published": "Gepubliceerd",
   "author": "Auteur",
   "about-author": "Over de auteur",

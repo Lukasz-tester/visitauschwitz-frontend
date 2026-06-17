@@ -1,4 +1,34 @@
 {
+  "app-nav": "Moja aplikacja",
+  "appPromo": {
+    "badge-coming-soon": "Wkrótce",
+    "notify": "Powiadom mnie o premierze",
+    "learn-more": "Dowiedz się więcej o aplikacji",
+    "download-ios": "Pobierz z App Store",
+    "download-android": "Pobierz z Google Play",
+    "guidebook": {
+      "name": "Przewodnik po Auschwitz",
+      "tagline": "Twój towarzysz samodzielnego zwiedzania, działający offline",
+      "description": "Towarzysz samodzielnego zwiedzania Auschwitz-Birkenau — czytelne trasy, mapy i kontekst od licencjonowanego przewodnika, w pełni offline, w Twoim języku.",
+      "features": [
+        "Działa w pełni offline na terenie Miejsca Pamięci",
+        "Trasy po Auschwitz I i Birkenau",
+        "Interaktywna mapa ze wszystkimi najważniejszymi miejscami",
+        "Dostępny w kilku językach"
+      ]
+    },
+    "history": {
+      "name": "Historia Auschwitz",
+      "tagline": "Poznaj historię, zanim przyjedziesz",
+      "description": "Edukacyjny towarzysz do poznawania historii Auschwitz-Birkenau we własnym tempie, ze zweryfikowanymi faktami i relacjami świadków.",
+      "features": [
+        "Czytelny, zweryfikowany kontekst historyczny",
+        "Dla uczniów i badaczy",
+        "Nauka we własnym tempie, w dowolnym miejscu",
+        "Dostępny w kilku językach"
+      ]
+    }
+  },
   "date-published": "Opublikowano",
   "author": "Autor",
   "about-author": "O autorze",
